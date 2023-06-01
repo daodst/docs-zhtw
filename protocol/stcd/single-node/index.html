@@ -1,0 +1,1857 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../config/">
+      
+      
+        <link rel="next" href="../command/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>單節點 - DAODST文檔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="DAODST文檔" class="md-header__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST文檔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              單節點
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../account/" class="md-tabs__link md-tabs__link--active">
+        🔍協議
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../modules_accounts/" class="md-tabs__link">
+        🧱模塊
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../gateway/run/" class="md-tabs__link">
+        ✈網關和驗證器
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../chat/installation/" class="md-tabs__link">
+        📞聊天
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../faq/" class="md-tabs__link">
+      📋常見問題
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DAODST文檔" class="md-nav__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST文檔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍協議
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍協議
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account/" class="md-nav__link">
+        技術架構
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          命令行界面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          命令行界面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          單節點
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        單節點
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    先決條件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    自動化腳本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    手動部署
+  </a>
+  
+    <nav class="md-nav" aria-label="手動部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    初始化鏈
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    創世程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    添加創世賬戶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gentx" class="md-nav__link">
+    收集gentx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daemon" class="md-nav__link">
+    daemon 運行單節點
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    進一步配置
+  </a>
+  
+    <nav class="md-nav" aria-label="進一步配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    密鑰管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyring" class="md-nav__link">
+    Keyring 後端選項
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    啟用跟踪
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    從鏈中清除數據
+  </a>
+  
+    <nav class="md-nav" aria-label="從鏈中清除數據">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    重置數據
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    刪除數據
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tps" class="md-nav__link">
+    每秒記錄交易 (TPS)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command/" class="md-nav__link">
+        CLI命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account/" class="md-nav__link">
+        帳號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chainid/" class="md-nav__link">
+        鏈ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encode/" class="md-nav__link">
+        編碼
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gas/" class="md-nav__link">
+        Gas和手續費
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../keyring/" class="md-nav__link">
+        密鑰環
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../key-management/" class="md-nav__link">
+        密鑰管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../state-migrate/" class="md-nav__link">
+        狀態導入導出
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pending/" class="md-nav__link">
+        等待隊列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multsign/" class="md-nav__link">
+        多簽
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coin/" class="md-nav__link">
+        代幣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transfer/" class="md-nav__link">
+        交易
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱模塊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱模塊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules_accounts/" class="md-nav__link">
+        模塊賬號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evm/" class="md-nav__link">
+        以太坊虛擬機
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/" class="md-nav__link">
+        聊天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/" class="md-nav__link">
+        網關
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contract/" class="md-nav__link">
+        合約
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pledge/" class="md-nav__link">
+        質押
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈網關和驗證器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈網關和驗證器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          設置和配寘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          設置和配寘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/run/" class="md-nav__link">
+        運行驗證器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/config/" class="md-nav__link">
+        配寘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/disk-usage/" class="md-nav__link">
+        硬碟使用優化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/state-sync/" class="md-nav__link">
+        狀態同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/mempool/" class="md-nav__link">
+        記憶體池
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/security/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          陞級
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          陞級
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/list/" class="md-nav__link">
+        升級清單
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/hard-fork/" class="md-nav__link">
+        硬分叉升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/auto/" class="md-nav__link">
+        自動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/manual/" class="md-nav__link">
+        手動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/rollback/" class="md-nav__link">
+        回滾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/template/" class="md-nav__link">
+        提案模板
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/testnet/" class="md-nav__link">
+        測試網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/mainnet/" class="md-nav__link">
+        主網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          網關操作指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          網關操作指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/guide-linux/" class="md-nav__link">
+        linux版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/guide-win/" class="md-nav__link">
+        window版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/key-backup/" class="md-nav__link">
+        金鑰備份和恢復
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞聊天
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/installation/" class="md-nav__link">
+        安裝啟動
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/chat_doc/" class="md-nav__link">
+        文檔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/client_server/" class="md-nav__link">
+        客戶端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/server_server/" class="md-nav__link">
+        服務端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/customise_doc/" class="md-nav__link">
+        定制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/voip_signaling/" class="md-nav__link">
+        呼叫流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/optional_cfg/" class="md-nav__link">
+        可選配置*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        📋常見問題
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    先決條件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    自動化腳本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    手動部署
+  </a>
+  
+    <nav class="md-nav" aria-label="手動部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    初始化鏈
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    創世程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    添加創世賬戶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gentx" class="md-nav__link">
+    收集gentx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daemon" class="md-nav__link">
+    daemon 運行單節點
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    進一步配置
+  </a>
+  
+    <nav class="md-nav" aria-label="進一步配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    密鑰管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyring" class="md-nav__link">
+    Keyring 後端選項
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    啟用跟踪
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    從鏈中清除數據
+  </a>
+  
+    <nav class="md-nav" aria-label="從鏈中清除數據">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    重置數據
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    刪除數據
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tps" class="md-nav__link">
+    每秒記錄交易 (TPS)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">單節點</h1>
+<p>在此頁面之後，您可以手動或使用已經準備好的自動化腳本運行單節點本地網絡。運行單節點設置對於想要測試其應用程序和協議功能的開發人員非常有用，因為它的簡單性和速度。對於更複雜的設置，請參考<a href="./multi-nodes">多節點設置</a>頁面。</p>
+<h2 id="_2">先決條件</h2>
+<ul>
+<li><a href="/protocol/stcd/">安裝</a></li>
+</ul>
+<h2 id="_3">自動化腳本</h2>
+<p>啟動本地 Daodst 節點的最簡單方法是使用提供的幫助腳本，它將為測試目的創建一個合理的默認配置：</p>
+<pre><code class="language-bash">$ local_node.sh
+...
+</code></pre>
+<p>📣 提示 :  <code>$install_path</code> 用來表示您安裝 <code>stcd</code> 二進製程序的路徑</p>
+<p>📣 提示：
+為了避免覆蓋生產中使用的真實節點的任何數據，決定將自動生成的測試配置存儲在 <code>~/.tmp-stcd</code> 而不是默認的 <code>$install_path/.stcd</code> 。</p>
+<p>使用<code>local_node.sh</code>腳本時，有必要使用<code>--home ~/.tmp-stcd</code>標誌擴展所有以本地測試節點為目標的<code>stcd</code>命令。這是強制性的，因為 <code>home</code> 目錄不能存儲在 <code>stcd</code> 配置中，這可以在下面的輸出中看到。為了便於使用，將此目錄路徑導出為環境變量可能是明智的：</p>
+<pre><code>$ export TMP=$HOME/.tmp-stcd`
+$ stcd config --home $TMP
+{
+&quot;chain-id&quot;: &quot;daodst_7000-1&quot;,
+&quot;keyring-backend&quot;: &quot;test&quot;,
+&quot;output&quot;: &quot;text&quot;,
+&quot;node&quot;: &quot;tcp://localhost:26657&quot;,
+&quot;broadcast-mode&quot;: &quot;sync&quot;
+}
+</code></pre>
+<p>您可以通過更改配置變量來自定義本地節點腳本。
+有關可調整內容的想法，請參閱以下腳本摘錄：</p>
+<pre><code class="language-bash"># Customize the name of your keys, the chain-id, moniker of the node, keyring backend, and more
+KEYS[0]=&quot;dev0&quot;
+KEYS[1]=&quot;dev1&quot;
+KEYS[2]=&quot;dev2&quot;
+CHAINID=&quot;daodst_7000-1&quot;
+MONIKER=&quot;localtestnet&quot;
+# Remember to change to other types of keyring like 'file' in-case exposing to outside world,
+# otherwise your balance will be wiped quickly
+# The keyring test does not require private key to steal tokens from you
+KEYRING=&quot;test&quot;
+KEYALGO=&quot;eth_secp256k1&quot;
+LOGLEVEL=&quot;info&quot;
+# Set dedicated home directory for the daodst instance
+HOMEDIR=&quot;$HOME/.tmp-stcd&quot;
+# to trace evm
+#TRACE=&quot;--trace&quot;
+TRACE=&quot;&quot;
+
+[...]
+
+  # Adjust this set a different maximum gas limit
+  jq '.consensus_params[&quot;block&quot;][&quot;max_gas&quot;]=&quot;10000000&quot;' &quot;$GENESIS&quot; &gt;&quot;$TMP_GENESIS&quot; &amp;&amp; mv &quot;$TMP_GENESIS&quot; &quot;$GENESIS&quot;
+
+[...]
+
+</code></pre>
+<h2 id="_4">手動部署</h2>
+<p>本指南幫助您創建單個驗證器節點，該節點在本地運行網絡以用於測試和其他開發相關用途。</p>
+<h3 id="_5">初始化鏈</h3>
+<p>在實際運行節點之前，我們需要初始化鏈，最重要的是它的創世文件。這是通過 <code>init</code> 子命令完成的：</p>
+<pre><code class="language-bash">$MONIKER=testing
+$KEY=dev0
+$CHAINID=&quot;daodst_7000-1&quot;
+
+# The argument $MONIKER is the custom username of your node, it should be human-readable.
+stcd init $MONIKER --chain-id=$CHAINID
+</code></pre>
+<p>📣 提示：
+您可以稍後通過更新 <code>config.toml</code> 文件來 <a href="/protocol/stcd/config#client-configuration">修改</a> 這個 moniker 。</p>
+<p>上面的命令創建了您的節點和驗證器運行所需的所有配置文件，以及一個默認的創世文件，它定義了網絡的初始狀態。默認情況下，所有這些<a href="/protocol/stcd/config">配置文件</a> 都在<code>~/.stcd</code> 中，但您可以通過傳遞<code>--home</code> 標誌來覆蓋此文件夾的位置。</p>
+<h3 id="_6">創世程序</h3>
+<h3 id="_7">添加創世賬戶</h3>
+<p>在啟動鏈之前，您需要使用 <a href="/protocol/keyring#add-keys">keyring</a> 用至少一個帳戶填充狀態：</p>
+<pre><code class="language-bash">stcd keys add my_validator
+</code></pre>
+<p>創建本地帳戶後，繼續在鏈的創世文件中為其授予一些<code>dst</code>令牌。這樣做還將確保您的鏈知道此帳戶的存在：</p>
+<pre><code class="language-bash">stcd add-genesis-account my_validator 10000000000dst
+</code></pre>
+<p>現在您的帳戶已經有了一些代幣，您需要向您的鏈添加一個驗證器。</p>
+<p>對於本指南，您將添加本地節點（通過上面的<code>init</code>命令創建）作為鏈的驗證器。
+驗證器可以在鏈首次啟動之前通過創世文件中包含的稱為<code>gentx</code>的特殊交易來聲明：</p>
+<pre><code class="language-bash"># Create a gentx
+# NOTE: this command lets you set the number of coins.
+# Make sure this account has some coins with the genesis.app_state.staking.params.bond_denom denom
+stcd add-genesis-account my_validator 1000000000dst,10000000000fm
+</code></pre>
+<p><code>gentx</code> 做三件事：</p>
+<ol>
+<li>將您創建的<code>validator</code>賬戶註冊為驗證者操作者賬戶（即控制驗證者的賬戶）。</li>
+<li>自行委託所提供的<code>amount</code>的質押代幣。</li>
+<li>將操作員帳戶與將用於簽署區塊的 Tendermint 節點公鑰關聯起來。如果未提供 <code>--pubkey</code> 標誌，則默認為通過上面的 <code>stcd init</code> 命令創建的本地節點 pubkey。</li>
+</ol>
+<p>有關 <code>gentx</code> 的更多信息，請使用以下命令：</p>
+<pre><code class="language-bash">stcd gentx --help
+</code></pre>
+<h3 id="gentx">收集<code>gentx</code></h3>
+<p>默認情況下，創世文件不包含任何 <code>gentxs</code>。 <code>gentx</code> 是一種交易，它將存在於 <code>accounts</code> 下的創世文件中的質押令牌綁定到驗證器，本質上是在創世時創建一個驗證器。
+一旦作為有效 <code>gentx</code> 接收者的 2/3 以上的驗證器（按投票權加權）在 <code>genesis_time</code> 之後上線，該鏈就會啟動。</p>
+<p>可以手動將 <code>gentx</code> 添加到創世文件，或通過以下命令：</p>
+<pre><code class="language-bash"># Add the gentx to the genesis file
+stcd collect-gentxs
+</code></pre>
+<p>此命令會將存儲在 <code>~/.stcd/config/gentx</code> 中的所有 <code>gentxs</code> 添加到創世文件中。</p>
+<h3 id="daemon">daemon 運行單節點</h3>
+<p>最後，檢查 <code>genesis.json</code> 文件的正確性：</p>
+<pre><code class="language-bash">stcd validate-genesis
+</code></pre>
+<p>現在一切都已設置好，您終於可以啟動您的節點了：</p>
+<pre><code class="language-bash">stcd daemon
+</code></pre>
+<p>📣 提示：
+要在運行節點時檢查所有可用的可自定義選項，請使用 --help 標誌。</p>
+<p>你應該看到塊進來了。</p>
+<p>前面的命令允許您運行單個節點。這對於下一節關於與該節點交互的部分來說已經足夠了，
+但您可能希望同時運行多個節點，並查看它們之間如何達成共識。</p>
+<p>然後，您可以使用 <code>Ctrl+C</code> 停止節點。</p>
+<h2 id="_8">進一步配置</h2>
+<h3 id="_9">密鑰管理</h3>
+<p>每次運行具有相同密鑰的節點：將 <code>./local_node.sh</code> 中的 <code>stcd keys add $KEY</code> 替換為：</p>
+<pre><code class="language-bash">echo &quot;your mnemonic here&quot; | stcd keys add $KEY --recover
+</code></pre>
+<p>📣 提示：
+Daodst 目前支持12個單詞的助記詞。
+:::</p>
+<p>您可以使用以下方法生成新的密鑰/助記符：</p>
+<pre><code class="language-bash">stcd keys add $KEY
+</code></pre>
+<p>將您的 Daodst 密鑰導出為以太坊私鑰（用於 <strong>Metamask</strong> 例如）：</p>
+<pre><code class="language-bash">stcd keys unsafe-export-eth-key $KEY
+</code></pre>
+<p>有關可用鍵命令的更多信息，請使用 <code>--help</code> 標誌</p>
+<pre><code class="language-bash">stcd keys -h
+</code></pre>
+<h3 id="keyring">Keyring 後端選項</h3>
+<p>上面的說明包括使用 <code>test</code> 作為 <code>keyring-backend</code> 的命令。
+這是一個不安全的密鑰環，不需要輸入密碼，不應在生產中使用。
+否則，Daodst 支持使用文件或操作系統密鑰環後端進行密鑰存儲。
+要創建和使用文件存儲密鑰而不是默認為操作系統密鑰環，請將標誌 <code>--keyring-backend file</code> 添加到任何相關命令，密碼提示將通過命令行出現。
+這也可以保存為 CLI 配置選項：</p>
+<pre><code class="language-bash">stcd config keyring-backend file
+</code></pre>
+<p>📣 提示：
+有關 Keyring 及其後端選項的更多信息，請單擊 <a href="/protocol/keyring/">此處</a>。</p>
+<h3 id="_10">啟用跟踪</h3>
+<p>要在運行節點時啟用跟踪，請將 <code>local_node.sh</code> 腳本的最後一行修改為以下命令，
+在哪裡：</p>
+<ul>
+<li><code>$TRACER</code> 是 EVM 跟踪器類型，用於從 EVM 事務​​執行中收集執行跟踪（例如 <code>json|struct|access_list|markdown</code>）</li>
+<li><code>$TRACESTORE</code> 是包含 KVStore 跟踪的輸出文件（例如 <code>store.txt</code>）</li>
+</ul>
+<pre><code class="language-bash">stcd start --evm.tracer $TRACER --tracestore $TRACESTORE --pruning=nothing $TRACE --log_level $LOGLEVEL --minimum-gas-prices=0.0001dst --json-rpc.api eth,txpool,personal,net,debug,web3
+</code></pre>
+<h2 id="_11">從鏈中清除數據</h2>
+<h3 id="_12">重置數據</h3>
+<p>或者，您可以<strong>重置</strong>區塊鏈數據庫，刪除節點的地址簿文件，並將 <code>priv_validator.json</code> 重置為創世狀態。</p>
+<p>📣 提示：
+如果您運行的是<strong>驗證器節點</strong>，請在執行 <code>stcd unsafe-reset-all</code> 時始終小心。
+如果您不切換 <code>chain-id</code>，則永遠不要使用此命令。</p>
+<p>🚨 <strong>危險</strong>：確保每個節點都有一個唯一的 <code>priv_validator.json</code>。 <strong>不要</strong>將 <code>priv_validator.json</code> 從舊節點複製到多個新節點。使用相同的 <code>priv_validator.json</code> 運行兩個節點將導致您產生 <strong>雙重簽名</strong> 並且將被 <strong>永久監禁</strong> !</p>
+<p>📣 提示 :  <code>$install_path</code> 用來表示您安裝 <code>stcd</code> 二進製程序的路徑</p>
+<p>首先，刪除過時的文件並重置數據。</p>
+<pre><code class="language-bash">rm $install_path/.stcd/config/addrbook.json $install_path/.stcd/config/genesis.json
+stcd tendermint unsafe-reset-all --home .stcd
+</code></pre>
+<p>您的節點現在處於原始狀態，同時保留原始的 <code>priv_validator.json</code> 和 <code>config.toml</code>。
+如果您之前設置了任何哨兵節點或完整節點，您的節點仍將嘗試連接到它們，但如果它們還沒有升級，則可能會失敗。</p>
+<h3 id="_13">刪除數據</h3>
+<p>二進制數據會默認存儲在 <code>$install_path/.stcd</code>，要<strong>刪除</strong>現有的二進製文件和配置，請運行：</p>
+<pre><code class="language-bash">rm -rf $install_path/.stcd
+</code></pre>
+<p>要清除密鑰存儲以外的所有數據（如果選擇了keyring後端），然後您可以從上面重新運行完整節點安裝命令以再次啟動節點。</p>
+<h2 id="tps">每秒記錄交易 (TPS)</h2>
+<p>為了獲得每秒事務的累進值，我們使用 Prometheus 返回值。
+Prometheus 導出器在地址 <a href="http://localhost:8877">http://localhost:8877</a> 運行，因此請將此部分添加到您的 <a href="https://opencensus.io/codelabs/prometheus/#1">Prometheus 安裝</a> config.yaml 文件中，如下所示</p>
+<pre><code class="language-yaml">global:
+scrape_interval: 10s
+
+external_labels:
+  monitor: 'daodst'
+
+scrape_configs:
+- job_name: 'daodst'
+
+  scrape_interval: 10s
+
+  static_configs:
+    - targets: ['localhost:8877']
+</code></pre>
+<p>然後像這樣運行 Prometheus</p>
+<pre><code class="language-shell">prometheus --config.file=prom_config.yaml
+</code></pre>
+<p>然後訪問位於 <a href="http://localhost:9090/">http://localhost:9090/</a> 的 Prometheus 儀表板，然後導航到表達式區域並輸入以下表達式</p>
+<pre><code class="language-shell">rate(daodst_transactions_processed[1m])
+</code></pre>
+<p>這將顯示處理的交易速度。</p>
+<p>📣 提示：
+Daodst 目前支持 12個單詞的助記詞。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

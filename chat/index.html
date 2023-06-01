@@ -1,0 +1,1868 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../evm/">
+      
+      
+        <link rel="next" href="../gateway/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>聊天 - DAODST文檔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST文檔" class="md-header__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST文檔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              聊天
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/account/" class="md-tabs__link">
+        🔍協議
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱模塊
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈網關和驗證器
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="installation/" class="md-tabs__link">
+        📞聊天
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋常見問題
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST文檔" class="md-nav__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST文檔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍協議
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍協議
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        技術架構
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          命令行界面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          命令行界面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        單節點
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        帳號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        鏈ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        編碼
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas和手續費
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        密鑰環
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        密鑰管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        狀態導入導出
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        等待隊列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        多簽
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        代幣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        交易
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱模塊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱模塊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        模塊賬號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        以太坊虛擬機
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        聊天
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    目錄
+  </a>
+  
+    <nav class="md-nav" aria-label="目錄">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    聊天
+  </a>
+  
+    <nav class="md-nav" aria-label="聊天">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#did" class="md-nav__link">
+    DID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    銷毀與質押
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    聊天收費模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    消息
+  </a>
+  
+    <nav class="md-nav" aria-label="消息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgsendgift" class="md-nav__link">
+    MsgSendGift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgsetchatinfo" class="md-nav__link">
+    MsgSetChatInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgburngetmobile" class="md-nav__link">
+    MsgBurnGetMobile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgmobiletransfer" class="md-nav__link">
+    MsgMobileTransfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgchatsendgift" class="md-nav__link">
+    MsgChatSendGift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    參數
+  </a>
+  
+    <nav class="md-nav" aria-label="參數">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    參數
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/" class="md-nav__link">
+        網關
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        合約
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        質押
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈網關和驗證器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈網關和驗證器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          設置和配寘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          設置和配寘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        運行驗證器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        配寘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        硬碟使用優化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        狀態同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        記憶體池
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          陞級
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          陞級
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        升級清單
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        硬分叉升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        自動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        手動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        回滾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        提案模板
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        測試網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        主網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          網關操作指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          網關操作指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        linux版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        window版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        金鑰備份和恢復
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞聊天
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation/" class="md-nav__link">
+        安裝啟動
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chat_doc/" class="md-nav__link">
+        文檔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="client_server/" class="md-nav__link">
+        客戶端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="server_server/" class="md-nav__link">
+        服務端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="customise_doc/" class="md-nav__link">
+        定制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="voip_signaling/" class="md-nav__link">
+        呼叫流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="optional_cfg/" class="md-nav__link">
+        可選配置*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋常見問題
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    目錄
+  </a>
+  
+    <nav class="md-nav" aria-label="目錄">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    聊天
+  </a>
+  
+    <nav class="md-nav" aria-label="聊天">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#did" class="md-nav__link">
+    DID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    銷毀與質押
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    聊天收費模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    消息
+  </a>
+  
+    <nav class="md-nav" aria-label="消息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgsendgift" class="md-nav__link">
+    MsgSendGift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgsetchatinfo" class="md-nav__link">
+    MsgSetChatInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgburngetmobile" class="md-nav__link">
+    MsgBurnGetMobile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgmobiletransfer" class="md-nav__link">
+    MsgMobileTransfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgchatsendgift" class="md-nav__link">
+    MsgChatSendGift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    參數
+  </a>
+  
+    <nav class="md-nav" aria-label="參數">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    參數
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>聊天</h1>
+
+<p>聊天模塊負責用戶鏈上聊天相關的資料管理，包括用戶的鏈上資訊存儲等</p>
+<pre><code class="language-shell">chat/
+├── client
+│   └── rest
+│        ├── error.go          # 介面錯誤集
+│        ├── grpc.go           # grpc查询方法
+│        ├── handle_account.go # grpc査詢方法
+│        ├── handle_chat.go    # chat模塊消息前置處理
+│        ├── query.go          # 介面査詢函數
+│        ├── rest.go           # 消息與査詢路由的注册
+│        └── tx.go             # tx相關方法，包括廣播等
+├── keeper
+│   ├── genesis.go        # 模塊的狀態化和匯出
+│   ├── keeper.go         # 存儲管理器，處理模塊的業務邏輯，並有許可權訪問狀態樹的特定子樹
+│   ├── msg_server.go     # 提供上鏈消息的服務處理邏輯
+│   ├── params.go         # 模塊參數的設定和獲取
+│   ├── query.go          # 狀態査詢函數
+├── types
+│   ├── codec.go          # 編碼注册類型
+│   ├── errors.go         # 模塊特定的錯誤
+│   ├── events.go         # 向Tendermint PubSub/Websocket暴露的事件
+│   ├── genesis.go        # 模塊的創世狀態
+│   ├── interface.go      # 模塊的介面集合
+│   ├── keys.go           # 模塊存儲key以及一些其他的常數
+│   ├── msg.go            # 聊天模塊交易消息
+│   ├── params.go         # 模塊可以通過治理模塊修改的自定義參數
+│   └── types.go          # 模塊的類型集合
+├── genesis.go            # ABCI的創世狀態初始化和匯出功能
+├── handler.go            # 消息路由
+└── module.go             # 模塊管理器的模塊設定
+</code></pre>
+<h2 id="_1">目錄</h2>
+<h3 id="_2">聊天</h3>
+<p>DaoDst作為一個帶有去中心化聊天的區塊鏈，其中聊天的數據的鏈上管理，主要就是通過'x/chat'模塊進行，</p>
+<p>當用戶註冊聊天時，會發起廣播，將用戶的地址，閘道，did，聊天等資訊記錄到鏈上。</p>
+<p>當其他功能或模塊需要調用這些數據時，也需要通過chat模塊獲取</p>
+<h4 id="_3">狀態</h4>
+<p>Chat模塊存儲了關於聊天用戶的基礎鏈上數據</p>
+<pre><code class="language-go">// 用户信息
+type UserInfo struct {
+    //錢包地址
+    FromAddress string `json:&quot;from_address&quot; yaml:&quot;from_address&quot;`
+    //注册閘道
+    RegisterNodeAddress string `json:&quot;register_node_address&quot; yaml:&quot;register_node_address&quot;`
+    //當前閘道
+    NodeAddress string `json:&quot;node_address&quot; yaml:&quot;node_address&quot;`
+    //通訊錄
+    AddressBook string `json:&quot;address_book&quot; yaml:&quot;address_book&quot;`
+    //通訊錄黑名單（用戶公開金鑰加密）
+    ChatBlacklist string `json:&quot;chat_blacklist&quot; yaml:&quot;chat_blacklist&quot;`
+    //聊天限制模式（fee | any | list）
+    ChatRestrictedMode string `json:&quot;chat_restricted_mode&quot; yaml:&quot;chat_restricted_mode&quot;`
+    //通訊錄白名單（用戶公開金鑰加密）
+    ChatWhitelist string `json:&quot;chat_whitelist&quot; yaml:&quot;chat_whitelist&quot;`
+    //聊天收費費用
+    ChatFee types.Coin `json:&quot;chat_fee&quot; yaml:&quot;chat_fee&quot;`
+    //持有did
+    Mobile []string `json:&quot;mobile&quot; yaml:&quot;mobile&quot;`
+    //最後更新時間
+    UpdateTime int64 `json:&quot;update_time&quot; yaml:&quot;update_time&quot;`
+    //通訊錄黑名單（閘道公開金鑰加密）
+    ChatBlackEncList string `json:&quot;chat_black_enc_list&quot; yaml:&quot;chat_black_enc_list&quot;`
+    //通訊錄白名單（閘道公開金鑰加密）
+    ChatWhiteEncList string `json:&quot;chat_white_enc_list&quot; yaml:&quot;chat_white_enc_list&quot; `
+    //備註
+    Remarks string `json:&quot;remarks&quot; yaml:&quot;remarks&quot;`
+}
+</code></pre>
+<p>用戶在注册的時候會將其初始化，</p>
+<p>其中ChatRestrictedMode，ChatFee兩個關於聊天收費的參數會有預設值</p>
+<p>Chat模塊的大多數業務邏輯都是基於此結構體的</p>
+<h4 id="did">DID</h4>
+<p>用戶註冊時需要選擇所屬的閘道，並選擇屬於閘道的一個號碼段
+在此號碼段下，用戶將得到一個專屬的號碼（DID），此號碼歸屬與錢包地址（即使閘道不再存在）
+處理前置號碼段外，後續的號碼是遞增的</p>
+<p>比如某閘道下8888888號碼段，此號碼段下號碼已經到達1234
+那麼下一個選擇此號碼段的人，獲得的號碼將會是88888881235</p>
+<p>除了注册外，還可以主動銷毀來獲得DID</p>
+<p>did 可以通主动转让</p>
+<h4 id="_4">銷毀與質押</h4>
+<p>注册聊天时，需要销毁一定数量的DST,同时，注册合约将会自动把销毁得到的哈希币质押到 Pledge 模块，由此获得质押奖励</p>
+<h4 id="_5">聊天收費模式</h4>
+<p>用戶註冊時，默認的聊天收費模式為”收費“，用戶可以自行發消息上鏈更改</p>
+<p>有如下三種模式</p>
+<ul>
+<li>收費模式</li>
+</ul>
+<p>開啟收費模式後，主動發起聊天或者拉入房間需要支付一定費用</p>
+<ul>
+<li>公開模式</li>
+</ul>
+<p>開啟公開模式後，任何人都可以主動向你發起聊天</p>
+<ul>
+<li>白名單模式</li>
+</ul>
+<p>開啟白名單模式後，只有在白名單內的地址可以向你發起聊天（白名單的設定同屬於chat模塊）</p>
+<h3 id="_6">功能</h3>
+<p>聊天模塊' Keeper '授予對聊天模塊狀態的存取權限
+並實現' statedb。 介面，以支持' StateDB '實現。
+Keeper包含一個允許資料庫的存儲鍵
+寫入只能由Chat模塊訪問的多庫的具體子樹。
+而不是使用樹和資料庫進行査詢和持久化（' StateDB '實現），
+DaoDst使用Cosmos的“KVStore”（鍵值存儲）和Cosmos SDK的“Keeper”來促進狀態轉換。</p>
+<p>為了支持介面功能，它導入了4個模塊Keepers:</p>
+<ul>
+<li><code>auth</code>: 帳號的增删改查</li>
+<li><code>bank</code>: 供應量和餘額的增删改查</li>
+<li><code>comm</code>: 閘道相關資料的管理</li>
+<li><code>pledge</code>: 質押、銷毀與獎勵</li>
+</ul>
+<pre><code class="language-go">type Keeper struct {
+    storeKey   sdk.StoreKey
+    cdc        codec.BinaryCodec
+    paramstore paramtypes.Subspace
+
+    accountKeeper types.AccountKeeper
+    bankKeeper    types.BankKeeper
+    commKeeper    commkeeper.Keeper
+    pledgeKeeper  pledgekeeper.Keeper
+}
+
+</code></pre>
+<h2 id="_7">消息</h2>
+<h3 id="msgsendgift">MsgSendGift</h3>
+<pre><code>通過此消息將地址注册到chat模塊，並初始化對應資訊
+</code></pre>
+<pre><code class="language-go">      type MsgRegister struct {
+          FromAddress    string     `protobuf:&quot;bytes,1,opt,name=from_address,json=fromAddress,proto3&quot; json:&quot;from_address,omitempty&quot; yaml:&quot;from_address&quot;`
+          NodeAddress    string     `protobuf:&quot;bytes,2,opt,name=node_address,json=nodeAddress,proto3&quot; json:&quot;node_address,omitempty&quot; yaml:&quot;node_address&quot;`
+          MortgageAmount types.Coin `protobuf:&quot;bytes,3,opt,name=mortgage_amount,json=mortgageAmount,proto3&quot; json:&quot;mortgage_amount&quot; yaml:&quot;mortgage_amount&quot;`
+          MobilePrefix   string     `protobuf:&quot;bytes,4,opt,name=mobile_prefix,json=mobilePrefix,proto3&quot; json:&quot;mobile_prefix,omitempty&quot; yaml:&quot;mobile_prefix&quot;`
+      }
+</code></pre>
+<h3 id="msgsetchatinfo">MsgSetChatInfo</h3>
+<pre><code>通過此消息修改地址對應的chat模塊存儲的數據，該消息接受全量的用戶數據，並覆蓋原來的數據
+</code></pre>
+<pre><code class="language-go">    type MsgSetChatInfo struct {
+        FromAddress        string     `protobuf:&quot;bytes,1,opt,name=from_address,json=fromAddress,proto3&quot; json:&quot;from_address,omitempty&quot; yaml:&quot;from_address&quot;`
+        NodeAddress        string     `protobuf:&quot;bytes,2,opt,name=node_address,json=nodeAddress,proto3&quot; json:&quot;node_address,omitempty&quot; yaml:&quot;node_address&quot;`
+        AddressBook        string     `protobuf:&quot;bytes,3,opt,name=address_book,json=addressBook,proto3&quot; json:&quot;address_book,omitempty&quot; yaml:&quot;address_book&quot;`
+        ChatBlacklist      string     `protobuf:&quot;bytes,4,opt,name=chat_blacklist,json=chatBlacklist,proto3&quot; json:&quot;chat_blacklist,omitempty&quot; yaml:&quot;chat_blacklist&quot;`
+        ChatRestrictedMode string     `protobuf:&quot;bytes,5,opt,name=chat_restricted_mode,json=chatRestrictedMode,proto3&quot; json:&quot;chat_restricted_mode,omitempty&quot; yaml:&quot;chat_limit&quot;`
+        ChatFee            types.Coin `protobuf:&quot;bytes,6,opt,name=chat_fee,json=chatFee,proto3&quot; json:&quot;chat_fee&quot; yaml:&quot;chat_fee&quot;`
+        ChatWhitelist      string     `protobuf:&quot;bytes,7,opt,name=chat_whitelist,json=chatWhitelist,proto3&quot; json:&quot;chat_whitelist,omitempty&quot; yaml:&quot;chat_whitelist&quot;`
+        UpdateTime         int64      `protobuf:&quot;varint,8,opt,name=update_time,json=updateTime,proto3&quot; json:&quot;update_time,omitempty&quot; yaml:&quot;update_time&quot;`
+        ChatBlacklistEnc   string     `protobuf:&quot;bytes,9,opt,name=chat_blacklist_enc,json=chatBlacklistEnc,proto3&quot; json:&quot;chat_blacklist_enc,omitempty&quot; yaml:&quot;chat_blacklist_enc&quot;`
+        ChatWhitelistEnc   string     `protobuf:&quot;bytes,10,opt,name=chat_whitelist_enc,json=chatWhitelistEnc,proto3&quot; json:&quot;chat_whitelist_enc,omitempty&quot; yaml:&quot;chat_whitelist_enc&quot;`
+    }
+</code></pre>
+<h3 id="msgburngetmobile">MsgBurnGetMobile</h3>
+<pre><code>通過此消息通過銷毀的管道獲得did，獲得的did的首碼為選擇的did號段，尾碼則在此號段下遞增
+
+如果號段與閘道不匹配或號段下號碼已滿，則獲取失敗
+</code></pre>
+<pre><code class="language-go">    type MsgBurnGetMobile struct {
+        FromAddress  string `protobuf:&quot;bytes,1,opt,name=from_address,json=fromAddress,proto3&quot; json:&quot;from_address,omitempty&quot; yaml:&quot;from_address&quot;`
+        MobilePrefix string `protobuf:&quot;bytes,2,opt,name=mobile_prefix,json=mobilePrefix,proto3&quot; json:&quot;mobile_prefix,omitempty&quot; yaml:&quot;mobile_prefix&quot;`
+    }
+</code></pre>
+<h3 id="msgmobiletransfer">MsgMobileTransfer</h3>
+<pre><code>持有的did可以轉讓
+
+如果對方持有的did已經到達最大持有量，則轉讓失敗
+</code></pre>
+<pre><code class="language-go">    type MsgMobileTransfer struct {
+        FromAddress string `protobuf:&quot;bytes,1,opt,name=from_address,json=fromAddress,proto3&quot; json:&quot;from_address,omitempty&quot; yaml:&quot;from_address&quot;`
+        ToAddress   string `protobuf:&quot;bytes,2,opt,name=to_address,json=toAddress,proto3&quot; json:&quot;to_address,omitempty&quot; yaml:&quot;to_address&quot;`
+        Mobile      string `protobuf:&quot;bytes,3,opt,name=mobile,proto3&quot; json:&quot;mobile,omitempty&quot; yaml:&quot;mobile&quot;`
+    }
+</code></pre>
+<h3 id="msgchatsendgift">MsgChatSendGift</h3>
+<pre><code>聊天支付，如果對方設定了聊天收費，需要發起此消息給對方支付一定token
+</code></pre>
+<pre><code class="language-go">    type MsgChatSendGift struct {
+        FromAddress string     `protobuf:&quot;bytes,1,opt,name=from_address,json=fromAddress,proto3&quot; json:&quot;from_address,omitempty&quot; yaml:&quot;from_address&quot;`
+        ToAddress   string     `protobuf:&quot;bytes,2,opt,name=to_address,json=toAddress,proto3&quot; json:&quot;to_address,omitempty&quot; yaml:&quot;to_address&quot;`
+        GiftValue   types.Coin `protobuf:&quot;bytes,3,opt,name=gift_value,json=giftValue,proto3&quot; json:&quot;gift_value&quot; yaml:&quot;gift_value&quot;`
+    }
+</code></pre>
+<h2 id="_8">參數</h2>
+<p>chat模塊包含如下模塊參數</p>
+<h3 id="_9">參數</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>类型</th>
+<th>预设值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MaxPhoneNumber</code></td>
+<td>uint64</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>DestroyPhoneNumberCoin</code></td>
+<td>github.com/cosmos/cosmos-sdk/types.Coin</td>
+<td><code>100000000000000000000dst</code></td>
+</tr>
+<tr>
+<td><code>ChatFee</code></td>
+<td>github.com/cosmos/cosmos-sdk/types.Coin</td>
+<td><code>1000000000000000000dst</code></td>
+</tr>
+<tr>
+<td><code>MinRegisterBurnAmount</code></td>
+<td>github.com/cosmos/cosmos-sdk/types.Coin</td>
+<td><code>100000000000000000000dst</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

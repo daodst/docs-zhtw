@@ -1,0 +1,3900 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../modules_accounts/">
+      
+      
+        <link rel="next" href="../chat/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>以太坊虛擬機 - DAODST文檔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST文檔" class="md-header__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST文檔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              以太坊虛擬機
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/account/" class="md-tabs__link">
+        🔍協議
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱模塊
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈網關和驗證器
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞聊天
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋常見問題
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST文檔" class="md-nav__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST文檔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍協議
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍協議
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        技術架構
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          命令行界面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          命令行界面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        單節點
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        帳號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        鏈ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        編碼
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas和手續費
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        密鑰環
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        密鑰管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        狀態導入導出
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        等待隊列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        多簽
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        代幣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        交易
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱模塊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱模塊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        模塊賬號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          以太坊虛擬機
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        以太坊虛擬機
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    內容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    模塊架構
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    概念
+  </a>
+  
+    <nav class="md-nav" aria-label="概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evm" class="md-nav__link">
+    EVM
+  </a>
+  
+    <nav class="md-nav" aria-label="EVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    賬號
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    結構
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    智能合約的狀態轉換
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm_1" class="md-nav__link">
+    執行 EVM 字節碼
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daodst-geth" class="md-nav__link">
+    Daodst 作為 Geth 實現
+  </a>
+  
+    <nav class="md-nav" aria-label="Daodst 作為 Geth 實現">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-rpc" class="md-nav__link">
+    JSON-RPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    狀態DB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    共識引擎
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    交易記錄
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-bloom" class="md-nav__link">
+    Block Bloom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    狀態
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    狀態對象
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態對象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db_1" class="md-nav__link">
+    狀態DB
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態DB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crud" class="md-nav__link">
+    以太坊賬戶的 CRUD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eip2930-functionality" class="md-nav__link">
+    EIP2930 functionality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    快照狀態和恢復功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    以太坊交易日誌
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeper" class="md-nav__link">
+    Keeper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    創世狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    創世賬號
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    狀態轉換
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態轉換">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    客戶端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    服務端
+  </a>
+  
+    <nav class="md-nav" aria-label="服務端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    前置處理程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm_2" class="md-nav__link">
+    EVM 模塊
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    交易
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgethereumtx" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgethereumtx_1" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+    <nav class="md-nav" aria-label="MsgEthereumTx">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    轉換
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    簽名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txdata" class="md-nav__link">
+    TxData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacytx" class="md-nav__link">
+    LegacyTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamicfeetx" class="md-nav__link">
+    DynamicFeeTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesslisttx" class="md-nav__link">
+    AccessListTx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abci" class="md-nav__link">
+    ABCI
+  </a>
+  
+    <nav class="md-nav" aria-label="ABCI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    初始化創世
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    導出創世
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beginblock" class="md-nav__link">
+    BeginBlock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    結束出塊
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    鉤子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posttxprocessing" class="md-nav__link">
+    PostTxProcessing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    事件
+  </a>
+  
+    <nav class="md-nav" aria-label="事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgethereumtx_2" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abci_1" class="md-nav__link">
+    ABCI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    參數
+  </a>
+  
+    <nav class="md-nav" aria-label="參數">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    模塊參數
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablecreate" class="md-nav__link">
+    EnableCreate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablecall" class="md-nav__link">
+    EnableCall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-eips" class="md-nav__link">
+    Extra EIPs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-config" class="md-nav__link">
+    Chain Config
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chainconfig" class="md-nav__link">
+    默认 ChainConfig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    客戶端
+  </a>
+  
+    <nav class="md-nav" aria-label="客戶端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    查詢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    交易
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    gRPC
+  </a>
+  
+    <nav class="md-nav" aria-label="gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    查詢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    交易
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        聊天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/" class="md-nav__link">
+        網關
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        合約
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        質押
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈網關和驗證器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈網關和驗證器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          設置和配寘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          設置和配寘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        運行驗證器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        配寘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        硬碟使用優化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        狀態同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        記憶體池
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          陞級
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          陞級
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        升級清單
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        硬分叉升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        自動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        手動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        回滾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        提案模板
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        測試網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        主網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          網關操作指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          網關操作指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        linux版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        window版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        金鑰備份和恢復
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞聊天
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        安裝啟動
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        文檔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/client_server/" class="md-nav__link">
+        客戶端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/server_server/" class="md-nav__link">
+        服務端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        定制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        呼叫流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        可選配置*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋常見問題
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    內容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    模塊架構
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    概念
+  </a>
+  
+    <nav class="md-nav" aria-label="概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evm" class="md-nav__link">
+    EVM
+  </a>
+  
+    <nav class="md-nav" aria-label="EVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    賬號
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    結構
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    智能合約的狀態轉換
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm_1" class="md-nav__link">
+    執行 EVM 字節碼
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daodst-geth" class="md-nav__link">
+    Daodst 作為 Geth 實現
+  </a>
+  
+    <nav class="md-nav" aria-label="Daodst 作為 Geth 實現">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-rpc" class="md-nav__link">
+    JSON-RPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    狀態DB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    共識引擎
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    交易記錄
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-bloom" class="md-nav__link">
+    Block Bloom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    狀態
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    狀態對象
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態對象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db_1" class="md-nav__link">
+    狀態DB
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態DB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crud" class="md-nav__link">
+    以太坊賬戶的 CRUD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eip2930-functionality" class="md-nav__link">
+    EIP2930 functionality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    快照狀態和恢復功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    以太坊交易日誌
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeper" class="md-nav__link">
+    Keeper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    創世狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    創世賬號
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    狀態轉換
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態轉換">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    客戶端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    服務端
+  </a>
+  
+    <nav class="md-nav" aria-label="服務端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    前置處理程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm_2" class="md-nav__link">
+    EVM 模塊
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    交易
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgethereumtx" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgethereumtx_1" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+    <nav class="md-nav" aria-label="MsgEthereumTx">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    轉換
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    簽名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txdata" class="md-nav__link">
+    TxData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacytx" class="md-nav__link">
+    LegacyTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamicfeetx" class="md-nav__link">
+    DynamicFeeTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesslisttx" class="md-nav__link">
+    AccessListTx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abci" class="md-nav__link">
+    ABCI
+  </a>
+  
+    <nav class="md-nav" aria-label="ABCI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    初始化創世
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    導出創世
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beginblock" class="md-nav__link">
+    BeginBlock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    結束出塊
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    鉤子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posttxprocessing" class="md-nav__link">
+    PostTxProcessing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    事件
+  </a>
+  
+    <nav class="md-nav" aria-label="事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgethereumtx_2" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abci_1" class="md-nav__link">
+    ABCI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    參數
+  </a>
+  
+    <nav class="md-nav" aria-label="參數">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    模塊參數
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablecreate" class="md-nav__link">
+    EnableCreate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablecall" class="md-nav__link">
+    EnableCall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-eips" class="md-nav__link">
+    Extra EIPs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-config" class="md-nav__link">
+    Chain Config
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chainconfig" class="md-nav__link">
+    默认 ChainConfig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    客戶端
+  </a>
+  
+    <nav class="md-nav" aria-label="客戶端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    查詢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    交易
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    gRPC
+  </a>
+  
+    <nav class="md-nav" aria-label="gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    查詢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    交易
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>以太坊虛擬機</h1>
+
+<p>本文檔將以太坊虛擬機 (EVM) 的規範定義為 Cosmos SDK 模塊。</p>
+<p>自2015年引入以太坊以來，通過[<strong>智能合約</strong>]控制數字資產的能力吸引了大量開發人員在以太坊虛擬機 (EVM) 上構建去中心化應用程序。
+該社區不斷創建廣泛的工具並引入標準，這進一步提高了 EVM 兼容技術的採用率。</p>
+<p>然而，基於 EVM 的鏈（例如以太坊）的增長揭示了一些可擴展性挑戰，這些挑戰通常被稱為<a href="https://vitalik.ca/general/2021/04 /07/sharding.html">去中心化、安全性和可擴展性的三難困境</a>。
+開發人員對高昂的 gas 費用、緩慢的交易速度和吞吐量以及鏈特定的治理感到沮喪，這些治理由於其廣泛部署的應用程序而只能經歷緩慢的變化。
+需要一種解決方案來消除在熟悉的 EVM 環境中構建應用程序的開發人員的這些顧慮。</p>
+<p><code>x/evm</code> 模塊在可擴展、高吞吐量的權益證明區塊鏈上提供這種 EVM 熟悉度。
+它構建為 <a href="https://docs.cosmos.network/main/building-modules/intro.html">Cosmos SDK 模塊</a>，允許部署智能合約、與 EVM 狀態機交互（狀態轉換） ，以及 EVM 工具的使用。
+它可用於 Cosmos 特定應用程序區塊鏈，通過 <a href="https://github.com/tendermint/tendermint">Tendermint Core</a> 的高交易吞吐量、快速的交易終結性和 <a href="https://ibcprotocol.org/">IBC</a> 的水平可擴展性來緩解上述問題。</p>
+<h2 id="_1">內容</h2>
+<ol>
+<li><strong><a href="#concepts">概念</a></strong></li>
+<li><strong><a href="#state">狀態</a></strong></li>
+<li><strong><a href="#state-transitions">狀態轉換</a></strong></li>
+<li><strong><a href="#transactions">交易</a></strong></li>
+<li><strong><a href="#abci">ABCI</a></strong></li>
+<li><strong><a href="#hooks">鉤子</a></strong></li>
+<li><strong><a href="#events">事件</a></strong></li>
+<li><strong><a href="#parameters">參數</a></strong></li>
+<li><strong><a href="#client">客戶端</a></strong></li>
+</ol>
+<h2 id="_2">模塊架構</h2>
+<blockquote>
+<p><strong>注意:</strong>: 如果您不熟悉 SDK 模塊的整體模塊結構，請先閱讀此 <a href="https://docs.cosmos.network/main/building-modules/structure.html">文檔</a> 作為先決條件。</p>
+</blockquote>
+<pre><code class="language-shell">evm/
+├── client
+│   └── cli
+│       ├── query.go      # 模塊的 CLI 查詢命令
+│       └── tx.go         # 模塊的 CLI 交易命令
+├── keeper
+│   ├── abci.go           # ABCI 開始出塊 和 結束出塊 邏輯
+│   ├── keeper.go         # 處理模塊的業務邏輯。
+│   ├── params.go         # 參數獲取器和設置器
+│   ├── querier.go        # 狀態查詢函數
+│   └── statedb.go        # 來自 types/statedb 並傳入 sdk.Context 的函數
+├── types
+│   ├── chain_config.go
+│   ├── codec.go          # 編碼類型註冊
+│   ├── errors.go         # 特定於模塊的錯誤
+│   ├── events.go         # 暴露給 Tendermint PubSub/Websocket 的事件
+│   ├── genesis.go        # 模塊的創世狀態
+│   ├── journal.go        # 以太坊狀態轉換交易
+│   ├── keys.go           # 存儲密鑰和實用函數
+│   ├── logs.go           # 鏈升級後持久化 Ethereum tx 登錄狀態的類型
+│   ├── msg.go            #EVM 模塊交易消息
+│   ├── params.go         # 可以使用治理參數更改建議自定義的模塊參數
+│   ├── state_object.go   # EVM 狀態對象
+│   ├── statedb.go        # StateDb接口的實現
+│   ├── storage.go        # 使用數組實現以太坊狀態存儲映射以防止非確定性
+│   └── tx_data.go        # 以太坊交易數據類型
+├── genesis.go            # ABCI InitGenesis 和 ExportGenesis 功能
+├── handler.go            # 消息路由
+└── module.go             # 模塊管理器的模塊設置
+</code></pre>
+<h2 id="_3">概念</h2>
+<h3 id="evm">EVM</h3>
+<p>以太坊虛擬機 (EVM) 是一種計算引擎，可以將其視為由數千台運行以太坊客戶端的連接計算機（節點）維護的單一實體。
+作為虛擬機 (<a href="https://en.wikipedia.org/wiki/Virtual_machine">VM</a>)，EVM 負責確定性地計算狀態變化，而不管其環境（硬件和操作系統）如何。
+這意味著在給定相同的起始狀態和交易 (tx) 的情況下，每個節點都必須獲得完全相同的結果。</p>
+<p>EVM 被認為是處理 <a href="https://ethereum.org/en/developers/docs/smart-contracts/">智能合約</a> 部署和執行的以太坊協議的一部分。</p>
+<p>要明確區分：</p>
+<ul>
+<li>以太坊協議描述了一個區塊鏈，所有以太坊賬戶和智能合約都存在於其中。
+  它在鏈中的任何給定塊中只有一個規範狀態（一種數據結構，用於保存所有帳戶）。</li>
+<li>然而，EVM 是 <a href="https://en.wikipedia.org/wiki/Finite-state_machine">狀態機</a>，它定義了從一個塊到另一個塊計算新有效狀態的規則。
+  它是一個隔離的運行時，這意味著在 EVM 內運行的代碼無法訪問網絡、文件系統或其他進程（不是外部 API）。</li>
+</ul>
+<p><code>x/evm</code> 模塊將 EVM 實現為 Cosmos SDK 模塊。
+它允許用戶通過提交以太坊交易並在給定狀態上執行包含的消息來與 EVM 交互，以引發狀態轉換。</p>
+<h4 id="_4">狀態</h4>
+<p>以太坊狀態是一種數據結構，實現為 <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle Patricia Tree</a>，將所有賬戶保存在鏈上。
+EVM 對該數據結構進行更改，從而產生具有不同狀態根的新狀態。
+因此，以太坊可以被視為一條狀態鏈，它通過使用 EVM 在區塊中執行交易來從一種狀態轉換到另一種狀態。
+一個新的 txs 塊可以通過它的塊頭（父哈希、塊號、時間戳、隨機數、收據……）來描述。</p>
+<h4 id="_5">賬號</h4>
+<p>有兩種類型的帳戶可以存儲在給定地址的狀態中：</p>
+<ul>
+<li><strong>外部擁有賬戶 (EOA)</strong>：具有隨機數（tx 計數器）和余額</li>
+<li><strong>智能合約</strong>：具有隨機數、餘額、（不可變）代碼哈希、存儲根（另一個 Merkle Patricia Trie）</li>
+</ul>
+<p>智能合約就像區塊鏈上的常規賬戶一樣，它還以以太坊特定的二進制格式存儲可執行代碼，稱為 <strong>EVM 字節碼</strong>。
+它們通常是用以太坊高級語言編寫的，例如 Solidity，它被編譯成 EVM 字節碼並通過使用以太坊客戶端提交交易部署在區塊鏈上。</p>
+<h4 id="_6">結構</h4>
+<p>EVM 作為基於堆棧的機器運行。
+它的主要架構組件包括：</p>
+<ul>
+<li>Virtual ROM：合約代碼在處理txs時被拉入這個只讀內存</li>
+<li>機器狀態（易失性）：隨著 EVM 運行而變化，並在處理每個 tx 後被清除<ul>
+<li>程序計數器（PC）</li>
+<li>Gas​​：跟踪使用了多少 gas
+  *堆棧和內存：計算狀態變化</li>
+</ul>
+</li>
+<li>訪問帳戶存儲（持久）</li>
+</ul>
+<h4 id="_7">智能合約的狀態轉換</h4>
+<p>通常，智能合約會公開一個公共 ABI，這是一個用戶可以與合約交互的受支持方式的列表。
+要與合約交互並調用狀態轉換，用戶將提交一個攜帶任意數量氣體的交易和根據 ABI 格式化的數據有效負載，指定交互類型和任何其他參數。
+當收到 tx 時，EVM 使用 tx 負載執行智能合約的 EVM 字節碼。</p>
+<h4 id="evm_1">執行 EVM 字節碼</h4>
+<p>合約的 EVM 字節碼由基本操作（加法、乘法、存儲等）組成，稱為<strong>操作碼</strong>。
+每個 Opcode 執行都需要用 tx 支付的 gas。
+因此，EVM 被認為是準圖靈完備的，因為它允許任意計算，但合約執行期間的計算量僅限於 tx 中提供的氣體量。</p>
+<p>每個操作碼的 <a href="https://www.evm.codes/"><strong>gas 成本</strong></a> 反映了在實際計算機硬件上運行這些操作的成本（例如，<code>ADD = 3gas</code> 和 <code>SSTORE = 100gas</code>）。
+要計算交易的 gas 消耗量，請將 gas 成本乘以 <strong>gas price</strong>，這可能會根據當時網絡的需求而變化。
+如果網絡負載很重，您可能需要支付更高的 gas 價格才能執行您的交易。
+如果達到氣體限制（氣體異常），則不會對以太坊狀態進行任何更改，除非發送者的隨機數增加並且他們的餘額下降以支付浪費 EVM 時間的費用。</p>
+<p>智能合約也可以調用其他智能合約。
+每次調用新合約都會創建一個新的 EVM 實例（包括新的堆棧和內存）。
+每次調用都會將沙箱狀態傳遞給下一個 EVM。
+如果氣體用完，所有狀態變化都將被丟棄。
+否則，它們將被保留。</p>
+<p>如需進一步閱讀，請參閱：</p>
+<ul>
+<li><a href="https://eth.wiki/concepts/evm/evm">EVM</a></li>
+<li><a href="https://cypherpunks-core.github.io/ethereumbook/13evm.html#evm_architecture">EVM Architecture</a></li>
+<li><a href="https://ethdocs.org/en/latest/introduction/what-is-ethereum.html#what-is-ethereum">What is Ethereum</a></li>
+<li><a href="https://www.ethervm.io/">Opcodes</a></li>
+</ul>
+<h3 id="daodst-geth">Daodst 作為 Geth 實現</h3>
+<p>Daodst 包含 <a href="https://geth.ethereum.org/docs/getting-started">Golang 中的以太坊協議</a> (Geth) 作為 Cosmos SDK 模塊的實現。
+Geth 包含一個 EVM 的實現來計算狀態轉換。
+查看 <a href="https://github.com/ethereum/go-ethereum/blob/master/core/vm/instructions.go">go-ethereum 源代碼</a> 了解 EVM 操作碼是如何實現的。
+正如 Geth 可以作為以太坊節點運行一樣，Daodst 也可以作為節點運行以計算 EVM 的狀態轉換。</p>
+<h4 id="json-rpc">JSON-RPC</h4>
+<p>JSON-RPC 是一種無狀態、輕量級的遠程過程調用 (RPC) 協議。
+該規範主要定義了幾種數據結構及其處理規則。
+它與傳輸無關，因為這些概念可以在同一進程中、通過套接字、通過 HTTP 或在許多不同的消息傳遞環境中使用。
+它使用 JSON (RFC 4627) 作為數據格式。</p>
+<p><strong> JSON-RPC 範例: <code>eth_call</code> </strong></p>
+<p>JSON-RPC 方法允許您根據合約執行消息。
+通常，您需要將交易發送到 Geth 節點以將其包含在內存池中，然後節點之間相互傳播，最終交易被包含在一個塊中並被執行。
+然而，<code>eth_call</code> 允許您將數據發送到合約，並在不提交交易的情況下查看會發生什麼。</p>
+<p>在Geth實現中，調用端點大致經過以下步驟：</p>
+<ol>
+<li><code>eth_call</code> 請求轉換為使用 <code>eth</code> 命名空間調用 <code>func (s *PublicBlockchainAPI) Call()</code> 函數</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/master/internal/ethapi/api.go#L982"><code>Call()</code></a> 被賦予交易參數、要調用的塊和可選參數，用於修改要調用的狀態。
+   然後它調用 <code>DoCall()</code>。</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/internal/ethapi/api.go#L891"><code>DoCall()</code></a>
+   將參數轉換為<code>ethtypes.message</code>，實例化 EVM 並使用<code>core.ApplyMessage</code>應用消息</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/core/state_transition.go#L180"><code>ApplyMessage()</code></a>
+   調用狀態轉換<code>TransitionDb()</code></li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/core/state_transition.go#L275"><code>TransitionDb()</code></a>
+   <code>Create()</code> 是一個新合約或者 <code>Call()</code> 是一個合約</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/core/vm/evm.go#L168"><code>evm.Call()</code></a>
+   運行解釋器 evm.interpreter.Run() 來執行消息。
+   如果執行失敗，狀態將恢復為執行前拍攝的快照並消耗 gas。</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/core/vm/interpreter.go#L116"><code>Run()</code></a>
+   執行循環以執行操作碼。</li>
+</ol>
+<h4 id="db">狀態DB</h4>
+<p>來自 <a href="https://github.com/ethereum/go-ethereum/blob/master/core/vm/interface.go">go-ethereum</a> 的 <code>StateDB</code> 接口表示用於完整狀態查詢的 EVM 數據庫。
+EVM 狀態轉換由該接口啟用，在 <code>x/evm</code> 模塊中由 <code>Keeper</code> 實現。
+該接口的實現使 Daodst EVM 兼容。</p>
+<h3 id="_8">共識引擎</h3>
+<p>使用 <code>x/evm</code> 模塊的應用程序通過應用程序區塊鏈接口 (ABCI) 與 Tendermint 核心共識引擎交互。
+該應用程序和 Tendermint Core 共同構成了運行完整區塊鏈並將業務邏輯與去中心化數據存儲相結合的程序。</p>
+<p>提交給 <code>x/evm</code> 模塊的以太坊事務在執行和更改應用程序狀態之前參與此共識過程。
+我們鼓勵了解 <a href="https://docs.tendermint.com/main/introduction/what-is-tendermint.html#intro-to-abci">Tendermint 共識引擎</a> 的基礎知識，以便詳細了解狀態轉換.</p>
+<h3 id="_9">交易記錄</h3>
+<p>在每個<code>x/evm</code>交易中，結果包含來自狀態機執行的以太坊<code>日誌</code>，JSON-RPC Web3 服務器使用這些日誌進行過濾器查詢和處理 EVM 掛鉤。</p>
+<p>tx 日誌在 tx 執行期間存儲在臨時存儲中，然後在事務處理後通過 cosmos events 發出。
+可以通過 gRPC 和 JSON-RPC 查詢它們。</p>
+<h3 id="block-bloom">Block Bloom</h3>
+<p>布隆是可用於過濾器查詢的每個塊的布隆過濾器值（以字節為單位）。
+塊 bloom 值存儲在瞬態存儲中，然後在 EndBlock 處理期間通過 cosmos 事件發出。
+可以通過 gRPC 和 JSON-RPC 查詢它們。</p>
+<p>:::提示</p>
+<p>👉 <strong>注意</strong>: 由於它們不存儲在狀態中，事務日誌和塊綻放在升級後不會持久化。
+用戶必須在升級後使用存檔節點才能獲得遺留鏈事件。
+:::</p>
+<h2 id="_10">狀態</h2>
+<p>本節概述存儲在 <code>x/evm</code> 模塊狀態中的對象，源自 go-ethereum <code>StateDB</code> 接口的功能，及其通過 Keeper 的實現以及創世時的狀態實現。</p>
+<h3 id="_11">狀態對象</h3>
+<p><code>x/evm</code> 模塊保持以下狀態的對象：</p>
+<h4 id="_12">狀態</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>說明</th>
+<th>Key</th>
+<th>Value</th>
+<th>Store</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>智能合約字節碼</td>
+<td><code>[]byte{1} + []byte(address)</code></td>
+<td><code>[]byte{code}</code></td>
+<td>KV</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>智能合約存儲</td>
+<td><code>[]byte{2} + [32]byte{key}</code></td>
+<td><code>[32]byte(value)</code></td>
+<td>KV</td>
+</tr>
+<tr>
+<td>Block Bloom</td>
+<td>Block bloom filter，用於累加當前塊的bloom filter，發送到end blocker的事件.</td>
+<td><code>[]byte{1} + []byte(tx.Hash)</code></td>
+<td><code>protobuf([]Log)</code></td>
+<td>Transient</td>
+</tr>
+<tr>
+<td>Tx Index</td>
+<td>當前區塊中當前交易的索引。</td>
+<td><code>[]byte{2}</code></td>
+<td><code>BigEndian(uint64)</code></td>
+<td>Transient</td>
+</tr>
+<tr>
+<td>Log Size</td>
+<td>到目前為止在當前塊中發出的日誌數。用於決定後續日誌的日誌索引.</td>
+<td><code>[]byte{3}</code></td>
+<td><code>BigEndian(uint64)</code></td>
+<td>Transient</td>
+</tr>
+<tr>
+<td>Gas Used</td>
+<td>當前cosmos-sdk tx的ethereum消息使用的gas量，當cosmos-sdk tx包含多條ethereum消息時需要。</td>
+<td><code>[]byte{4}</code></td>
+<td><code>BigEndian(uint64)</code></td>
+<td>Transient</td>
+</tr>
+</tbody>
+</table>
+<h3 id="db_1">狀態DB</h3>
+<p><code>StateDB</code> 接口由 <code>x/evm/statedb</code> 模塊中的 <code>StateDB</code> 實現，代表一個 EVM 數據庫，用於合約和賬戶的完整狀態查詢。
+在以太坊協議中，<code>StateDB</code> 用於存儲 IAVL 樹中的任何內容，並負責緩存和存儲嵌套狀態。</p>
+<pre><code class="language-go">// github.com/ethereum/go-ethereum/core/vm/interface.go
+type StateDB interface {
+ CreateAccount(common.Address)
+
+ SubBalance(common.Address, *big.Int)
+ AddBalance(common.Address, *big.Int)
+ GetBalance(common.Address) *big.Int
+
+ GetNonce(common.Address) uint64
+ SetNonce(common.Address, uint64)
+
+ GetCodeHash(common.Address) common.Hash
+ GetCode(common.Address) []byte
+ SetCode(common.Address, []byte)
+ GetCodeSize(common.Address) int
+
+ AddRefund(uint64)
+ SubRefund(uint64)
+ GetRefund() uint64
+
+ GetCommittedState(common.Address, common.Hash) common.Hash
+ GetState(common.Address, common.Hash) common.Hash
+ SetState(common.Address, common.Hash, common.Hash)
+
+ Suicide(common.Address) bool
+ HasSuicided(common.Address) bool
+
+ // Exist reports whether the given account exists in state.
+ // Notably this should also return true for suicided accounts.
+ Exist(common.Address) bool
+ // Empty returns whether the given account is empty. Empty
+ // is defined according to EIP161 (balance = nonce = code = 0).
+ Empty(common.Address) bool
+
+ PrepareAccessList(sender common.Address, dest *common.Address, precompiles []common.Address, txAccesses types.AccessList)
+ AddressInAccessList(addr common.Address) bool
+ SlotInAccessList(addr common.Address, slot common.Hash) (addressOk bool, slotOk bool)
+ // AddAddressToAccessList adds the given address to the access list. This operation is safe to perform
+ // even if the feature/fork is not active yet
+ AddAddressToAccessList(addr common.Address)
+ // AddSlotToAccessList adds the given (address,slot) to the access list. This operation is safe to perform
+ // even if the feature/fork is not active yet
+ AddSlotToAccessList(addr common.Address, slot common.Hash)
+
+ RevertToSnapshot(int)
+ Snapshot() int
+
+ AddLog(*types.Log)
+ AddPreimage(common.Hash, []byte)
+
+ ForEachStorage(common.Address, func(common.Hash, common.Hash) bool) error
+}
+</code></pre>
+<p>The <code>StateDB</code> in the <code>x/evm</code> provides the following functionalities:</p>
+<h4 id="crud">以太坊賬戶的 CRUD</h4>
+<p>您可以從提供的地址創建 <code>EthAccount</code> 實例，並使用 <code>createAccount()</code> 將值設置為存儲在 <code>AccountKeeper</code> 上。
+如果具有給定地址的帳戶已經存在，此函數還會重置與該地址關聯的任何預先存在的代碼和存儲。</p>
+<p>一個賬戶的貨幣餘額可以通過 <code>BankKeeper</code> 進行管理，可以使用 <code>GetBalance()</code> 讀取並使用 <code>AddBalance()</code> 和 <code>SubBalance()</code> 進行更新。</p>
+<ul>
+<li><code>GetBalance()</code> 返回所提供地址的 EVM 貨幣餘額。
+  貨幣名稱是從模塊參數中獲取的。</li>
+<li><code>AddBalance()</code> 通過鑄造新貨幣並將其轉移到地址來將給定金額添加到地址貨幣餘額中。
+  貨幣名稱是從模塊參數中獲取的。</li>
+<li><code>SubBalance()</code> 通過將貨幣轉移到託管賬戶然後銷毀它們來從地址餘額中減去給定的金額。
+  貨幣名稱是從模塊參數中獲取的。
+  如果金額為負或用戶沒有足夠的資金進行轉賬，此函數將執行空操作。</li>
+</ul>
+<p>隨機數（或交易序列）可以通過身份驗證模塊<code>AccountKeeper</code>從賬戶 <code>Sequence</code> 中獲取。</p>
+<ul>
+<li><code>GetNonce()</code> 檢索具有給定地址的帳戶並返回 tx 序列（即隨機數）。
+  如果找不到該帳戶，該函數將執行空操作。</li>
+<li><code>SetNonce()</code> 將給定的隨機數設置為地址帳戶的序列。
+  如果該帳戶不存在，將從該地址創建一個新帳戶。</li>
+</ul>
+<p>包含任意合約邏輯的智能合約字節碼存儲在 <code>EVMKeeper</code> 上，可以使用 <code>GetCodeHash()</code> , <code>GetCode()</code> 和 <code>GetCodeSize()</code> 查詢，並使用 <code>SetCode()</code> 更新。</p>
+<ul>
+<li><code>GetCodeHash()</code> 從存儲中獲取帳戶並返回其代碼哈希。
+  如果賬戶不存在或不是 EthAccount 類型，則返回空代碼哈希值。</li>
+<li><code>GetCode()</code> 返回與給定地址關聯的代碼字節數組。
+  如果來自帳戶的代碼哈希為空，則此函數返回 nil。</li>
+<li><code>SetCode()</code> 將代碼字節數組存儲到應用程序 KVStore，並將代碼哈希設置到給定的帳戶。
+  如果代碼為空，則將從存儲中刪除該代碼。</li>
+<li><code>GetCodeSize()</code> 返回與此對象關聯的合約代碼的大小，如果沒有則返回零。</li>
+</ul>
+<p>需要跟踪退還的氣體並將其存儲在單獨的變量中，以便在 EVM 執行完成後將其從氣體使用值中減去/添加到氣體使用值中。退款值在每筆交易和每個區塊結束時被清除。</p>
+<ul>
+<li><code>AddRefund()</code> 將給定的氣體量添加到內存中的退款值。</li>
+<li><code>SubRefund()</code> 從內存中的退款值中減去給定的氣體量。
+  如果 gas 量大於當前退款，此函數將 panic。</li>
+<li><code>GetRefund()</code> 返回 tx 執行完成後可用於返回的氣體量。
+  該值在每次交易時重置為 0。</li>
+</ul>
+<p>狀態存儲在<code>EVMKeeper</code>上。
+可以使用 <code>GetCommittedState()</code>、<code>GetState()</code> 查詢並使用 <code>SetState()</code> 更新。</p>
+<ul>
+<li><code>GetCommittedState()</code> 返回存儲中為給定鍵哈希設置的值。
+  如果密鑰未註冊，則此函數返回空散列。</li>
+<li><code>GetState()</code> 返回給定鍵哈希的內存中臟狀態，
+  如果不存在，則從 KVStore 加載提交的值。</li>
+<li><code>SetState()</code> 將給定的哈希值（鍵、值）設置為狀態。
+  如果值散列為空，則此函數從狀態中刪除鍵，
+  新值先保持臟狀態，最後提交給KVStore。</li>
+</ul>
+<p>帳戶也可以設置為自殺狀態。
+當合約自殺時，賬戶被標記為自殺，當提交代碼時，存儲和賬戶被刪除（從下一個塊開始）。</p>
+<ul>
+<li><code>Suicide()</code> 將給定帳戶標記為已自殺並清除 EVM 代幣的帳戶餘額。</li>
+<li><code>HasSuicided()</code> 查詢內存中的標誌以檢查帳戶是否已在當前交易中被標記為自殺。
+  被自殺的賬戶將在查詢期間返回為非零，並在提交塊後“清除”。</li>
+</ul>
+<p>要檢查帳戶是否存在，請使用 <code>Exist()</code> 和 <code>Empty()</code>。</p>
+<ul>
+<li>如果給定帳戶存在於存儲中或已被標記為已自殺，則 <code>Exist()</code> 返回 true。</li>
+<li>如果地址滿足以下條件，<code>Empty()</code> 返回 true：<ul>
+<li>nonce為 0</li>
+<li>evm 貨幣 的餘額為 0</li>
+<li>帳戶code hash為空</li>
+</ul>
+</li>
+</ul>
+<h4 id="eip2930-functionality">EIP2930 functionality</h4>
+<p>支持包含<a href="https://eips.ethereum.org/EIPS/eip-2930">訪問列表</a>、交易計劃訪問的地址和存儲密鑰列表的交易類型。
+訪問列表狀態保存在內存中，並在事務提交後丟棄。</p>
+<ul>
+<li><code>PrepareAccessList()</code> 處理執行關於 EIP-2929 和 EIP-2930 的狀態轉換的準備步驟。
+  僅當 Yolov3/Berlin/2929+2930 適用於當前編號時才應調用此方法。<ul>
+<li>將發件人添加到訪問列表 (EIP-2929)</li>
+<li>將目的地添加到訪問列表 (EIP-2929)</li>
+<li>將預編譯添加到訪問列表 (EIP-2929)</li>
+<li>添加可選的 tx 訪問列表的內容 (EIP-2930)</li>
+</ul>
+</li>
+<li>如果地址已註冊，<code>AddressInAccessList()</code> 返回 true。</li>
+<li><code>SlotInAccessList()</code> 檢查地址和插槽是否已註冊。</li>
+<li><code>AddAddressToAccessList()</code> 將給定地址添加到訪問列表。
+  如果該地址已經在訪問列表中，則此函數執行空操作。</li>
+<li><code>AddSlotToAccessList()</code> 將給定的（地址、槽）添加到訪問列表中。
+  如果地址和插槽已經在訪問列表中，則此函數執行空操作。</li>
+</ul>
+<h4 id="_13">快照狀態和恢復功能</h4>
+<p>EVM 使用狀態恢復異常來處理錯誤。
+這樣的異常將撤消對當前調用（及其所有子調用）中的狀態所做的所有更改，並且調用者可以處理錯誤並且不會傳播。
+您可以使用 <code>Snapshot()</code> 通過修訂識別當前狀態，並使用 <code>RevertToSnapshot()</code> 將狀態恢復到給定修訂以支持此功能。
+- <code>Snapshot()</code> 創建一個新快照並返回標識符。
+- <code>RevertToSnapshot(rev)</code> 撤消所有修改，直至標識為 <code>rev</code> 的快照。</p>
+<p>Daodst 改編了 <a href="https://github.com/ethereum/go-ethereum/blob/master/core/state/journal.go#L39">go-ethereum journal implementation</a> 來支持這一點，它使用日誌列表為了記錄到目前為止完成的所有狀態修改操作，快照由日誌列表中的唯一 ID 和索引組成，要恢復為快照，它只是以相反的順序在快照索引之後撤消日誌日誌。</p>
+<h4 id="_14">以太坊交易日誌</h4>
+<p>使用 <code>AddLog()</code>，您可以將給定的以太坊 <code>Log</code> 附加到與保存在當前狀態的交易哈希關聯的日誌列表中。
+該函數還在設置要存儲的日誌之前填寫 tx hash、block hash、tx index 和 log index 字段。</p>
+<h3 id="keeper">Keeper</h3>
+<p>EVM 模塊<code>Keeper</code>授予對 EVM 模塊狀態的訪問權限，並實現 <code>statedb.Keeper</code> 接口以支持 <code>StateDB</code> 實現。
+Keeper 包含一個存儲密鑰，允許 DB 寫入只能由 EVM 模塊訪問的多存儲的具體子樹。
+Daodst 沒有使用 trie 和數據庫進行查詢和持久化（ <code>StateDB</code> 實現），而是使用 Cosmos 的 <code>KVStore</code>（鍵值存儲）和 Cosmos SDK 的<code>Keeper</code>來促進狀態轉換。</p>
+<p>為了支持接口功能，它導入了 4 個模塊 Keepers：</p>
+<ul>
+<li><code>auth</code>：CRUD 帳戶</li>
+<li><code>bank</code>：會計（供應）和余額的 CRUD</li>
+<li><code>staking</code>：查詢歷史標頭</li>
+<li><code>fee market</code>：處理<code>DynamicFeeTx</code>的EIP1559基本費用
+   在<code>ChainConfig</code>參數上激活<code>London</code>硬分叉之後</li>
+</ul>
+<pre><code class="language-go">type Keeper struct {
+ // Protobuf codec
+ cdc codec.BinaryCodec
+ // Store key required for the EVM Prefix KVStore. It is required by:
+ // - storing account's Storage State
+ // - storing account's Code
+ // - storing Bloom filters by block height. Needed for the Web3 API.
+ // For the full list, check the module specification
+ storeKey sdk.StoreKey
+
+ // key to access the transient store, which is reset on every block during Commit
+ transientKey sdk.StoreKey
+
+ // module specific parameter space that can be configured through governance
+ paramSpace paramtypes.Subspace
+ // access to account state
+ accountKeeper types.AccountKeeper
+ // update balance and accounting operations with coins
+ bankKeeper types.BankKeeper
+ // access historical headers for EVM state transition execution
+ stakingKeeper types.StakingKeeper
+ // fetch EIP1559 base fee and parameters
+ feeMarketKeeper types.FeeMarketKeeper
+
+ // chain ID number obtained from the context's chain id
+ eip155ChainID *big.Int
+
+ // Tracer used to collect execution traces from the EVM transaction execution
+ tracer string
+ // trace EVM state transition execution. This value is obtained from the `--trace` flag.
+ // For more info check https://geth.ethereum.org/docs/dapp/tracing
+ debug bool
+
+ // EVM Hooks for tx post-processing
+ hooks types.EvmHooks
+}
+</code></pre>
+<h3 id="_15">創世狀態</h3>
+<p><code>x/evm</code> 模塊 <code>GenesisState</code> 定義了從先前導出的高度初始化鏈所需的狀態。
+它包含 <code>GenesisAccounts</code> 和模塊參數</p>
+<pre><code class="language-go">type GenesisState struct {
+  // accounts is an array containing the ethereum genesis accounts.
+  Accounts []GenesisAccount `protobuf:&quot;bytes,1,rep,name=accounts,proto3&quot; json:&quot;accounts&quot;`
+  // params defines all the parameters of the module.
+  Params Params `protobuf:&quot;bytes,2,opt,name=params,proto3&quot; json:&quot;params&quot;`
+}
+</code></pre>
+<h3 id="_16">創世賬號</h3>
+<p><code>GenesisAccount</code> 類型對應於以太坊<code>GenesisAccount</code> 類型的改編。
+它定義了一個在創世狀態下被初始化的賬戶。</p>
+<p>它的主要區別在於 Daodst 上的那個使用自定義的<code>Storage</code>類型，該類型使用切片而不是 evm<code>State</code>的映射（由於非確定性），並且它不包含私鑰字段。</p>
+<p>同樣重要的是要注意，由於 Cosmos SDK 上的<code>auth</code>模塊管理帳戶狀態，<code>Address</code>字段必須對應於存儲在<code>auth</code>模塊<code>Keeper</code>中的現有<code>EthAccount</code>（即<code>AccountKeeper</code>）。</p>
+<p>地址使用 <strong><a href="https://eips.ethereum.org/EIPS/eip-55">EIP55</a></strong> 十六進制 <strong>[格式]</strong>
+在 <code>genesis.json</code> 上。</p>
+<pre><code class="language-go">type GenesisAccount struct {
+  // address defines an ethereum hex formated address of an account
+  Address string `protobuf:&quot;bytes,1,opt,name=address,proto3&quot; json:&quot;address,omitempty&quot;`
+  // code defines the hex bytes of the account code.
+  Code string `protobuf:&quot;bytes,2,opt,name=code,proto3&quot; json:&quot;code,omitempty&quot;`
+  // storage defines the set of state key values for the account.
+  Storage Storage `protobuf:&quot;bytes,3,rep,name=storage,proto3,castrepeated=Storage&quot; json:&quot;storage&quot;`
+}
+</code></pre>
+<h2 id="_17">狀態轉換</h2>
+<p><code>x/evm</code> 模塊允許用戶提交以太坊交易 (<code>Tx</code>) 並執行它們包含的消息以在給定狀態上引發狀態轉換。</p>
+<p>用戶在客戶端提交交易以將其廣播到網絡。
+當交易在共識過程中被包含在一個塊中時，它將在服務器端執行。
+我們強烈建議您了解 <a href="https://docs.tendermint.com/main/introduction/what-is-tendermint.html#intro-to-abci">Tendermint 共識引擎</a> 的基礎知識，以詳細了解狀態轉換.</p>
+<h3 id="_18">客戶端</h3>
+<p>:::提示
+👉 這是基於 <code>eth_sendTransaction</code> JSON-RPC
+:::</p>
+<ol>
+<li>
+<p>用戶使用以太坊兼容的客戶端或錢包（例如 Metamask、WalletConnect、Ledger 等）通過可用的 JSON-RPC 端點之一提交交易：</p>
+<ul>
+<li>eth（公共）命名空間： <code>eth_sendTransaction</code> 和 <code>eth_sendRawTransaction</code></li>
+<li>個人（私有）命名空間： <code>personal_sendTransaction</code></li>
+</ul>
+</li>
+<li>
+<p>在使用 SetTxDefaults 填充 RPC 事務後創建一個 MsgEthereumTx 實例，以使用默認值填充缺失的 tx 參數</p>
+</li>
+<li>使用 ValidateBasic() 驗證 <code>Tx</code> 字段（無狀態）</li>
+<li><code>Tx</code> 使用與發件人地址關聯的密鑰和來自 <code>ChainConfig</code> 的最新以太坊硬分叉（<code>London</code>、<code>Berlin</code> 等）<strong>簽名</strong></li>
+<li><code>Tx</code> 是使用 Cosmos Config 構建器從 msg 字段<strong>構建</strong>的</li>
+<li><code>Tx</code> 在同步模式中<a href="https://docs.cosmos.network/main/run-node/txs.html#broadcasting-a-transaction">廣播</a>
+   確保等待 <a href="https://docs.tendermint.com/main/introduction/what-is-tendermint.html#intro-to-abci"><code>CheckTx</code></a> 執行響應。
+   在添加到共識引擎的內存池之前，應用程序使用<code>CheckTx()</code>驗證交易。</li>
+<li>JSON-RPC 用戶收到帶有交易字段的 <a href="https://eth.wiki/en/fundamentals/rlp"><code>RLP</code></a> 哈希的響應。
+   此哈希不同於 SDK 交易使用的默認哈希，後者計算交易字節的<code>sha256</code>哈希。</li>
+</ol>
+<h3 id="_19">服務端</h3>
+<p>一旦在共識期間提交了一個塊（包含“Tx”），它就會在服務器端的一系列 ABCI 消息中應用於應用程序。</p>
+<p>每個 <code>Tx</code> 都由應用程序通過調用 <a href="https://docs.cosmos.network/main/core/baseapp.html#runtx"><code>RunTx</code></a> 來處理。
+在對 <code>Tx</code> 中的每個 <code>sdk.Msg</code> 進行無狀態驗證後，<code>AnteHandler</code> 確認 <code>Tx</code> 是以太坊交易還是 SDK 交易。
+作為以太坊交易，它包含消息，然後由 <code>x/evm</code> 模塊處理以更新應用程序的狀態。</p>
+<h4 id="_20">前置處理程序</h4>
+<p><code>anteHandler</code> 為每筆交易運行。
+它檢查 <code>Tx</code> 是否是以太坊交易並將其路由到內部 ante 處理程序。
+在這裡，<code>Tx</code> 使用 EthereumTx 擴展選項進行處理，以不同於正常的 Cosmos SDK 交易來處理它們。
+<code>antehandler</code> 運行一系列選項及其針對每個 <code>Tx</code> 的 <code>AnteHandle</code> 函數：</p>
+<ul>
+<li><code>EthSetUpContextDecorator()</code> 改編自 cosmos-sdk 的 SetUpContextDecorator，它通過將燃氣表設置為無限來忽略燃氣消耗</li>
+<li><code>EthValidateBasicDecorator(evmKeeper)</code> 驗證以太坊類型 Cosmos <code>Tx</code> 消息的字段</li>
+<li><code>EthSigVerificationDecorator(evmKeeper)</code> 驗證註冊的鏈 ID 是否與消息上的相同，並且簽名者地址是否與消息上定義的相匹配。
+  RecheckTx 不會跳過它，因為它設置了<code>From</code>地址，這對於其他 ante 處理程序的工作至關重要。
+  RecheckTx 失敗將阻止 tx 被包含到塊中，特別是當 CheckTx 成功時，在這種情況下用戶將不會看到錯誤消息。
+  -<code>EthAccountVerificationDecorator(ak, bankKeeper, evmKeeper)</code>
+  將驗證發送方餘額是否大於總交易成本。
+  如果該帳戶不存在，即無法在存儲中找到，則該帳戶將被設置到存儲中。
+  如果出現以下情況，此 AnteHandler 裝飾器將失敗：<ul>
+<li>任何消息都不是 MsgEthereumTx</li>
+<li>發件人地址為空</li>
+<li>賬戶餘額低於交易成本</li>
+</ul>
+</li>
+<li><code>EthNonceVerificationDecorator(ak)</code> 驗證交易隨機數是否有效並等同於發送方賬戶的當前隨機數。</li>
+<li><code>EthGasConsumeDecorator(evmKeeper)</code> 驗證以太坊 tx 消息是否足以支付固有氣體（僅在 CheckTx 期間）並且發送方有足夠的餘額來支付氣體成本。
+  交易的固有氣體是交易在執行之前使用的氣體量。
+  氣體是一個常數值加上交易提供的額外數據字節所產生的任何成本。
+  如果出現以下情況，此 AnteHandler 裝飾器將失敗：<ul>
+<li>交易包含多個消息</li>
+<li>消息不是 MsgEthereumTx</li>
+<li>找不到發件人帳戶</li>
+<li>交易的 gas limit 低於固有 gas</li>
+<li>用戶沒有足夠的餘額來扣除交易費用（gas_limit * gas_price）</li>
+<li>交易或區塊煤氣表用完煤氣</li>
+</ul>
+</li>
+<li><code>CanTransferDecorator(evmKeeper, feeMarketKeeper)</code> 從消息中創建一個 EVM 並調用 BlockContext CanTransfer 函數來查看該地址是否可以執行交易。</li>
+<li><code>EthIncrementSenderSequenceDecorator(ak)</code> 處理遞增簽名者（即發送者）的序列。
+  如果交易是合約創建，則隨機數將在交易執行期間遞增，而不是在此 AnteHandler 裝飾器內。</li>
+</ul>
+<p>選項 <code>authante.NewMempoolFeeDecorator()</code>、<code>authante.NewTxTimeoutHeightDecorator()</code> 和 <code>authante.NewValidateMemoDecorator(ak)</code> 與 Cosmos <code>Tx</code> 相同。
+單擊<a href="https://docs.cosmos.network/main/basics/gas-fees.html#antehandler">此處</a>了解有關 <code>anteHandler</code> 的更多信息。</p>
+<h4 id="evm_2">EVM 模塊</h4>
+<p>通過 <code>antehandler</code> 驗證後，<code>Tx</code> 中的每個 <code>sdk.Msg</code>（在本例中為 <code>MsgEthereumTx</code>）
+傳遞給 <code>x/evm</code> 模塊中的 Msg Handler，並通過以下步驟運行：</p>
+<ol>
+<li>將 <code>Msg</code> 轉換為以太坊的 <code>Tx</code> 類型</li>
+<li>將 <code>Tx</code> 與 <code>EVMConfig</code> 一起應用並嘗試執行狀態轉換，只有在交易未失敗的情況下才會持久化（提交）到底層 KVStore：
+   1.確認創建了<code>EVMConfig</code><ol>
+<li>使用來自“EVMConfig”的鏈配置值創建以太坊簽名者</li>
+<li>將以太坊交易哈希設置為（臨時）臨時存儲，以便它也可用於 StateDB 函數
+   4.生成新的EVM實例</li>
+<li>確認用於合約創建 (<code>EnableCreate</code>) 和合約執行 (<code>EnableCall</code>) 的 EVM 參數已啟用
+   6.應用消息。如果<code>To</code>地址為<code>nil</code>，則使用代碼作為部署代碼創建新合約。 Else 以給定輸入作為參數在給定地址調用合約
+   7.計算evm操作使用的gas</li>
+</ol>
+</li>
+<li>如果<code>Tx</code>申請成功<ol>
+<li>執行 EVM <code>Tx</code> 後處理掛鉤。如果鉤子返回錯誤，則還原整個“Tx”
+   2.按照以太坊gas記賬規則返還gas</li>
+<li>使用從 tx 生成的日誌更新塊布隆過濾器值</li>
+<li>為交易字段和 tx 日誌發出 SDK 事件</li>
+</ol>
+</li>
+</ol>
+<h2 id="_21">交易</h2>
+<p>本部分定義了導致上一節中定義的狀態轉換的 <code>sdk.Msg</code> 具體類型。</p>
+<h2 id="msgethereumtx"><code>MsgEthereumTx</code></h2>
+<p>EVM 狀態轉換可以通過使用“MsgEthereumTx”來實現。
+此消息將以太坊交易數據 (<code>TxData</code>) 封裝為 <code>sdk.Msg</code>。
+它包含必要的交易數據字段。
+請注意，<code>MsgEthereumTx</code> 實現了 <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.39.2/types/tx_msg.go#L7-L29"><code>sdk.Msg</code></a> 和 <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.39.2/types/tx_msg.go#L33-L41"> <code>sdk.Tx</code></a> 接口。
+通常，SDK 消息只實現前者，而後者是一組消息捆綁在一起。</p>
+<p>本部分定義了導致上一節中定義的狀態轉換的 <code>sdk.Msg</code> 具體類型。</p>
+<h2 id="msgethereumtx_1"><code>MsgEthereumTx</code></h2>
+<p>EVM 狀態轉換可以通過使用 <code>MsgEthereumTx</code>來實現。
+此消息將以太坊交易數據 (<code>TxData</code>) 封裝為 <code>sdk.Msg</code>。
+它包含必要的交易數據字段。
+請注意，<code>MsgEthereumTx</code> 實現了 <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.39.2/types/tx_msg.go#L7-L29"><code>sdk.Msg</code></a> 和 <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.39.2/types/tx_msg.go#L33-L41"> <code>sdk.Tx</code></a> 接口。</p>
+<p>通常，SDK 消息只實現前者，而後者是一組消息捆綁在一起。</p>
+<pre><code class="language-go">type MsgEthereumTx struct {
+ // inner transaction data
+ Data *types.Any `protobuf:&quot;bytes,1,opt,name=data,proto3&quot; json:&quot;data,omitempty&quot;`
+ // DEPRECATED: encoded storage size of the transaction
+ Size_ float64 `protobuf:&quot;fixed64,2,opt,name=size,proto3&quot; json:&quot;-&quot;`
+ // transaction hash in hex format
+ Hash string `protobuf:&quot;bytes,3,opt,name=hash,proto3&quot; json:&quot;hash,omitempty&quot; rlp:&quot;-&quot;`
+ // ethereum signer address in hex format. This address value is checked
+ // against the address derived from the signature (V, R, S) using the
+ // secp256k1 elliptic curve
+ From string `protobuf:&quot;bytes,4,opt,name=from,proto3&quot; json:&quot;from,omitempty&quot;`
+}
+</code></pre>
+<p>如果出現以下情況，則此消息字段驗證預計會失敗：</p>
+<ul>
+<li><code>From</code> 字段已定義且地址無效</li>
+<li><code>TxData</code> 無狀態驗證失敗</li>
+</ul>
+<p>如果出現以下情況，交易執行預計會失敗：</p>
+<ul>
+<li>任何自定義的<code>AnteHandler</code>以太坊裝飾器檢查都失敗了：<ul>
+<li>交易的最低gas量要求</li>
+<li>Tx 發件人帳戶不存在或沒有足夠的費用餘額</li>
+<li>賬戶序列與交易<code>Data.AccountNonce</code>不匹配</li>
+<li>消息簽名驗證失敗</li>
+</ul>
+</li>
+<li>EVM 合約創建（即 <code>evm.Create</code>）失敗，或 <code>evm.Call</code> 失敗</li>
+</ul>
+<h4 id="_22">轉換</h4>
+<p><code>MsgEthreumTx</code> 可以轉換為 go-ethereum <code>Transaction</code> 和 <code>Message</code> 類型
+為了創建和調用 evm 合約。</p>
+<pre><code class="language-go">// AsTransaction creates an Ethereum Transaction type from the msg fields
+func (msg MsgEthereumTx) AsTransaction() *ethtypes.Transaction {
+ txData, err := UnpackTxData(msg.Data)
+ if err != nil {
+  return nil
+ }
+
+ return ethtypes.NewTx(txData.AsEthereumData())
+}
+
+// AsMessage returns the transaction as a core.Message.
+func (tx *Transaction) AsMessage(s Signer, baseFee *big.Int) (Message, error) {
+ msg := Message{
+  nonce:      tx.Nonce(),
+  gasLimit:   tx.Gas(),
+  gasPrice:   new(big.Int).Set(tx.GasPrice()),
+  gasFeeCap:  new(big.Int).Set(tx.GasFeeCap()),
+  gasTipCap:  new(big.Int).Set(tx.GasTipCap()),
+  to:         tx.To(),
+  amount:     tx.Value(),
+  data:       tx.Data(),
+  accessList: tx.AccessList(),
+  isFake:     false,
+ }
+ // If baseFee provided, set gasPrice to effectiveGasPrice.
+ if baseFee != nil {
+  msg.gasPrice = math.BigMin(msg.gasPrice.Add(msg.gasTipCap, baseFee), msg.gasFeeCap)
+ }
+ var err error
+ msg.from, err = Sender(s, tx)
+ return msg, err
+}
+</code></pre>
+<h4 id="_23">簽名</h4>
+<p>為了使簽名驗證有效，<code>TxData</code> 必須包含來自 <code>Signer</code> 的 <code>v | r | s</code> 值。
+Sign 計算 secp256k1 ECDSA 簽名並簽署交易。
+根據 EIP155 標準，它需要一個密鑰環簽名者和 chainID 來簽署以太坊交易。
+此方法在填充交易簽名的 V、R、S 字段時改變交易。
+如果未為消息定義發件人地址或發件人未在密鑰環上註冊，則該函數將失敗。</p>
+<pre><code class="language-go">// Sign calculates a secp256k1 ECDSA signature and signs the transaction. It
+// takes a keyring signer and the chainID to sign an Ethereum transaction according to
+// EIP155 standard.
+// This method mutates the transaction as it populates the V, R, S
+// fields of the Transaction's Signature.
+// The function will fail if the sender address is not defined for the msg or if
+// the sender is not registered on the keyring
+func (msg *MsgEthereumTx) Sign(ethSigner ethtypes.Signer, keyringSigner keyring.Signer) error {
+ from := msg.GetFrom()
+ if from.Empty() {
+  return fmt.Errorf(&quot;sender address not defined for message&quot;)
+ }
+
+ tx := msg.AsTransaction()
+ txHash := ethSigner.Hash(tx)
+
+ sig, _, err := keyringSigner.SignByAddress(from, txHash.Bytes())
+ if err != nil {
+  return err
+ }
+
+ tx, err = tx.WithSignature(ethSigner, sig)
+ if err != nil {
+  return err
+ }
+
+ msg.FromEthereumTx(tx)
+ return nil
+}
+</code></pre>
+<h3 id="txdata">TxData</h3>
+<p><code>MsgEthereumTx</code> 支持來自 go-ethereum 的 3 種有效的以太坊交易數據類型：
+<code>LegacyTx</code>、<code>AccessListTx</code> 和 <code>DynamicFeeTx</code>。
+這些類型被定義為 protobuf 消息，並打包到 <code>MsgEthereumTx</code> 字段中的 <code>proto.Any</code> 接口類型中。</p>
+<ul>
+<li><code>LegacyTx</code>: <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP-155</a> 交易類型</li>
+<li><code>DynamicFeeTx</code>：<a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> 交易類型。</li>
+<li><code>AccessListTx</code>：<a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> 交易類型。</li>
+</ul>
+<h3 id="legacytx"><code>LegacyTx</code></h3>
+<p>常规以太坊交易的交易数据。</p>
+<pre><code class="language-go">type LegacyTx struct {
+ // nonce corresponds to the account nonce (transaction sequence).
+ Nonce uint64 `protobuf:&quot;varint,1,opt,name=nonce,proto3&quot; json:&quot;nonce,omitempty&quot;`
+ // gas price defines the value for each gas unit
+ GasPrice *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,2,opt,name=gas_price,json=gasPrice,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;gas_price,omitempty&quot;`
+ // gas defines the gas limit defined for the transaction.
+ GasLimit uint64 `protobuf:&quot;varint,3,opt,name=gas,proto3&quot; json:&quot;gas,omitempty&quot;`
+ // hex formatted address of the recipient
+ To string `protobuf:&quot;bytes,4,opt,name=to,proto3&quot; json:&quot;to,omitempty&quot;`
+ // value defines the unsigned integer value of the transaction amount.
+ Amount *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,5,opt,name=value,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;value,omitempty&quot;`
+ // input defines the data payload bytes of the transaction.
+ Data []byte `protobuf:&quot;bytes,6,opt,name=data,proto3&quot; json:&quot;data,omitempty&quot;`
+ // v defines the signature value
+ V []byte `protobuf:&quot;bytes,7,opt,name=v,proto3&quot; json:&quot;v,omitempty&quot;`
+ // r defines the signature value
+ R []byte `protobuf:&quot;bytes,8,opt,name=r,proto3&quot; json:&quot;r,omitempty&quot;`
+ // s define the signature value
+ S []byte `protobuf:&quot;bytes,9,opt,name=s,proto3&quot; json:&quot;s,omitempty&quot;`
+}
+</code></pre>
+<p>如果出現以下情況，則此消息字段驗證預計會失敗：</p>
+<ul>
+<li><code>GasPrice</code> 無效（<code>nil</code>，負數或超出 int256 範圍）</li>
+<li><code>Fee</code> (gasprice * gaslimit) 無效</li>
+<li><code>Amount</code> 無效（負數或超出 int256 範圍）</li>
+<li><code>To</code> 地址無效（無效的以太坊十六進制地址）</li>
+</ul>
+<h3 id="dynamicfeetx"><code>DynamicFeeTx</code></h3>
+<p>EIP-1559動態手續費交易的交易數據。</p>
+<pre><code class="language-go">type DynamicFeeTx struct {
+ // destination EVM chain ID
+ ChainID *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,1,opt,name=chain_id,json=chainId,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;chainID&quot;`
+ // nonce corresponds to the account nonce (transaction sequence).
+ Nonce uint64 `protobuf:&quot;varint,2,opt,name=nonce,proto3&quot; json:&quot;nonce,omitempty&quot;`
+ // gas tip cap defines the max value for the gas tip
+ GasTipCap *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,3,opt,name=gas_tip_cap,json=gasTipCap,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;gas_tip_cap,omitempty&quot;`
+ // gas fee cap defines the max value for the gas fee
+ GasFeeCap *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,4,opt,name=gas_fee_cap,json=gasFeeCap,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;gas_fee_cap,omitempty&quot;`
+ // gas defines the gas limit defined for the transaction.
+ GasLimit uint64 `protobuf:&quot;varint,5,opt,name=gas,proto3&quot; json:&quot;gas,omitempty&quot;`
+ // hex formatted address of the recipient
+ To string `protobuf:&quot;bytes,6,opt,name=to,proto3&quot; json:&quot;to,omitempty&quot;`
+ // value defines the the transaction amount.
+ Amount *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,7,opt,name=value,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;value,omitempty&quot;`
+ // input defines the data payload bytes of the transaction.
+ Data     []byte     `protobuf:&quot;bytes,8,opt,name=data,proto3&quot; json:&quot;data,omitempty&quot;`
+ Accesses AccessList `protobuf:&quot;bytes,9,rep,name=accesses,proto3,castrepeated=AccessList&quot; json:&quot;accessList&quot;`
+ // v defines the signature value
+ V []byte `protobuf:&quot;bytes,10,opt,name=v,proto3&quot; json:&quot;v,omitempty&quot;`
+ // r defines the signature value
+ R []byte `protobuf:&quot;bytes,11,opt,name=r,proto3&quot; json:&quot;r,omitempty&quot;`
+ // s define the signature value
+ S []byte `protobuf:&quot;bytes,12,opt,name=s,proto3&quot; json:&quot;s,omitempty&quot;`
+}
+</code></pre>
+<p>如果出現以下情況，則此消息字段驗證預計會失敗：</p>
+<ul>
+<li><code>GasTipCap</code> 無效（<code>nil</code>、負值或溢出 int256）</li>
+<li><code>GasFeeCap</code> 無效（<code>nil</code>、負值或溢出 int256）</li>
+<li><code>GasFeeCap</code> 小於 <code>GasTipCap</code></li>
+<li><code>Fee</code> (gas price * gas limit) 無效（溢出 int256）</li>
+<li><code>Amount</code> 無效（負數或溢出 int256）</li>
+<li><code>To</code> 地址無效（無效的以太坊十六進制地址）</li>
+<li><code>ChainID</code> 為 <code>nil</code></li>
+</ul>
+<h3 id="accesslisttx"><code>AccessListTx</code></h3>
+<p>EIP-2930訪問列表交易的交易數據。</p>
+<pre><code class="language-go">type AccessListTx struct {
+ // destination EVM chain ID
+ ChainID *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,1,opt,name=chain_id,json=chainId,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;chainID&quot;`
+ // nonce corresponds to the account nonce (transaction sequence).
+ Nonce uint64 `protobuf:&quot;varint,2,opt,name=nonce,proto3&quot; json:&quot;nonce,omitempty&quot;`
+ // gas price defines the value for each gas unit
+ GasPrice *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,3,opt,name=gas_price,json=gasPrice,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;gas_price,omitempty&quot;`
+ // gas defines the gas limit defined for the transaction.
+ GasLimit uint64 `protobuf:&quot;varint,4,opt,name=gas,proto3&quot; json:&quot;gas,omitempty&quot;`
+ // hex formatted address of the recipient
+ To string `protobuf:&quot;bytes,5,opt,name=to,proto3&quot; json:&quot;to,omitempty&quot;`
+ // value defines the unsigned integer value of the transaction amount.
+ Amount *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,6,opt,name=value,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;value,omitempty&quot;`
+ // input defines the data payload bytes of the transaction.
+ Data     []byte     `protobuf:&quot;bytes,7,opt,name=data,proto3&quot; json:&quot;data,omitempty&quot;`
+ Accesses AccessList `protobuf:&quot;bytes,8,rep,name=accesses,proto3,castrepeated=AccessList&quot; json:&quot;accessList&quot;`
+ // v defines the signature value
+ V []byte `protobuf:&quot;bytes,9,opt,name=v,proto3&quot; json:&quot;v,omitempty&quot;`
+ // r defines the signature value
+ R []byte `protobuf:&quot;bytes,10,opt,name=r,proto3&quot; json:&quot;r,omitempty&quot;`
+ // s define the signature value
+ S []byte `protobuf:&quot;bytes,11,opt,name=s,proto3&quot; json:&quot;s,omitempty&quot;`
+}
+</code></pre>
+<p>如果出現以下情況，則此消息字段驗證預計會失敗：</p>
+<ul>
+<li><code>GasPrice</code> 無效（<code>nil</code>、負數或溢出 int256）</li>
+<li><code>Fee</code> (gas price * gas limit) 無效（溢出 int256）</li>
+<li><code>Amount</code> 無效（負數或溢出 int256）</li>
+<li><code>To</code> 地址無效（無效的以太坊十六進制地址）</li>
+<li><code>ChainID</code> 為 <code>nil</code></li>
+</ul>
+<h2 id="abci">ABCI</h2>
+<p>應用程序區塊鏈接口 (ABCI) 允許應用程序與 Tendermint 共識引擎進行交互。
+該應用程序與 Tendermint 保持多個 ABCI 連接。
+與 <code>x/evm</code> 最相關的是 <a href="https://docs.tendermint.com/v0.33/app-dev/app-development.html#consensus-connection">提交時的共識連接</a>。
+此連接負責塊執行並調用函數<code>InitChain</code>（包含<code>InitGenesis</code>），<code>BeginBlock</code>，<code>DeliverTx</code>，<code>EndBlock</code>，<code>Commit</code>。
+<code>InitChain</code> 僅在第一次啟動新區塊鏈時調用，並且為塊中的每個交易調用 <code>DeliverTx</code>。</p>
+<h3 id="_24">初始化創世</h3>
+<p><code>InitGenesis</code> 通過將 <code>GenesisState</code> 字段設置為存儲來初始化 EVM 模塊創世狀態。
+特別是，它設置參數和創世帳戶（狀態和代碼）。</p>
+<h3 id="_25">導出創世</h3>
+<p><code>ExportGenesis</code> ABCI 函數導出 EVM 模塊的創世狀態。
+特別是，它檢索所有帳戶及其字節碼、餘額和存儲、交易日誌、
+以及 EVM 參數和鏈配置。</p>
+<h3 id="beginblock">BeginBlock</h3>
+<p>EVM 模塊<code>BeginBlock</code>邏輯在處理交易的狀態轉換之前執行。
+該功能的主要目標是：</p>
+<ul>
+<li>設置當前區塊的上下文，以便區塊頭、存儲、煤氣表等。
+  一旦在 EVM 狀態轉換期間調用了 StateDB 函數之一，Keeper 就可以使用這些函數。</li>
+<li>設置 EIP155 <code>ChainID</code> 編號（從完整的鏈 ID 獲得），以防之前在 <code>InitChain</code> 期間未設置它</li>
+</ul>
+<h3 id="_26">結束出塊</h3>
+<p>EVM 模塊的<code>EndBlock</code>邏輯發生在執行完交易的所有狀態轉換之後。
+該功能的主要目標是：</p>
+<ul>
+<li>發出塊綻放事件<ul>
+<li>這是由於 web3 兼容性，因為以太坊標頭包含此類型作為字段。
+  JSON-RPC 服務使用此事件查詢從 Tendermint 標頭構造以太坊標頭。</li>
+<li>塊布隆過濾器值從瞬態存儲中獲取，然後發出</li>
+</ul>
+</li>
+</ul>
+<h2 id="_27">鉤子</h2>
+<p><code>x/evm</code> 模塊實現了一個 <code>EvmHooks</code> 接口，可以在外部擴展和定制 <code>Tx</code> 處理邏輯。</p>
+<p>這支持 EVM 合約調用原生 cosmos 模塊</p>
+<ol>
+<li>定義日誌簽名並從智能合約發出特定日誌，</li>
+<li>在本機 tx 處理代碼中識別這些日誌，以及</li>
+<li>將它們轉換為本地模塊調用。</li>
+</ol>
+<p>為此，接口包含一個 PostTxProcessing 掛鉤，用於在 EvmKeeper 中註冊自定義的 Tx 掛鉤。
+這些<code>Tx</code>掛鉤在 EVM 狀態轉換完成並且不會失敗後進行處理。
+請注意，EVM 模塊中沒有實現默認掛鉤。</p>
+<pre><code class="language-go">type EvmHooks interface {
+ // Must be called after tx is processed successfully, if return an error, the whole transaction is reverted.
+ PostTxProcessing(ctx sdk.Context, msg core.Message, receipt *ethtypes.Receipt) error
+}
+</code></pre>
+<h2 id="posttxprocessing"><code>PostTxProcessing</code></h2>
+<p><code>PostTxProcessing</code> 僅在 EVM 事務​​成功完成後調用，並將調用委託給底層掛鉤。
+如果沒有鉤子被註冊，這個函數返回一個<code>nil</code> 錯誤。 .</p>
+<pre><code class="language-go">func (k *Keeper) PostTxProcessing(ctx sdk.Context, msg core.Message, receipt *ethtypes.Receipt) error {
+ if k.hooks == nil {
+  return nil
+ }
+ return k.hooks.PostTxProcessing(k.Ctx(), msg, receipt)
+}
+</code></pre>
+<p>它與 EVM 事務​​在相同的緩存上下文中執行，如果它返回錯誤，整個 EVM 事務​​將被還原，如果 hook 實現者不想還原 tx，他們總是可以返回 <code>nil</code>。</p>
+<p>鉤子返回的錯誤被轉換為 VM 錯誤<code>無法處理本機日誌</code>，詳細的錯誤消息存儲在返回值中。
+消息異步發送到本機模塊，調用者無法捕獲和恢復錯誤。</p>
+<p><strong> 用例：在 Daodst 上調用原生 ERC20 模塊 </strong></p>
+<p>以下是取自 Daodst <a href="erc20.md">erc20 模塊</a> 的示例，展示了<code>EVMHooks</code>如何支持調用原生模塊以將 ERC-20 代幣轉換為 Cosmos 原生代幣的合約。
+按照上面的步驟。</p>
+<p>您可以像這樣在智能合約中定義並發出一個“Transfer”日誌簽名：</p>
+<pre><code class="language-solidity">event Transfer(address indexed from, address indexed to, uint256 value);
+
+function _transfer(address sender, address recipient, uint256 amount) internal virtual {
+  require(sender != address(0), &quot;ERC20: transfer from the zero address&quot;);
+  require(recipient != address(0), &quot;ERC20: transfer to the zero address&quot;);
+
+  _beforeTokenTransfer(sender, recipient, amount);
+
+  _balances[sender] = _balances[sender].sub(amount, &quot;ERC20: transfer amount exceeds balance&quot;);
+  _balances[recipient] = _balances[recipient].add(amount);
+  emit Transfer(sender, recipient, amount);
+}
+</code></pre>
+<p>應用程序將向 <code>EvmKeeper</code> 註冊一個 <code>BankSendHook</code>。
+它識別以太坊 tx <code>Log</code> 並將其轉換為對銀行模塊的 <code>SendCoinsFromAccountToAccount</code> 方法的調用：</p>
+<pre><code class="language-go">
+const ERC20EventTransfer = &quot;Transfer&quot;
+
+// PostTxProcessing implements EvmHooks.PostTxProcessing
+func (k Keeper) PostTxProcessing(
+ ctx sdk.Context,
+ msg core.Message,
+ receipt *ethtypes.Receipt,
+) error {
+ params := h.k.GetParams(ctx)
+ if !params.EnableErc20 || !params.EnableEVMHook {
+  // no error is returned to allow for other post-processing txs
+  // to pass
+  return nil
+ }
+
+ erc20 := contracts.ERC20BurnableContract.ABI
+
+ for i, log := range receipt.Logs {
+  if len(log.Topics) &lt; 3 {
+   continue
+  }
+
+  eventID := log.Topics[0] // event ID
+
+  event, err := erc20.EventByID(eventID)
+  if err != nil {
+   // invalid event for ERC20
+   continue
+  }
+
+  if event.Name != types.ERC20EventTransfer {
+   h.k.Logger(ctx).Info(&quot;emitted event&quot;, &quot;name&quot;, event.Name, &quot;signature&quot;, event.Sig)
+   continue
+  }
+
+  transferEvent, err := erc20.Unpack(event.Name, log.Data)
+  if err != nil {
+   h.k.Logger(ctx).Error(&quot;failed to unpack transfer event&quot;, &quot;error&quot;, err.Error())
+   continue
+  }
+
+  if len(transferEvent) == 0 {
+   continue
+  }
+
+  tokens, ok := transferEvent[0].(*big.Int)
+  // safety check and ignore if amount not positive
+  if !ok || tokens == nil || tokens.Sign() != 1 {
+   continue
+  }
+
+  // check that the contract is a registered token pair
+  contractAddr := log.Address
+
+  id := h.k.GetERC20Map(ctx, contractAddr)
+
+  if len(id) == 0 {
+   // no token is registered for the caller contract
+   continue
+  }
+
+  pair, found := h.k.GetTokenPair(ctx, id)
+  if !found {
+   continue
+  }
+
+  // check that conversion for the pair is enabled
+  if !pair.Enabled {
+   // continue to allow transfers for the ERC20 in case the token pair is disabled
+   h.k.Logger(ctx).Debug(
+    &quot;ERC20 token -&gt; Cosmos coin conversion is disabled for pair&quot;,
+    &quot;coin&quot;, pair.Denom, &quot;contract&quot;, pair.Erc20Address,
+   )
+   continue
+  }
+
+  // ignore as the burning always transfers to the zero address
+  to := common.BytesToAddress(log.Topics[2].Bytes())
+  if !bytes.Equal(to.Bytes(), types.ModuleAddress.Bytes()) {
+   continue
+  }
+
+  // check that the event is Burn from the ERC20Burnable interface
+  // NOTE: assume that if they are burning the token that has been registered as a pair, they want to mint a Cosmos coin
+
+  // create the corresponding sdk.Coin that is paired with ERC20
+  coins := sdk.Coins{{Denom: pair.Denom, Amount: sdk.NewIntFromBigInt(tokens)}}
+
+  // Mint the coin only if ERC20 is external
+  switch pair.ContractOwner {
+  case types.OWNER_MODULE:
+   _, err = h.k.CallEVM(ctx, erc20, types.ModuleAddress, contractAddr, true, &quot;burn&quot;, tokens)
+  case types.OWNER_EXTERNAL:
+   err = h.k.bankKeeper.MintCoins(ctx, types.ModuleName, coins)
+  default:
+   err = types.ErrUndefinedOwner
+  }
+
+  if err != nil {
+   h.k.Logger(ctx).Debug(
+    &quot;failed to process EVM hook for ER20 -&gt; coin conversion&quot;,
+    &quot;coin&quot;, pair.Denom, &quot;contract&quot;, pair.Erc20Address, &quot;error&quot;, err.Error(),
+   )
+   continue
+  }
+
+  // Only need last 20 bytes from log.topics
+  from := common.BytesToAddress(log.Topics[1].Bytes())
+  recipient := sdk.AccAddress(from.Bytes())
+
+  // transfer the tokens from ModuleAccount to sender address
+  if err := h.k.bankKeeper.SendCoinsFromModuleToAccount(ctx, types.ModuleName, recipient, coins); err != nil {
+   h.k.Logger(ctx).Debug(
+    &quot;failed to process EVM hook for ER20 -&gt; coin conversion&quot;,
+    &quot;tx-hash&quot;, receipt.TxHash.Hex(), &quot;log-idx&quot;, i,
+    &quot;coin&quot;, pair.Denom, &quot;contract&quot;, pair.Erc20Address, &quot;error&quot;, err.Error(),
+   )
+   continue
+  }
+ }
+
+ return nil
+</code></pre>
+<p>最後，在 app.go 中註冊鉤子：</p>
+<pre><code class="language-go">app.EvmKeeper = app.EvmKeeper.SetHooks(app.Erc20Keeper)
+</code></pre>
+<h2 id="_28">事件</h2>
+<p><code>x/evm</code> 模塊在狀態執行後發出 Cosmos SDK 事件。
+EVM 模塊發出相關交易字段的事件，以及交易日誌（以太坊事件）。</p>
+<h3 id="msgethereumtx_2">MsgEthereumTx</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>属性 Key</th>
+<th>属性 Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"amount"</code></td>
+<td><code>{amount}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"recipient"</code></td>
+<td><code>{hex_address}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"contract"</code></td>
+<td><code>{hex_address}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"txHash"</code></td>
+<td><code>{tendermint_hex_hash}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"ethereumTxHash"</code></td>
+<td><code>{hex_hash}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"txIndex"</code></td>
+<td><code>{tx_index}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"txGasUsed"</code></td>
+<td><code>{gas_used}</code></td>
+</tr>
+<tr>
+<td>tx_log</td>
+<td><code>"txLog"</code></td>
+<td><code>{tx_log}</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>"sender"</code></td>
+<td><code>{eth_address}</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>"action"</code></td>
+<td><code>"ethereum"</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>"module"</code></td>
+<td><code>"evm"</code></td>
+</tr>
+</tbody>
+</table>
+<p>此外，EVM 模塊在<code>EndBlock</code>期間為過濾器查詢塊 bloom 發出一個事件。</p>
+<h3 id="abci_1">ABCI</h3>
+<table>
+<thead>
+<tr>
+<th>類型</th>
+<th>屬性 Key</th>
+<th>屬性 Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block_bloom</td>
+<td><code>"bloom"</code></td>
+<td><code>string(bloomBytes)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_29">參數</h2>
+<p>evm 模塊包含以下參數：</p>
+<h3 id="_30">模塊參數</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>數據類型</th>
+<th>默認值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EVMDenom</code></td>
+<td>string</td>
+<td><code>"dst"</code></td>
+</tr>
+<tr>
+<td><code>EnableCreate</code></td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>EnableCall</code></td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>ExtraEIPs</code></td>
+<td>[]int</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>ChainConfig</code></td>
+<td>ChainConfig</td>
+<td>See ChainConfig</td>
+</tr>
+</tbody>
+</table>
+<p>:::提示
+注意：SDK 應用想要導入 EVM 模塊作為依賴
+將需要設置自己的 <code>evm_denom</code>（即不是 <code>"dst"</code>）。
+:::</p>
+<h3 id="enablecreate">EnableCreate</h3>
+<p>EnableCreate 參數切換使用<code>vm.Create</code>函數的狀態轉換。
+當禁用該參數時，它將阻止所有合約創建功能。</p>
+<h3 id="enablecall">EnableCall</h3>
+<p>EnableCall 參數切換使用 <code>vm.Call</code> 函數的狀態轉換。
+當該參數被禁用時，它將阻止賬戶之間的轉賬和執行智能合約調用。</p>
+<h3 id="extra-eips">Extra EIPs</h3>
+<p>額外的 EIPs 參數在應用自定義跳轉表的以太坊 VM <code>Config</code> 上定義了一組可激活的以太坊改進建議 (<strong><a href="https://ethereum.org/en/eips/">EIPs</a></strong>)。</p>
+<p>:::提示
+注意: 其中一些 EIP 已經通過鏈配置啟用，具體取決於硬分叉數量。
+:::</p>
+<p>支持的可激活 EIPS 是：</p>
+<ul>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP 1344</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP 1884</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP 2200</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-2315">EIP 2315</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP 2929</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-3198">EIP 3198</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP 3529</a></strong></li>
+</ul>
+<h3 id="chain-config">Chain Config</h3>
+<p><code>ChainConfig</code> 是一種 protobuf 包裝器類型，它包含與 go-ethereum <code>ChainConfig</code> 參數相同的字段，但使用<code>*sdk.Int</code> 類型而不是<code>*big.Int</code>。</p>
+<p>默認情況下，除了<code>ConstantinopleBlock</code>之外的所有塊配置字段都在創世紀（高度 0）啟用。</p>
+<h4 id="chainconfig">默认 ChainConfig</h4>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HomesteadBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>DAOForkBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>DAOForkSupport</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>EIP150Block</td>
+<td>0</td>
+</tr>
+<tr>
+<td>EIP150Hash</td>
+<td><code>0x0000000000000000000000000000000000000000000000000000000000000000</code></td>
+</tr>
+<tr>
+<td>EIP155Block</td>
+<td>0</td>
+</tr>
+<tr>
+<td>EIP158Block</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ByzantiumBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ConstantinopleBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>PetersburgBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>IstanbulBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>MuirGlacierBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>BerlinBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>LondonBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ArrowGlacierBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>GrayGlacierBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>MergeNetsplitBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ShanghaiBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>CancunBlock.</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_31">客戶端</h2>
+<p>用戶可以使用 CLI、JSON-RPC、gRPC 或 REST 查詢 <code>evm</code> 模塊並與之交互。</p>
+<h3 id="cli">CLI</h3>
+<p>在下面找到使用 <code>x/evm</code> 模塊添加的 <code>stcd</code> 命令列表。
+您可以使用 <code>stcd -h</code> 命令獲取完整列表。</p>
+<h4 id="_32">查詢</h4>
+<p><code>query</code> 命令允許用戶查詢 <code>evm</code> 狀態。</p>
+<p><strong><code>code</code></strong></p>
+<p>允許用戶查詢給定地址的智能合約代碼。</p>
+<pre><code class="language-bash">stcd query evm code ADDRESS [flags]
+</code></pre>
+<pre><code class="language-bash"># Example
+$ stcd query evm code 0x7bf7b17da59880d9bcca24915679668db75f9397
+
+# Output
+code: &quot;0xef616c92f3cfc9e92dc270d6acff9cea213cecc7020a76ee4395af09bdceb4837a1ebdb5735e11e7d3adb6104e0c3ac55180b4ddf5e54d022cc5e8837f6a4f971b&quot;
+</code></pre>
+<p><strong><code>storage</code></strong></p>
+<p>允許用戶查詢具有給定鍵和高度的帳戶的存儲。</p>
+<pre><code class="language-bash">stcd query evm storage ADDRESS KEY [flags]
+</code></pre>
+<pre><code class="language-bash"># Example
+$ stcd query evm storage 0x0f54f47bf9b8e317b214ccd6a7c3e38b893cd7f0 0 --height 0
+
+# Output
+value: &quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;
+</code></pre>
+<h4 id="_33">交易</h4>
+<p><code>tx</code> 命令允許用戶與 <code>evm</code> 模塊進行交互。</p>
+<p><strong><code>raw</code></strong></p>
+<p>允許用戶從原始以太坊交易構建 cosmos 交易。</p>
+<pre><code class="language-bash">stcd tx evm raw TX_HEX [flags]
+</code></pre>
+<pre><code class="language-bash"># Example
+$ stcd tx evm raw 0xf9ff74c86aefeb5f6019d77280bbb44fb695b4d45cfe97e6eed7acd62905f4a85034d5c68ed25a2e7a8eeb9baf1b84
+
+# Output
+value: &quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;
+</code></pre>
+<h3 id="grpc">gRPC</h3>
+<h4 id="_34">查詢</h4>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Method</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Account</code></td>
+<td>獲取以太坊賬戶</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/CosmosAccount</code></td>
+<td>獲取以太坊賬戶的 Cosmos 地址</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/ValidatorAccount</code></td>
+<td>從驗證者共識地址獲取以太坊賬戶</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Balance</code></td>
+<td>獲取單個 EthAccount 的 EVM 面額餘額.</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Storage</code></td>
+<td>獲取單個賬戶所有幣的餘額</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Code</code></td>
+<td>獲取單個賬戶所有幣的餘額</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Params</code></td>
+<td>獲取x/evm模塊的參數</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/EthCall</code></td>
+<td>實現 eth_call rpc api</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/EstimateGas</code></td>
+<td>實現 eth_estimateGas rpc api</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/TraceTx</code></td>
+<td>實現 debug_traceTransaction rpc api</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/TraceBlock</code></td>
+<td>實現 debug_traceBlockByNumber 和 debug_traceBlockByHash rpc api</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/account/{address}</code></td>
+<td>獲取以太坊賬戶</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/cosmos_account/{address}</code></td>
+<td>獲取以太坊賬戶的 Cosmos 地址</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/validator_account/{cons_address}</code></td>
+<td>從驗證者共識地址獲取以太坊賬戶</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/balances/{address}</code></td>
+<td>獲取單個 EthAccount 的 EVM 面額餘額.</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/storage/{address}/{key}</code></td>
+<td>獲取單個賬戶所有幣的餘額</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/codes/{address}</code></td>
+<td>獲取單個賬戶所有幣的餘額</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/params</code></td>
+<td>獲取x/evm模塊的參數</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/eth_call</code></td>
+<td>實現 eth_call rpc api</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/estimate_gas</code></td>
+<td>實現 eth_estimateGas rpc api</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/trace_tx</code></td>
+<td>實現 debug_traceTransaction rpc api</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/trace_block</code></td>
+<td>實現 debug_traceBlockByNumber 和 debug_traceBlockByHash rpc api</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_35">交易</h4>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Method</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Msg/EthereumTx</code></td>
+<td>提交以太坊交易</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/ethermint/evm/v1/ethereum_tx</code></td>
+<td>提交以太坊交易</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

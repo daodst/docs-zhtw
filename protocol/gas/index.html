@@ -1,0 +1,1891 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../encode/">
+      
+      
+        <link rel="next" href="../keyring/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Gas和手續費 - DAODST文檔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DAODST文檔" class="md-header__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST文檔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gas和手續費
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../account/" class="md-tabs__link md-tabs__link--active">
+        🔍協議
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../modules_accounts/" class="md-tabs__link">
+        🧱模塊
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../gateway/run/" class="md-tabs__link">
+        ✈網關和驗證器
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../chat/installation/" class="md-tabs__link">
+        📞聊天
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faq/" class="md-tabs__link">
+      📋常見問題
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAODST文檔" class="md-nav__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST文檔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍協議
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍協議
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        技術架構
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          命令行界面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          命令行界面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stcd/" class="md-nav__link">
+        安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stcd/config/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stcd/single-node/" class="md-nav__link">
+        單節點
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stcd/command/" class="md-nav__link">
+        CLI命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        帳號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chainid/" class="md-nav__link">
+        鏈ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encode/" class="md-nav__link">
+        編碼
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Gas和手續費
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Gas和手續費
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    先決條件閱讀
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基礎
+  </a>
+  
+    <nav class="md-nav" aria-label="基礎">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    為什麼交易需要手續費?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas" class="md-nav__link">
+    什麼是 Gas?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_1" class="md-nav__link">
+    如何計算Gas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_2" class="md-nav__link">
+    Gas和手續費的關係?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosmos" class="md-nav__link">
+    Cosmos如何處理手續費?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    如何在以太坊上處理手續費?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    實施
+  </a>
+  
+    <nav class="md-nav" aria-label="實施">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daodstgas" class="md-nav__link">
+    如何在Daodst上處理Gas和手續費?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    詳細時間表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    详细做法
+  </a>
+  
+    <nav class="md-nav" aria-label="详细做法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cosmos-gas" class="md-nav__link">
+    Cosmos Gas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm-gas" class="md-nav__link">
+    匹配EVM Gas消耗
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antehandler" class="md-nav__link">
+    AnteHandler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_3" class="md-nav__link">
+    Gas 返还
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    零手续费交易
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_4" class="md-nav__link">
+    Gas 预估
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daodst-cligas" class="md-nav__link">
+    使用Daodst CLI处理Gas和手续费
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyring/" class="md-nav__link">
+        密鑰環
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key-management/" class="md-nav__link">
+        密鑰管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../state-migrate/" class="md-nav__link">
+        狀態導入導出
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pending/" class="md-nav__link">
+        等待隊列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multsign/" class="md-nav__link">
+        多簽
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coin/" class="md-nav__link">
+        代幣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer/" class="md-nav__link">
+        交易
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱模塊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱模塊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules_accounts/" class="md-nav__link">
+        模塊賬號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evm/" class="md-nav__link">
+        以太坊虛擬機
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/" class="md-nav__link">
+        聊天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/" class="md-nav__link">
+        網關
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contract/" class="md-nav__link">
+        合約
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pledge/" class="md-nav__link">
+        質押
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈網關和驗證器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈網關和驗證器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          設置和配寘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          設置和配寘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/run/" class="md-nav__link">
+        運行驗證器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/config/" class="md-nav__link">
+        配寘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/disk-usage/" class="md-nav__link">
+        硬碟使用優化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/state-sync/" class="md-nav__link">
+        狀態同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/mempool/" class="md-nav__link">
+        記憶體池
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/security/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          陞級
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          陞級
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/list/" class="md-nav__link">
+        升級清單
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/hard-fork/" class="md-nav__link">
+        硬分叉升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/auto/" class="md-nav__link">
+        自動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/manual/" class="md-nav__link">
+        手動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/rollback/" class="md-nav__link">
+        回滾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/template/" class="md-nav__link">
+        提案模板
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/testnet/" class="md-nav__link">
+        測試網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/mainnet/" class="md-nav__link">
+        主網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          網關操作指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          網關操作指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/guide-linux/" class="md-nav__link">
+        linux版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/guide-win/" class="md-nav__link">
+        window版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/key-backup/" class="md-nav__link">
+        金鑰備份和恢復
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞聊天
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/installation/" class="md-nav__link">
+        安裝啟動
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/chat_doc/" class="md-nav__link">
+        文檔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/client_server/" class="md-nav__link">
+        客戶端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/server_server/" class="md-nav__link">
+        服務端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/customise_doc/" class="md-nav__link">
+        定制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/voip_signaling/" class="md-nav__link">
+        呼叫流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/optional_cfg/" class="md-nav__link">
+        可選配置*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        📋常見問題
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    先決條件閱讀
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基礎
+  </a>
+  
+    <nav class="md-nav" aria-label="基礎">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    為什麼交易需要手續費?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas" class="md-nav__link">
+    什麼是 Gas?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_1" class="md-nav__link">
+    如何計算Gas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_2" class="md-nav__link">
+    Gas和手續費的關係?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosmos" class="md-nav__link">
+    Cosmos如何處理手續費?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    如何在以太坊上處理手續費?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    實施
+  </a>
+  
+    <nav class="md-nav" aria-label="實施">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daodstgas" class="md-nav__link">
+    如何在Daodst上處理Gas和手續費?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    詳細時間表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    详细做法
+  </a>
+  
+    <nav class="md-nav" aria-label="详细做法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cosmos-gas" class="md-nav__link">
+    Cosmos Gas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm-gas" class="md-nav__link">
+    匹配EVM Gas消耗
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antehandler" class="md-nav__link">
+    AnteHandler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_3" class="md-nav__link">
+    Gas 返还
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    零手续费交易
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_4" class="md-nav__link">
+    Gas 预估
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daodst-cligas" class="md-nav__link">
+    使用Daodst CLI处理Gas和手续费
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Gas和手續費</h1>
+
+<p>用戶需要支付費用才能在 Daodst 網絡上提交交易。
+由於以太坊和 Cosmos 的費用處理方式不同，了解 Daodst 區塊鏈如何實現與 Cosmos SDK 兼容的以太坊類型的費用計算非常重要。</p>
+<p>因此，本概述解釋了天然氣計算的基礎知識、如何為交易提供費用以及以太坊類型的費用計算如何使用費用市場 (EIP1559) 來確定交易的優先級。</p>
+<p>另外請注意，與 Daodst 上的智能合約交互所支付的費用可以為智能合約部署者賺取收入。</p>
+<h2 id="_1">先決條件閱讀</h2>
+<ul>
+<li><a href="https://docs.cosmos.network/main/basics/gas-fees.html">Cosmos SDK Gas</a></li>
+<li><a href="https://ethereum.org/en/developers/docs/gas/">Ethereum Gas</a></li>
+</ul>
+<h2 id="_2">基礎</h2>
+<h3 id="_3">為什麼交易需要手續費?</h3>
+<p>如果任何人都可以免費向網絡提交交易，則網絡可能會被少數參與者發送大量欺詐性交易以阻塞網絡並使其無法正常工作。</p>
+<p>這個問題的解決方案是一個叫做<code>gas</code>的概念，它是在整個交易執行過程中消耗的資源。</p>
+<p>在實踐中，代碼執行的每一步都會消耗少量gas，從而有效地對驗證者資源的使用進行收費，並防止惡意行為者隨意中斷網絡。</p>
+<h3 id="gas">什麼是 Gas?</h3>
+<p>一般來說，gas 是衡量特定交易計算強度的單位——換句話說，評估和執行這項工作需要多少工作量。</p>
+<p>複雜的多步交易，例如委託給十幾個驗證器的 Cosmos 交易，比簡單的單步交易（例如將代幣發送到另一個地址的 Cosmos 交易）需要更多的 gas。</p>
+<p>在提及交易時，<code>gas</code>是指交易所需的gas總量。</p>
+<p>例如，一筆交易可能需要 300,000 單位的gas才能執行。</p>
+<p>可以將gas視為房屋或工廠內的電力 (kWh)，或汽車燃料。</p>
+<p>這個想法是要花一些錢才能到達某個地方。</p>
+<p>更多 Gas 介紹:</p>
+<ul>
+<li><a href="https://docs.cosmos.network/main/basics/gas-fees">Cosmos Gas Fees</a></li>
+<li><a href="https://docs.cosmos.network/main/basics/tx-lifecycle.html">Cosmos Tx Lifecycle</a></li>
+<li><a href="https://ethereum.org/en/developers/docs/gas/">Ethereum Gas</a></li>
+</ul>
+<h3 id="gas_1">如何計算Gas</h3>
+<p>一般來說，如果不簡單地運行交易，就無法確切知道交易將花費多少 gas。</p>
+<p>使用 Cosmos SDK，這可以通過<a href="https://docs.cosmos.network/main/run-node/txs#simulating-a-transaction">模擬 Tx</a> 來完成。</p>
+<p>否則，有一些方法可以根據交易字段和數據的詳細信息來估計交易將需要的gas。</p>
+<p>例如，在 EVM 的情況下，每個字節碼操作都有 <a href="https://ethereum.org/en/developers/docs/evm/opcodes/">相應數量的gas</a>。</p>
+<p>更多關於Gas計算:</p>
+<ul>
+<li><a href="https://docs.ethers.org/v5/api/providers/provider/#Provider-estimateGas">Estimate Gas</a></li>
+<li><a href="https://ethereum.org/en/developers/docs/evm/opcodes/">Executing EVM Bytecode</a></li>
+<li><a href="https://docs.cosmos.network/main/run-node/txs#simulating-a-transaction">Simulate a Cosmos SDK Tx</a></li>
+</ul>
+<h3 id="gas_2">Gas和手續費的關係?</h3>
+<p>Gas 是指執行所需的計算工作，而費用是指您實際花費來執行交易的代幣數量。</p>
+<p>它們是使用以下公式得出的：</p>
+<pre><code class="language-markdown">Total Fees = Gas * Gas Price (the price per unit of gas)
+</code></pre>
+<p>如果 <code>gas</code> 以 kWh 為單位，則“gas price”將是您的能源供應商確定的費率（以美元/kWh 為單位），而 <code>fees​​</code> 將是您的賬單。</p>
+<p>與電力一樣，gas價格在某一天可能會波動，具體取決於網絡流量。</p>
+<p>更多關於 Gas 和 手續費:</p>
+<ul>
+<li><a href="https://docs.cosmos.network/main/basics/gas-fees">Cosmos Gas and Fees</a></li>
+<li><a href="https://ethereum.org/en/developers/docs/gas/">Ethereum Gas and Fees</a></li>
+</ul>
+<h3 id="cosmos">Cosmos如何處理手續費?</h3>
+<p>Cosmos 的gas費相對簡單。作為用戶，您指定兩個字段：</p>
+<ol>
+<li>對應於執行氣體上限的 <code>GasLimit</code>，定義為<code>GasWanted</code></li>
+<li><code>Fees</code> 或 <code>GasPrice</code> 之一，將用於指定或計算交易費用</li>
+</ol>
+<p>節點將完全消耗所提供的費用，然後開始執行交易。
+如果在執行過程中發現<code>GasLimit</code>不足，交易將失敗並回滾任何更改，不退還提供的費用。</p>
+<p>基於 Cosmos SDK 的鏈的驗證者可以指定他們在選擇要包含在區塊中的交易時將強制執行的“最低汽油價格”。</p>
+<p>因此，費用不足的交易將遇到延遲或徹底失敗。</p>
+<p>在每個區塊的開始，前一個區塊的費用被<a href="https://docs.cosmos.network/main/modules/distribution">分配給驗證者和委託者</a>，之後它們可以被提取和使用。</p>
+<h3 id="_4">如何在以太坊上處理手續費?</h3>
+<p>以太坊的費用包括隨著時間的推移引入的多種實現。</p>
+<p>最初，用戶會在交易中指定 <code>GasPrice</code> 和 <code>GasLimit</code> ——很像 Cosmos SDK 交易。</p>
+<p>區塊提議者將從區塊中的每筆交易中收取全部汽油費，並且他們會相應地選擇要包含的交易。</p>
+<p>隨著提案 EIP-1559 和倫敦硬分叉，gas 計算發生了變化。</p>
+<p>上面的 <code>GasPrice</code> 現在被分成兩個獨立的部分：<code>BaseFee</code> 和 <code>PriorityFee</code>。</p>
+<p><code>BaseFee</code> 是根據區塊大小自動計算的，一旦區塊被挖出就會被銷毀。</p>
+<p><code>PriorityFee</code> 交給提議者並代表一個小費，或激勵提議者將交易包含在一個區塊中。</p>
+<pre><code class="language-markdown">Gas Price = Base Fee + Priority Fee
+</code></pre>
+<p>在交易中，除了像以前一樣指定 <code>gas_limit</code> 之外，用戶還可以指定對應於總 <code>GasPrice</code> 的 <code>max_fee_per_gas</code> 和對應於最大 <code>PriorityFee</code> 的 <code>max_priority_fee_per_gas</code>。</p>
+<p>所有不需要執行的多餘氣體都退還給用戶。</p>
+<p>更多關於 Ethereum 手續費:</p>
+<ul>
+<li><a href="https://ethereum.org/en/developers/docs/gas/">Gas Calculation Docs</a></li>
+<li><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md">Proposal EIP-1559</a></li>
+</ul>
+<h2 id="_5">實施</h2>
+<h3 id="daodstgas">如何在Daodst上處理Gas和手續費?</h3>
+<p>從根本上說，Daodst 是一個 Cosmos SDK 鏈，可作為 Cosmos SDK 模塊的一部分實現 EVM 兼容性。由於這種架構，所有 EVM 交易最終都被編碼為 Cosmos SDK 交易並更新 Cosmos SDK 管理的狀態。由於所有交易都表示為 Cosmos SDK 交易，因此交易費用可以在不同執行層。</p>
+<p>實際上，處理費用包括標準的 Cosmos SDK 邏輯、一些以太坊邏輯和 customDaodst 邏輯。大多數情況下，費用由 <code>fee_collector</code> 模塊收取，然後支付給驗證者和委託者。一些關鍵的區別如下：</p>
+<p><strong>1.Fee 市場模塊</strong></p>
+<p>為了在 Daodst 的 EVM 層上支持 EIP-1559 氣體和費用計算，Daodst 跟踪為每個區塊供應的氣體，並使用它來計算未來 EVM 交易的基本費用，從而實現 EIP 指定的 EVM 動態費用和交易優先級 -1559。</p>
+<p>對於 EVM 交易，每個節點都繞過其本地的 <code>min-gas-prices</code> 配置，而是應用 EIP-1559 費用邏輯——gas 價格必須簡單地大於全局 <code>min-gas-price</code> 和區塊的 <code>BaseFee</code> ，剩餘部分被視為優先小費。</p>
+<p>這允許驗證者在不應用 Cosmos SDK 費用邏輯的情況下計算以太坊費用。</p>
+<p>與以太坊不同，Daodst 上的<code>BaseFee</code>不會被銷毀，而是分發給驗證者和委託者</p>
+<p>此外，<code>BaseFee</code> 受全局<code>min-gas-price</code> 的下限（目前，全局<code>min-gas-price</code> 參數設置為零，儘管它可以通過治理進行更新）。</p>
+<p><strong>2.EVM Gas返還</strong></p>
+<p>Daodst 會為 EVM 交易退還一小部分（默認情況下至少 50%）未使用的氣體，以接近以太坊上的當前行為。</p>
+<p><strong>3.收入模塊</strong></p>
+<p>Daodst 開發收入模塊作為獎勵開發人員創建有用的 dApp 的一種方式——任何在 Daodst 收入模塊註冊的合同都會從與合同交互的每筆交易中向合同開發人員獎勵一小部分交易費用（目前為 95%）. 驗證者和委託者賺取剩餘部分。</p>
+<h3 id="_6">詳細時間表</h3>
+<p>1.節點執行前一個塊並運行 <code>EndBlock</code> 掛鉤 * 作為此掛鉤的一部分，FeeMarket (EIP-1559) 模塊從該塊上的交易中跟踪總的 <code>TransientGasWanted</code>。
+這將用於下一個區塊的 <code>BaseFee</code>。</p>
+<p>2.節點接收後續區塊的交易並將這些交易八卦給同行*這些可以按包含的費用價格排序和優先級（使用 EIP-1559 費用優先機制進行 EVM 交易 ，將包含在下一個區塊中</p>
+<p>3.節點為後續塊運行 <code>BeginBlock</code> * FeeMarket 模塊計算 <code>BaseFee</code> 使用前一個塊中的總 <code>GasWanted</code> 應用於此塊。
+* 分配模塊 <a href="https://docs.cosmos.network/main/modules/distribution#begin-block">distributes</a> 前一個區塊的費用獎勵給驗證者和委託者</p>
+<p>4.對於將包含在此塊中的每個有效交易，節點執行以下操作：</p>
+<p><strong> 他們運行一個對應於交易類型的<code>AnteHandler</code> </strong>。</p>
+<p>這個流程:</p>
+<ol>
+<li>執行基本交易驗證</li>
+<li>驗證提供的費用是否大於全球和本地最小驗證器值<em>並且</em>大於計算出的<code>BaseFee</code>
+   3.（對於以太坊交易）搶占EVM交易消耗gas</li>
+<li>扣除用戶的交易手續費，轉入<code>fee_collector</code>模塊</li>
+<li>
+<p>增加當前區塊中的 <code>TransientGasWanted</code>，用於計算下一個區塊的 <code>BaseFee</code></p>
+<p><strong>然後，對於標準Cosmos交易,节点</strong></p>
+<ul>
+<li>執行交易並更新狀態</li>
+<li>交易消耗gas</li>
+</ul>
+<p><strong>對於以太坊交易，節點:</strong></p>
+<ul>
+<li>執行交易並更新狀態</li>
+<li>計算使用的gas並與供應的gas進行比較，然後退還指定部分的剩餘部分</li>
+<li>如果交易與已註冊的智能合約交互，則將一小部分用作收入的費用作為收入模塊的一部分發送給合同開發商</li>
+</ul>
+</li>
+<li>
+<p>節點為此塊運行 <code>EndBlock</code> 並存儲塊的 <code>GasWanted</code></p>
+</li>
+</ol>
+<h2 id="_7">详细做法</h2>
+<h3 id="cosmos-gas">Cosmos <code>Gas</code></h3>
+<p>在 Cosmos SDK 中，gas 主要在 <code>GasMeter</code>和 <code>BlockGasMeter</code> 中進行跟踪：</p>
+<ul>
+<li><code>GasMeter</code>：跟踪導致狀態轉換的執行過程中消耗的氣體。 它在每次交易執行時重置。</li>
+<li><code>BlockGasMeter</code>：跟踪區塊中消耗的氣體並強制氣體不超過預定義的限制。此限制在 Tendermint 共識參數中定義，可以通過治理參數更改提案進行更改。</li>
+</ul>
+<p>由於 gas 是按字節定價的，因此相同的交互在參數值較大的情況下比較小的參數值更耗費氣體（與以太坊的 <code>uint256</code> 值不同，Cosmos SDK 數值使用 <a href="https://pkg.go.dev/math/big#Int">Big.Int</a> 類型，它們是動態調整大小的）。</p>
+<p>可以在<a href="https://docs.cosmos.network/main/basics/gas-fees.html">此處</a> 找到有關作為 Cosmos SDK 一部分的 gas 的更多信息。</p>
+<h3 id="evm-gas">匹配EVM Gas消耗</h3>
+<p>Daodst 是一條 EVM 兼容鏈，支持以太坊 Web3 工具。 出於這個原因，氣體消耗必須與其他 EVM 相當，最重要的是以太坊。</p>
+<p>EVM 和 Cosmos 狀態轉換之間的主要區別在於，EVM 為每個操作碼使用一個 <a href="https://github.com/ethereum/go-ethereum/blob/master/params/protocol_params.go">gas table</a>，而 Cosmos 使用<code>GasConfig</code>為每個 CRUD 操作收取 gas，方法是為訪問數據庫設置固定的每字節成本。</p>
+<p>為了匹配EVM消耗的gas，忽略SDK中的gas消耗邏輯，取而代之的是消耗的gas是通過從消息上定義的氣體限制中減去狀態轉換剩餘氣體加上退款來計算的。</p>
+<p>為了忽略 SDK 的 gas 消耗，我們將交易<code>GasMeter</code>計數重置為 0，並手動將其設置為 EVM 模塊在執行結束時計算出的<code>gasUsed</code>值。</p>
+<h3 id="antehandler"><code>AnteHandler</code></h3>
+<p>Cosmos SDK <a href="https://docs.cosmos.network/main/basics/gas-fees.html#antehandler"><code>AnteHandler</code></a> 在交易執行之前執行基本檢查。</p>
+<p>這些檢查通常是簽名驗證、交易字段驗證、交易費用等。</p>
+<p>關於 gas 消耗和費用，<code>AnteHandler</code> 檢查用戶是否有足夠的餘額來支付 tx 成本（金額加上費用），並檢查消息中定義的 gas 限制是否大於或等於計算的固有 gas 消息。</p>
+<h3 id="gas_3">Gas 返还</h3>
+<p>在 EVM 中，gas 可以在執行之前指定。 指定的全部氣體在執行開始時（在<code>AnteHandler</code>步驟期間）被消耗，如果執行後有任何氣體剩餘，剩餘的氣體將退還給用戶。</p>
+<p>此外，EVM 還可以定義要返還給用戶的氣體，但這些氣體將被限制為所用氣體的一小部分，具體取決於所使用的分叉/版本。</p>
+<h3 id="_8">零手续费交易</h3>
+<p>在 Cosmos 中，<code>AnteHandler</code> 不強制執行最低 gas 價格，因為<code>min-gas-prices</code>是根據本地節點/驗證器檢查的。</p>
+<p>換句話說，接受的最低費用由網絡的驗證者決定，每個驗證者可以為其費用指定不同的最低值。</p>
+<p>如果至少有一個驗證者願意在他們提議的區塊中包含<code>0</code> gas price 的交易，這可能允許最終用戶提交 0 費用交易。</p>
+<p>出於同樣的原因，在 Daodst 中，對於<code>evm</code>模塊定義的交易類型以外的交易類型，可以發送<code>0</code>費用的交易。</p>
+<p>EVM 模塊交易不能有“0”費用，因為 EVM 本身就需要 gas。</p>
+<p>此檢查由 EVM 事務無狀態驗證（即<code>ValidateBasic</code>）函數以及 Daodst 定義的自定義<code>AnteHandler</code>完成。</p>
+<h3 id="gas_4">Gas 预估</h3>
+<p>以太坊提供了一個 JSON-RPC 端點<code>eth_estimateGas</code>來幫助用戶在他們的交易中設置正確的氣體限制。</p>
+<p>因此，在 Daodst 中實現了一個特定的查詢 API <code>EstimateGas</code>。 它將針對當前區塊/狀態應用交易並執行二進制搜索以找到返回給用戶的最佳氣體值（相同的交易將一遍又一遍地應用，直到我們找到失敗前所需的最小氣體） .</p>
+<p>我們需要使用二分查找的原因是交易所需的 gas 可能高於應用交易後 EVM 返回的值，因此我們需要嘗試直到找到最優值。</p>
+<p>在整個執行過程中將使用緩存上下文以避免更改在狀態中持久化。</p>
+<p>對於 Cosmos Tx，開發者可以使用 Cosmos SDK 的<a href="https://docs.cosmos.network/main/run-node/txs#simulating-a-transaction">交易模擬</a> 來創建準確的預估。</p>
+<h3 id="daodst-cligas">使用Daodst CLI处理Gas和手续费</h3>
+<p>使用 Daodst CLI 客戶端廣播交易時，用戶應考慮可用的選項。
+向網絡發送交易時需要考慮三個標誌：</p>
+<ul>
+<li><code>--fees</code>: 隨交易一起支付的費用； 例如：10dst。 默認為所需費用。</li>
+<li><code>--gas</code>: 每筆交易設置的氣體限制； 默認值為 200000。</li>
+<li><code>--gas-prices</code>: gas 價格來確定交易費用（例如 10dst）。</li>
+</ul>
+<p>但是，並非所有這些都需要在每個事務中定義。
+正確的組合是：</p>
+<ul>
+<li><code>--fees=auto</code>: 自動估算費用和汽油（與 --gas=auto 相同的行為）。
+  如果使用任何其他與費用相關的標誌（例如，<code>--gas-prices</code>、<code>--fees</code>），則會引發錯誤</li>
+<li><code>--gas=auto</code>: 與 <code>--fees=auto</code> 相同的行為。
+  如果使用任何其他與費用相關的標誌（例如，<code>--gas-prices</code>、<code>--fees</code>），則會引發錯誤</li>
+<li><code>--gas={int}</code>: 使用指定的氣體量和交易所需的費用</li>
+<li><code>--fees={int}{denom}</code>: 使用 tx 的指定費用。 對 tx 使用 gas 默認值 (200000)。</li>
+<li><code>--fees={int}{denom} --gas={int}</code>: 使用指定的氣體和費用。 使用提供的參數計算 gas-price</li>
+<li><code>--gas-prices={int}{denom}</code>: 使用提供的 gas 價格和默認 gas 量 (200000)</li>
+<li><code>--gas-prices={int}{denom} --gas={int}</code>: 使用為 tx 指定的氣體，並使用相應的參數計算費用。</li>
+</ul>
+<p>讀者應注意，前兩個選項為新用戶提供了更友好的用戶體驗，而後者則適用於更高級的用戶，他們希望對這些參數有更多的控制權。</p>
+<p>該團隊引入了<code>自動</code>標誌選項，可以自動計算執行交易所需的汽油和費用。通過這種方式，新用戶或開發人員可以執行交易而無需定義特定的 gas 和費用值。</p>
+<p>使用 <code>auto</code> 標誌有時可能無法根據網絡流量估算正確的 gas 和費用。
+為了克服這個問題，您可以為 <code>--gas-adjustment</code> 標誌使用更高的值。
+默認情況下，它設置為<code>1.2</code>。
+當估計值不足時，重試更高的 gas 調整，例如 <code>--gas-adjustment 1.3</code>。</p>
+<p>不能結合使用 <code>--gas-prices</code> 和 <code>--fees</code> 標誌。
+如果是這樣，用戶將收到一條錯誤消息，指出無法同時提供費用和汽油價格。</p>
+<p>請記住，如果提供的費用或汽油量不足，上述組合可能會失敗。
+如果是這種情況，CLI 將返回一條包含特定原因的錯誤消息。 例如：</p>
+<pre><code class="language-shell">raw_log: 'out of gas in location: submit proposal; gasWanted: 200000, gasUsed: 263940.
+  Please retry with a gas (--gas flag) amount higher than gasUsed: out of gas'
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

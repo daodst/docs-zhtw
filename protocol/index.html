@@ -1,0 +1,2810 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Protocol - DAODST文檔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST文檔" class="md-header__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST文檔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Protocol
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="account/" class="md-tabs__link">
+        🔍協議
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link">
+        🧱模塊
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈網關和驗證器
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞聊天
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋常見問題
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST文檔" class="md-nav__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST文檔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍協議
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍協議
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="account/" class="md-nav__link">
+        技術架構
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          命令行界面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          命令行界面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stcd/" class="md-nav__link">
+        安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stcd/config/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stcd/single-node/" class="md-nav__link">
+        單節點
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stcd/command/" class="md-nav__link">
+        CLI命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="account/" class="md-nav__link">
+        帳號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chainid/" class="md-nav__link">
+        鏈ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="encode/" class="md-nav__link">
+        編碼
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gas/" class="md-nav__link">
+        Gas和手續費
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keyring/" class="md-nav__link">
+        密鑰環
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="key-management/" class="md-nav__link">
+        密鑰管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="state-migrate/" class="md-nav__link">
+        狀態導入導出
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pending/" class="md-nav__link">
+        等待隊列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multsign/" class="md-nav__link">
+        多簽
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="coin/" class="md-nav__link">
+        代幣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="transfer/" class="md-nav__link">
+        交易
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱模塊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱模塊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        模塊賬號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        以太坊虛擬機
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        聊天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/" class="md-nav__link">
+        網關
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        合約
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        質押
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈網關和驗證器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈網關和驗證器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          設置和配寘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          設置和配寘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        運行驗證器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        配寘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        硬碟使用優化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        狀態同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        記憶體池
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          陞級
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          陞級
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        升級清單
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        硬分叉升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        自動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        手動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        回滾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        提案模板
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        測試網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        主網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          網關操作指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          網關操作指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        linux版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        window版說明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        金鑰備份和恢復
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞聊天
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        安裝啟動
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        文檔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/client_server/" class="md-nav__link">
+        客戶端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/server_server/" class="md-nav__link">
+        服務端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        定制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        呼叫流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        可選配置*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋常見問題
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    賬號
+  </a>
+  
+    <nav class="md-nav" aria-label="賬號">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    創建賬號
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    代理賬戶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daodst" class="md-nav__link">
+    Daodst 賬號
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    地址和公鑰
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    客戶的地址格式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    地址轉換
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    Key 導出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    賬號查詢
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    鏈ID
+  </a>
+  
+    <nav class="md-nav" aria-label="鏈ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    主網
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    測試網
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    鏈身份
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    編碼
+  </a>
+  
+    <nav class="md-nav" aria-label="編碼">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    先決條件閱讀
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    編碼格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gas" class="md-nav__link">
+    Gas和手續費
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    密鑰管理
+  </a>
+  
+    <nav class="md-nav" aria-label="密鑰管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    密鑰導出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    密鑰導入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    驗證
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    導入/導出 狀態
+  </a>
+  
+    <nav class="md-nav" aria-label="導入/導出 狀態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    導出狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    手動遷移狀態
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    多簽
+  </a>
+  
+    <nav class="md-nav" aria-label="多簽">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    生成多簽密鑰對
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    簽名交易
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pending" class="md-nav__link">
+    Pending 狀態
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    代幣
+  </a>
+  
+    <nav class="md-nav" aria-label="代幣">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daodst_1" class="md-nav__link">
+    Daodst 代幣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosmos" class="md-nav__link">
+    Cosmos 代幣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm" class="md-nav__link">
+    EVM 代幣
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    交易
+  </a>
+  
+    <nav class="md-nav" aria-label="交易">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    交易類型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosmos_1" class="md-nav__link">
+    Cosmos 交易
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethereum" class="md-nav__link">
+    Ethereum 交易
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    鏈間交易
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    交易憑證
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Protocol</h1>
+
+<h2 id="_1">賬號</h2>
+<p>可以在不同的區塊鏈上以獨特的方式創建和表示加密錢包（或帳戶）。對於在 Daodst 上與帳戶類型交互的開發人員，在其 dApp 前端的錢包集成過程中，重要的是要了解 Daodst 上的賬戶被實施為與以太坊類型地址兼容。</p>
+<h4 id="_2"><strong>創建賬號</strong></h4>
+<p>要創建一個帳戶，您可以創建私鑰、密鑰庫文件（受密碼保護的私鑰）或助記詞（可以訪問多個私鑰的一串單詞）。</p>
+<p>除了具有不同的安全功能外，它們之間最大的區別在於私鑰或密鑰庫文件僅創建一個帳戶。創建一個助記詞可以讓您控制許多帳戶，所有帳戶都可以使用同一個短語訪問。</p>
+<p>Cosmos 區塊鏈與 Daodst 一樣，支持使用助記詞創建帳戶，也稱為分層確定性密鑰生成（HD 密鑰）。這允許用戶在多個區塊鏈上創建帳戶，而無需管理多個密鑰。</p>
+<p>HD 密鑰通過獲取助記詞並將其與一條稱為派生路徑的信息組合來生成地址。區塊鏈可以在它們支持的推導路徑上有所不同。因此，要通過區塊鏈上的助記詞訪問所有賬戶，使用該區塊鏈的特定推導路徑非常重要。</p>
+<h4 id="_3"><strong>代理賬戶</strong></h4>
+<p>術語“賬戶”和“地址”經常互換使用來描述加密錢包。在 Cosmos SDK 中，一個賬戶指定一對公鑰（PubKey）和私鑰（PrivKey）。派生路徑定義了私鑰、公鑰和地址。</p>
+<p>可以派生 PubKey 以生成不同格式的各種地址，這些地址用於識別應用程序中的用戶（以及其他方）。 Cosmos 鏈的常見地址形式是 bech32 格式（例如 dst1 ...）。地址也與消息相關聯以識別消息的發送者。</p>
+<p>PrivKey 用於生成數字簽名，以證明與 PrivKey 關聯的地址批准給定消息。通過對 PrivKey 應用加密方案（稱為橢圓曲線數字簽名算法 (ECDSA)）來執行證明，以生成與消息中的地址進行比較的公鑰。</p>
+<h4 id="daodst"><strong>Daodst 賬號</strong></h4>
+<p>Daodst 定義了自己的自定義賬戶類型，以實現與以太坊類型地址兼容的 HD 錢包。它使用以太坊的 ECDSA secp256k1 曲線作為密鑰 (eth_secp265k1) 並滿足 EIP84 的完整 BIP44 路徑。不要將這條加密曲線與比特幣的 ECDSA secp256k1 曲線混淆。</p>
+<p>基於 Daodst 的帳戶的根 HD 路徑是 <code>m/44'/60'/0'/0</code>。 Daodst 使用 Coin type 60 來支持以太坊類型的賬戶，不像許多其他使用 Coin type 118 的 Cosmos 鏈（coin types 列表</p>
+<p>自定義 Daodst EthAccount 滿足來自 Cosmos SDK 身份驗證模塊的 AccountI 接口，並包含以太坊類型地址所需的其他字段：</p>
+<pre><code>// EthAccountI represents the interface of an EVM compatible account
+type EthAccountI interface {
+    authtypes.AccountI
+    // EthAddress returns the ethereum Address representation of the AccAddress
+    EthAddress() common.Address
+    // CodeHash is the keccak256 hash of the contract code (if any)
+    GetCodeHash() common.Hash
+    // SetCodeHash sets the code hash to the account fields
+    SetCodeHash(code common.Hash) error
+    // Type returns the type of Ethereum Account (EOA or Contract)
+    Type() int8
+}
+</code></pre>
+<h4 id="_4"><strong>地址和公鑰</strong></h4>
+<p>BIP-0173 為隔離見證輸出地址定義了一種新格式，其中包含標識 Bech32 用法的人類可讀部分。 Daodst 使用以下 HRP（人類可讀前綴）作為基礎 HRP：</p>
+<table>
+<thead>
+<tr>
+<th align="left">网络</th>
+<th align="center">主网</th>
+<th align="right">测试网</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">daodst</td>
+<td align="center">daodst</td>
+<td align="right">daodst</td>
+</tr>
+</tbody>
+</table>
+<p>在 Daodst 上默認可用的地址/公鑰有 3 種主要類型的 HRP：</p>
+<ul>
+<li>帳戶的地址和密鑰，用於識別用戶（例如消息的發件人）。它們是使 <strong>eth_secp256k1</strong> 曲線得出的。</li>
+<li>驗證器操作員的地址和密鑰，用於識別驗證器的操作員。它們是使 <strong>eth_secp256k1</strong> 曲線得出的。</li>
+<li>共識節點的地址和密鑰，用於標識參與共識的驗證節點。它們是使用 <strong>ed25519</strong> 曲線得出的</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="center"><strong>bech32 地址前缀</strong></th>
+<th align="right"><strong>bech32  公钥前缀</strong></th>
+<th align="right"><strong>曲线</strong></th>
+<th align="right"><strong> 地址字节长度</strong></th>
+<th align="right"><strong>公钥字节长度</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">帳戶</td>
+<td align="center">dst</td>
+<td align="right">dstpub</td>
+<td align="right">eth_secp256k1</td>
+<td align="right">20</td>
+<td align="right">33(compressed)</td>
+</tr>
+<tr>
+<td align="left">驗證器操作</td>
+<td align="center">dstvaloper</td>
+<td align="right">dstvaloperpub</td>
+<td align="right">eth_secp256k1</td>
+<td align="right">20</td>
+<td align="right">33(compressed)</td>
+</tr>
+<tr>
+<td align="left">共識節點</td>
+<td align="center">dstvalcons</td>
+<td align="right">dstvalconspub</td>
+<td align="right">ed25519</td>
+<td align="right">dst</td>
+<td align="right">32</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_5">客戶的地址格式</h4>
+<p><strong><em>Eth賬號</em></strong> 可以用 Bech32 (dst1...) 和十六進制 (0x...) 格式表示，以實現以太坊的 Web3 工具兼容性.</p>
+<p>Bech32 格式是通過 CLI 和 REST 客戶端進行 Cosmos-SDK 查詢和交易的默認格式。另一方面，十六進制格式是以太坊 common.Address 表示 Cosmos sdk.AccAddress。</p>
+<ul>
+<li><strong><em>地址 (Bech32):</em></strong>
+  <code>dst1z3t55m0l9h0eupuz3dp5t5cypyv674jj7mz2jw</code></li>
+<li><strong><em>地址 (EIP55 16進制):</em></strong>
+  <code>0x91defC7fE5603DFA8CC9B655cF5772459BF10c6f</code></li>
+<li><strong><em>壓縮公鑰:</em></strong>
+  <code>{"@type":"/ethermint.crypto.v1.ethsecp256k1.PubKey","key":"AsV5oddeB+hkByIJo/4lZiVUgXTzNfBPKC73cZ4K1YD2"}</code></li>
+</ul>
+<h4 id="_6"><strong>地址轉換</strong></h4>
+<p>stcd debug addr <address> 可用於在十六進制和 bech32 格式之間轉換地址。例如：
+Bech32</p>
+<pre><code> $ stcd debug addr dst1z3t55m0l9h0eupuz3dp5t5cypyv674jj7mz2jw
+  Address: [20 87 74 109 255 45 223 158 7 130 139 67 69 211 4 9 25 175 86 82]
+  Address (hex): 14574A6DFF2DDF9E07828B4345D3040919AF5652
+  Bech32 Acc: dst1z3t55m0l9h0eupuz3dp5t5cypyv674jj7mz2jw
+  Bech32 Val: dstvaloper1z3t55m0l9h0eupuz3dp5t5cypyv674jjn4d6nn
+</code></pre>
+<p>Hex</p>
+<pre><code> $ stcd debug addr 14574A6DFF2DDF9E07828B4345D3040919AF5652
+  Address: [20 87 74 109 255 45 223 158 7 130 139 67 69 211 4 9 25 175 86 82]
+  Address (hex): 14574A6DFF2DDF9E07828B4345D3040919AF5652
+  Bech32 Acc: dst1z3t55m0l9h0eupuz3dp5t5cypyv674jj7mz2jw
+  Bech32 Val: dstvaloper1z3t55m0l9h0eupuz3dp5t5cypyv674jjn4d6nn
+</code></pre>
+<h4 id="key">Key 導出</h4>
+<p>我們可以使用帶有標誌 --bech <type> (acc|val|cons) 的 stcd 的 keys show 命令來獲取地址和密鑰，如上所述，</p>
+<p>普通賬號</p>
+<pre><code> $ stcd keys show dev0 --bech acc
+- name: dev0
+  type: local
+  address: dst1z3t55m0l9h0eupuz3dp5t5cypyv674jj7mz2jw
+  pubkey: '{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;AsV5oddeB+hkByIJo/4lZiVUgXTzNfBPKC73cZ4K1YD2&quot;}'
+  mnemonic: &quot;&quot;
+</code></pre>
+<p>驗證器</p>
+<pre><code> $ stcd keys show dev0 --bech val
+- name: dev0
+  type: local
+  address: dstvaloper1z3t55m0l9h0eupuz3dp5t5cypyv674jjn4d6nn
+  pubkey: '{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;AsV5oddeB+hkByIJo/4lZiVUgXTzNfBPKC73cZ4K1YD2&quot;}'
+  mnemonic: &quot;&quot;
+</code></pre>
+<p>共識</p>
+<pre><code> $ stcd keys show dev0 --bech cons
+- name: dev0
+  type: local
+  address: dstvalcons1rllqa5d97n6zyjhy6cnscc7zu30zjn3f7wyj2n
+  pubkey: '{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;A/fVLgIqiLykFQxum96JkSOoTemrXD0tFaFQ1B0cpB2c&quot;}'
+  mnemonic: &quot;&quot;
+</code></pre>
+<h4 id="_7">賬號查詢</h4>
+<p>您可以使用 CLI、gRPC 或</p>
+<p>命令行界面</p>
+<pre><code># NOTE: the --output (-o) flag will define the output format in JSON or YAML (text)
+stcd q auth account $(stcd keys show dev0 -a) -o text
+
+'@type': /ethermint.types.v1.EthAccount
+base_account:
+account_number: &quot;0&quot;
+address: dst1z3t55m0l9h0eupuz3dp5t5cypyv674jj7mz2jw
+pub_key:
+  '@type': /ethermint.crypto.v1.ethsecp256k1.PubKey
+  key: AsV5oddeB+hkByIJo/4lZiVUgXTzNfBPKC73cZ4K1YD2
+sequence: &quot;1&quot;
+code_hash: 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+</code></pre>
+<p>Cosmos gRPC and REST</p>
+<pre><code># GET /cosmos/auth/v1beta1/accounts/{address}
+curl -X GET &quot;http://localhost:10337/cosmos/auth/v1beta1/accounts/dst14au322k9munkmx5wrchz9q30juf5wjgz2cfqku&quot; -H &quot;accept: application/json&quot;
+</code></pre>
+<p>JSON-RPC
+要使用 Web3 檢索以太坊十六進制地址，請使用 JSON-RPC eth_accounts 或 personal_listAccounts 端點</p>
+<pre><code># query against a local node
+curl -X POST --data '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_accounts&quot;,&quot;params&quot;:[],&quot;id&quot;:1}' -H &quot;Content-Type: application/json&quot; http://localhost:8545
+
+curl -X POST --data '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;personal_listAccounts&quot;,&quot;params&quot;:[],&quot;id&quot;:1}' -H &quot;Content-Type: application/json&quot; http://localhost:8545
+</code></pre>
+<h2 id="id">鏈ID</h2>
+<p>鏈 ID 是代表區塊鍊網絡的唯一標識符。我們用它來區分不同的區塊鍊網絡，並確保交易和消息被發送到正確的網絡。 Daodst網絡遵循 <strong><em>identifier_EIP155-version</em></strong> 的格式。</p>
+<h4 id="_8">主網</h4>
+<table>
+<thead>
+<tr>
+<th align="left">名稱</th>
+<th align="center">鏈 ID</th>
+<th align="right">標識符</th>
+<th align="right">EIP155 Number</th>
+<th align="right">版本</th>
+<th align="right">激活</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Daodst2</td>
+<td align="center"><code>daodst_7001-2</code></td>
+<td align="right">dst</td>
+<td align="right">7001</td>
+<td align="right">2</td>
+<td align="right">yes</td>
+</tr>
+<tr>
+<td align="left">Daodst1</td>
+<td align="center"><code>Daodst_7001-1</code></td>
+<td align="right">dst</td>
+<td align="right">7001</td>
+<td align="right">1</td>
+<td align="right">no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">測試網</h4>
+<table>
+<thead>
+<tr>
+<th align="left">名稱</th>
+<th align="center">鏈 ID</th>
+<th align="right">標識符</th>
+<th align="right">EIP155 Number</th>
+<th align="right">版本</th>
+<th align="right">激活</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Daodst Public Testnet</td>
+<td align="center"><code>Daodst_7000-2</code></td>
+<td align="right">dst</td>
+<td align="right">9000</td>
+<td align="right">2</td>
+<td align="right">yes</td>
+</tr>
+<tr>
+<td align="left">Daodst Public Testnet</td>
+<td align="center"><code>Daodst_7000-1</code></td>
+<td align="right">dst</td>
+<td align="right">9000</td>
+<td align="right">1</td>
+<td align="right">no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">鏈身份</h4>
+<p>每條鏈都必須有一個唯一的標識符或 <code>chain-id</code>。
+Tendermint 要求每個應用程序在 <a href="https://docs.tendermint.com/master/spec/core/genesis.html#genesis-fields">genesis.json 字段</a> 中定義自己的 <code>chain-id</code>。但是，為了同時符合 EIP155 和 Cosmos 鏈升級標準，Daodst 兼容鏈必須實現他們的鏈標識符的特殊結構。</p>
+<p><strong><em>  結構 </em></strong></p>
+<p>Daodst 鏈 ID 包含 3 個主要組件</p>
+<ul>
+<li><strong>標識符</strong>: 定義應用程序名稱的非結構化字符串。</li>
+<li><strong>EIP155 Number</strong>: 不可變 <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP155</a> <code>CHAIN_ID</code>
+  定義重放攻擊保護數。</li>
+<li><strong>版本號</strong>: 是鏈當前正在運行的版本號（始終為正數）。每次鏈升級或分叉時，這個數字<strong>必須</strong>遞增，以避免網絡或共識錯誤。</li>
+</ul>
+<p><strong><em>  格式 </em></strong></p>
+<p>genesis中指定和Daodst兼容的chain-id的格式如下：</p>
+<pre><code class="language-bash">{identifier}_{EIP155}-{version}
+</code></pre>
+<p>下表提供了一個示例，其中第二行對應於第一行的升級：</p>
+<table>
+<thead>
+<tr>
+<th>ChainID</th>
+<th>Identifier</th>
+<th>EIP155 Number</th>
+<th>Version Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>daodst_7000-1</code></td>
+<td>dst</td>
+<td>7000</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>daodst_7000-2</code></td>
+<td>dst</td>
+<td>7000</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>...</code></td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td><code>daodst_7000-N</code></td>
+<td>dst</td>
+<td>7000</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_11">編碼</h2>
+<p>編碼是指將數據從一種格式轉換為另一種格式以使其更加安全和高效的過程。</p>
+<p>在區塊鏈的背景下，編碼用於確保數據以安全且易於訪問的方式存儲和傳輸。</p>
+<p>遞歸長度前綴 (RLP) 是一種在以太坊執行客戶端中廣泛使用的序列化格式。</p>
+<p>它的目的是對任意嵌套的二進制數據數組進行編碼，是以太坊中用於序列化對象的主要編碼方式。</p>
+<p>RLP 僅對結構進行編碼，而將對特定原子數據類型（例如字符串、整數和浮點數）的編碼留給高階協議。</p>
+<p>在以太坊中，整數必須以沒有前導零的大端二進制形式表示，使得整數值零等同於空字節數組。</p>
+<p>RLP 編碼函數接受一個項目，該項目被定義為值在 [0x00, 0x7f] 範圍內的單個字節或 0-55 字節長的字符串。</p>
+<p>如果字符串的長度超過 55 個字節，則 RLP 編碼包含一個值為 0xb7（dec.183）的字節加上長度
+二進制形式的字符串長度的字節，後跟字符串的長度，後跟字符串。</p>
+<p>RLP 用於哈希驗證，其中通過簽署交易數據的 RLP 哈希來簽署交易，並且區塊由其標頭的 RLP 哈希標識。</p>
+<p>RLP 還用於通過網絡對數據進行編碼，以及在某些情況下應該支持默克爾樹數據結構的高效編碼。</p>
+<p>以太坊執行層使用 RLP 作為序列化對象的主要編碼方式，但更新的 Simple Serialize (SSZ) 取代了 RLP 作為以太坊 2.0 中新共識層的編碼。</p>
+<p>Cosmos Stargate 版本引入了 protobuf 作為客戶端和狀態序列化的主要編碼格式。</p>
+<p>所有用於狀態和客戶端的 EVM 模塊類型，如交易消息、創世、查詢服務等，都將作為協議緩衝區消息實現。</p>
+<p>Cosmos SDK 還支持傳統的 Amino 編碼。</p>
+<p>Protocol Buffers (protobuf) 是一種與語言無關的二進制序列化格式，它比 JSON 更小更快。</p>
+<p>它用於序列化結構化數據，例如消息，並且被設計為高效和可擴展的。</p>
+<p>編碼格式以與語言無關的語言定義，稱為 Protocol Buffers Language (proto3)，編碼的消息可用於為各種編程語言生成代碼。</p>
+<p>protobuf 的主要優點是它的效率，這導致更小的消息大小和更快的序列化和反序列化時間。</p>
+<p>RLP解碼過程如下：根據輸入數據的第一個字節（即前綴）解碼數據類型、實際數據的長度和偏移量；根據數據的類型和偏移量，對數據進行相應的解碼。</p>
+<h4 id="_12">先決條件閱讀</h4>
+<ul>
+<li><a href="https://docs.cosmos.network/main/core/encoding.html">Cosmos SDK Encoding</a></li>
+<li><a href="https://eth.wiki/en/fundamentals/rlp">Ethereum RLP</a></li>
+</ul>
+<h4 id="_13">編碼格式</h4>
+<p><strong><em> Protocol Buffers </em></strong></p>
+<p>Cosmos <a href="https://stargate.cosmos.network/">Stargate</a> 版本引入了 <a href="https://developers.google.com/protocol-buffers">protobuf</a> 作為客戶端和狀態序列化的主要編碼格式。</p>
+<p>所有用於狀態和客戶端（交易消息、創世、查詢服務等）的 EVM 模塊類型都將作為協議緩衝區消息實現。</p>
+<p><strong><em>  Amino </em></strong></p>
+<p>Cosmos SDK 還支持舊版 Amino 編碼格式，以向後兼容以前的版本，特別是用於客戶端編碼和使用 Ledger 設備簽名。</p>
+<p>Daodst 在 EVM 模塊中不支持 Amino，但所有其他啟用它的 Cosmos SDK 模塊都支持它。</p>
+<p><strong><em>  RLP </em></strong></p>
+<p>遞歸長度前綴 (<a href="https://eth.wiki/en/fundamentals/rlp">RLP</a>) 是一種編碼/解碼算法，可序列化消息並允許快速重建編碼數據。</p>
+<p>Daodst 使用 RLP 編碼/解碼以太坊消息以進行 JSON-RPC 處理，以使消息符合正確的以太坊格式。這允許以與以太坊的格式完全相同的格式對消息進行編碼和解碼。</p>
+<p><code>x/evm</code> 交易 (<code>MsgEthereumTx</code>) 編碼是通過將消息轉換為 go-ethereum 的 <code>Transaction</code> 然後使用 RLP 編組交易數據來執行的：</p>
+<pre><code class="language-go">// TxEncoder overwrites sdk.TxEncoder to support MsgEthereumTx
+func (g txConfig) TxEncoder() sdk.TxEncoder {
+return func(tx sdk.Tx) ([]byte, error) {
+  msg, ok := tx.(*evmtypes.MsgEthereumTx)
+  if ok {
+    return msg.AsTransaction().MarshalBinary()
+  }
+  return g.TxConfig.TxEncoder()(tx)
+}
+}
+
+// TxDecoder overwrites sdk.TxDecoder to support MsgEthereumTx
+func (g txConfig) TxDecoder() sdk.TxDecoder {
+return func(txBytes []byte) (sdk.Tx, error) {
+  tx := &amp;ethtypes.Transaction{}
+
+  err := tx.UnmarshalBinary(txBytes)
+  if err == nil {
+    msg := &amp;evmtypes.MsgEthereumTx{}
+    msg.FromEthereumTx(tx)
+    return msg, nil
+  }
+
+  return g.TxConfig.TxDecoder()(txBytes)
+}
+}
+</code></pre>
+<h2 id="gas">Gas和手續費</h2>
+<p>用戶需要支付費用才能在 Daodst 網絡上提交交易。
+由於以太坊和 Cosmos 的費用處理方式不同，了解 Daodst 區塊鏈如何實現與 Cosmos SDK 兼容的以太坊類型的費用計算非常重要。</p>
+<p>因此，本概述解釋了天然氣計算的基礎知識、如何為交易提供費用以及以太坊類型的費用計算如何使用費用市場 (EIP1559) 來確定交易的優先級。</p>
+<p>另外請注意，與 Daodst 上的智能合約交互所支付的費用可以為智能合約部署者賺取收入。
+有關這方面的信息，請前往 <a href="./../../develop/mainnet#revenue">develop</a>。</p>
+<p><strong><em> 先決條件閱讀 </em></strong></p>
+<ul>
+<li><a href="https://docs.cosmos.network/main/basics/gas-fees.html">Cosmos SDK Gas</a></li>
+<li><a href="https://ethereum.org/en/developers/docs/gas/">Ethereum Gas</a></li>
+</ul>
+<p><strong><em>  Basics </em></strong></p>
+<p><strong><em>  為什麼交易需要手續費? </em></strong></p>
+<p>如果任何人都可以免費向網絡提交交易，則網絡可能會被少數參與者發送大量欺詐性交易以阻塞網絡並使其無法正常工作。</p>
+<p>這個問題的解決方案是一個叫做“gas”的概念，它是在整個交易執行過程中消耗的資源。</p>
+<p>在實踐中，代碼執行的每一步都會消耗少量gas，從而有效地對驗證者資源的使用進行收費，並防止惡意行為者隨意中斷網絡。</p>
+<p><strong><em>  什麼是 Gas? </em></strong></p>
+<p>一般來說，gas 是衡量特定交易計算強度的單位——換句話說，評估和執行這項工作需要多少工作量。</p>
+<p>複雜的多步交易，例如委託給十幾個驗證器的 Cosmos 交易，比簡單的單步交易（例如將代幣發送到另一個地址的 Cosmos 交易）需要更多的 gas。</p>
+<p>在提及交易時，“gas”是指交易所需的gas總量。</p>
+<p>例如，一筆交易可能需要 300,000 單位的gas才能執行。</p>
+<p>可以將gas視為房屋或工廠內的電力 (kWh)，或汽車燃料。</p>
+<p>這個想法是要花一些錢才能到達某個地方。</p>
+<p>更多 Gas 介紹:</p>
+<ul>
+<li><a href="https://docs.cosmos.network/main/basics/gas-fees">Cosmos Gas Fees</a></li>
+<li><a href="https://docs.cosmos.network/main/basics/tx-lifecycle.html">Cosmos Tx Lifecycle</a></li>
+<li><a href="https://ethereum.org/en/developers/docs/gas/">Ethereum Gas</a></li>
+</ul>
+<p><strong><em>  如何計算Gas </em></strong></p>
+<p>一般來說，如果不簡單地運行交易，就無法確切知道交易將花費多少 gas。</p>
+<p>使用 Cosmos SDK，這可以通過<a href="https://docs.cosmos.network/main/run-node/txs#simulating-a-transaction">模擬 Tx</a> 來完成。</p>
+<p>否則，有一些方法可以根據交易字段和數據的詳細信息來估計交易將需要的gas。</p>
+<p>例如，在 EVM 的情況下，每個字節碼操作都有 <a href="https://ethereum.org/en/developers/docs/evm/opcodes/">相應數量的gas</a>。</p>
+<p>更多關於Gas計算:</p>
+<ul>
+<li><a href="https://docs.ethers.org/v5/api/providers/provider/#Provider-estimateGas">Estimate Gas</a></li>
+<li><a href="https://ethereum.org/en/developers/docs/evm/opcodes/">Executing EVM Bytecode</a></li>
+<li><a href="https://docs.cosmos.network/main/run-node/txs#simulating-a-transaction">Simulate a Cosmos SDK Tx</a></li>
+</ul>
+<p><strong><em>  Gas和手續費的關係? </em></strong></p>
+<p>Gas 是指執行所需的計算工作，而費用是指您實際花費來執行交易的代幣數量。</p>
+<p>它們是使用以下公式得出的：</p>
+<pre><code class="language-markdown">Total Fees = Gas * Gas Price (the price per unit of gas)
+</code></pre>
+<p>如果 <code>gas</code> 以 kWh 為單位，則“gas price”將是您的能源供應商確定的費率（以美元/kWh 為單位），而 <code>fees​​</code> 將是您的賬單。</p>
+<p>與電力一樣，gas價格在某一天可能會波動，具體取決於網絡流量。</p>
+<p>更多關於 Gas 和 手續費:</p>
+<ul>
+<li><a href="https://docs.cosmos.network/main/basics/gas-fees">Cosmos Gas and Fees</a></li>
+<li><a href="https://ethereum.org/en/developers/docs/gas/">Ethereum Gas and Fees</a></li>
+</ul>
+<p><strong><em>  Cosmos如何處理手續費? </em></strong></p>
+<p>Cosmos 的gas費相對簡單。作為用戶，您指定兩個字段：</p>
+<ol>
+<li>對應於執行氣體上限的 <code>GasLimit</code>，定義為<code>GasWanted</code></li>
+<li><code>Fees</code> 或 <code>GasPrice</code> 之一，將用於指定或計算交易費用</li>
+</ol>
+<p>節點將完全消耗所提供的費用，然後開始執行交易。
+如果在執行過程中發現<code>GasLimit</code>不足，交易將失敗並回滾任何更改，不退還提供的費用。</p>
+<p>基於 Cosmos SDK 的鏈的驗證者可以指定他們在選擇要包含在區塊中的交易時將強制執行的“最低汽油價格”。</p>
+<p>因此，費用不足的交易將遇到延遲或徹底失敗。</p>
+<p>在每個區塊的開始，前一個區塊的費用被<a href="https://docs.cosmos.network/main/modules/distribution">分配給驗證者和委託者</a>，之後它們可以被提取和使用。</p>
+<p><strong><em>  如何在以太坊上處理手續費? </em></strong></p>
+<p>以太坊的費用包括隨著時間的推移引入的多種實現。</p>
+<p>最初，用戶會在交易中指定 <code>GasPrice</code> 和 <code>GasLimit</code> ——很像 Cosmos SDK 交易。</p>
+<p>區塊提議者將從區塊中的每筆交易中收取全部汽油費，並且他們會相應地選擇要包含的交易。</p>
+<p>隨著提案 EIP-1559 和倫敦硬分叉，gas 計算發生了變化。</p>
+<p>上面的 <code>GasPrice</code> 現在被分成兩個獨立的部分：<code>BaseFee</code> 和 <code>PriorityFee</code>。</p>
+<p><code>BaseFee</code> 是根據區塊大小自動計算的，一旦區塊被挖出就會被銷毀。</p>
+<p><code>PriorityFee</code> 交給提議者並代表一個小費，或激勵提議者將交易包含在一個區塊中。</p>
+<pre><code class="language-markdown">Gas Price = Base Fee + Priority Fee
+</code></pre>
+<p>在交易中，除了像以前一樣指定 <code>gas_limit</code> 之外，用戶還可以指定對應於總 <code>GasPrice</code> 的 <code>max_fee_per_gas</code> 和對應於最大 <code>PriorityFee</code> 的 <code>max_priority_fee_per_gas</code>。</p>
+<p>所有不需要執行的多餘氣體都退還給用戶。</p>
+<p>更多關於 Ethereum 手續費:</p>
+<ul>
+<li><a href="https://ethereum.org/en/developers/docs/gas/">Gas Calculation Docs</a></li>
+<li><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md">Proposal EIP-1559</a></li>
+</ul>
+<p><strong><em>   實施 </em></strong></p>
+<p><strong><em>  如何在Daodst上處理Gas和手續費? </em></strong></p>
+<p>從根本上說，Daodst 是一個 Cosmos SDK 鏈，可作為 Cosmos SDK 模塊的一部分實現 EVM 兼容性。由於這種架構，所有 EVM 交易最終都被編碼為 Cosmos SDK 交易並更新 Cosmos SDK 管理的狀態。由於所有交易都表示為 Cosmos SDK 交易，因此交易費用可以在不同執行層。</p>
+<p>實際上，處理費用包括標準的 Cosmos SDK 邏輯、一些以太坊邏輯和 customDaodst 邏輯。大多數情況下，費用由 <code>fee_collector</code> 模塊收取，然後支付給驗證者和委託者。一些關鍵的區別如下：</p>
+<p>1.Fee 市場模塊</p>
+<p>為了在 Daodst 的 EVM 層上支持 EIP-1559 氣體和費用計算，Daodst 跟踪為每個區塊供應的氣體，並使用它來計算未來 EVM 交易的基本費用，從而實現 EIP 指定的 EVM 動態費用和交易優先級 -1559。</p>
+<p>對於 EVM 交易，每個節點都繞過其本地的 <code>min-gas-prices</code> 配置，而是應用 EIP-1559 費用邏輯——gas 價格必須簡單地大於全局 <code>min-gas-price</code> 和區塊的 <code>BaseFee</code> ，剩餘部分被視為優先小費。</p>
+<p>這允許驗證者在不應用 Cosmos SDK 費用邏輯的情況下計算以太坊費用。</p>
+<p>與以太坊不同，Daodst 上的“BaseFee”不會被銷毀，而是分發給驗證者和委託者</p>
+<p>此外，<code>BaseFee</code> 受全局<code>min-gas-price</code> 的下限（目前，全局<code>min-gas-price</code> 參數設置為零，儘管它可以通過治理進行更新）。</p>
+<p>2.EVM Gas返還</p>
+<p>Daodst 會為 EVM 交易退還一小部分（默認情況下至少 50%）未使用的氣體，以接近以太坊上的當前行為。 </p>
+<p>3.收入模塊</p>
+<p>Daodst 開發收入模塊作為獎勵開發人員創建有用的 dApp 的一種方式——任何在 Daodst 收入模塊註冊的合同都會從與合同交互的每筆交易中向合同開發人員獎勵一小部分交易費用（目前為 95%）. 驗證者和委託者賺取剩餘部分。</p>
+<p><strong><em>  詳細時間表 </em></strong></p>
+<p>1.節點執行前一個塊並運行 <code>EndBlock</code> 掛鉤 * 作為此掛鉤的一部分，FeeMarket (EIP-1559) 模塊從該塊上的交易中跟踪總的 <code>TransientGasWanted</code>。
+這將用於下一個區塊的 <code>BaseFee</code>。</p>
+<p>2.節點接收後續區塊的交易並將這些交易八卦給同行*這些可以按包含的費用價格排序和優先級（使用 EIP-1559 費用優先機制進行 EVM 交易 ，將包含在下一個區塊中</p>
+<p>3.節點為後續塊運行 <code>BeginBlock</code> * FeeMarket 模塊計算 <code>BaseFee</code> 使用前一個塊中的總 <code>GasWanted</code> 應用於此塊。
+* 分配模塊 <a href="https://docs.cosmos.network/main/modules/distribution#begin-block">distributes</a> 前一個區塊的費用獎勵給驗證者和委託者</p>
+<p>4.對於將包含在此塊中的每個有效交易，節點執行以下操作：</p>
+<p><strong> 他們運行一個對應於交易類型的<code>AnteHandler</code> </strong>。</p>
+<p>這個流程:</p>
+<ol>
+<li>執行基本交易驗證</li>
+<li>驗證提供的費用是否大於全球和本地最小驗證器值<em>並且</em>大於計算出的<code>BaseFee</code>
+   3.（對於以太坊交易）搶佔EVM交易消耗gas</li>
+<li>扣除用戶的交易手續費，轉入<code>fee_collector</code>模塊</li>
+<li>
+<p>增加當前區塊中的 <code>TransientGasWanted</code>，用於計算下一個區塊的 <code>BaseFee</code></p>
+<p><strong>然後，對於標準Cosmos交易,節點</strong></p>
+<ul>
+<li>執行交易並更新狀態</li>
+<li>交易消耗gas</li>
+</ul>
+<p><strong>對於以太坊交易，節點:</strong></p>
+<ul>
+<li>執行交易並更新狀態</li>
+<li>計算使用的gas並與供應的gas進行比較，然後退還指定部分的剩餘部分</li>
+<li>如果交易與已註冊的智能合約交互，則將一小部分用作收入的費用作為收入模塊的一部分發送給合同開發商</li>
+</ul>
+</li>
+<li>
+<p>節點為此塊運行 <code>EndBlock</code> 並存儲塊的 <code>GasWanted</code></p>
+</li>
+</ol>
+<p><strong><em>  詳細做法 </em></strong></p>
+<p><strong><em>  Cosmos <code>Gas</code> </em></strong></p>
+<p>在 Cosmos SDK 中，gas 主要在 <code>GasMeter</code>和 <code>BlockGasMeter</code> 中進行跟踪：</p>
+<ul>
+<li><code>GasMeter</code>：跟踪導致狀態轉換的執行過程中消耗的氣體。它在每次交易執行時重置。</li>
+<li><code>BlockGasMeter</code>：跟踪區塊中消耗的氣體並強制氣體不超過預定義的限制。此限制在 Tendermint 共識參數中定義，可以通過治理參數更改提案進行更改。</li>
+</ul>
+<p>由於 gas 是按字節定價的，因此相同的交互在參數值較大的情況下比較小的參數值更耗費氣體（與以太坊的 <code>uint256</code> 值不同，Cosmos SDK 數值使用 <a href="https://pkg.go.dev/math/big#Int">Big.Int</a> 類型，它們是動態調整大小的）。</p>
+<p>可以在<a href="https://docs.cosmos.network/main/basics/gas-fees.html">此處</a> 找到有關作為 Cosmos SDK 一部分的 gas 的更多信息。</p>
+<p><strong><em>  匹配EVM Gas消耗 </em></strong></p>
+<p>Daodst 是一條 EVM 兼容鏈，支持以太坊 Web3 工具。出於這個原因，氣體消耗必須與其他 EVM 相當，最重要的是以太坊。</p>
+<p>EVM 和 Cosmos 狀態轉換之間的主要區別在於，EVM 為每個操作碼使用一個 <a href="https://github.com/ethereum/go-ethereum/blob/master/params/protocol_params.go">gas table</a>，而 Cosmos 使用<code>GasConfig</code>為每個 CRUD 操作收取 gas，方法是為訪問數據庫設置固定的每字節成本。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/3fd376bd5659f076a4dc79b644573299fd1ec1bf/store/types/gas.go#L187-L196</p>
+<p>為了匹配EVM消耗的gas，忽略SDK中的gas消耗邏輯，取而代之的是消耗的gas是通過從消息上定義的氣體限制中減去狀態轉換剩餘氣體加上退款來計算的。</p>
+<p>為了忽略 SDK 的 gas 消耗，我們將交易<code>GasMeter</code>計數重置為 0，並手動將其設置為 EVM 模塊在執行結束時計算出的<code>gasUsed</code>值。</p>
+<p><strong><em>  <code>AnteHandler</code> </em></strong></p>
+<p>Cosmos SDK <a href="https://docs.cosmos.network/main/basics/gas-fees.html#antehandler"><code>AnteHandler</code></a> 在交易執行之前執行基本檢查。</p>
+<p>這些檢查通常是簽名驗證、交易字段驗證、交易費用等。</p>
+<p>關於 gas 消耗和費用，<code>AnteHandler</code> 檢查用戶是否有足夠的餘額來支付 tx 成本（金額加上費用），並檢查消息中定義的 gas 限制是否大於或等於計算的固有 gas 消息。</p>
+<p><strong><em>  Gas 返还 </em></strong> </p>
+<p>在 EVM 中，gas 可以在執行之前指定。 指定的全部氣體在執行開始時（在<code>AnteHandler</code>步驟期間）被消耗，如果執行後有任何氣體剩餘，剩餘的氣體將退還給用戶。</p>
+<p>此外，EVM 還可以定義要返還給用戶的氣體，但這些氣體將被限制為所用氣體的一小部分，具體取決於所使用的分叉/版本。</p>
+<p><strong><em>  零手续费交易 </em></strong> </p>
+<p>在 Cosmos 中，<code>AnteHandler</code> 不強制執行最低 gas 價格，因為<code>min-gas-prices</code>是根據本地節點/驗證器檢查的。</p>
+<p>換句話說，接受的最低費用由網絡的驗證者決定，每個驗證者可以為其費用指定不同的最低值。</p>
+<p>如果至少有一個驗證者願意在他們提議的區塊中包含<code>0</code> gas price 的交易，這可能允許最終用戶提交 0 費用交易。</p>
+<p>出於同樣的原因，在 Daodst 中，對於<code>evm</code>模塊定義的交易類型以外的交易類型，可以發送<code>0</code>費用的交易。</p>
+<p>EVM 模塊交易不能有“0”費用，因為 EVM 本身就需要 gas。</p>
+<p>此檢查由 EVM 事務無狀態驗證（即<code>ValidateBasic</code>）函數以及 Daodst 定義的自定義<code>AnteHandler</code>完成。</p>
+<p><strong><em>  Gas 预估 </em></strong> </p>
+<p>以太坊提供了一個 JSON-RPC 端點<code>eth_estimateGas</code>來幫助用戶在他們的交易中設置正確的氣體限制。</p>
+<p>因此，在 Daodst 中實現了一個特定的查詢 API <code>EstimateGas</code>。 它將針對當前區塊/狀態應用交易並執行二進制搜索以找到返回給用戶的最佳氣體值（相同的交易將一遍又一遍地應用，直到我們找到失敗前所需的最小氣體） .</p>
+<p>我們需要使用二分查找的原因是交易所需的 gas 可能高於應用交易後 EVM 返回的值，因此我們需要嘗試直到找到最優值。</p>
+<p>在整個執行過程中將使用緩存上下文以避免更改在狀態中持久化。</p>
+<p>對於 Cosmos Tx，開發者可以使用 Cosmos SDK 的【交易模擬】(https://docs.cosmos.network/main/run-node/txs#simulating-a-transaction) 來創建準確的預估。</p>
+<p><strong><em>  跨链 Gas 和 手续费 </em></strong> </p>
+<p>假設用戶通過 IBC 轉賬將代幣從鏈 A 轉移到 Daodst，並希望執行 Daodst 交易——但是，他們沒有任何 Daodst 代幣來支付費用。Cosmos SDK 引入了 <code>Tips</code> 來解決這個問題； 用戶可以使用不同的代幣支付費用——在本例中，是來自鏈 A 的代幣。</p>
+<p>為了使用小費支付交易費用，該用戶可以簽署一筆不帶小費的交易，然後將交易發送給費用中繼器。
+  然後，費用中繼器將以本地貨幣（在本例中為 dst）支付費用，並收到付款小費，充當中介交易所。</p>
+<p>有關 Cosmos 的更多信息：</p>
+<ul>
+<li><a href="https://docs.cosmos.network/main/core/tips">Cosmos 提示文檔</a></li>
+</ul>
+<p><strong><em>  使用Daodst CLI处理Gas和手续费 </em></strong> </p>
+<p>使用 Daodst CLI 客戶端廣播交易時，用戶應考慮可用的選項。
+向網絡發送交易時需要考慮三個標誌：</p>
+<ul>
+<li><code>--fees</code>: 隨交易一起支付的費用； 例如：10dst。 默認為所需費用。</li>
+<li><code>--gas</code>: 每筆交易設置的氣體限制； 默認值為 200000。</li>
+<li><code>--gas-prices</code>: gas 價格來確定交易費用（例如 10dst）。</li>
+</ul>
+<p>但是，並非所有這些都需要在每個事務中定義。
+正確的組合是：</p>
+<ul>
+<li><code>--fees=auto</code>: 自動估算費用和汽油（與 --gas=auto 相同的行為）。
+  如果使用任何其他與費用相關的標誌（例如，<code>--gas-prices</code>、<code>--fees</code>），則會引發錯誤</li>
+<li><code>--gas=auto</code>: 與 <code>--fees=auto</code> 相同的行為。
+  如果使用任何其他與費用相關的標誌（例如，<code>--gas-prices</code>、<code>--fees</code>），則會引發錯誤</li>
+<li><code>--gas={int}</code>: 使用指定的氣體量和交易所需的費用</li>
+<li><code>--fees={int}{denom}</code>: 使用 tx 的指定費用。 對 tx 使用 gas 默認值 (200000)。</li>
+<li><code>--fees={int}{denom} --gas={int}</code>: 使用指定的氣體和費用。 使用提供的參數計算 gas-price</li>
+<li><code>--gas-prices={int}{denom}</code>: 使用提供的 gas 價格和默認 gas 量 (200000)</li>
+<li><code>--gas-prices={int}{denom} --gas={int}</code>: 使用為 tx 指定的氣體，並使用相應的參數計算費用。</li>
+</ul>
+<p>讀者應注意，前兩個選項為新用戶提供了更友好的用戶體驗，而後者則適用於更高級的用戶，他們希望對這些參數有更多的控制權。</p>
+<p>該團隊引入了<code>自動</code>標誌選項，可以自動計算執行交易所需的汽油和費用。通過這種方式，新用戶或開發人員可以執行交易而無需定義特定的 gas 和費用值。</p>
+<p>使用 <code>auto</code> 標誌有時可能無法根據網絡流量估算正確的 gas 和費用。
+為了克服這個問題，您可以為 <code>--gas-adjustment</code> 標誌使用更高的值。
+默認情況下，它設置為<code>1.2</code>。
+當估計值不足時，重試更高的 gas 調整，例如 <code>--gas-adjustment 1.3</code>。</p>
+<p>不能結合使用 <code>--gas-prices</code> 和 <code>--fees</code> 標誌。
+如果是這樣，用戶將收到一條錯誤消息，指出無法同時提供費用和汽油價格。</p>
+<p>請記住，如果提供的費用或汽油量不足，上述組合可能會失敗。
+如果是這種情況，CLI 將返回一條包含特定原因的錯誤消息。 例如：</p>
+<pre><code class="language-shell">raw_log: 'out of gas in location: submit proposal; gasWanted: 200000, gasUsed: 263940.
+  Please retry with a gas (--gas flag) amount higher than gasUsed: out of gas'
+</code></pre>
+<h2 id="_14">密鑰管理</h2>
+<p>A mnemonic phrase, also known as a seed phrase, is a set of words used to recover or restore a cryptocurrency wallet.
+It acts as a backup to access your digital assets in case you lose access to the original wallet. The phrase is
+typically a series of 12-24 words that are generated when you create a wallet, and it should be kept secure and
+ private.</p>
+<p>The importance of mnemonic phrases lies in the fact that cryptocurrencies are stored in a decentralized manner,
+meaning that there is no central authority or institution that holds or controls your funds. This means that if
+you lose access to your wallet (e.g. forget your password, lose your device), you will not be able to recover
+your funds without the mnemonic phrase.</p>
+<p>Therefore, it is crucial to store your mnemonic phrase in a safe and secure place, such as a physical paper or
+a secure digital file. Additionally, it is recommended to make multiple copies and store them in different
+locations, so that you can access your funds in case of any emergency.</p>
+<p>:::note
+<strong>助記符短語與私鑰</strong>
+A seed phrase, also known as a recovery phrase or backup phrase, is a sequence of words used to generate a private
+key. It is typically a set of 12 or 24 words, and it's used to recover or restore access to a cryptocurrency wallet
+in case the original private key is lost or damaged. A seed phrase can be used to generate multiple private keys,
+which can be used to access multiple cryptocurrency addresses and balances.</p>
+<p>On the other hand, a private key is a long string of characters that is used to sign transactions and provide access
+to your cryptocurrency funds. The private key is generated from the seed phrase and is unique to each cryptocurrency
+address. It is used to create digital signatures for transactions, which ensure that the transaction is legitimate
+and has been authorized by the rightful owner of the funds.</p>
+<p>In conclusion, the security of your private keys and mnemonic phrase is of utmost importance. If your private keys
+ are compromised, it can put all associated accounts at risk. However, the loss of your mnemonic phrase can have
+ even more severe consequences as it is used to generate multiple private keys. Therefore, it is crucial to take
+  proper measures to safeguard both your private keys and mnemonic phrase to avoid any catastrophic loss.</p>
+<p>:::</p>
+<p><strong> Daodst CLI中的助記符 </strong></p>
+<p>:::note
+Before proceeding with the CLI, please insure you have <code>stcd</code> installed. Installation instruction are located 
+:::</p>
+<p>When you create a new key, you'll receive a mnemonic phrase that can be used to restore that key. Backup the mnemonic phrase:</p>
+<pre><code class="language-bash">stcd keys add dev0
+{
+  &quot;name&quot;: &quot;dev0&quot;,
+  &quot;type&quot;: &quot;local&quot;,
+  &quot;address&quot;: &quot;dst1n253dl2tgyhxjm592p580c38r4dn8023ctv28d&quot;,
+  &quot;pubkey&quot;: '{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq&quot;}',
+  &quot;mnemonic&quot;: &quot;&quot;
+}
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+# &lt;24 word mnemonic phrase&gt;
+</code></pre>
+<p>To restore the key:</p>
+<pre><code class="language-bash">$ stcd keys add dev0-restored --recover
+&gt; Enter your bip39 mnemonic
+banner genuine height east ghost oak toward reflect asset marble else explain foster car nest make van divide twice culture announce shuffle net peanut
+{
+  &quot;name&quot;: &quot;dev0-restored&quot;,
+  &quot;type&quot;: &quot;local&quot;,
+  &quot;address&quot;: &quot;dst1n253dl2tgyhxjm592p580c38r4dn8023ctv28d&quot;,
+  &quot;pubkey&quot;: '{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq&quot;}'
+}
+</code></pre>
+<h4 id="_15">密鑰導出</h4>
+<p><strong> Tendermint-私鑰格式 </strong></p>
+<p>To backup this type of key without the mnemonic phrase, do the following:</p>
+<pre><code class="language-bash">stcd keys export dev0
+Enter passphrase to decrypt your key:
+Enter passphrase to encrypt the exported key:
+-----BEGIN TENDERMINT PRIVATE KEY-----
+kdf: bcrypt
+salt: 14559BB13D881A86E0F4D3872B8B2C82
+type: secp256k1
+
+# &lt;Tendermint private key&gt;
+-----END TENDERMINT PRIVATE KEY-----
+
+$ echo &quot;\
+-----BEGIN TENDERMINT PRIVATE KEY-----
+kdf: bcrypt
+salt: 14559BB13D881A86E0F4D3872B8B2C82
+type: secp256k1
+
+# &lt;Tendermint private key&gt;
+-----END TENDERMINT PRIVATE KEY-----&quot; &gt; dev0.export
+</code></pre>
+<p><strong> Ethereum-私鑰格式 </strong></p>
+<p>:::tip
+<strong>Note</strong>: These types of keys are MetaMask-compatible.
+:::</p>
+<p>To backup this type of key without the mnemonic phrase, do the following:</p>
+<pre><code class="language-bash">stcd keys unsafe-export-eth-key dev0 &gt; dev0.export
+**WARNING** this is an unsafe way to export your unencrypted private key, are you sure? [y/N]: y
+Enter keyring passphrase:
+</code></pre>
+<h4 id="_16">密鑰導入</h4>
+<p><strong> Tendermint-私鑰格式 </strong>s</p>
+<pre><code class="language-bash">$ stcd keys import dev0-imported ./dev0.export
+Enter passphrase to decrypt your key:
+</code></pre>
+<p><strong> Ethereum-私鑰格式 </strong></p>
+<pre><code>$ stcd keys unsafe-import-eth-key dev0-imported ./dev0.export
+Enter passphrase to encrypt your key:
+</code></pre>
+<h4 id="_17">驗證</h4>
+<p>Verify that your key has been restored using the following command:</p>
+<pre><code class="language-bash">$ stcd keys list
+[
+  {
+    &quot;name&quot;: &quot;dev0-imported&quot;,
+    &quot;type&quot;: &quot;local&quot;,
+    &quot;address&quot;: &quot;dst1n253dl2tgyhxjm592p580c38r4dn8023ctv28d&quot;,
+    &quot;pubkey&quot;: '{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq&quot;}'
+  },
+  {
+    &quot;name&quot;: &quot;dev0-restored&quot;,
+    &quot;type&quot;: &quot;local&quot;,
+    &quot;address&quot;: &quot;dst1n253dl2tgyhxjm592p580c38r4dn8023ctv28d&quot;,
+    &quot;pubkey&quot;: '{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq&quot;}'
+  },
+  {
+    &quot;name&quot;: &quot;dev0&quot;,
+    &quot;type&quot;: &quot;local&quot;,
+    &quot;address&quot;: &quot;dst1n253dl2tgyhxjm592p580c38r4dn8023ctv28d&quot;,
+    &quot;pubkey&quot;: '{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;ArJhve4v5HkLm+F7ViASU/rAGx7YrwU4+XKV2MNJt+Cq&quot;}'
+  }
+]
+</code></pre>
+<h2 id="_18">導入/導出 狀態</h2>
+<p>Daodst can dump the entire application state to a JSON file.
+This, besides <a href="../../validate/upgrades">upgrades</a>,
+can be useful for manual analysis of the state at a given height.</p>
+<h4 id="_19">導出狀態</h4>
+<p>Export state with:</p>
+<pre><code class="language-bash">stcd export &gt; new_genesis.json
+</code></pre>
+<p>You can also export state from a particular height
+(at the end of processing the block of that height):</p>
+<pre><code class="language-bash">stcd export --height [height] &gt; new_genesis.json
+</code></pre>
+<p>If you plan to start a new network for 0 height (i.e genesis) from the exported state,
+export with the <code>--for-zero-height</code> flag:</p>
+<pre><code class="language-bash">stcd export --height [height] --for-zero-height &gt; new_genesis.json
+</code></pre>
+<h4 id="_20">手動遷移狀態</h4>
+<p>If you want to migrate state manually, e.g. for local testing purpose.
+Note that for regular chain upgrades, a manual state migration is not required.</p>
+<p>After exporting your state into a json file,
+you can replace the old <code>genesis.json</code> with <code>new_genesis.json</code>.</p>
+<pre><code class="language-bash">cp -f genesis.json new_genesis.json
+mv new_genesis.json genesis.json
+</code></pre>
+<p>At this point, you might want to run a script
+to update the exported genesis into a genesis state
+that is compatible with your new version.</p>
+<p>You can use the <code>migrate</code> command to
+migrate from a given version to the next one (eg: <code>v0.X.X</code> to <code>v1.X.X</code>):</p>
+<pre><code class="language-bash">stcd migrate TARGET_VERSION GENESIS_FILE --chain-id=&lt;new_chain_id&gt; --genesis-time=&lt;yyyy-mm-ddThh:mm:ssZ&gt;
+</code></pre>
+<h2 id="_21">多簽</h2>
+<p>Learn how to generate, sign and broadcast a transaction using the keyring multisig.</p>
+<p>A <strong>multisig account</strong> is an Daodst account with a special key that can require more than one signature to sign transactions.
+This can be useful for increasing the security of the account or for requiring the consent of multiple parties to make
+transactions. Multisig accounts can be created by specifying:</p>
+<ul>
+<li>threshold number of signatures required</li>
+<li>the public keys involved in signing</li>
+</ul>
+<p>To sign with a multisig account, the transaction must be signed individually by the different keys specified for the account.
+Then, the signatures will be combined into a multi-signature which can be used to sign the transaction. If fewer than the
+threshold number of signatures needed are present, the resultant multi-signature is considered invalid.</p>
+<h4 id="_22">生成多簽密鑰對</h4>
+<pre><code class="language-bash">stcd keys add --multisig=name1,name2,name3[...] --multisig-threshold=K new_key_name
+</code></pre>
+<p><code>K</code> is the minimum number of private keys that must have signed the transactions that carry the public key's address as signer.</p>
+<p>The <code>--multisig</code> flag must contain the name of public keys that will be combined into a public key that will be
+generated and stored as <code>new_key_name</code> in the local database. All names supplied through <code>--multisig</code> must already exist
+ in the local database.</p>
+<p>Unless the flag <code>--nosort</code> is set, the order in which the keys are supplied on the command line does not matter, i.e. the
+ following commands generate two identical keys:</p>
+<pre><code class="language-bash">stcd keys add --multisig=p1,p2,p3 --multisig-threshold=2 multisig_address
+stcd keys add --multisig=p2,p3,p1 --multisig-threshold=2 multisig_address
+</code></pre>
+<p>Multisig addresses can also be generated on-the-fly and printed through the which command:</p>
+<pre><code class="language-bash">stcd keys show --multisig-threshold=K name1 name2 name3 [...]
+</code></pre>
+<h4 id="_23">簽名交易</h4>
+<p><strong> Step 1: 创建多签密钥 </strong></p>
+<p>Let's assume that you have <code>test1</code> and <code>test2</code> want to make a multisig account with <code>test3</code>.</p>
+<p>First import the public keys of <code>test3</code> into your keyring.</p>
+<pre><code class="language-sh">stcd keys add \
+    test3 \
+    --pubkey=dstpub1addwnpepqgcxazmq6wgt2j4rdfumsfwla0zfk8e5sws3p3zg5dkm9007hmfysxas0u2
+</code></pre>
+<p>Generate the multisig key with 2/3 threshold.</p>
+<pre><code class="language-sh">stcd keys add \
+    multi \
+    --multisig=test1,test2,test3 \
+    --multisig-threshold=2
+</code></pre>
+<p>You can see its address and details:</p>
+<pre><code class="language-sh">stcd keys show multi
+
+- name: multi
+  type: multi
+  address: dst1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m
+  pubkey: dstpub1ytql0csgqgfzd666axrjzq3mxw59ys6yqcd3ydjvhgs0uzs6kdk5fp4t73gmkl8t6y02yfq7tvfzd666axrjzq3sd69kp5usk492x6nehqjal67ynv0nfqapzrzy3gmdk27la0kjfqfzd666axrjzq6utqt639ka2j3xkncgk65dup06t297ccljmxhvhu3rmk92u3afjuyz9dg9
+  mnemonic: &quot;&quot;
+  threshold: 0
+  pubkeys: []
+</code></pre>
+<p>Let's add 10 dst to the multisig wallet:</p>
+<pre><code class="language-bash">stcd tx bank send \
+    test1 \
+    dst1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
+    10000000000000000000adst \
+    --chain-id=daodst_7000-4 \
+    --gas=auto \
+    --fees=1000000adst \
+    --broadcast-mode=block
+</code></pre>
+<p><strong> Step 2: 創建多簽交易 </strong></p>
+<p>We want to send 5 dst from our multisig account to <code>dst1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft</code>.</p>
+<pre><code class="language-bash">stcd tx bank send \
+    dst1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft \
+    dst157g6rn6t6k5rl0dl57zha2wx72t633axqyvvwq \
+    5000000000000000000dst \
+    --gas=200000 \
+    --fees=1000000dst \
+    --chain-id=daodst_7000-4 \
+    --generate-only &gt; unsignedTx.json
+</code></pre>
+<p>The file <code>unsignedTx.json</code> contains the unsigned transaction encoded in JSON.</p>
+<pre><code class="language-json">{
+  &quot;body&quot;: {
+    &quot;messages&quot;: [
+      {
+        &quot;@type&quot;: &quot;/cosmos.bank.v1beta1.MsgSend&quot;,
+        &quot;from_address&quot;: &quot;dst1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft&quot;,
+        &quot;to_address&quot;: &quot;dst157g6rn6t6k5rl0dl57zha2wx72t633axqyvvwq&quot;,
+        &quot;amount&quot;: [
+          {
+            &quot;denom&quot;: &quot;dst&quot;,
+            &quot;amount&quot;: &quot;5000000000000000000&quot;
+          }
+        ]
+      }
+    ],
+    &quot;memo&quot;: &quot;&quot;,
+    &quot;timeout_height&quot;: &quot;0&quot;,
+    &quot;extension_options&quot;: [],
+    &quot;non_critical_extension_options&quot;: []
+  },
+  &quot;auth_info&quot;: {
+    &quot;signer_infos&quot;: [],
+    &quot;fee&quot;: {
+      &quot;amount&quot;: [
+        {
+          &quot;denom&quot;: &quot;dst&quot;,
+          &quot;amount&quot;: &quot;1000000&quot;
+        }
+      ],
+      &quot;gas_limit&quot;: &quot;200000&quot;,
+      &quot;payer&quot;: &quot;&quot;,
+      &quot;granter&quot;: &quot;&quot;
+    }
+  },
+  &quot;signatures&quot;: []
+}
+</code></pre>
+<p><strong> Step 3: 單獨簽名 </strong></p>
+<p>Sign with <code>test1</code> and <code>test2</code> and create individual signatures.</p>
+<pre><code class="language-sh">stcd tx sign \
+    unsignedTx.json \
+    --multisig=dst1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
+    --from=test1 \
+    --output-document=test1sig.json \
+    --chain-id=daodst_7000-4
+</code></pre>
+<pre><code class="language-sh">stcd tx sign \
+    unsignedTx.json \
+    --multisig=dst1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
+    --from=test2 \
+    --output-document=test2sig.json \
+    --chain-id=daodst_7000-4
+</code></pre>
+<p><strong> Step 4: 創建多重簽名 </strong></p>
+<p>Combine signatures to sign transaction.</p>
+<pre><code class="language-sh">stcd tx multisign \
+    unsignedTx.json \
+    multi \
+    test1sig.json test2sig.json \
+    --output-document=signedTx.json \
+    --chain-id=daodst_7000-4
+</code></pre>
+<p>The TX is now signed:</p>
+<pre><code class="language-json">{
+  &quot;body&quot;: {
+    &quot;messages&quot;: [
+      {
+        &quot;@type&quot;: &quot;/cosmos.bank.v1beta1.MsgSend&quot;,
+        &quot;from_address&quot;: &quot;dst1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft&quot;,
+        &quot;to_address&quot;: &quot;dst157g6rn6t6k5rl0dl57zha2wx72t633axqyvvwq&quot;,
+        &quot;amount&quot;: [
+          {
+            &quot;denom&quot;: &quot;dst&quot;,
+            &quot;amount&quot;: &quot;5000000000000000000&quot;
+          }
+        ]
+      }
+    ],
+    &quot;memo&quot;: &quot;&quot;,
+    &quot;timeout_height&quot;: &quot;0&quot;,
+    &quot;extension_options&quot;: [],
+    &quot;non_critical_extension_options&quot;: []
+  },
+  &quot;auth_info&quot;: {
+    &quot;signer_infos&quot;: [
+      {
+        &quot;public_key&quot;: {
+          &quot;@type&quot;: &quot;/cosmos.crypto.multisig.LegacyAminoPubKey&quot;,
+          &quot;threshold&quot;: 2,
+          &quot;public_keys&quot;: [
+            {
+              &quot;@type&quot;: &quot;/cosmos.crypto.secp256k1.PubKey&quot;,
+              &quot;key&quot;: &quot;ApCzSG8k7Tr4aM6e4OJRExN7cNtvH21L9azbh+uRrvt4&quot;
+            },
+            {
+              &quot;@type&quot;: &quot;/cosmos.crypto.secp256k1.PubKey&quot;,
+              &quot;key&quot;: &quot;Ah91erz8ChNanqLe9ea948rvAiXMCRlR5Ka7EE/c0xUK&quot;
+            },
+            {
+              &quot;@type&quot;: &quot;/cosmos.crypto.secp256k1.PubKey&quot;,
+              &quot;key&quot;: &quot;A0OjtIUCFJM3AobJ9HJTWKP9RZV2+WPcwVjLgsAidrZ/&quot;
+            }
+          ]
+        },
+        &quot;mode_info&quot;: {
+          &quot;multi&quot;: {
+            &quot;bitarray&quot;: {
+              &quot;extra_bits_stored&quot;: 3,
+              &quot;elems&quot;: &quot;wA==&quot;
+            },
+            &quot;mode_infos&quot;: [
+              {
+                &quot;single&quot;: {
+                  &quot;mode&quot;: &quot;SIGN_MODE_LEGACY_AMINO_JSON&quot;
+                }
+              },
+              {
+                &quot;single&quot;: {
+                  &quot;mode&quot;: &quot;SIGN_MODE_LEGACY_AMINO_JSON&quot;
+                }
+              }
+            ]
+          }
+        },
+        &quot;sequence&quot;: &quot;1&quot;
+      }
+    ],
+    &quot;fee&quot;: {
+      &quot;amount&quot;: [
+        {
+          &quot;denom&quot;: &quot;dst&quot;,
+          &quot;amount&quot;: &quot;1000000&quot;
+        }
+      ],
+      &quot;gas_limit&quot;: &quot;200000&quot;,
+      &quot;payer&quot;: &quot;&quot;,
+      &quot;granter&quot;: &quot;&quot;
+    }
+  },
+  &quot;signatures&quot;: [
+    &quot;CkCEeIbeGc+I1ipZuhp/0KhVNnWAv2tTlvgo5x61lzk1KHmLPV38m/YFurrFt5cm5+fqIXrn+FlOjrJuzBhw8ogYCkCawm9mpXsBHk0CFsE5618fVnvScEkfrzW0c2jCcjqV8EPuj3ut74UWzZyQkwtJGxUWtro9EgnGsB7Di1Gzizst&quot;
+  ]
+}
+</code></pre>
+<p><strong> Step 5: 廣播交易 </strong></p>
+<pre><code class="language-sh">stcd tx broadcast signedTx.json \
+    --chain-id=daodst_7000-4 \
+    --broadcast-mode=block
+</code></pre>
+<h2 id="pending">Pending 狀態</h2>
+<p>當一筆交易被提交到以太坊網絡時，它首先進入待處理狀態，等待節點執行。</p>
+<p>如果交易中的 gas 價格設置得非常低並且節點正忙於處理其他更高 gas 價格的交易，則交易可能會在更長的時間內處於待處理狀態。</p>
+<p>在掛起狀態期間，允許交易發起者隨時更改交易字段。</p>
+<p>他們可以通過發送具有相同隨機數的另一筆交易來做到這一點。</p>
+<p><strong> 先決條件閱讀 </strong></p>
+<ul>
+<li><a href="https://docs.cosmos.network/main/building-apps/app-mempool">Cosmos SDK Mempool</a></li>
+</ul>
+<p><strong> Daodst 對比 Ethereum </strong></p>
+<p>在以太坊中，待處理的區塊是在礦工排隊等待生產時生成的。</p>
+<p>這些未決區塊包括礦工根據支付的最高 gas 獎勵挑選出的未決交易。</p>
+<p>這種機制的存在是因為在以太坊網絡上不可能實現區塊最終性。</p>
+<p>塊以概率確定性提交，這意味著隨著時間（和塊）的流逝，交易和塊變得不太可能被還原。</p>
+<p>Daodst 在這方面的設計完全不同，因為沒有“待定狀態”的概念。</p>
+<p>Daodst 使用 <a href="https://docs.tendermint.com/">Tendermint Core</a> BFT 共識，為交易提供即時終結性。</p>
+<p>出於這個原因，Ethermint 不需要掛起狀態機制，因為所有（如果不是大多數）交易都將提交到下一個區塊（Cosmos 鏈上的平均區塊時間約為 8 秒）。</p>
+<p>然而，這會導致一些與以太坊 Web3 兼容的查詢出現問題，這些查詢可能會進入掛起狀態。</p>
+<p>與以太坊的另一個顯著區別是，區塊是由驗證者或區塊生產者生成的，他們以先進先出 (FIFO) 的方式將本地內存池中的交易包含到區塊中。</p>
+<p>Daodst 上的交易不能從 Tendermint 節點 <a href="https://docs.tendermint.com/v0.34/tendermint-core/mempool.html">mempool</a> 中排序或挑選出來。</p>
+<p><strong> Pending 狀態隊列 </strong></p>
+<p>Daodst 將進行查詢，以說明節點交易內存池中存在的任何未確認交易。</p>
+<p>進行的掛起狀態查詢將是主觀的，並且將在目標節點的內存池上進行查詢。</p>
+<p>因此，對於兩個不同節點的相同查詢，掛起狀態將不相同。</p>
+<p><strong> JSON-RPC Calls on Pending Transactions </strong></p>
+<ul>
+<li><a href="./../../develop/api/ethereum-json-rpc/methods#eth_getbalance"><code>eth_getBalance</code></a></li>
+<li><a href="./../../develop/api/ethereum-json-rpc/methods#eth_gettransactioncount"><code>eth_getTransactionCount</code></a></li>
+<li><a href="./../../develop/api/ethereum-json-rpc/methods#eth_getblocktransactioncountbynumber"><code>eth_getBlockTransactionCountByNumber</code></a></li>
+<li><a href="./../../develop/api/ethereum-json-rpc/methods#eth_getblockbynumber"><code>eth_getBlockByNumber</code></a></li>
+<li><a href="./../../develop/api/ethereum-json-rpc/methods#eth_gettransactionbyhash"><code>eth_getTransactionByHash</code></a></li>
+<li><a href="./../../develop/api/ethereum-json-rpc/methods#eth_gettransactionbyblockhashandindex"><code>eth_getTransactionByBlockNumberAndIndex</code></a></li>
+<li><a href="./../../develop/api/ethereum-json-rpc/methods#eth_sendtransaction"><code>eth_sendTransaction</code></a></li>
+</ul>
+<h2 id="_24">代幣</h2>
+<h3 id="daodst_1">Daodst 代幣</h3>
+<p>EVM 上用於質押、治理和氣體消耗的面額是 DST。
+Daodst 提供以下實用程序：保護權益證明鏈、用於治理建議的代幣、向驗證者和用戶分配費用，以及作為在 EVM 上運行智能合約的燃料。</p>
+<p>Daodst 使用 <a href="https://en.wikipedia.org/wiki/Atto-">Atto</a> DST 作為基礎面額以保持與以太坊的對等。
+資產分為三類：</p>
+<ul>
+<li>原生 DST 代幣</li>
+<li>IBC代幣（通過 IBC）</li>
+<li>以太坊類型的代幣，例如 ERC-20</li>
+</ul>
+<p>這與以太坊的面額相匹配：</p>
+<p><code>1 ETH = 10&lt;sup&gt;18&lt;/sup&gt; wei</code></p>
+<h3 id="cosmos">Cosmos 代幣</h3>
+<p>賬戶可以在其餘額中擁有 Cosmos 幣，這些幣用於與其他 Cosmos 的操作和交易。
+這些例子包括使用代幣進行質押、IBC 轉賬、治理存款和 EVM。</p>
+<h3 id="evm">EVM 代幣</h3>
+<p>Daodst 與 ERC20 代幣和 EVM 原生支持的其他不可替代代幣標準（EIP721、EIP1155）兼容。</p>
+<p><strong>  Daodst 資產頁 </strong></p>
+<p>Daodst 儀表板上的功能。</p>
+<p>Daodst 啟用此功能，通過混淆資產類型遠離用戶並允許他們專注於交互來幫助改善用戶體驗。</p>
+<p>該協議通過處理轉換簡化了流程，並為用戶提供了簡化的面額和他們持有的資產數量。</p>
+<p>有關我們如何處理令牌註冊的更多信息，請訪問 <a href="./../../develop/mainnet#token-registration">此處</a>。</p>
+<h2 id="_25">交易</h2>
+<p>交易是指由賬戶發起的改變區塊鏈狀態的動作。</p>
+<p>為了有效地執行狀態更改，每筆交易都會廣播到整個網絡。</p>
+<p>任何節點都可以廣播請求在區塊鏈狀態機上執行的交易；</p>
+<p>發生這種情況後，驗證器將驗證、執行交易並將產生的狀態更改傳播到網絡的其餘部分。</p>
+<p>為了處理每筆交易，網絡上的計算資源都會被消耗。</p>
+<p>因此，“gas”的概念是作為驗證者處理交易所需的計算的參考而出現的。</p>
+<p>用戶必須為此計算付費，所有交易都需要相關費用。</p>
+<p>該費用是根據執行交易所需的 gas 和 gas 價格計算的。</p>
+<p>此外，交易需要使用發送方的私鑰進行簽名。</p>
+<p>這證明交易只能來自發件人，而不是欺詐性發送。</p>
+<p>簡而言之，將簽名交易提交到網絡後的交易生命週期如下：</p>
+<ul>
+<li>交易哈希是加密生成的。</li>
+<li>該交易被廣播到網絡並添加到由所有其他未決網絡交易組成的交易池中。</li>
+<li>驗證者必須選擇你的交易並將其包含在一個塊中，以驗證交易並認為它“成功”。</li>
+</ul>
+<p>關於交易生命週期的更詳細解釋，請參見<a href="https://docs.cosmos.network/main/basics/tx-lifecycle">相應部分</a>。</p>
+<p>交易哈希是一個唯一標識符，可用於檢查交易信息，例如，發出的事件是否成功。</p>
+<p>交易可能因各種原因而失敗。</p>
+<p>例如，提供的 gas 或費用可能不足。</p>
+<p>此外，交易驗證可能會失敗。</p>
+<p>每筆交易都有特定的條件，必須滿足這些條件才能被視為有效。</p>
+<p>一個廣泛的驗證是發送者是交易簽名者。</p>
+<p>在這種情況下，如果您在發件人地址與簽名者地址不同的地方發送交易，即使費用足夠，交易也會失敗。</p>
+<p>如今，交易不僅可以在提交的鏈上進行狀態轉換，還可以在另一條區塊鏈上進行交易。</p>
+<p>鏈間交易可以通過 <a href="https://ibcprotocol.org/">區塊鏈間通信協議 (IBC)</a> 實現。</p>
+<p>在下面的部分中找到更詳細的解釋。</p>
+<h4 id="_26">交易類型</h4>
+<p>Daodst 支持兩種交易類型：</p>
+<ol>
+<li>Cosmos 交易</li>
+<li>Ethereum 交易</li>
+</ol>
+<p>這是可能的，因為 Daodst 使用 <a href="https://docs.cosmos.network/main">Cosmos-SDK</a> 並實現了 <a href="https://ethereum.org/en/developers/docs/evm/">以太坊虛擬機</a> 作為一個模塊。</p>
+<p>通過這種方式，Daodst 提供了以太坊和 Cosmos 鏈組合的特性和功能，等等。</p>
+<p>儘管這兩種交易類型中包含的大部分信息相似，但它們之間存在差異。</p>
+<p>一個重要的區別是，Cosmos 交易允許在同一交易中發送多條消息。</p>
+<p>相反，以太坊交易則沒有這種可能。</p>
+<p>為了將這兩種類型結合在一起，Daodst 將以太坊交易實現為單個 <a href="https://godoc.org/github.com/cosmos/cosmos-sdk/types#Msg"><code>sdk.Msg</code></a>
+包含在 <a href="https://pkg.go.dev/github.com/cosmos/cosmos-sdk/x/auth#StdTx"><code>auth.StdTx</code></a> 中。</p>
+<p>此消息中包含所有相關的以太坊交易信息。</p>
+<p>這包括簽名、氣體、有效載荷等。</p>
+<p>在以下部分中找到有關這兩種類型的更多信息。</p>
+<h4 id="cosmos_1">Cosmos 交易</h4>
+<p>On Cosmos chains, transactions are comprised of metadata held in contexts and <code>sdk.Msg</code>s
+that trigger state changes within a module through the module's Protobuf <a href="https://docs.cosmos.network/main/building-modules/msg-services">Msg service</a>.</p>
+<p>When users want to interact with an application and make state changes (e.g. sending coins), they create transactions.
+Cosmos transactions can have multiple <code>sdk.Msg</code>s.
+Each of these must be signed using the private key associated with the appropriate account(s),
+before the transaction is broadcasted to the network.</p>
+<p>A Cosmos transaction includes the following information:</p>
+<ul>
+<li><code>Msgs</code>: an array of msgs (<code>sdk.Msg</code>)</li>
+<li><code>GasLimit</code>: option chosen by the users for how to calculate how much gas they will need to pay</li>
+<li><code>FeeAmount</code>: max amount user is willing to pay in fees</li>
+<li><code>TimeoutHeight</code>: block height until which the transaction is valid</li>
+<li><code>Signatures</code>: array of signatures from all signers of the tx</li>
+<li><code>Memo</code>: a note or comment to send with the transaction</li>
+</ul>
+<p>To submit a Cosmos transaction, users must use one of the provided clients.</p>
+<h4 id="ethereum">Ethereum 交易</h4>
+<p>Ethereum transactions refer to actions initiated by EOAs (externally-owned accounts, managed by humans),
+rather than internal smart contract calls. Ethereum transactions transform the state of the EVM
+and therefore must be broadcasted to the entire network.</p>
+<p>Ethereum transactions also require a fee, known as <code>gas</code>. (<a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a>)
+introduced the idea of a base fee, along with a priority fee which serves as an incentive
+for miners to include specific transactions in blocks.</p>
+<p>There are several categories of Ethereum transactions:</p>
+<ul>
+<li>regular transactions: transactions from one account to another</li>
+<li>contract deployment transactions: transactions without a <code>to</code> address, where the contract code is sent in the <code>data</code> field</li>
+<li>execution of a contract: transactions that interact with a deployed smart contract,
+  where the <code>to</code> address is the smart contract address</li>
+</ul>
+<p>An Ethereum transaction includes the following information:</p>
+<ul>
+<li><code>recipient</code>: receiving address</li>
+<li><code>signature</code>: sender's signature</li>
+<li><code>nonce</code>: counter of tx number from account</li>
+<li><code>value</code>: amount of ETH to transfer (in wei)</li>
+<li><code>data</code>: include arbitrary data. Used when deploying a smart contract or making a smart contract method call</li>
+<li><code>gasLimit</code>: max amount of gas to be consumed</li>
+<li><code>maxPriorityFeePerGas</code>: mas gas to be included as tip to validators</li>
+<li><code>maxFeePerGas</code>: max amount of gas to be paid for tx</li>
+</ul>
+<p>For more information on Ethereum transactions and the transaction lifecycle, <a href="https://ethereum.org/en/developers/docs/transactions/">go here</a>.</p>
+<p>Daodst supports the following Ethereum transactions.</p>
+<p>:::tip
+<strong>Note</strong>: Unprotected legacy transactions are not supported by default.
+:::</p>
+<ul>
+<li>Dynamic Fee Transactions (<a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a>)</li>
+<li>Access List Transactions (<a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a>)</li>
+<li>Legacy Transactions (<a href="https://eips.ethereum.org/EIPS/eip-2718">EIP-2718</a>)</li>
+</ul>
+<p>Daodst is capable of processing Ethereum transactions by wrapping them on a <code>sdk.Msg</code>.
+Daodst achieves this by using the <code>MsgEthereumTx</code>.
+This message encapsulates an Ethereum transaction as an SDK message and contains the necessary transaction data fields.</p>
+<p>One remark about the <code>MsgEthereumTx</code> is that it implements both the <code>sdk.Msg</code> and <code>sdk.Tx</code> interfaces
+(generally SDK messages only implement the former, while the latter is a group of messages bundled together).
+The reason of this, is because the <code>MsgEthereumTx</code> must not be included in a <code>auth.StdTx</code>
+(SDK's standard transaction type) as it performs gas and fee checks using the Ethereum logic
+from Geth instead of the Cosmos SDK checks done on the auth module <code>AnteHandler</code>.</p>
+<h4 id="_27">鏈間交易</h4>
+<p>Interchain transactions refer to the transfer of digital assets or data between two or more different blockchain networks.</p>
+<p>Each blockchain network has its own unique protocol and data structure,
+making it difficult to directly transfer assets or data from one blockchain to another.
+Interchain transactions allow for the transfer of assets and data between different blockchains
+by using intermediary mechanisms or protocols.</p>
+<p>One such mechanism is a cross-chain bridge, which acts as a connector between different blockchains,
+enabling the transfer of assets or data.
+Cross-chain bridges typically require some form of trust or
+consensus mechanism to ensure the security and integrity of the transaction.</p>
+<p>Another possibility is to use the <a href="https://ibcprotocol.org/">IBC (Inter-Blockchain Communication)</a> protocol.
+To make an interchain transaction using IBC a user needs to:</p>
+<ul>
+<li>Choose the source and destination blockchain networks that the user wants to transfer assets or data between.</li>
+<li>Ensure that both blockchain networks have implemented the IBC protocol</li>
+<li>Ensure there's a connection and channel established between the two blockchain networks using IBC</li>
+<li>Initiate the transfer of assets or data: this is done by sending a transaction from the source blockchain
+  to the destination blockchain through the IBC channel</li>
+</ul>
+<p>Interchain transactions are becoming increasingly important as the number of different blockchain networks
+and applications continues to grow.
+They enable the interoperability of different blockchain networks,
+allowing for greater flexibility and efficiency in the transfer of digital assets and data.</p>
+<h4 id="_28">交易憑證</h4>
+<p>A transaction receipt shows data returned by an Ethereum client to represent the result of a particular transaction,
+including a hash of the transaction, its block number, the amount of gas used, and,
+in case of deployment of a smart contract, the address of the contract.
+Additionally, it includes custom information from the events emitted in the smart contract.</p>
+<p>A receipt contains the following information:</p>
+<ul>
+<li><code>transactionHash</code> : hash of the transaction.</li>
+<li><code>transactionIndex</code>: integer of the transactions index position in the block.</li>
+<li><code>blockHash</code>: hash of the block where this transaction was in.</li>
+<li><code>blockNumber</code>: block number where this transaction was in.</li>
+<li><code>from</code>: address of the sender.</li>
+<li><code>to</code>: address of the receiver. null when its a contract creation transaction.</li>
+<li><code>cumulativeGasUsed</code> : The total amount of gas used when this transaction was executed in the block.</li>
+<li><code>effectiveGasPrice</code> : The sum of the base fee and tip paid per unit of gas.</li>
+<li><code>gasUsed</code> : The amount of gas used by this specific transaction alone.</li>
+<li><code>contractAddress</code> : The contract address created, if the transaction was a contract creation, otherwise null.</li>
+<li><code>logs</code>: Array of log objects, which this transaction generated.</li>
+<li><code>logsBloom</code>: Bloom filter for light clients to quickly retrieve related logs.</li>
+<li><code>type</code>: integer of the transaction type, 0x00 for legacy transactions, 0x01 for access list types,
+  0x02 for dynamic fees. It also returns either.</li>
+<li><code>root</code> : transaction stateroot (pre Byzantium)</li>
+<li><code>status</code>: either 1 (success) or 0 (failure)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
