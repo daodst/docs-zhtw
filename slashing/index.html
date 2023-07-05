@@ -1,0 +1,2443 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../distribute/">
+      
+      
+        <link rel="next" href="../staking/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>削減 - DAODST文檔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST文檔" class="md-header__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST文檔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              削減
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/stcd/" class="md-tabs__link">
+        🔍協議
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱模塊
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈網關和驗證器
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞聊天
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋常見問題
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST文檔" class="md-nav__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST文檔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍協議
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍協議
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+          命令行界面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          命令行界面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        單節點
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        帳號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        鏈ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        編碼
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas和手續費
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        密鑰環
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        密鑰管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        狀態導入導出
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        等待隊列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        多簽
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        代幣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        交易
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱模塊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱模塊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        模塊賬號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        以太坊虛擬機
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        聊天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/" class="md-nav__link">
+        網關
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        合約
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        聊天質押
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth/" class="md-nav__link">
+        認證
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bank/" class="md-nav__link">
+        銀行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gov/" class="md-nav__link">
+        治理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mint/" class="md-nav__link">
+        鑄造
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distribute/" class="md-nav__link">
+        分配
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          削減
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        削減
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    摘要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    概念
+  </a>
+  
+    <nav class="md-nav" aria-label="概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    墓碑上限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    違規時間軸
+  </a>
+  
+    <nav class="md-nav" aria-label="違規時間軸">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    單次或雙重簽名違規
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    多次雙重簽名違規
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    簽名信息（活性）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    Messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unjail" class="md-nav__link">
+    Unjail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    開始區塊
+  </a>
+  
+    <nav class="md-nav" aria-label="開始區塊">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liveness-tracking" class="md-nav__link">
+    Liveness Tracking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staking-hooks" class="md-nav__link">
+    Staking hooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    驗證者綁定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgserver" class="md-nav__link">
+    MsgServer
+  </a>
+  
+    <nav class="md-nav" aria-label="MsgServer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgunjail" class="md-nav__link">
+    MsgUnjail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staking/" class="md-nav__link">
+        DPOS質押
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈網關和驗證器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈網關和驗證器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          設置和配寘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          設置和配寘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        運行驗證器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        配寘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        硬碟使用優化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        狀態同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        記憶體池
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          陞級
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          陞級
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        升級清單
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        硬分叉升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        自動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        手動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        回滾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        提案模板
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        測試網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        主網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          網關操作指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          網關操作指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        操作指南(linux)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        操作指南(win)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        金鑰備份和恢復
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞聊天
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        安裝啟動
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        文檔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/client_server/" class="md-nav__link">
+        客戶端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/server_server/" class="md-nav__link">
+        服務端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        定制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        呼叫流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        可選配置*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋常見問題
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    摘要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    概念
+  </a>
+  
+    <nav class="md-nav" aria-label="概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    墓碑上限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    違規時間軸
+  </a>
+  
+    <nav class="md-nav" aria-label="違規時間軸">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    單次或雙重簽名違規
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    多次雙重簽名違規
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    狀態
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    簽名信息（活性）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    Messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unjail" class="md-nav__link">
+    Unjail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    開始區塊
+  </a>
+  
+    <nav class="md-nav" aria-label="開始區塊">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liveness-tracking" class="md-nav__link">
+    Liveness Tracking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staking-hooks" class="md-nav__link">
+    Staking hooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    驗證者綁定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgserver" class="md-nav__link">
+    MsgServer
+  </a>
+  
+    <nav class="md-nav" aria-label="MsgServer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgunjail" class="md-nav__link">
+    MsgUnjail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!--
+order: 20
+title: Slashing Overview
+parent:
+  title: "slashing"
+-->
+
+<h1 id="_1"><code>削减(懲罰)</code></h1>
+<h2 id="_2">摘要</h2>
+<p>本節規定了削減模塊。</p>
+<p>削減模塊使得基於Cosmos SDK的區塊鏈能夠通過懲罰具有權益價值的協議認可的參與者來減少其可能導致的行為風險。</p>
+<p>懲罰可能包括但不限於：:</p>
+<ul>
+<li>銷毀他們持有的一定數量的權益份額</li>
+<li>在一段時間內取消他們對未來區塊的投票權限。</li>
+</ul>
+<h2 id="_3">概念</h2>
+<h3 id="_4">狀態</h3>
+<p>在任何時候，狀態機中都有任意數量的驗證者註冊。
+每個區塊，頂部的 MaxValidators（由 x/staking 定義）未被監禁的驗證者變成了 bonded，這意味著他們可以提出和投票支持區塊。
+被 bonded 的驗證者 at stake，這意味著他們和他們的委託人的部分或全部權益份額會因為他們犯了協議錯誤而遭受風險。</p>
+<p>對於每個驗證者，我們保留一個 ValidatorSigningInfo 記錄，其中包含有關驗證者活動狀態和其他違反相關屬性的信息。</p>
+<h3 id="_5">墓碑上限</h3>
+<p>為了減輕最初可能出現的非惡意協議錯誤的影響，Cosmos Hub 為每個驗證者實現了一個 墓碑 上限，這只允許驗證者因雙重簽署錯誤而被懲罰一次。例如，如果您錯誤地配置了 HSM 並雙重簽署了一堆舊區塊，您只會因為第一次雙重簽署而受到懲罰（然後立即被墓碑化）。這仍然是相當昂貴的，因此需要盡量避免，但是墓碑上限在一定程度上減輕了意外錯誤配置的經濟影響。</p>
+<p>活動性錯誤（Liveness faults）沒有上限，因為它們不能堆疊在一起。當違規發生時，活動性錯誤被“檢測”出來，並且驗證者立即被監禁，因此他們不可能在解監之前多次犯錯。</p>
+<h3 id="_6">違規時間軸</h3>
+<p>為了說明 <code>slashing</code> 模塊如何通過 Tendermint 共識處理提交的證據，請考慮以下示例：</p>
+<p><strong>定義</strong>:</p>
+<p><em>C<sub>n</sub></em> : 違規行為 <code>n</code> 發生
+<em>D<sub>n</sub></em> : 發現違規行為 <code>n</code>
+<em>V<sub>b</sub></em> : 已綁定的驗證者
+<em>V<sub>u</sub></em> : 未綁定的驗證者</p>
+<h4 id="_7">單次或雙重簽名違規</h4>
+<p>&lt;-----------------&gt;</p>
+<p>當發現單次違規行為後，驗證者會被解除綁定並被扣除違規行為的全部懲罰。</p>
+<h4 id="_8">多次雙重簽名違規</h4>
+<p>&lt;---------------------------&gt;</p>
+<p>當發現多次違規行為後，驗證者會被拘留並被扣除其中一次違規行為的懲罰。由於驗證者已被墓碑化，因此無法重新加入驗證者集合。</p>
+<h2 id="_9">狀態</h2>
+<h2 id="_10">簽名信息（活性）</h2>
+<p>每個區塊都包含前一個區塊的驗證者預提交集合，稱為 Tendermint 提供的 LastCommitInfo。
+只要 LastCommitInfo 包含超過總投票權的 2/3 的預提交，就是有效的。這個機制可以確保網絡的安全性和活性。</p>
+<p>提議者會受到激勵，將所有驗證者的預提交包含在 Tendermint 的 <code>LastCommitInfo</code> 中，通過根据包含在 <code>LastCommitInfo</code> 中的投票權與 2/3 投票權之差比例提高額外費用。</p>
+<pre><code>type LastCommitInfo struct {
+    Round int32
+    Votes []VoteInfo
+}
+</code></pre>
+<p>如果驗證者未能在某些區塊的 <code>L</code>astCommitInfo` 中被包含，他們將受到懲罰，自動被拘留，可能被削減獎勵，並解除綁定。</p>
+<p>有關驗證者活性的信息通過 ValidatorSigningInfo 进行跟踪。它在存储库中按以下方式进行索引：</p>
+<ul>
+<li>ValidatorSigningInfo: <code>0x01 | ConsAddrLen (1 byte) | ConsAddress -&gt; ProtocolBuffer(ValSigningInfo)</code></li>
+<li>MissedBlocksBitArray: <code>0x02 | ConsAddrLen (1 byte) | ConsAddress | LittleEndianUint64(signArrayIndex) -&gt; VarInt(didMiss)</code> (varint 是一種數字編碼格式。)</li>
+</ul>
+<p>第一個映射允許我們根據驗證者的共識地址輕鬆查找驗證者的最近簽名信息。</p>
+<p>第二個映射 (<code>MissedBlocksBitArray</code>) 充當大小為 <code>SignedBlocksWindow</code> 的位數組，告訴我們驗證者是否錯過了位數組中給定索引的區塊。
+位數組中的索引以小端 uint64 的形式給出。
+結果是一個 <code>varint</code>，取值為 <code>0</code>或 <code>1</code>，其中 <code>0</code> 表示驗證者未錯過（已簽署）相應的區塊，而 <code>1</code> 表示他們錯過了該區塊（未簽署）。</p>
+<p>請注意，<code>MissedBlocksBitArray</code> 不是在前面明確初始化的。
+當我們在新綁定的驗證者的前 <code>SignedBlocksWindow</code> 個區塊中進行進度時，將添加鍵。
+<code>SignedBlocksWindow</code> 參數定義用於跟踪驗證者活性的滑動窗口的大小（區塊數）。</p>
+<p>跟踪驗證者活性存儲的信息如下：</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/slashing/v1beta1/slashing.proto#L11-L33</p>
+<h2 id="messages">Messages</h2>
+<p>在本節中，我們描述了針對“懲罰”模塊的消息處理過程。</p>
+<h3 id="unjail">Unjail</h3>
+<p>如果驗證者因停機而被自動解除綁定，並希望重新上線並可能重新加入綁定集，則必須發送 <code>MsgUnjail</code>：</p>
+<pre><code class="language-protobuf">// MsgUnjail is an sdk.Msg used for unjailing a jailed validator, thus returning
+// them into the bonded validator set, so they can begin receiving provisions
+// and rewards again.
+message MsgUnjail {
+  string validator_addr = 1;
+}
+</code></pre>
+<p>Below is a pseudocode of the <code>MsgSrv/Unjail</code> RPC:</p>
+<pre><code>unjail(tx MsgUnjail)
+    validator = getValidator(tx.ValidatorAddr)
+    if validator == nil
+      fail with &quot;No validator found&quot;
+
+    if getSelfDelegation(validator) == 0
+      fail with &quot;validator must self delegate before unjailing&quot;
+
+    if !validator.Jailed
+      fail with &quot;Validator not jailed, cannot unjail&quot;
+
+    info = GetValidatorSigningInfo(operator)
+    if info.Tombstoned
+      fail with &quot;Tombstoned validator cannot be unjailed&quot;
+    if block time &lt; info.JailedUntil
+      fail with &quot;Validator still jailed, cannot unjail until period has expired&quot;
+
+    validator.Jailed = false
+    setValidator(validator)
+
+    return
+</code></pre>
+<p>如果驗證者擁有足夠的股份以進入前 <code>n = MaximumBondedValidators 名</code>，它將自動重新綁定，
+仍然委託給該驗證者的所有委託者將重新綁定並開始再次收集佣金和獎勵。</p>
+<h2 id="_11">開始區塊</h2>
+<h3 id="liveness-tracking">Liveness Tracking</h3>
+<p>在每個區塊開始時，我們會更新每個驗證者的 <code>ValidatorSigningInfo</code>，並檢查它們是否在一個滑動窗口內跨越了存活閾值。
+這個滑動窗口由 <code>SignedBlocksWindow</code> 定義，並且此窗口中的索引由驗證者的 <code>ValidatorSigningInfo</code> 中的 <code>IndexOffset</code> 確定。
+對於每個處理的區塊，無論驗證者是否簽署，都會增加 <code>I</code>ndexOffset<code>。一旦確定索引，就會相應地更新</code>MissedBlocksBitArray<code>和</code>MissedBlocksCounter`。</p>
+<p>最後，為了確定驗證者是否跨越了存活閾值，我們會取得最大錯過區塊數 maxMissed，
+它等於 <code>SignedBlocksWindow - (MinSignedPerWindow * SignedBlocksWindow)</code>，
+以及可以確定存活性的最小高度 minHeight。如果當前區塊高度大於 minHeight，
+並且驗證者的 <code>MissedBlocksCounter</code> 大於 <code>maxMissed</code>，則會對其進行懲罰，
+懲罰方式是削減 <code>SlashFractionDowntime</code> 的貢獻值，並將其關押在 <code>DowntimeJailDuration</code> 的時間內
+同時重置以下值：<code>MissedBlocksBitArray</code>、<code>MissedBlocksCounter</code> 和 <code>IndexOffset</code>。</p>
+<p><strong>注意</strong>: 存活性懲罰<strong><em>不會</em></strong>導致墓碑化。</p>
+<pre><code class="language-go">height := block.Height
+
+for vote in block.LastCommitInfo.Votes {
+  signInfo := GetValidatorSigningInfo(vote.Validator.Address)
+
+  // This is a relative index, so we counts blocks the validator SHOULD have
+  // signed. We use the 0-value default signing info if not present, except for
+  // start height.
+  index := signInfo.IndexOffset % SignedBlocksWindow()
+  signInfo.IndexOffset++
+
+  // Update MissedBlocksBitArray and MissedBlocksCounter. The MissedBlocksCounter
+  // just tracks the sum of MissedBlocksBitArray. That way we avoid needing to
+  // read/write the whole array each time.
+  missedPrevious := GetValidatorMissedBlockBitArray(vote.Validator.Address, index)
+  missed := !signed
+
+  switch {
+  case !missedPrevious &amp;&amp; missed:
+    // array index has changed from not missed to missed, increment counter
+    SetValidatorMissedBlockBitArray(vote.Validator.Address, index, true)
+    signInfo.MissedBlocksCounter++
+
+  case missedPrevious &amp;&amp; !missed:
+    // array index has changed from missed to not missed, decrement counter
+    SetValidatorMissedBlockBitArray(vote.Validator.Address, index, false)
+    signInfo.MissedBlocksCounter--
+
+  default:
+    // array index at this index has not changed; no need to update counter
+  }
+
+  if missed {
+    // emit events...
+  }
+
+  minHeight := signInfo.StartHeight + SignedBlocksWindow()
+  maxMissed := SignedBlocksWindow() - MinSignedPerWindow()
+
+  // If we are past the minimum height and the validator has missed too many
+  // jail and slash them.
+  if height &gt; minHeight &amp;&amp; signInfo.MissedBlocksCounter &gt; maxMissed {
+    validator := ValidatorByConsAddr(vote.Validator.Address)
+
+    // emit events...
+
+    // We need to retrieve the stake distribution which signed the block, so we
+    // subtract ValidatorUpdateDelay from the block height, and subtract an
+    // additional 1 since this is the LastCommit.
+    //
+    // Note, that this CAN result in a negative &quot;distributionHeight&quot; up to
+    // -ValidatorUpdateDelay-1, i.e. at the end of the pre-genesis block (none) = at the beginning of the genesis block.
+    // That's fine since this is just used to filter unbonding delegations &amp; redelegations.
+    distributionHeight := height - sdk.ValidatorUpdateDelay - 1
+
+    Slash(vote.Validator.Address, distributionHeight, vote.Validator.Power, SlashFractionDowntime())
+    Jail(vote.Validator.Address)
+
+    signInfo.JailedUntil = block.Time.Add(DowntimeJailDuration())
+
+    // We need to reset the counter &amp; array so that the validator won't be
+    // immediately slashed for downtime upon rebonding.
+    signInfo.MissedBlocksCounter = 0
+    signInfo.IndexOffset = 0
+    ClearValidatorMissedBlockBitArray(vote.Validator.Address)
+  }
+
+  SetValidatorSigningInfo(vote.Validator.Address, signInfo)
+}
+</code></pre>
+<h2 id="hooks">Hooks</h2>
+<p>本節包含模組的 hooks 描述。Hooks 是當事件觸發時自動執行的操作。</p>
+<h3 id="staking-hooks">Staking hooks</h3>
+<p>削減模組實現了在 <code>x/staking</code> 中定義的 <code>StakingHooks</code>，用於記錄驗證者的信息。
+在應用程序初始化期間，這些 <code>hooks</code> 應該在權益綁定模組結構中註冊。</p>
+<p>以下 hooks 影響削減狀態：</p>
+<ul>
+<li><code>AfterValidatorBonded</code> 會根據以下部分的描述創建一個 <code>V</code>alidatorSigningInfo` 實例。</li>
+<li><code>AfterValidatorCreated</code> 存儲驗證者的共識密鑰。</li>
+<li><code>AfterValidatorRemoved</code> 刪除驗證者的共識密鑰。</li>
+</ul>
+<h3 id="_12">驗證者綁定</h3>
+<p>在新驗證者首次成功綁定時，我們為新綁定的驗證者創建一個新的 <code>ValidatorSigningInfo</code> 結構，其 <code>StartHeight</code> 為當前區塊的高度。</p>
+<pre><code>onValidatorBonded(address sdk.ValAddress)
+
+  signingInfo, found = GetValidatorSigningInfo(address)
+  if !found {
+    signingInfo = ValidatorSigningInfo {
+      StartHeight         : CurrentHeight,
+      IndexOffset         : 0,
+      JailedUntil         : time.Unix(0, 0),
+      Tombstone           : false,
+      MissedBloskCounter  : 0
+    }
+    setValidatorSigningInfo(signingInfo)
+  }
+
+  return
+</code></pre>
+<h2 id="tags">Tags</h2>
+<p>削減模組發出以下事件/標籤：</p>
+<h2 id="msgserver">MsgServer</h2>
+<h3 id="msgunjail">MsgUnjail</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>slashing</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{validatorAddress}</td>
+</tr>
+</tbody>
+</table>
+<h1 id="keeper">Keeper</h1>
+<h2 id="beginblocker-handlevalidatorsignature">BeginBlocker: HandleValidatorSignature</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slash</td>
+<td>address</td>
+<td>{validatorConsensusAddress}</td>
+</tr>
+<tr>
+<td>slash</td>
+<td>power</td>
+<td>{validatorPower}</td>
+</tr>
+<tr>
+<td>slash</td>
+<td>reason</td>
+<td>{slashReason}</td>
+</tr>
+<tr>
+<td>slash</td>
+<td>jailed [0]</td>
+<td>{validatorConsensusAddress}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>[0] 只有在驗證者被投入監獄時才會包括。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>liveness</td>
+<td>address</td>
+<td>{validatorConsensusAddress}</td>
+</tr>
+<tr>
+<td>liveness</td>
+<td>missed_blocks</td>
+<td>{missedBlocksCounter}</td>
+</tr>
+<tr>
+<td>liveness</td>
+<td>height</td>
+<td>{blockHeight}</td>
+</tr>
+</tbody>
+</table>
+<p>Slash</p>
+<ul>
+<li>與 <code>HandleValidatorSignature</code> 中的 <code>slash</code> 事件相同，但不包括 <code>jailed</code> 屬性。</li>
+</ul>
+<p>Jail</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slash</td>
+<td>jailed</td>
+<td>{validatorAddress}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_13">權益墓碑</h2>
+<h3 id="_14">摘要</h3>
+<p>在當前的 slashing 模組實現中，當共識引擎通知狀態機出現驗證者共識錯誤時，該驗證者會被部分削減，並進入“監獄期”，
+在此期間不允許其重新加入驗證者集合。
+然而，由於共識錯誤和 ABCI 的性質，可能會存在一段時間的延遲，使得違規行為發生後的證據到達狀態機（這是存在解除綁定期的主要原因之一）。</p>
+<blockquote>
+<p>注意：權益墓碑的概念僅適用於存在延遲的錯誤，例如由於不可預測的證據傳播層延遲以及驗證者有選擇性地揭示雙簽名（例如向不經常在線的輕客戶端揭示），
+證據表明驗證者雙重簽名可能需要一段時間才能到達狀態機。
+另一方面，活性削減會在違規行為發生後立即檢測到，因此不需要削減期。
+驗證者立即進入監獄期，他們不能再犯活性錯誤，直到解除監獄。
+將來可能會出現其他類型的拜占庭錯誤，例如將無效提案作為交易提交的證據。
+當實施時，必須決定這些未來的拜占庭錯誤是否會導致墓碑（如果不是，削減金額將不會受到削減期的限制）。</p>
+</blockquote>
+<p>在目前的系统设计中，
+一旦验证者由于共识错误而被关进监狱，经过JailPeriod（监狱时期）后，他们可以发送一个unjail（解除监禁）交易来解除自己的监禁状态，从而重新加入验证者集合。
+这样的设计允许验证者在被惩罚并完成监禁期后有机会恢复其验证者身份。</p>
+<p>slashing模块的一个“设计愿望”是，如果在执行证据（并将验证者关进监狱）之前发生了多次违规行为，
+那么验证者应该只受到最严重违规行为的惩罚，而不是累积惩罚
+例如，如果事件的顺序是：</p>
+<p>1.驗證者A犯下違規行為1（價值30%削減）
+2.驗證者A犯下違規行為2（價值40%削減）
+3.驗證者A犯下違規行為3（價值35%削減）
+4.違規行為1的證據到達狀態機（並將驗證者關入監獄）
+5.違規行為2的證據到達狀態機
+6.違規行為3的證據到達狀態機</p>
+<p>只有違規行為2應該生效其削減，因為它是最高的。
+這樣做是為了在驗證者的共識密鑰被破壞的情況下，即使黑客對多個區塊進行雙重簽名，他們也只會被懲罰一次
+因為，解除監禁必須使用驗證者的操作密鑰，他們有機會重新保護他們的共識密鑰，然後使用他們的操作密鑰發出信號表明他們已經準備好。
+我們將在這段期間內僅追踪最大違規行為，稱為"削減期"。</p>
+<p>一旦驗證者通過解除監禁重新加入，我們將開始一個新的削減期；
+如果他們在解除監禁後犯下新的違規行為，則將在前一個削減期的最嚴重違規行為基礎上累計削減。</p>
+<p>然而，雖然違規行為是根據削減期進行分組，但由於證據可以在違規行為之後的"解除綁定期"內提交，
+我們仍然必須允許提交先前削減期的證據。
+例如，如果事件的順序是：</p>
+<p>1.驗證者A犯下違規行為1（價值30%削減）
+2.驗證者A犯下違規行為2（價值40%削減）
+3.違規行為1的證據到達狀態機（驗證者A被監禁）
+4.驗證者A解除監禁</p>
+<p>我們現在進入了一個新的削減期，但是我們仍然必須為之前的違規行為留下空間，因為違規行為2的證據可能仍會出現。
+隨著削減期數量的增加，它會帶來更多的複雜性，因為我們必須跟踪每個削減期的最高違規行為金額。
+這可能會增加一些複雜性，但這是必要的，以確保整個網絡的安全和穩定。</p>
+<blockquote>
+<p>注意：根據“削減”模塊的規範，每當驗證器取消綁定然後重新綁定時，就會創建一個新的削減期。這可能應該更改為被監禁/解除監禁。有關更多詳細信息，請參見問題 <a href="https://github.com/cosmos/cosmos-sdk/issues/3205">#3205</a>。
+在接下來的內容中，我將假設我們只有在驗證器被解除監禁時才開始一個新的削減期。</p>
+</blockquote>
+<p>最大削减期数是 <code>len(UnbondingPeriod) / len(JailPeriod)</code>。
+Gaia 中 <code>UnbondingPeriod</code> 和 <code>JailPeriod</code> 的默认值分别为 3 周和 2 天。这意味着每个验证器可能同时被跟踪多达 11 个削减期。
+如果我们将 <code>JailPeriod &gt;= UnbondingPeriod</code>，我们只需要跟踪 1 个削减期（即不需要跟踪削减期）。</p>
+<p>目前，在監禁期實現中，一旦驗證器解除監禁，所有委託給他們的委託人（沒有取消綁定/重新委託）都會留在他們身邊。
+鑒於共識安全故障非常嚴重（比活性故障嚴重得多），讓委託人不自動重新委託給驗證器可能是明智的選擇。</p>
+<h3 id="_15">提議：無限監禁</h3>
+<p>我們建議將共識安全故障的“監禁時間”設置為無限（即墓碑狀態）。
+這實際上將驗證器踢出驗證器集合，並且不允許它們重新進入驗證器集合。
+他們的所有委託人（包括操作員本身）必須取消綁定或重新委託。
+如果驗證器操作員願意，可以創建一個新的驗證器，帶有新的操作員密鑰和共識密鑰，但是他們必須“重新贏得”他們的委託。</p>
+<p>實現墓碑系統並且擺脫懲罰期追踪將使 <code>slashing</code> 模塊變得更簡單，
+特別是因為我們可以刪除staking模塊中使用的<code>slashing</code>模塊定義的所有鉤子（<code>slashing</code>模塊仍然使用<code>staking</code>中定義的鉤子</p>
+<h3 id="_16">单次惩罚金额</h3>
+<p>另一個可以進行的優化是，如果我們假設所有Tendermint共識的ABCI故障都會被削減相同的金額，
+我們就不必跟踪“最大削減金額”。
+一旦發生ABCI故障，我們就不必擔心比較未來可能發生的故障，以找到最大削減金額。</p>
+<p>目前唯一的 Tendermint ABCI 故障是：</p>
+<ul>
+<li>不合理的預提交（雙重簽名）</li>
+</ul>
+<p>目前計劃在不久的將來包括以下故障：</p>
+<ul>
+<li>在未綁定期間簽署預提交（需要使輕客戶端二分法安全）</li>
+</ul>
+<p>鑑於這些故障都是可歸因的拜占庭故障，我們可能希望對它們進行相同的懲罰，因此我們可以實施上述更改。</p>
+<blockquote>
+<p>注意：此更改可能對當前的Tendermint共識算法有意義，
+但對於不同的共識算法或未來可能希望以不同級別進行懲罰（例如部分懲罰）的Tendermint版本可能沒有意義。</p>
+</blockquote>
+<h2 id="parameters">Parameters(參數)</h2>
+<p>懲罰模組包含以下參數</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SignedBlocksWindow</td>
+<td>string (int64)</td>
+<td>"100"</td>
+</tr>
+<tr>
+<td>MinSignedPerWindow</td>
+<td>string (dec)</td>
+<td>"0.500000000000000000"</td>
+</tr>
+<tr>
+<td>DowntimeJailDuration</td>
+<td>string (ns)</td>
+<td>"600000000000"</td>
+</tr>
+<tr>
+<td>SlashFractionDoubleSign</td>
+<td>string (dec)</td>
+<td>"0.050000000000000000"</td>
+</tr>
+<tr>
+<td>SlashFractionDowntime</td>
+<td>string (dec)</td>
+<td>"0.010000000000000000"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cli">CLI</h2>
+<p>用戶可以使用命令行界面（CLI）查詢和與<code>slashing</code>模組進行互動。</p>
+<h3 id="query">Query</h3>
+<p><code>query</code>命令允許用戶查詢<code>slashing</code>狀態。</p>
+<pre><code class="language-bash">stcd query slashing --help
+</code></pre>
+<h4 id="params">params</h4>
+<p>params命令允許用戶查詢slashing模組的創世參數。</p>
+<pre><code class="language-bash">stcd query slashing params [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query slashing params
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">downtime_jail_duration: 600s
+min_signed_per_window: &quot;0.500000000000000000&quot;
+signed_blocks_window: &quot;100&quot;
+slash_fraction_double_sign: &quot;0.050000000000000000&quot;
+slash_fraction_downtime: &quot;0.010000000000000000&quot;
+</code></pre>
+<h4 id="signing-info">signing-info</h4>
+<p><code>signing-info</code>命令允許用戶使用共識公鑰查詢驗證者的簽名信息。</p>
+<pre><code class="language-bash">stcd query slashing signing-infos [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query slashing signing-info '{&quot;@type&quot;:&quot;/cosmos.crypto.ed25519.PubKey&quot;,&quot;key&quot;:&quot;Auxs3865HpB/EfssYOzfqNhEJjzys6jD5B6tPgC8=&quot;}'
+
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">address: cosmosvalcons1nrqsld3aw6lh6t082frdqc84uwxn0t958c
+index_offset: &quot;2068&quot;
+jailed_until: &quot;1970-01-01T00:00:00Z&quot;
+missed_blocks_counter: &quot;0&quot;
+start_height: &quot;0&quot;
+tombstoned: false
+</code></pre>
+<h4 id="signing-infos">signing-infos</h4>
+<p><code>signing-infos</code>命令允許用戶查詢所有驗證者的簽名信息。</p>
+<pre><code class="language-bash">stcd query slashing signing-infos [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query slashing signing-infos
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">info:
+- address: cosmosvalcons1nrqsld3aw6lh6t082frdqc84uwxn0t958c
+  index_offset: &quot;2075&quot;
+  jailed_until: &quot;1970-01-01T00:00:00Z&quot;
+  missed_blocks_counter: &quot;0&quot;
+  start_height: &quot;0&quot;
+  tombstoned: false
+pagination:
+  next_key: null
+  total: &quot;0&quot;
+</code></pre>
+<h3 id="_17">交易</h3>
+<p><code>tx</code>命令允許用戶與<code>slashing</code>模組進行互動。</p>
+<pre><code class="language-bash"> tx slashing --help
+</code></pre>
+<h4 id="unjail_1">unjail</h4>
+<p><code>unjail</code>命令允許用戶解禁先前因停機時間而被禁用的驗證者。</p>
+<pre><code class="language-bash">  simd tx slashing unjail --from mykey [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd tx slashing unjail --from mykey
+</code></pre>
+<h2 id="grpc">gRPC</h2>
+<p>用戶可以使用gRPC端點查詢<code>slashing</code>模組。</p>
+<h3 id="params_1">Params</h3>
+<p><code>Params</code>端點允許用戶查詢削減模組的參數。</p>
+<pre><code class="language-bash">cosmos.slashing.v1beta1.Query/Params
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext localhost:9090 cosmos.slashing.v1beta1.Query/Params
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;signedBlocksWindow&quot;: &quot;100&quot;,
+    &quot;minSignedPerWindow&quot;: &quot;NTAwMDAwMDAwMDAwMDAwMDAw&quot;,
+    &quot;downtimeJailDuration&quot;: &quot;600s&quot;,
+    &quot;slashFractionDoubleSign&quot;: &quot;NTAwMDAwMDAwMDAwMDAwMDA=&quot;,
+    &quot;slashFractionDowntime&quot;: &quot;MTAwMDAwMDAwMDAwMDAwMDA=&quot;
+  }
+}
+</code></pre>
+<h3 id="signinginfo">SigningInfo</h3>
+<p>SigningInfo查詢給定共識地址的簽名信息。</p>
+<pre><code class="language-bash">cosmos.slashing.v1beta1.Query/SigningInfo
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;cons_address&quot;:&quot;cosmosvalcons1nrqsld3aw6lh6t082frdqc84uwxn0t958c&quot;}' localhost:9090 cosmos.slashing.v1beta1.Query/SigningInfo
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;valSigningInfo&quot;: {
+    &quot;address&quot;: &quot;cosmosvalcons1nrqsld3aw6lh6t082frdqc84uwxn0t958c&quot;,
+    &quot;indexOffset&quot;: &quot;3493&quot;,
+    &quot;jailedUntil&quot;: &quot;1970-01-01T00:00:00Z&quot;
+  }
+}
+</code></pre>
+<h3 id="signinginfos">SigningInfos</h3>
+<p><code>SigningInfos</code>查詢所有驗證者的簽名信息。</p>
+<pre><code class="language-bash">cosmos.slashing.v1beta1.Query/SigningInfos
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext localhost:9090 cosmos.slashing.v1beta1.Query/SigningInfos
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;info&quot;: [
+    {
+      &quot;address&quot;: &quot;cosmosvalcons1nrqslkwd3pz096lh6t082frdqc84uwxn0t958c&quot;,
+      &quot;indexOffset&quot;: &quot;2467&quot;,
+      &quot;jailedUntil&quot;: &quot;1970-01-01T00:00:00Z&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h2 id="rest">REST</h2>
+<p>用戶可以使用REST端點查詢<code>slashing</code>模組。</p>
+<h3 id="params_2">Params</h3>
+<pre><code class="language-bash">/cosmos/slashing/v1beta1/params
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl &quot;localhost:1317/cosmos/slashing/v1beta1/params&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;signed_blocks_window&quot;: &quot;100&quot;,
+    &quot;min_signed_per_window&quot;: &quot;0.500000000000000000&quot;,
+    &quot;downtime_jail_duration&quot;: &quot;600s&quot;,
+    &quot;slash_fraction_double_sign&quot;: &quot;0.050000000000000000&quot;,
+    &quot;slash_fraction_downtime&quot;: &quot;0.010000000000000000&quot;
+}
+</code></pre>
+<h3 id="signing_info">signing_info</h3>
+<pre><code class="language-bash">/cosmos/slashing/v1beta1/signing_infos/%s
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl &quot;localhost:1317/cosmos/slashing/v1beta1/signing_infos/cosmosvalcons1nrqslkwd3pz096lh6t082frdqc84uwxn0t958c&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;val_signing_info&quot;: {
+    &quot;address&quot;: &quot;cosmosvalcons1nrqslkwd3pz096lh6t082frdqc84uwxn0t958c&quot;,
+    &quot;start_height&quot;: &quot;0&quot;,
+    &quot;index_offset&quot;: &quot;4184&quot;,
+    &quot;jailed_until&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;tombstoned&quot;: false,
+    &quot;missed_blocks_counter&quot;: &quot;0&quot;
+  }
+}
+</code></pre>
+<h3 id="signing_infos">signing_infos</h3>
+<pre><code class="language-bash">/cosmos/slashing/v1beta1/signing_infos
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl &quot;localhost:1317/cosmos/slashing/v1beta1/signing_infos
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;info&quot;: [
+    {
+      &quot;address&quot;: &quot;cosmosvalcons1nrqslkwd3pz096lh6t082frdqc84uwxn0t958c&quot;,
+      &quot;start_height&quot;: &quot;0&quot;,
+      &quot;index_offset&quot;: &quot;4169&quot;,
+      &quot;jailed_until&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;tombstoned&quot;: false,
+      &quot;missed_blocks_counter&quot;: &quot;0&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

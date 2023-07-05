@@ -1,0 +1,5075 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../slashing/">
+      
+      
+        <link rel="next" href="../gateway/run/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>DPOS質押 - DAODST文檔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST文檔" class="md-header__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST文檔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DPOS質押
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/stcd/" class="md-tabs__link">
+        🔍協議
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱模塊
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈網關和驗證器
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞聊天
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋常見問題
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST文檔" class="md-nav__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST文檔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍協議
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍協議
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+          命令行界面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          命令行界面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        單節點
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        帳號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        鏈ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        編碼
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas和手續費
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        密鑰環
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        密鑰管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        狀態導入導出
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        等待隊列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        多簽
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        代幣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        交易
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱模塊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱模塊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        模塊賬號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        以太坊虛擬機
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        聊天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/" class="md-nav__link">
+        網關
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        合約
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        聊天質押
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth/" class="md-nav__link">
+        認證
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bank/" class="md-nav__link">
+        銀行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gov/" class="md-nav__link">
+        治理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mint/" class="md-nav__link">
+        鑄造
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distribute/" class="md-nav__link">
+        分配
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slashing/" class="md-nav__link">
+        削減
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DPOS質押
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        DPOS質押
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    內容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    狀態
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    池
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lasttotalpower" class="md-nav__link">
+    最後總功率（LastTotalPower）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    驗證者
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation" class="md-nav__link">
+    Delegation（委託）
+  </a>
+  
+    <nav class="md-nav" aria-label="Delegation（委託）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    委託人股份
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    解除委託
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queues" class="md-nav__link">
+    隊列(Queues)
+  </a>
+  
+    <nav class="md-nav" aria-label="隊列(Queues)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unbondingdelegationqueue" class="md-nav__link">
+    (解除抵押委託隊列)UnbondingDelegationQueue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    驗證者隊列
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historicalinfo" class="md-nav__link">
+    HistoricalInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    狀態轉換
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態轉換">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    驗證者
+  </a>
+  
+    <nav class="md-nav" aria-label="驗證者">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-bonded-bonded" class="md-nav__link">
+    從 Not Bonded 到 Bonded
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bonded-unbonding" class="md-nav__link">
+    從 Bonded 到 Unbonding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbonding-unbonded" class="md-nav__link">
+    從 Unbonding 到 Unbonded
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    監禁/解禁
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    委託
+  </a>
+  
+    <nav class="md-nav" aria-label="委託">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    委派
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    開始解除綁定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    完成解除綁定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    削減
+  </a>
+  
+    <nav class="md-nav" aria-label="削減">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    削減驗證者
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    削減解除綁定委託
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    股份如何計算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    訊息
+  </a>
+  
+    <nav class="md-nav" aria-label="訊息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgcreatevalidator" class="md-nav__link">
+    MsgCreateValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgeditvalidator" class="md-nav__link">
+    MsgEditValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgdelegate" class="md-nav__link">
+    MsgDelegate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgundelegate" class="md-nav__link">
+    MsgUndelegate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begin-block" class="md-nav__link">
+    Begin-Block(開始新區塊)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historical-info-tracking" class="md-nav__link">
+    Historical Info Tracking(歷史信息跟踪)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-block" class="md-nav__link">
+    End-Block(結束區塊)
+  </a>
+  
+    <nav class="md-nav" aria-label="End-Block(結束區塊)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    驗證器集合變更
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    隊列
+  </a>
+  
+    <nav class="md-nav" aria-label="隊列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    解除綁定驗證器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    解除綁定委託
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks(鉤子)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    Events(事件)
+  </a>
+  
+    <nav class="md-nav" aria-label="Events(事件)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endblocker" class="md-nav__link">
+    EndBlocker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    消息事件
+  </a>
+  
+    <nav class="md-nav" aria-label="消息事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgcreatevalidator_1" class="md-nav__link">
+    MsgCreateValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgeditvalidator_1" class="md-nav__link">
+    MsgEditValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgdelegate_1" class="md-nav__link">
+    MsgDelegate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgundelegate_1" class="md-nav__link">
+    MsgUndelegate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    參數
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    客戶端
+  </a>
+  
+    <nav class="md-nav" aria-label="客戶端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation_1" class="md-nav__link">
+    delegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegations" class="md-nav__link">
+    delegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegations-to" class="md-nav__link">
+    delegations-to
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historical-info" class="md-nav__link">
+    historical-info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_1" class="md-nav__link">
+    params
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pool" class="md-nav__link">
+    pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbonding-delegation" class="md-nav__link">
+    unbonding-delegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbonding-delegations" class="md-nav__link">
+    unbonding-delegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbonding-delegations-from" class="md-nav__link">
+    unbonding-delegations-from
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator" class="md-nav__link">
+    validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validators" class="md-nav__link">
+    validators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    Transactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Transactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-validator" class="md-nav__link">
+    create-validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegate" class="md-nav__link">
+    delegate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-validator" class="md-nav__link">
+    edit-validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbond" class="md-nav__link">
+    unbond
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    gRPC
+  </a>
+  
+    <nav class="md-nav" aria-label="gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validators_1" class="md-nav__link">
+    Validators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator_1" class="md-nav__link">
+    Validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatordelegations" class="md-nav__link">
+    ValidatorDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatorunbondingdelegations" class="md-nav__link">
+    ValidatorUnbondingDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation_2" class="md-nav__link">
+    Delegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbondingdelegation" class="md-nav__link">
+    UnbondingDelegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatordelegations" class="md-nav__link">
+    DelegatorDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorunbondingdelegations" class="md-nav__link">
+    DelegatorUnbondingDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorvalidators" class="md-nav__link">
+    DelegatorValidators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorvalidator" class="md-nav__link">
+    DelegatorValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historicalinfo_1" class="md-nav__link">
+    HistoricalInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pool_1" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_2" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest" class="md-nav__link">
+    REST
+  </a>
+  
+    <nav class="md-nav" aria-label="REST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delegatordelegations_1" class="md-nav__link">
+    DelegatorDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorunbondingdelegations_1" class="md-nav__link">
+    DelegatorUnbondingDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorvalidators_1" class="md-nav__link">
+    DelegatorValidators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorvalidator_1" class="md-nav__link">
+    DelegatorValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historicalinfo_2" class="md-nav__link">
+    HistoricalInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pool_2" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validators_2" class="md-nav__link">
+    Validators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator_2" class="md-nav__link">
+    Validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatordelegations_1" class="md-nav__link">
+    ValidatorDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation_3" class="md-nav__link">
+    Delegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbondingdelegation_1" class="md-nav__link">
+    UnbondingDelegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatorunbondingdelegations_1" class="md-nav__link">
+    ValidatorUnbondingDelegations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈網關和驗證器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈網關和驗證器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          設置和配寘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          設置和配寘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        運行驗證器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        配寘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        硬碟使用優化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        狀態同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        記憶體池
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          陞級
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          陞級
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        升級清單
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        硬分叉升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        自動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        手動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        回滾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        提案模板
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        測試網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        主網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          網關操作指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          網關操作指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        操作指南(linux)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        操作指南(win)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        金鑰備份和恢復
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞聊天
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        安裝啟動
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        文檔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/client_server/" class="md-nav__link">
+        客戶端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/server_server/" class="md-nav__link">
+        服務端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        定制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        呼叫流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        可選配置*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋常見問題
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    內容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    狀態
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    池
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lasttotalpower" class="md-nav__link">
+    最後總功率（LastTotalPower）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    驗證者
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation" class="md-nav__link">
+    Delegation（委託）
+  </a>
+  
+    <nav class="md-nav" aria-label="Delegation（委託）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    委託人股份
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    解除委託
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queues" class="md-nav__link">
+    隊列(Queues)
+  </a>
+  
+    <nav class="md-nav" aria-label="隊列(Queues)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unbondingdelegationqueue" class="md-nav__link">
+    (解除抵押委託隊列)UnbondingDelegationQueue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    驗證者隊列
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historicalinfo" class="md-nav__link">
+    HistoricalInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    狀態轉換
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態轉換">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    驗證者
+  </a>
+  
+    <nav class="md-nav" aria-label="驗證者">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-bonded-bonded" class="md-nav__link">
+    從 Not Bonded 到 Bonded
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bonded-unbonding" class="md-nav__link">
+    從 Bonded 到 Unbonding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbonding-unbonded" class="md-nav__link">
+    從 Unbonding 到 Unbonded
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    監禁/解禁
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    委託
+  </a>
+  
+    <nav class="md-nav" aria-label="委託">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    委派
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    開始解除綁定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    完成解除綁定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    削減
+  </a>
+  
+    <nav class="md-nav" aria-label="削減">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    削減驗證者
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    削減解除綁定委託
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    股份如何計算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    訊息
+  </a>
+  
+    <nav class="md-nav" aria-label="訊息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgcreatevalidator" class="md-nav__link">
+    MsgCreateValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgeditvalidator" class="md-nav__link">
+    MsgEditValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgdelegate" class="md-nav__link">
+    MsgDelegate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgundelegate" class="md-nav__link">
+    MsgUndelegate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begin-block" class="md-nav__link">
+    Begin-Block(開始新區塊)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historical-info-tracking" class="md-nav__link">
+    Historical Info Tracking(歷史信息跟踪)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-block" class="md-nav__link">
+    End-Block(結束區塊)
+  </a>
+  
+    <nav class="md-nav" aria-label="End-Block(結束區塊)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    驗證器集合變更
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    隊列
+  </a>
+  
+    <nav class="md-nav" aria-label="隊列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    解除綁定驗證器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    解除綁定委託
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks(鉤子)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    Events(事件)
+  </a>
+  
+    <nav class="md-nav" aria-label="Events(事件)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endblocker" class="md-nav__link">
+    EndBlocker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    消息事件
+  </a>
+  
+    <nav class="md-nav" aria-label="消息事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgcreatevalidator_1" class="md-nav__link">
+    MsgCreateValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgeditvalidator_1" class="md-nav__link">
+    MsgEditValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgdelegate_1" class="md-nav__link">
+    MsgDelegate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgundelegate_1" class="md-nav__link">
+    MsgUndelegate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    參數
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    客戶端
+  </a>
+  
+    <nav class="md-nav" aria-label="客戶端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation_1" class="md-nav__link">
+    delegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegations" class="md-nav__link">
+    delegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegations-to" class="md-nav__link">
+    delegations-to
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historical-info" class="md-nav__link">
+    historical-info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_1" class="md-nav__link">
+    params
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pool" class="md-nav__link">
+    pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbonding-delegation" class="md-nav__link">
+    unbonding-delegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbonding-delegations" class="md-nav__link">
+    unbonding-delegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbonding-delegations-from" class="md-nav__link">
+    unbonding-delegations-from
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator" class="md-nav__link">
+    validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validators" class="md-nav__link">
+    validators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    Transactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Transactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-validator" class="md-nav__link">
+    create-validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegate" class="md-nav__link">
+    delegate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-validator" class="md-nav__link">
+    edit-validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbond" class="md-nav__link">
+    unbond
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    gRPC
+  </a>
+  
+    <nav class="md-nav" aria-label="gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validators_1" class="md-nav__link">
+    Validators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator_1" class="md-nav__link">
+    Validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatordelegations" class="md-nav__link">
+    ValidatorDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatorunbondingdelegations" class="md-nav__link">
+    ValidatorUnbondingDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation_2" class="md-nav__link">
+    Delegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbondingdelegation" class="md-nav__link">
+    UnbondingDelegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatordelegations" class="md-nav__link">
+    DelegatorDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorunbondingdelegations" class="md-nav__link">
+    DelegatorUnbondingDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorvalidators" class="md-nav__link">
+    DelegatorValidators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorvalidator" class="md-nav__link">
+    DelegatorValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historicalinfo_1" class="md-nav__link">
+    HistoricalInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pool_1" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_2" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest" class="md-nav__link">
+    REST
+  </a>
+  
+    <nav class="md-nav" aria-label="REST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delegatordelegations_1" class="md-nav__link">
+    DelegatorDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorunbondingdelegations_1" class="md-nav__link">
+    DelegatorUnbondingDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorvalidators_1" class="md-nav__link">
+    DelegatorValidators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegatorvalidator_1" class="md-nav__link">
+    DelegatorValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historicalinfo_2" class="md-nav__link">
+    HistoricalInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pool_2" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validators_2" class="md-nav__link">
+    Validators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator_2" class="md-nav__link">
+    Validator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatordelegations_1" class="md-nav__link">
+    ValidatorDelegations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation_3" class="md-nav__link">
+    Delegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unbondingdelegation_1" class="md-nav__link">
+    UnbondingDelegation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatorunbondingdelegations_1" class="md-nav__link">
+    ValidatorUnbondingDelegations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!--
+order: 0
+title: Staking Overview
+parent:
+  title: "staking"
+-->
+
+<h1 id="_1"><code>抵押</code></h1>
+<h2 id="_2">概念</h2>
+<p>本文明確了抵押模組。</p>
+<p>此模組使基於Cosmos-SDK的區塊鏈能夠支持先進的權益證明系統。
+在此系統中，鏈的本地抵押代幣持有者可以成為驗證者，並可以將代幣委託給驗證者，從而最終確定系統的有效驗證者集合。</p>
+<h2 id="_3">內容</h2>
+<h2 id="_4">狀態</h2>
+<h3 id="_5">池</h3>
+<p>池用於追踪已綁定和未綁定的債券面額代幣供應。</p>
+<h3 id="lasttotalpower">最後總功率（LastTotalPower）</h3>
+<p>LastTotalPower 追踪了在上一個結束區塊期間記錄的已綁定代幣的總量。以 "Last" 為前綴的存儲條目在 EndBlock 之前必須保持不變。</p>
+<ul>
+<li>LastTotalPower: <code>0x12 -&gt; ProtocolBuffer(sdk.Int)</code></li>
+</ul>
+<h3 id="params">Params</h3>
+<p>Params 是一個模組範疇的配置結構，用於存儲系統參數並定義權益擺放模組的整體運作方式。</p>
+<ul>
+<li>Params: <code>Paramsspace("staking") -&gt; legacy_amino(params)</code></li>
+</ul>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.1/proto/cosmos/staking/v1beta1/staking.proto#L230-L241</p>
+<h3 id="_6">驗證者</h3>
+<p>驗證者可以有三種狀態之一。</p>
+<ul>
+<li><code>Unbonded</code>：驗證者不在活躍集合中。他們無法簽署區塊並且不獲得獎勵。但他們可以接收委託。</li>
+<li><code>Bonded</code>: 一旦驗證者獲得足夠的綁定代幣，他們將在 EndBlock 期間自動加入活躍集合，並將其狀態更新為 Bonded。他們正在簽署區塊並獲得獎勵。
+   他們可以接收更多的委託。
+   他們可能因行為不端而被削減。對此驗證者解除委託的委託人必須等待解除綁定時間（<code>UnbondingTime</code>，一個鏈特定的參數），
+   在此期間，如果源驗證者在代幣綁定期間犯下了違規行為，委託人仍然有可能被削減。</li>
+<li><code>Unbonding</code>: When a validator leaves the active set, either by choice or due to slashing, jailing or
+  tombstoning, an unbonding of all their delegations begins. All delegations must then wait the UnbondingTime
+  before their tokens are moved to their accounts from the <code>BondedPool</code>.</li>
+</ul>
+<p>驗證者對象應主要通過OperatorAddr存儲和訪問，OperatorAddr是驗證者操作者的SDK驗證者地址。
+每個驗證者對象都需要維護兩個額外的索引，以便完成削減和驗證者集合更新所需的查找。
+還維護了第三個特殊索引（LastValidatorPower），但是它在每個區塊中保持不變，與前兩個索引不同，前兩個索引在區塊內反映驗證者記錄。</p>
+<ul>
+<li>Validators: <code>0x21 | OperatorAddrLen (1 byte) | OperatorAddr -&gt; ProtocolBuffer(validator)</code></li>
+<li>ValidatorsByConsAddr: <code>0x22 | ConsAddrLen (1 byte) | ConsAddr -&gt; OperatorAddr</code></li>
+<li>ValidatorsByPower: <code>0x23 | BigEndian(ConsensusPower) | OperatorAddrLen (1 byte) | OperatorAddr -&gt; OperatorAddr</code></li>
+<li>LastValidatorsPower: <code>0x11 | OperatorAddrLen (1 byte) | OperatorAddr -&gt; ProtocolBuffer(ConsensusPower)</code></li>
+</ul>
+<p><code>Validators</code> 是主要的索引 - 它確保每個操作者只能擁有一個關聯驗證者，其中該驗證者的公鑰可以在未來改變。
+委託人可以引用驗證者的不可變操作者，而無需擔心公鑰的變化。</p>
+<p><code>ValidatorByConsAddr</code> 是一個額外的索引，用於支持削減查找。
+當 Tendermint 報告證據時，它提供驗證者地址，因此需要此映射來查找操作者
+請注意，ConsAddr 對應於可以從驗證者的 ConsPubKey 推導出的地址。</p>
+<p><code>ValidatorsByPower</code> 是一個額外的索引，提供了一個排序後的潛在驗證者列表，以快速確定當前的活躍集合。
+在此，默認情況下，ConsensusPower 等於 validator.Tokens/10^6。
+請注意，所有 Jailed 為 true 的驗證者都不會存儲在此索引中。</p>
+<p><code>LastValidatorsPower</code> 是一個特殊的索引，提供了上一個區塊的綁定驗證者的歷史列表。這個索引在一個區塊中保持不變，但在驗證者集合更新過程中會更新，該過程發生在  <a href="./05_end_block.md"><code>EndBlock</code></a>.</p>
+<p>每個驗證者的狀態都存儲在一個 Validator 結構中：</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L65-L99</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L24-L63</p>
+<h3 id="delegation">Delegation（委託）</h3>
+<p>委託是通過組合 DelegatorAddr（委託人地址）和 ValidatorAddr（驗證者地址）來標識的。在存儲中，委託人按以下方式進行索引：</p>
+<ul>
+<li>Delegation: <code>0x31 | DelegatorAddrLen (1 byte) | DelegatorAddr | ValidatorAddrLen (1 byte) | ValidatorAddr -&gt; ProtocolBuffer(delegation)</code></li>
+</ul>
+<p>持有者可以將代幣委託給驗證者；在這種情況下，他們的資金被保存在一個 Delegation 數據結構中。
+它由一個委託人擁有，並與一個驗證者的股份相關聯。交易的發送者是這個擁有者。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L159-L170</p>
+<h4 id="_7">委託人股份</h4>
+<p>當某人將代幣委託給驗證者時，
+他們將根據一個動態匯率獲得一定數量的委託人股份，
+該匯率根據已委託給驗證者的代幣總數和迄今為止發行的股份數量計算，如下所示：</p>
+<p><code>Shares per Token = validator.TotalShares() / validator.Tokens()</code></p>
+<p>在DelegationEntry上只存儲了收到的股份數量。
+當委託人取消委託時，他們收到的代幣數量是根據他們目前持有的股份數量和相反的匯率計算的：</p>
+<p><code>Tokens per Share = validator.Tokens() / validatorShares()</code></p>
+<p>這些股份僅僅是一種記賬機制，它們不是一種可互換的資產。
+使用這種機制的原因是為了簡化對委託懲罰的記賬。
+與其迭代地懲罰每個委託條目的代幣，不如直接懲罰驗證者的總抵押代幣，從而有效地降低每個已發行委託人股份的價值。</p>
+<h3 id="_8">解除委託</h3>
+<p>在<code>Delegation</code>中的股份可以解除抵押，但它們必須在一段時間內作為<code>UnbondingDelegation</code>存在，如果檢測到拜占庭行為，股份可以相應減少。</p>
+<p><code>UnbondingDelegation</code> 在存儲中的索引方式為：</p>
+<ul>
+<li>UnbondingDelegation: <code>0x32 | DelegatorAddrLen (1 byte) | DelegatorAddr | ValidatorAddrLen (1 byte) | ValidatorAddr -&gt; ProtocolBuffer(unbondingDelegation)</code></li>
+<li>UnbondingDelegationsFromValidator: <code>0x33 | ValidatorAddrLen (1 byte) | ValidatorAddr | DelegatorAddrLen (1 byte) | DelegatorAddr -&gt; nil</code></li>
+</ul>
+<p>第一個映射用於查詢，查找給定委託人的所有解除委託；
+第二個映射用於削減，查找與給定驗證者相關的所有需要削減的解除委託。</p>
+<p>每次啟動解除抵押時，都會創建一個UnbondingDelegation對象。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L172-L198</p>
+<h3 id="queues">隊列(Queues)</h3>
+<p>所有隊列對象都按照時間戳排序。隊列中使用的時間首先四舍五入到最接近的納秒，然後進行排序。
+可排序的時間格式是對RFC3339Nano的輕微修改，使用格式字符串"2006-01-02T15:04:05.000000000"。
+值得注意的是，這種格式：</p>
+<ul>
+<li>將所有零填充至右侧。</li>
+<li>丟棄時區信息（使用UTC）。</li>
+</ul>
+<p>在所有情況下，存儲的時間戳表示隊列元素的成熟時間。</p>
+<h4 id="unbondingdelegationqueue">(解除抵押委託隊列)UnbondingDelegationQueue</h4>
+<p>為了追踪解除委託的進度，需要維護一個解除委託隊列。</p>
+<ul>
+<li>UnbondingDelegation: <code>0x41 | format(time) -&gt; []DVPair</code></li>
+</ul>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L123-L133</p>
+<h4 id="_9">驗證者隊列</h4>
+<p>為了追踪解除驗證者的進度，需要維護一個驗證者隊列。</p>
+<ul>
+<li>ValidatorQueueTime: <code>0x43 | format(time) -&gt; []sdk.ValAddress</code></li>
+</ul>
+<p>存儲的對象作為每個鍵是一個驗證者操作地址數組，從中可以訪問驗證者對象。
+通常，預期只有一個驗證者記錄與給定的時間戳關聯，但在同一位置的隊列中可能存在多個驗證者。</p>
+<h3 id="historicalinfo">HistoricalInfo</h3>
+<p>HistoricalInfo 物件在每個區塊中被儲存和修剪，使得抵押持有者保留由抵押模組參數 HistoricalEntries 定義的最近 n 個歷史資訊。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L15-L22</p>
+<p>在每個 BeginBlock，staking keeper 將在一個 <code>HistoricalInfo</code> 對象中保留當前的 Header 和提交當前區塊的驗證者。
+驗證者根據其地址進行排序，以確保它們按照確定的順序排列。
+最老的 <code>HistoricalEntries</code> 將被修剪，以確保只存在參數定義的歷史條目數量。</p>
+<h2 id="_10">狀態轉換</h2>
+<p>本文檔描述了與以下內容相關的狀態轉換操作：</p>
+<h3 id="_11">驗證者</h3>
+<p>在每個 <code>EndBlock</code> 中，對驗證者進行狀態轉換，以檢查活動中的 <code>ValidatorSet</code> 是否有變化。</p>
+<p>驗證者可以是 <code>Unbonded</code>、<code>Unbonding</code> 或 <code>Bonded</code>。
+<code>Unbonded</code> 和 <code>Unbonding</code> 統稱為 <code>Not Bonded</code>。
+驗證者可以直接在所有狀態之間移動，但不能從 <code>Bonded</code> 直接轉為 <code>Unbonded</code>。</p>
+<h4 id="not-bonded-bonded">從 Not Bonded 到 Bonded</h4>
+<p>當驗證者在 <code>ValidatorPowerIndex</code> 中的排名超過 <code>LastValidator</code> 時，將發生以下轉換。</p>
+<ul>
+<li>將 <code>validator.Status</code> 設置為 <code>Bonded</code></li>
+<li>將 <code>validator.Tokens</code> 從 <code>NotBondedTokens</code> 發送到 <code>BondedPool</code> 的 <code>ModuleAccount</code></li>
+<li>從 <code>ValidatorByPowerIndex</code> 刪除現有記錄</li>
+<li>向 <code>ValidatorByPowerIndex</code> 添加一個新的更新記錄</li>
+<li>更新此驗證者的 <code>Validator</code> 對象</li>
+<li>如果存在，刪除此驗證者的任何 <code>ValidatorQueue</code> 記錄</li>
+</ul>
+<h4 id="bonded-unbonding">從 Bonded 到 Unbonding</h4>
+<p>當驗證者開始解除綁定過程時，將發生以下操作：</p>
+<ul>
+<li>將 <code>validator.Tokens</code> 從 <code>BondedPool</code> 發送到 <code>NotBondedTokens</code> 的 <code>ModuleAccount</code></li>
+<li>將 <code>validator.Status</code> 設置為 <code>Unbonding</code></li>
+<li>從 <code>ValidatorByPowerIndex</code> 刪除現有記錄</li>
+<li>向 <code>ValidatorByPowerIndex</code> 添加一個新的更新記錄</li>
+<li>更新此驗證者的 <code>Validator</code> 對象</li>
+<li>為此驗證者在 <code>ValidatorQueue</code> 中插入一個新記錄</li>
+</ul>
+<h4 id="unbonding-unbonded">從 Unbonding 到 Unbonded</h4>
+<p>當 <code>ValidatorQueue</code> 對象從綁定狀態轉為未綁定狀態時，驗證者從解除綁定狀態轉為未綁定狀態。</p>
+<ul>
+<li>更新此驗證者的 <code>Validator</code> 對象</li>
+<li>將 <code>validator.Status</code> 設置為 <code>Unbonded</code></li>
+</ul>
+<h3 id="_12">監禁/解禁</h3>
+<p>當驗證者被監禁時，它實際上是從Tendermint集合中移除的。
+這個過程也可以反轉。以下操作將發生：</p>
+<ul>
+<li>設置 <code>Validator.Jailed</code> 並更新對象</li>
+<li>如果被監禁，從 <code>ValidatorByPowerIndex</code> 刪除記錄</li>
+<li>如果解禁，向 <code>V</code>alidatorByPowerIndex` 添加記錄</li>
+</ul>
+<p>被監禁的驗證者不會出現在以下任何存儲中：</p>
+<ul>
+<li>power store (從共識權力到地址)</li>
+</ul>
+<h2 id="_13">委託</h2>
+<h3 id="_14">委派</h3>
+<p>當委託發生時，驗證者和委託對象都會受到影響。</p>
+<ul>
+<li>根據代理的代幣和驗證者的匯率確定代理人的份額</li>
+<li>從發送賬戶中刪除代幣</li>
+<li>將份額添加到委託對象，或將其添加到創建的驗證者對象中</li>
+<li>添加新的代表份額並更新 <code>Validator</code> 對象</li>
+<li>根據 <code>validator.Status</code> 是否為 <code>Bonded</code>，將 <code>delegation.Amount</code> 從代表賬戶轉移到 <code>BondedPool</code> 或 <code>NotBondedPool</code> 的 <code>ModuleAccount</code></li>
+<li>從 <code>ValidatorByPowerIndex</code> 刪除現有記錄</li>
+<li>向 <code>ValidatorByPowerIndex</code> 添加一個新的更新記錄</li>
+</ul>
+<h3 id="_15">開始解除綁定</h3>
+<p>作為取消代表和完成解除綁定狀態過渡的一部分，可以調用解除綁定委託。</p>
+<ul>
+<li>從委託人中扣除未綁定的份額</li>
+<li>如果驗證者為 <code>Unbonding</code> 或 <code>Bonded</code>，將代幣添加到 <code>UnbondingDelegation</code> 條目</li>
+<li>如果驗證者為 <code>Unbonded</code>，將代幣直接發送到提款賬戶</li>
+<li>更新委託或在沒有更多份額的情況下刪除委託</li>
+<li>如果委託是驗證者的操作者並且沒有更多的份額，則觸發監禁驗證者</li>
+<li>更新已刪除代表份額和相關代幣的驗證者</li>
+<li>如果驗證者狀態為 <code>Bonded</code>，將未綁定份額的 <code>Coins</code> 價值從 <code>BondedPool</code> 轉移到 <code>NotBondedPool</code> 的 <code>ModuleAccount</code></li>
+<li>如果驗證者未綁定並且沒有更多的委託份額，則刪除驗證者。</li>
+</ul>
+<h3 id="_16">完成解除綁定</h3>
+<p>對於不立即完成的取消委託，當解除綁定委託隊列元素成熟時，將發生以下操作：</p>
+<ul>
+<li>從 <code>UnbondingDelegation</code> 對象中刪除條目</li>
+<li>將代幣從 <code>NotBondedPool</code> 的 <code>ModuleAccount</code> 轉移到委託人的 <code>Account</code></li>
+</ul>
+<h2 id="_17">削減</h2>
+<h3 id="_18">削減驗證者</h3>
+<p>當驗證者被削減時，將發生以下情況：</p>
+<ul>
+<li>總的 <code>slashAmount</code> 計算為 <code>slashFactor</code>（鏈參數）* <code>TokensFromConsensusPower</code>，
+  即在違規行為發生時綁定到驗證者的代幣總數。</li>
+<li>所有解除綁定的委託和偽解除綁定的重新委託，使得在解除綁定或
+  重新委託開始之前的違規行為都被削減 slashFactor 百分比的初始餘額。</li>
+<li>從重新委託和解除綁定委託中削減的每個金額都會從
+  總削減金額中扣除。</li>
+<li>然後從驗證者在 <code>BondedPool</code> 或 NonBondedPool 中的代幣中削減 remaingSlashAmount，
+  具體取決於驗證者的狀態。這將減少代幣的總供應量。</li>
+</ul>
+<p>在需要提交證據的削減情況下（例如雙重簽名），削減發生在包含證據的區塊，而不是違規行為發生的區塊。
+換句話說，驗證者不會追溯地被削減，只有在被抓到時才會被削減。</p>
+<h3 id="_19">削減解除綁定委託</h3>
+<p>當驗證者被削減時，從驗證者開始解除綁定的那些解除綁定委託也會在違規行為發生後被削減。
+來自驗證者的每個解除綁定委託中的每個條目都會被削減 slashFactor。
+削減的金額是根據委託的 InitialBalance 計算的，並且有上限以防止產生負餘額。已完成（或成熟）的解除綁定不會被削減。</p>
+<h3 id="_20">股份如何計算</h3>
+<p>在任何給定的時間點，每個驗證者都有一定數量的代幣 <code>T</code>，並發行了一定數量的股份 <code>S</code>。
+每個委託人 <code>i</code> 持有一定數量的股份 <code>S_i</code>。
+代幣數量是所有委託給驗證者的代幣之和，加上獎勵，減去削減。</p>
+<p>委託人有權獲得與其股份比例相當的基礎代幣部分。
+因此，委託人 i 有權獲得驗證者代幣的 <code>T * S_i / S</code>。</p>
+<p>當委託人向驗證者委託新代幣時，他們將獲得與其貢獻成比例的股份數量。
+因此，當委託人 <code>j</code> 委託 <code>T_j</code> 代幣時，他們將獲得 <code>S_j = S * T_j / T</code> 股份。
+代幣總數現在是 <code>T + T_j</code>，股份總數是 <code>S + S_j</code>。
+j 的股份比例與他們貢獻的代幣總數比例相同：<code>(S + S_j) / S = (T + T_j) / T</code>。</p>
+<p>一個特殊情況是初始委託，當 <code>T = 0</code> 和 <code>S = 0</code> 時，<code>T_j / T</code> 是未定義的。
+對於初始委託，委託人 <code>j</code> 委託 <code>T_j</code> 代幣將獲得 <code>S_j = T_j</code> 股份。
+因此，一個尚未獲得任何獎勵且未被削減的驗證者將擁有 <code>T = S</code>。</p>
+<h2 id="_21">訊息</h2>
+<p>在本節中，我們描述了抵押訊息的處理以及相應的狀態更新。
+每條訊息所指定的所有創建/修改的狀態對象均在 狀態 部分中定義。</p>
+<h3 id="msgcreatevalidator">MsgCreateValidator</h3>
+<p>通過使用<code>MsgCreateValidator</code>消息來創建驗證者。驗證者必須在操作者的初始委託下創建。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L16-L17</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L35-L51</p>
+<p>如果出現以下情況，則預期此消息將失敗：</p>
+<ul>
+<li>已經註冊了具有此操作者地址的另一個驗證者</li>
+<li>已經註冊了具有此公鑰的另一個驗證者</li>
+<li>初始自我委託代幣的面額未指定為抵押面額</li>
+<li>佣金參數有誤，即：</li>
+<li><code>MaxRate</code> 大於 1 或小於 0</li>
+<li>初始 <code>Rate</code> 為負數或大於 <code>MaxRate</code></li>
+<li>初始 <code>MaxChangeRate</code> 為負數或大於 <code>MaxRate</code></li>
+<li>描述字段過大</li>
+</ul>
+<p>此消息在適當的索引處創建並存儲<code>Validator</code>對象。
+此外，還將使用初始代幣委託代幣<code>Delegation</code>進行自我委託。驗證者始終以未綁定的狀態開始，但可能在第一個結束區塊中綁定。</p>
+<h3 id="msgeditvalidator">MsgEditValidator</h3>
+<p>可以使用<code>MsgEditValidator</code>消息更新驗證者的<code>Description</code>和<code>CommissionRate</code>。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L19-L20</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L56-L76</p>
+<p>如果出現以下情況，則預期此消息將失敗：</p>
+<ul>
+<li>初始 <code>CommissionRate</code> 為負數或大於 <code>MaxRate</code></li>
+<li><code>CommissionRate</code> 已在過去 24 小時內更新</li>
+<li><code>CommissionRate</code> 大於 MaxChangeRate</li>
+<li>描述字段過大</li>
+</ul>
+<p>此消息存儲更新後的Validator對象。</p>
+<h3 id="msgdelegate">MsgDelegate</h3>
+<p>在此消息中，委託人提供代幣，作為回報，他們將獲得其驗證者（新創建的）委託人股份中的一部分，這些股份分配給<code>Delegation.Shares</code>。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L22-L24</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L81-L90</p>
+<p>如果出現以下情況，則預期此消息將失敗：</p>
+<ul>
+<li>驗證者不存在</li>
+<li><code>Amount</code> <code>Coin</code> 的面額與 <code>params.BondDenom</code> 定義的面額不同</li>
+<li>兌換率無效，即驗證者沒有代幣（由於削減）但存在未分配的股份</li>
+<li>委託金額小於允許的最低委託金額</li>
+</ul>
+<p>如果對於提供的地址尚不存在現有的<code>Delegation</code>對象，則它將作為此消息的一部分創建，否則將更新現有的Delegation以包括新收到的股份。</p>
+<p>委託人按當前匯率獲得新鑄造的股份。匯率是驗證者中現有股份數除以當前委託代幣數。</p>
+<p>驗證者在<code>ValidatorByPower</code>索引中進行更新，並在<code>Validators</code>索引中的驗證者對象中跟踪委託。</p>
+<p>可以委託給入獄的驗證者，唯一的區別是在其被解除監禁之前，它不會被添加到權力指數中。</p>
+<h3 id="msgundelegate">MsgUndelegate</h3>
+<p><code>MsgUndelegate</code>消息允許委託人從驗證者那裡撤銷他們的代幣。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L30-L32</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L112-L121</p>
+<p>此消息返回包含解除委託完成時間的響應：</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L123-L126</p>
+<p>如果出現以下情況，則預期此消息將失敗：</p>
+<ul>
+<li>委託不存在</li>
+<li>驗證者不存在</li>
+<li>委託的股份少於<code>Amount</code>的價值</li>
+<li>現有的<code>UnbondingDelegation</code>具有由<code>params.MaxEntries</code>定義的最大條目</li>
+<li><code>Amount</code>具有與<code>params.BondDenom</code>定義的面額不同的面額</li>
+</ul>
+<p>處理此消息時，將發生以下操作：</p>
+<ul>
+<li>驗證者的<code>DelegatorShares</code>和委託的<code>Shares</code>都將通過消息<code>SharesAmount</code>減少</li>
+<li>計算股份的代幣價值，並從驗證者中移除該數量的代幣</li>
+<li>使用這些移除的代幣，如果驗證者是：</li>
+<li><code>Bonded</code> - 將它們添加到<code>UnbondingDelegation</code>中的一個條目（如果不存在，創建<code>UnbondingDelegation</code>），完成時間為從當前時間開始的完整解除委託期。更新池股份以減少<code>BondedTokens</code>並增加<code>NotBondedTokens</code>的股份代幣價值。</li>
+<li><code>Unbonding</code> - 將它們添加到<code>UnbondingDelegation</code>中的一個條目（如果不存在，創建<code>UnbondingDelegation</code>），與驗證者（<code>UnbondingMinTime</code>）相同的完成時間。</li>
+<li><code>Unbonded</code> - 然後將<code>coins</code>發送給消息<code>DelegatorAddr</code></li>
+<li>如果委託中沒有更多的<code>Shares</code>，那麼委託對象將從存儲中移除</li>
+<li>在這種情況下，如果委託是驗證者的自我委託，那麼還將監禁驗證者。</li>
+</ul>
+<h2 id="begin-block">Begin-Block(開始新區塊)</h2>
+<p>每次 abci begin block 調用時，歷史信息將根據<code>HistoricalEntries</code>參數進行存儲和修剪。</p>
+<h2 id="historical-info-tracking">Historical Info Tracking(歷史信息跟踪)</h2>
+<p>如果 <code>HistoricalEntries</code> 參數為 0，則 <code>BeginBlock</code> 不執行任何操作。</p>
+<p>否則，最新的歷史信息將存儲在鍵 <code>historicalInfoKey|height</code> 下，而任何早於 <code>height - HistoricalEntries</code> 的條目都將被刪除。
+在大多數情況下，這意味著每個區塊將修剪一個條目。
+然而，如果參數 <code>HistoricalEntries</code> 已更改為較低的值，則存儲中將有多個條目需要修剪。</p>
+<h2 id="end-block">End-Block(結束區塊)</h2>
+<p>每次 abci end block 調用，都會指定執行更新隊列和驗證器集合變更的操作。</p>
+<h3 id="_22">驗證器集合變更</h3>
+<p>在此過程中，通過每個區塊結束時運行的狀態轉換來更新抵押驗證器集合。
+作為此過程的一部分，任何更新的驗證器也會返回到 Tendermint，以便包含在負責驗證共識層的 Tendermint 消息的 Tendermint 驗證器集合中。
+操作如下：</p>
+<ul>
+<li>新的驗證器集合取自從<code>ValidatorsByPower</code>索引中檢索的前<code>params.MaxValidators</code>個驗證器</li>
+<li>將先前的驗證器集合與新的驗證器集合進行比較：</li>
+<li>缺失的驗證器開始解除綁定，並將其<code>Tokens</code>從<code>BondedPool</code>轉移到<code>NotBondedPool</code>的<code>ModuleAccount</code></li>
+<li>新的驗證器立即綁定，並將其<code>Tokens</code>從<code>NotBondedPool</code>轉移到<code>BondedPool的ModuleAccount</code></li>
+</ul>
+<p>在所有情況下，任何離開或進入綁定驗證器集合的驗證器，或者在綁定驗證器集合內更改餘額，
+都會產生一條更新消息，報告它們的新共識能力，然後將其傳回到 Tendermint。</p>
+<p><code>LastTotalPower</code> 和 <code>LastValidatorsPower</code> 保存了上一個區塊結束時的總功率和驗證器功率的狀態，
+並用於檢查在ValidatorsByPower中發生的變化以及在EndBlock期間計算的新總功率。</p>
+<h3 id="_23">隊列</h3>
+<p>在抵押中，某些狀態轉換並非瞬間完成，而是在一段時間內進行（通常是解除綁定期）。
+當這些轉換成熟時，必須執行某些操作以完成狀態操作。這是通過在每個區塊結束時檢查/處理隊列來實現的。</p>
+<h4 id="_24">解除綁定驗證器</h4>
+<p>當驗證器被踢出綁定驗證器集合時（無論是因為被監禁還是沒有足夠的綁定代幣），
+它將開始解除綁定過程，同時所有與其委託的解除綁定也將開始（儘管仍然被委託給此驗證器）。
+在這一點上，驗證器被認為是一個"解除綁定驗證器"，在解除綁定期過去之後，它將成熟為一個"未綁定驗證器"。</p>
+<p>在每個區塊中，都需要檢查驗證器隊列中是否有成熟的解除綁定驗證器（即完成時間 &lt;= 當前時間和完成高度 &lt;= 當前區塊高度）。
+此時，任何沒有剩餘委託的成熟驗證器都將從狀態中刪除。
+對於仍然有剩餘委託的所有其他成熟解除綁定驗證器，<code>validator.Status</code>將從<code>types.Unbonding</code>切換為<code>types.Unbonded</code>。</p>
+<h4 id="_25">解除綁定委託</h4>
+<p>在<code>UnbondingDelegations</code>隊列中完成所有成熟的<code>UnbondingDelegations.Entries</code>的解除綁定，遵循以下步驟：</p>
+<ul>
+<li>將餘額代幣轉移到委託人的錢包地址</li>
+<li>從<code>UnbondingDelegation.Entries</code>中移除成熟的條目</li>
+<li>如果沒有剩餘條目，則從存儲中移除<code>UnbondingDelegation</code>對象。</li>
+</ul>
+<h2 id="hooks">Hooks(鉤子)</h2>
+<p>其他模組可以註冊操作，以便在抵押中發生某個事件時執行。這些事件可以註冊為在抵押事件之前（根據鉤子名稱）或之後執行。以下鉤子可以在抵押中註冊：</p>
+<ul>
+<li><code>AfterValidatorCreated(Context, ValAddress)</code></li>
+<li>當創建驗證器時調用。</li>
+<li><code>BeforeValidatorModified(Context, ValAddress)</code></li>
+<li>當驗證器的狀態發生變化時調用。</li>
+<li><code>AfterValidatorRemoved(Context, ConsAddress, ValAddress)</code></li>
+<li>當驗證器被刪除時調用。</li>
+<li><code>AfterValidatorBonded(Context, ConsAddress, ValAddress)</code></li>
+<li>當驗證器被綁定時調用。</li>
+<li><code>AfterValidatorBeginUnbonding(Context, ConsAddress, ValAddress)</code></li>
+<li>當驗證器開始解除綁定時調用。</li>
+<li><code>BeforeDelegationCreated(Context, AccAddress, ValAddress)</code></li>
+<li>當創建委託時調用。</li>
+<li><code>BeforeDelegationSharesModified(Context, AccAddress, ValAddress)</code></li>
+<li>當委託份額被修改時調用。</li>
+<li><code>BeforeDelegationRemoved(Context, AccAddress, ValAddress)</code></li>
+<li>當委託被移除時調用。</li>
+</ul>
+<h2 id="events">Events(事件)</h2>
+<p>抵押模組發出以下事件：</p>
+<h3 id="endblocker">EndBlocker</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>complete_unbonding</td>
+<td>amount</td>
+<td>{totalUnbondingAmount}</td>
+</tr>
+<tr>
+<td>complete_unbonding</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>complete_unbonding</td>
+<td>delegator</td>
+<td>{delegatorAddress}</td>
+</tr>
+<tr>
+<td>complete_redelegation</td>
+<td>amount</td>
+<td>{totalRedelegationAmount}</td>
+</tr>
+<tr>
+<td>complete_redelegation</td>
+<td>source_validator</td>
+<td>{srcValidatorAddress}</td>
+</tr>
+<tr>
+<td>complete_redelegation</td>
+<td>destination_validator</td>
+<td>{dstValidatorAddress}</td>
+</tr>
+<tr>
+<td>complete_redelegation</td>
+<td>delegator</td>
+<td>{delegatorAddress}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_26">消息事件</h3>
+<h4 id="msgcreatevalidator_1">MsgCreateValidator</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create_validator</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>create_validator</td>
+<td>amount</td>
+<td>{delegationAmount}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>staking</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>create_validator</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h4 id="msgeditvalidator_1">MsgEditValidator</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>edit_validator</td>
+<td>commission_rate</td>
+<td>{commissionRate}</td>
+</tr>
+<tr>
+<td>edit_validator</td>
+<td>min_self_delegation</td>
+<td>{minSelfDelegation}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>staking</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>edit_validator</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h4 id="msgdelegate_1">MsgDelegate</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delegate</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>delegate</td>
+<td>amount</td>
+<td>{delegationAmount}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>staking</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>delegate</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h4 id="msgundelegate_1">MsgUndelegate</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unbond</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>unbond</td>
+<td>amount</td>
+<td>{unbondAmount}</td>
+</tr>
+<tr>
+<td>unbond</td>
+<td>completion_time [0]</td>
+<td>{completionTime}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>staking</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>begin_unbonding</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>[0] 時間格式遵循 RFC3339 標準。</li>
+</ul>
+<h2 id="_27">參數</h2>
+<p>抵押模組包含以下參數：</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UnbondingTime</td>
+<td>string (time ns)</td>
+<td>"259200000000000"</td>
+</tr>
+<tr>
+<td>MaxValidators</td>
+<td>uint16</td>
+<td>100</td>
+</tr>
+<tr>
+<td>KeyMaxEntries</td>
+<td>uint16</td>
+<td>7</td>
+</tr>
+<tr>
+<td>HistoricalEntries</td>
+<td>uint16</td>
+<td>3</td>
+</tr>
+<tr>
+<td>BondDenom</td>
+<td>string</td>
+<td>"dst"</td>
+</tr>
+<tr>
+<td>PowerReduction</td>
+<td>string</td>
+<td>"1000000"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_28">客戶端</h2>
+<h3 id="cli">CLI</h3>
+<p>用戶可以使用命令行界面（CLI）查詢和與staking模組互動。</p>
+<h4 id="query">Query</h4>
+<p><code>query</code>命令允許用戶查詢staking的狀態。</p>
+<pre><code class="language-bash">stcd query staking --help
+</code></pre>
+<h4 id="delegation_1">delegation</h4>
+<p><code>delegation</code> 命令允許用戶查詢特定委託人在特定驗證者上的委託情況。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking delegation [delegator-addr] [validator-addr] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking delegation dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">balance:
+  amount: &quot;10000000000&quot;
+  denom: dst
+delegation:
+  delegator_address: dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+  shares: &quot;10000000000.000000000000000000&quot;
+  validator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<h4 id="delegations">delegations</h4>
+<p><code>delegations</code> 命令允許用戶查詢特定委託人在所有驗證者上的委託情況。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking delegations [delegator-addr] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking delegations dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">delegation_responses:
+- balance:
+    amount: &quot;10000000000&quot;
+    denom: dst
+  delegation:
+    delegator_address: dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+    shares: &quot;10000000000.000000000000000000&quot;
+    validator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+- balance:
+    amount: &quot;10000000000&quot;
+    denom: dst
+  delegation:
+    delegator_address: dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+    shares: &quot;10000000000.000000000000000000&quot;
+    validator_address: dstvaloper1x20lytyf6zkcrv5edpkfkn8sz578qg5sqfyqnp
+pagination:
+  next_key: null
+  total: &quot;0&quot;
+</code></pre>
+<h4 id="delegations-to">delegations-to</h4>
+<p><code>delegations-to</code> 命令允許用戶查詢特定驗證者上的委託情況。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking delegations-to [validator-addr] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking delegations-to dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">- balance:
+    amount: &quot;504000000&quot;
+    denom: dst
+  delegation:
+    delegator_address: dst1q2qwwynhv8kh3lu5fkeex4awau9x8fwt45f5cp
+    shares: &quot;504000000.000000000000000000&quot;
+    validator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+- balance:
+    amount: &quot;78125000000&quot;
+    denom: uixo
+  delegation:
+    delegator_address: dst1qvppl3479hw4clahe0kwdlfvf8uvjtcd99m2ca
+    shares: &quot;78125000000.000000000000000000&quot;
+    validator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+pagination:
+  next_key: null
+  total: &quot;0&quot;
+</code></pre>
+<h4 id="historical-info">historical-info</h4>
+<p><code>historical-info</code> 命令允許用戶在給定高度查詢歷史信息。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking historical-info [height] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking historical-info 10
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">header:
+  app_hash: Lbx8cXpI868wz8sgp4qPYVrlaKjevR5WP/IjUxwp3oo=
+  chain_id: testnet
+  consensus_hash: BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=
+  data_hash: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+  evidence_hash: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+  height: &quot;10&quot;
+  last_block_id:
+    hash: RFbkpu6pWfSThXxKKl6EZVDnBSm16+U0l0xVjTX08Fk=
+    part_set_header:
+      hash: vpIvXD4rxD5GM4MXGz0Sad9I7//iVYLzZsEU4BVgWIU=
+      total: 1
+  last_commit_hash: Ne4uXyx4QtNp4Zx89kf9UK7oG9QVbdB6e7ZwZkhy8K0=
+  last_results_hash: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+  next_validators_hash: nGBgKeWBjoxeKFti00CxHsnULORgKY4LiuQwBuUrhCs=
+  proposer_address: mMEP2c2IRPLr99LedSRtBg9eONM=
+  time: &quot;2021-10-01T06:00:49.785790894Z&quot;
+  validators_hash: nGBgKeWBjoxeKFti00CxHsnULORgKY4LiuQwBuUrhCs=
+  version:
+    app: &quot;0&quot;
+    block: &quot;11&quot;
+valset:
+- commission:
+    commission_rates:
+      max_change_rate: &quot;0.010000000000000000&quot;
+      max_rate: &quot;0.200000000000000000&quot;
+      rate: &quot;0.100000000000000000&quot;
+    update_time: &quot;2021-10-01T05:52:50.380144238Z&quot;
+  consensus_pubkey:
+    '@type': /cosmos.crypto.ed25519.PubKey
+    key: Auxs3865HpB/EfssYOzfqNhEJjzys2Fo6jD5B8tPgC8=
+  delegator_shares: &quot;10000000.000000000000000000&quot;
+  description:
+    details: &quot;&quot;
+    identity: &quot;&quot;
+    moniker: myvalidator
+    security_contact: &quot;&quot;
+    website: &quot;&quot;
+  jailed: false
+  min_self_delegation: &quot;1&quot;
+  operator_address: dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc
+  status: BOND_STATUS_BONDED
+  tokens: &quot;10000000&quot;
+  unbonding_height: &quot;0&quot;
+  unbonding_time: &quot;1970-01-01T00:00:00Z&quot;
+</code></pre>
+<h4 id="params_1">params</h4>
+<p><code>params</code> 命令允許用戶查詢設置為抵押參數的值。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking params [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking params
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">bond_denom: dst
+historical_entries: 10000
+max_entries: 7
+max_validators: 50
+unbonding_time: 1814400s
+</code></pre>
+<h4 id="pool">pool</h4>
+<p><code>pool</code> 命令允許用戶查詢存儲在抵押池中的金額值。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd q staking pool [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd q staking pool
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">bonded_tokens: &quot;10000000&quot;
+not_bonded_tokens: &quot;0&quot;
+``
+範例:
+
+```bash
+stcd query staking redelegation dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p dstvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">pagination: null
+redelegation_responses:
+- entries:
+  - balance: &quot;50000000&quot;
+    redelegation_entry:
+      completion_time: &quot;2021-10-24T20:33:21.960084845Z&quot;
+      creation_height: 2.382847e+06
+      initial_balance: &quot;50000000&quot;
+      shares_dst: &quot;50000000.000000000000000000&quot;
+  - balance: &quot;5000000000&quot;
+    redelegation_entry:
+      completion_time: &quot;2021-10-25T21:33:54.446846862Z&quot;
+      creation_height: 2.397271e+06
+      initial_balance: &quot;5000000000&quot;
+      shares_dst: &quot;5000000000.000000000000000000&quot;
+  redelegation:
+    delegator_address: dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+    entries: null
+    validator_dst_address: dstvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm
+    validator_src_address: dstvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm
+</code></pre>
+<h4 id="unbonding-delegation">unbonding-delegation</h4>
+<p><code>unbonding-delegation</code> 命令允許用戶查詢特定委託人在特定驗證者上的解綁委託情況。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking unbonding-delegation [delegator-addr] [validator-addr] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking unbonding-delegation dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">delegator_address: dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+entries:
+- balance: &quot;52000000&quot;
+  completion_time: &quot;2021-11-02T11:35:55.391594709Z&quot;
+  creation_height: &quot;55078&quot;
+  initial_balance: &quot;52000000&quot;
+validator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<h4 id="unbonding-delegations">unbonding-delegations</h4>
+<p><code>unbonding-delegations</code> 命令允許用戶查詢一個委託人的所有解綁委託記錄。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking unbonding-delegations [delegator-addr] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking unbonding-delegations dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">pagination:
+  next_key: null
+  total: &quot;0&quot;
+unbonding_responses:
+- delegator_address: dst1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+  entries:
+  - balance: &quot;52000000&quot;
+    completion_time: &quot;2021-11-02T11:35:55.391594709Z&quot;
+    creation_height: &quot;55078&quot;
+    initial_balance: &quot;52000000&quot;
+  validator_address: dstvaloper1t8ehvswxjfn3ejzkjtntcyrqwvmvuknzmvtaaa
+
+</code></pre>
+<h4 id="unbonding-delegations-from">unbonding-delegations-from</h4>
+<p><code>unbonding-delegations-from</code> 命令允許用戶查詢從驗證者解綁的委託情況。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking unbonding-delegations-from [validator-addr] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking unbonding-delegations-from dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">pagination:
+  next_key: null
+  total: &quot;0&quot;
+unbonding_responses:
+- delegator_address: dst1qqq9txnw4c77sdvzx0tkedsafl5s3vk7hn53fn
+  entries:
+  - balance: &quot;150000000&quot;
+    completion_time: &quot;2021-11-01T21:41:13.098141574Z&quot;
+    creation_height: &quot;46823&quot;
+    initial_balance: &quot;150000000&quot;
+  validator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+- delegator_address: dst1peteje73eklqau66mr7h7rmewmt2vt99y24f5z
+  entries:
+  - balance: &quot;24000000&quot;
+    completion_time: &quot;2021-10-31T02:57:18.192280361Z&quot;
+    creation_height: &quot;21516&quot;
+    initial_balance: &quot;24000000&quot;
+  validator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<h4 id="validator">validator</h4>
+<p><code>validator</code> 命令允許用戶查詢有關特定驗證者的詳細信息。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking validator [validator-addr] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking validator dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">commission:
+  commission_rates:
+    max_change_rate: &quot;0.020000000000000000&quot;
+    max_rate: &quot;0.200000000000000000&quot;
+    rate: &quot;0.050000000000000000&quot;
+  update_time: &quot;2021-10-01T19:24:52.663191049Z&quot;
+consensus_pubkey:
+  '@type': /cosmos.crypto.ed25519.PubKey
+  key: sIiexdJdYWn27+7iUHQJDnkp63gq/rzUq1Y+fxoGjXc=
+delegator_shares: &quot;32948270000.000000000000000000&quot;
+description:
+  details: Witval is the validator arm from Vitwit. Vitwit is into software consulting
+    and services business since 2015. We are working closely with Cosmos ecosystem
+    since 2018. We are also building tools for the ecosystem, Aneka is our explorer
+    for the cosmos ecosystem.
+  identity: 51468B615127273A
+  moniker: Witval
+  security_contact: &quot;&quot;
+  website: &quot;&quot;
+jailed: false
+min_self_delegation: &quot;1&quot;
+operator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+status: BOND_STATUS_BONDED
+tokens: &quot;32948270000&quot;
+unbonding_height: &quot;0&quot;
+unbonding_time: &quot;1970-01-01T00:00:00Z&quot;
+</code></pre>
+<h4 id="validators">validators</h4>
+<p><code>validators</code> 命令允許用戶查詢網絡上所有驗證者的詳細信息。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd query staking validators [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd query staking validators
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">pagination:
+  next_key: FPTi7TKAjN63QqZh+BaXn6gBmD5/
+  total: &quot;0&quot;
+validators:
+commission:
+  commission_rates:
+    max_change_rate: &quot;0.020000000000000000&quot;
+    max_rate: &quot;0.200000000000000000&quot;
+    rate: &quot;0.050000000000000000&quot;
+  update_time: &quot;2021-10-01T19:24:52.663191049Z&quot;
+consensus_pubkey:
+  '@type': /cosmos.crypto.ed25519.PubKey
+  key: sIiexdJdYWn27+7iUHQJDnkp63gq/rzUq1Y+fxoGjXc=
+delegator_shares: &quot;32948270000.000000000000000000&quot;
+description:
+    details: Witval is the validator arm from Vitwit. Vitwit is into software consulting
+      and services business since 2015. We are working closely with Cosmos ecosystem
+      since 2018. We are also building tools for the ecosystem, Aneka is our explorer
+      for the cosmos ecosystem.
+    identity: 51468B615127273A
+    moniker: Witval
+    security_contact: &quot;&quot;
+    website: &quot;&quot;
+  jailed: false
+  min_self_delegation: &quot;1&quot;
+  operator_address: dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+  status: BOND_STATUS_BONDED
+  tokens: &quot;32948270000&quot;
+  unbonding_height: &quot;0&quot;
+  unbonding_time: &quot;1970-01-01T00:00:00Z&quot;
+- commission:
+    commission_rates:
+      max_change_rate: &quot;0.100000000000000000&quot;
+      max_rate: &quot;0.200000000000000000&quot;
+      rate: &quot;0.050000000000000000&quot;
+    update_time: &quot;2021-10-04T18:02:21.446645619Z&quot;
+  consensus_pubkey:
+    '@type': /cosmos.crypto.ed25519.PubKey
+    key: GDNpuKDmCg9GnhnsiU4fCWktuGUemjNfvpCZiqoRIYA=
+  delegator_shares: &quot;559343421.000000000000000000&quot;
+  description:
+    details: Noderunners is a professional validator in POS networks. We have a huge
+      node running experience, reliable soft and hardware. Our commissions are always
+      low, our support to delegators is always full. Stake with us and start receiving
+      your Cosmos rewards now!
+    identity: 812E82D12FEA3493
+    moniker: Noderunners
+    security_contact: info@noderunners.biz
+    website: http://noderunners.biz
+  jailed: false
+  min_self_delegation: &quot;1&quot;
+  operator_address: dstvaloper1q5ku90atkhktze83j9xjaks2p7uruag5zp6wt7
+  status: BOND_STATUS_BONDED
+  tokens: &quot;559343421&quot;
+  unbonding_height: &quot;0&quot;
+  unbonding_time: &quot;1970-01-01T00:00:00Z&quot;
+</code></pre>
+<h3 id="transactions">Transactions</h3>
+<p><code>tx</code> 命令允許用戶與 <code>staking</code> 模組進行交互。</p>
+<pre><code class="language-bash">stcd tx staking --help
+</code></pre>
+<h4 id="create-validator">create-validator</h4>
+<p>create-validator 命令允許用戶創建一個新的驗證者，並對其進行自我委託初始化。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd tx staking create-validator [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd tx staking create-validator \
+  --amount=1000000dst \
+  --pubkey=$(stcd tendermint show-validator) \
+  --moniker=&quot;my-moniker&quot; \
+  --website=&quot;https://myweb.site&quot; \
+  --details=&quot;description of your validator&quot; \
+  --chain-id=&quot;name_of_chain_id&quot; \
+  --commission-rate=&quot;0.10&quot; \
+  --commission-max-rate=&quot;0.20&quot; \
+  --commission-max-change-rate=&quot;0.01&quot; \
+  --min-self-delegation=&quot;1&quot; \
+  --gas=&quot;auto&quot; \
+  --gas-adjustment=&quot;1.2&quot; \
+  --gas-prices=&quot;0.025dst&quot; \
+  --from=mykey
+</code></pre>
+<h4 id="delegate">delegate</h4>
+<p><code>delegate</code> 命令允許用戶將流動代幣委託給一個驗證者。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd tx staking delegate [validator-addr] [amount] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd tx staking delegate dstvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 1000dst --from mykey
+</code></pre>
+<h4 id="edit-validator">edit-validator</h4>
+<p>edit-validator 命令允許用戶編輯現有的驗證者賬戶。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd tx staking edit-validator [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd tx staking edit-validator --moniker &quot;new_moniker_name&quot; --website &quot;new_webiste_url&quot; --from mykey
+</code></pre>
+<h4 id="unbond">unbond</h4>
+<p><code>unbond</code> 命令允許用戶從驗證者中解除綁定股份。</p>
+<p>使用方法:</p>
+<pre><code class="language-bash">stcd tx staking unbond [validator-addr] [amount] [flags]
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">stcd tx staking unbond dstvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100dst --from mykey
+</code></pre>
+<h2 id="grpc">gRPC</h2>
+<p>用戶可以使用 gRPC 端點查詢 <code>staking</code> 模塊。</p>
+<h3 id="validators_1">Validators</h3>
+<p><code>Validators</code> 端點查詢符合給定狀態的所有驗證者。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Validators
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext localhost:9090 cosmos.staking.v1beta1.Query/Validators
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;validators&quot;: [
+    {
+      &quot;operatorAddress&quot;: &quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+      &quot;consensusPubkey&quot;: {&quot;@type&quot;:&quot;/cosmos.crypto.ed25519.PubKey&quot;,&quot;key&quot;:&quot;Auxs3865HpB/EfssYOzfqNhEJjzys2Fo6jD5B8tPgC8=&quot;},
+      &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+      &quot;tokens&quot;: &quot;10000000&quot;,
+      &quot;delegatorShares&quot;: &quot;10000000000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;myvalidator&quot;
+      },
+      &quot;unbondingTime&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commissionRates&quot;: {
+          &quot;rate&quot;: &quot;100000000000000000&quot;,
+          &quot;maxRate&quot;: &quot;200000000000000000&quot;,
+          &quot;maxChangeRate&quot;: &quot;10000000000000000&quot;
+        },
+        &quot;updateTime&quot;: &quot;2021-10-01T05:52:50.380144238Z&quot;
+      },
+      &quot;minSelfDelegation&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="validator_1">Validator</h3>
+<p><code>Validator</code> 端點根據給定的驗證者地址查詢驗證者信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Validator
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;validator_addr&quot;:&quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/Validator
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;validator&quot;: {
+    &quot;operatorAddress&quot;: &quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+    &quot;consensusPubkey&quot;: {&quot;@type&quot;:&quot;/cosmos.crypto.ed25519.PubKey&quot;,&quot;key&quot;:&quot;Auxs3865HpB/EfssYOzfqNhEJjzys2Fo6jD5B8tPgC8=&quot;},
+    &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+    &quot;tokens&quot;: &quot;10000000&quot;,
+    &quot;delegatorShares&quot;: &quot;10000000000000000000000000&quot;,
+    &quot;description&quot;: {
+      &quot;moniker&quot;: &quot;myvalidator&quot;
+    },
+    &quot;unbondingTime&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;commission&quot;: {
+      &quot;commissionRates&quot;: {
+        &quot;rate&quot;: &quot;100000000000000000&quot;,
+        &quot;maxRate&quot;: &quot;200000000000000000&quot;,
+        &quot;maxChangeRate&quot;: &quot;10000000000000000&quot;
+      },
+      &quot;updateTime&quot;: &quot;2021-10-01T05:52:50.380144238Z&quot;
+    },
+    &quot;minSelfDelegation&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="validatordelegations">ValidatorDelegations</h3>
+<p><code>ValidatorDelegations</code> 端點根據給定的驗證者查詢委託信息。`</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/ValidatorDelegations
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;validator_addr&quot;:&quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/ValidatorDelegations
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;delegationResponses&quot;: [
+    {
+      &quot;delegation&quot;: {
+        &quot;delegatorAddress&quot;: &quot;dst1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgy3ua5t&quot;,
+        &quot;validatorAddress&quot;: &quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+        &quot;shares&quot;: &quot;10000000000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;dst&quot;,
+        &quot;amount&quot;: &quot;10000000&quot;
+      }
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="validatorunbondingdelegations">ValidatorUnbondingDelegations</h3>
+<p><code>ValidatorUnbondingDelegations</code> 端點根據給定的驗證者查詢解綁委託信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/ValidatorUnbondingDelegations
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;validator_addr&quot;:&quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/ValidatorUnbondingDelegations
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;unbonding_responses&quot;: [
+    {
+      &quot;delegator_address&quot;: &quot;dst1z3pzzw84d6xn00pw9dy3yapqypfde7vg6965fy&quot;,
+      &quot;validator_address&quot;: &quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;25325&quot;,
+          &quot;completion_time&quot;: &quot;2021-10-31T09:24:36.797320636Z&quot;,
+          &quot;initial_balance&quot;: &quot;20000000&quot;,
+          &quot;balance&quot;: &quot;20000000&quot;
+        }
+      ]
+    },
+    {
+      &quot;delegator_address&quot;: &quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,
+      &quot;validator_address&quot;: &quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;13100&quot;,
+          &quot;completion_time&quot;: &quot;2021-10-30T12:53:02.272266791Z&quot;,
+          &quot;initial_balance&quot;: &quot;1000000&quot;,
+          &quot;balance&quot;: &quot;1000000&quot;
+        }
+      ]
+    },
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;8&quot;
+  }
+}
+</code></pre>
+<h3 id="delegation_2">Delegation</h3>
+<p>The <code>Delegation</code> endpoint queries delegate information for given validator delegator pair.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Delegation
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;, validator_addr&quot;:&quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/Delegation
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_response&quot;:
+  {
+    &quot;delegation&quot;:
+      {
+        &quot;delegator_address&quot;:&quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,
+        &quot;validator_address&quot;:&quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+        &quot;shares&quot;:&quot;25083119936.000000000000000000&quot;
+      },
+    &quot;balance&quot;:
+      {
+        &quot;denom&quot;:&quot;dst&quot;,
+        &quot;amount&quot;:&quot;25083119936&quot;
+      }
+  }
+}
+</code></pre>
+<h3 id="unbondingdelegation">UnbondingDelegation</h3>
+<p><code>UnbondingDelegation</code> 端點根據給定的驗證者委託人查詢解綁委託信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/UnbondingDelegation
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;, validator_addr&quot;:&quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/UnbondingDelegation
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;unbond&quot;: {
+    &quot;delegator_address&quot;: &quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,
+    &quot;validator_address&quot;: &quot;dstvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+    &quot;entries&quot;: [
+      {
+        &quot;creation_height&quot;: &quot;136984&quot;,
+        &quot;completion_time&quot;: &quot;2021-11-08T05:38:47.505593891Z&quot;,
+        &quot;initial_balance&quot;: &quot;400000000&quot;,
+        &quot;balance&quot;: &quot;400000000&quot;
+      },
+      {
+        &quot;creation_height&quot;: &quot;137005&quot;,
+        &quot;completion_time&quot;: &quot;2021-11-08T05:40:53.526196312Z&quot;,
+        &quot;initial_balance&quot;: &quot;385000000&quot;,
+        &quot;balance&quot;: &quot;385000000&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="delegatordelegations">DelegatorDelegations</h3>
+<p><code>DelegatorDelegations</code> 端點根據給定的委託人地址查詢所有委託信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/DelegatorDelegations
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/DelegatorDelegations
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_responses&quot;: [
+    {&quot;delegation&quot;:{&quot;delegator_address&quot;:&quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,&quot;validator_address&quot;:&quot;dstvaloper1eh5mwu044gd5ntkkc2xgfg8247mgc56fww3vc8&quot;,&quot;shares&quot;:&quot;25083339023.000000000000000000&quot;},&quot;balance&quot;:{&quot;denom&quot;:&quot;dst&quot;,&quot;amount&quot;:&quot;25083339023&quot;}}
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorunbondingdelegations">DelegatorUnbondingDelegations</h3>
+<p><code>DelegatorUnbondingDelegations</code> 端點根據給定的委託人地址查詢所有解綁委託信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/DelegatorUnbondingDelegations
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/DelegatorUnbondingDelegations
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;unbonding_responses&quot;: [
+    {
+      &quot;delegator_address&quot;: &quot;dst1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,
+      &quot;validator_address&quot;: &quot;dstvaloper1sjllsnramtg3ewxqwwrwjxfgc4n4ef9uxyejze&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;136984&quot;,
+          &quot;completion_time&quot;: &quot;2021-11-08T05:38:47.505593891Z&quot;,
+          &quot;initial_balance&quot;: &quot;400000000&quot;,
+          &quot;balance&quot;: &quot;400000000&quot;
+        },
+        {
+          &quot;creation_height&quot;: &quot;137005&quot;,
+          &quot;completion_time&quot;: &quot;2021-11-08T05:40:53.526196312Z&quot;,
+          &quot;initial_balance&quot;: &quot;385000000&quot;,
+          &quot;balance&quot;: &quot;385000000&quot;
+        }
+      ]
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorvalidators">DelegatorValidators</h3>
+<p><code>DelegatorValidators</code> 端點根據給定的委託人查詢所有驗證者的信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/DelegatorValidators
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;dst1ld5p7hn43yuh8ht28gm9pfjgj2fctujp2tgwvf&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/DelegatorValidators
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;validators&quot;: [
+    {
+      &quot;operator_address&quot;: &quot;dstvaloper1eh5mwu044gd5ntkkc2xgfg8247mgc56fww3vc8&quot;,
+      &quot;consensus_pubkey&quot;: {
+        &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+        &quot;key&quot;: &quot;UPwHWxH1zHJWGOa/m6JB3f5YjHMvPQPkVbDqqi+U7Uw=&quot;
+      },
+      &quot;jailed&quot;: false,
+      &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+      &quot;tokens&quot;: &quot;347260647559&quot;,
+      &quot;delegator_shares&quot;: &quot;347260647559.000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;BouBouNode&quot;,
+        &quot;identity&quot;: &quot;&quot;,
+        &quot;website&quot;: &quot;https://boubounode.com&quot;,
+        &quot;security_contact&quot;: &quot;&quot;,
+        &quot;details&quot;: &quot;AI-based Validator. #1 AI Validator on Game of Stakes. Fairly priced. Don't trust (humans), verify. Made with BouBou love.&quot;
+      },
+      &quot;unbonding_height&quot;: &quot;0&quot;,
+      &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commission_rates&quot;: {
+          &quot;rate&quot;: &quot;0.061000000000000000&quot;,
+          &quot;max_rate&quot;: &quot;0.300000000000000000&quot;,
+          &quot;max_change_rate&quot;: &quot;0.150000000000000000&quot;
+        },
+        &quot;update_time&quot;: &quot;2021-10-01T15:00:00Z&quot;
+      },
+      &quot;min_self_delegation&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorvalidator">DelegatorValidator</h3>
+<p><code>DelegatorValidator</code> 端點根據给定的委託人和驗證者查詢驗證者的信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/DelegatorValidator
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;dst1eh5mwu044gd5ntkkc2xgfg8247mgc56f3n8rr7&quot;, &quot;validator_addr&quot;: &quot;dstvaloper1eh5mwu044gd5ntkkc2xgfg8247mgc56fww3vc8&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/DelegatorValidator
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;validator&quot;: {
+    &quot;operator_address&quot;: &quot;dstvaloper1eh5mwu044gd5ntkkc2xgfg8247mgc56fww3vc8&quot;,
+    &quot;consensus_pubkey&quot;: {
+      &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+      &quot;key&quot;: &quot;UPwHWxH1zHJWGOa/m6JB3f5YjHMvPQPkVbDqqi+U7Uw=&quot;
+    },
+    &quot;jailed&quot;: false,
+    &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+    &quot;tokens&quot;: &quot;347262754841&quot;,
+    &quot;delegator_shares&quot;: &quot;347262754841.000000000000000000&quot;,
+    &quot;description&quot;: {
+      &quot;moniker&quot;: &quot;BouBouNode&quot;,
+      &quot;identity&quot;: &quot;&quot;,
+      &quot;website&quot;: &quot;https://boubounode.com&quot;,
+      &quot;security_contact&quot;: &quot;&quot;,
+      &quot;details&quot;: &quot;AI-based Validator. #1 AI Validator on Game of Stakes. Fairly priced. Don't trust (humans), verify. Made with BouBou love.&quot;
+    },
+    &quot;unbonding_height&quot;: &quot;0&quot;,
+    &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;commission&quot;: {
+      &quot;commission_rates&quot;: {
+        &quot;rate&quot;: &quot;0.061000000000000000&quot;,
+        &quot;max_rate&quot;: &quot;0.300000000000000000&quot;,
+        &quot;max_change_rate&quot;: &quot;0.150000000000000000&quot;
+      },
+      &quot;update_time&quot;: &quot;2021-10-01T15:00:00Z&quot;
+    },
+    &quot;min_self_delegation&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="historicalinfo_1">HistoricalInfo</h3>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/HistoricalInfo
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;height&quot; : 1}' localhost:9090 cosmos.staking.v1beta1.Query/HistoricalInfo
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;hist&quot;: {
+    &quot;header&quot;: {
+      &quot;version&quot;: {
+        &quot;block&quot;: &quot;11&quot;,
+        &quot;app&quot;: &quot;0&quot;
+      },
+      &quot;chain_id&quot;: &quot;simd-1&quot;,
+      &quot;height&quot;: &quot;140142&quot;,
+      &quot;time&quot;: &quot;2021-10-11T10:56:29.720079569Z&quot;,
+      &quot;last_block_id&quot;: {
+        &quot;hash&quot;: &quot;9gri/4LLJUBFqioQ3NzZIP9/7YHR9QqaM6B2aJNQA7o=&quot;,
+        &quot;part_set_header&quot;: {
+          &quot;total&quot;: 1,
+          &quot;hash&quot;: &quot;Hk1+C864uQkl9+I6Zn7IurBZBKUevqlVtU7VqaZl1tc=&quot;
+        }
+      },
+      &quot;last_commit_hash&quot;: &quot;VxrcS27GtvGruS3I9+AlpT7udxIT1F0OrRklrVFSSKc=&quot;,
+      &quot;data_hash&quot;: &quot;80BjOrqNYUOkTnmgWyz9AQ8n7SoEmPVi4QmAe8RbQBY=&quot;,
+      &quot;validators_hash&quot;: &quot;95W49n2hw8RWpr1GPTAO5MSPi6w6Wjr3JjjS7AjpBho=&quot;,
+      &quot;next_validators_hash&quot;: &quot;95W49n2hw8RWpr1GPTAO5MSPi6w6Wjr3JjjS7AjpBho=&quot;,
+      &quot;consensus_hash&quot;: &quot;BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=&quot;,
+      &quot;app_hash&quot;: &quot;ZZaxnSY3E6Ex5Bvkm+RigYCK82g8SSUL53NymPITeOE=&quot;,
+      &quot;last_results_hash&quot;: &quot;47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=&quot;,
+      &quot;evidence_hash&quot;: &quot;47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=&quot;,
+      &quot;proposer_address&quot;: &quot;aH6dO428B+ItuoqPq70efFHrSMY=&quot;
+    },
+  &quot;valset&quot;: [
+      {
+        &quot;operator_address&quot;: &quot;dstvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcqcnylw&quot;,
+        &quot;consensus_pubkey&quot;: {
+          &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+          &quot;key&quot;: &quot;/O7BtNW0pafwfvomgR4ZnfldwPXiFfJs9mHg3gwfv5Q=&quot;
+        },
+        &quot;jailed&quot;: false,
+        &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+        &quot;tokens&quot;: &quot;1426045203613&quot;,
+        &quot;delegator_shares&quot;: &quot;1426045203613.000000000000000000&quot;,
+        &quot;description&quot;: {
+          &quot;moniker&quot;: &quot;SG-1&quot;,
+          &quot;identity&quot;: &quot;48608633F99D1B60&quot;,
+          &quot;website&quot;: &quot;https://sg-1.online&quot;,
+          &quot;security_contact&quot;: &quot;&quot;,
+          &quot;details&quot;: &quot;SG-1 - your favorite validator on Witval. We offer 100% Soft Slash protection.&quot;
+        },
+        &quot;unbonding_height&quot;: &quot;0&quot;,
+        &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+        &quot;commission&quot;: {
+          &quot;commission_rates&quot;: {
+            &quot;rate&quot;: &quot;0.037500000000000000&quot;,
+            &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+            &quot;max_change_rate&quot;: &quot;0.030000000000000000&quot;
+          },
+          &quot;update_time&quot;: &quot;2021-10-01T15:00:00Z&quot;
+        },
+        &quot;min_self_delegation&quot;: &quot;1&quot;
+      }
+    ]
+  }
+}
+
+</code></pre>
+<h3 id="pool_1">Pool</h3>
+<p><code>Pool</code> 端點查詢抵押池（Pool）信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Pool
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d localhost:9090 cosmos.staking.v1beta1.Query/Pool
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;pool&quot;: {
+    &quot;not_bonded_tokens&quot;: &quot;369054400189&quot;,
+    &quot;bonded_tokens&quot;: &quot;15657192425623&quot;
+  }
+}
+</code></pre>
+<h3 id="params_2">Params</h3>
+<p><code>Params</code> 端點查詢參數（Params）信息。</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Params
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">grpcurl -plaintext localhost:9090 cosmos.staking.v1beta1.Query/Params
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;unbondingTime&quot;: &quot;1814400s&quot;,
+    &quot;maxValidators&quot;: 100,
+    &quot;maxEntries&quot;: 7,
+    &quot;historicalEntries&quot;: 10000,
+    &quot;bondDenom&quot;: &quot;dst&quot;
+  }
+}
+</code></pre>
+<h2 id="rest">REST</h2>
+<p>用戶可以使用 <code>REST</code> 端點查詢 <code>staking</code> 模塊。</p>
+<h3 id="delegatordelegations_1">DelegatorDelegations</h3>
+<p>DelegatorDelegations REST 端點查詢給定委託人地址的所有委託信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/delegations/{delegatorAddr}
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/delegations/dst1vcs68xf2tnqes5tg0khr0vyevm40ff6zdxatp5&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_responses&quot;: [
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;dst1vcs68xf2tnqes5tg0khr0vyevm40ff6zdxatp5&quot;,
+        &quot;validator_address&quot;: &quot;dstvaloper1quqxfrxkycr0uzt4yk0d57tcq3zk7srm7sm6r8&quot;,
+        &quot;shares&quot;: &quot;256250000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;dst&quot;,
+        &quot;amount&quot;: &quot;256250000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;dst1vcs68xf2tnqes5tg0khr0vyevm40ff6zdxatp5&quot;,
+        &quot;validator_address&quot;: &quot;dstvaloper194v8uwee2fvs2s8fa5k7j03ktwc87h5ym39jfv&quot;,
+        &quot;shares&quot;: &quot;255150000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;dst&quot;,
+        &quot;amount&quot;: &quot;255150000&quot;
+      }
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;2&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorunbondingdelegations_1">DelegatorUnbondingDelegations</h3>
+<p><code>DelegatorUnbondingDelegations</code> REST 端點查詢給定委託人地址的所有解綁委託信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/delegators/{delegatorAddr}/unbonding_delegations
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/delegators/dst1nxv42u3lv642q0fuzu2qmrku27zgut3n3z7lll/unbonding_delegations&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;unbonding_responses&quot;: [
+    {
+      &quot;delegator_address&quot;: &quot;dst1nxv42u3lv642q0fuzu2qmrku27zgut3n3z7lll&quot;,
+      &quot;validator_address&quot;: &quot;dstvaloper1e7mvqlz50ch6gw4yjfemsc069wfre4qwmw53kq&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;2442278&quot;,
+          &quot;completion_time&quot;: &quot;2021-10-12T10:59:03.797335857Z&quot;,
+          &quot;initial_balance&quot;: &quot;50000000000&quot;,
+          &quot;balance&quot;: &quot;50000000000&quot;
+        }
+      ]
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorvalidators_1">DelegatorValidators</h3>
+<p><code>DelegatorValidators</code> REST 端點根據給定的委託人地址查詢所有驗證者的信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/delegators/{delegatorAddr}/validators
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/delegators/dst1xwazl8ftks4gn00y5x3c47auquc62ssune9ppv/validators&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;validators&quot;: [
+    {
+      &quot;operator_address&quot;: &quot;dstvaloper1xwazl8ftks4gn00y5x3c47auquc62ssuvynw64&quot;,
+      &quot;consensus_pubkey&quot;: {
+        &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+        &quot;key&quot;: &quot;5v4n3px3PkfNnKflSgepDnsMQR1hiNXnqOC11Y72/PQ=&quot;
+      },
+      &quot;jailed&quot;: false,
+      &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+      &quot;tokens&quot;: &quot;21592843799&quot;,
+      &quot;delegator_shares&quot;: &quot;21592843799.000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;jabbey&quot;,
+        &quot;identity&quot;: &quot;&quot;,
+        &quot;website&quot;: &quot;https://twitter.com/JoeAbbey&quot;,
+        &quot;security_contact&quot;: &quot;&quot;,
+        &quot;details&quot;: &quot;just another dad in the cosmos&quot;
+      },
+      &quot;unbonding_height&quot;: &quot;0&quot;,
+      &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commission_rates&quot;: {
+          &quot;rate&quot;: &quot;0.100000000000000000&quot;,
+          &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+          &quot;max_change_rate&quot;: &quot;0.100000000000000000&quot;
+        },
+        &quot;update_time&quot;: &quot;2021-10-09T19:03:54.984821705Z&quot;
+      },
+      &quot;min_self_delegation&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorvalidator_1">DelegatorValidator</h3>
+<p><code>DelegatorValidator</code> REST 端點根據給定的委託人和驗證者對查詢驗證者的信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/delegators/{delegatorAddr}/validators/{validatorAddr}
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/delegators/dst1xwazl8ftks4gn00y5x3c47auquc62ssune9ppv/validators/dstvaloper1xwazl8ftks4gn00y5x3c47auquc62ssuvynw64&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;validator&quot;: {
+    &quot;operator_address&quot;: &quot;dstvaloper1xwazl8ftks4gn00y5x3c47auquc62ssuvynw64&quot;,
+    &quot;consensus_pubkey&quot;: {
+      &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+      &quot;key&quot;: &quot;5v4n3px3PkfNnKflSgepDnsMQR1hiNXnqOC11Y72/PQ=&quot;
+    },
+    &quot;jailed&quot;: false,
+    &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+    &quot;tokens&quot;: &quot;21592843799&quot;,
+    &quot;delegator_shares&quot;: &quot;21592843799.000000000000000000&quot;,
+    &quot;description&quot;: {
+      &quot;moniker&quot;: &quot;jabbey&quot;,
+      &quot;identity&quot;: &quot;&quot;,
+      &quot;website&quot;: &quot;https://twitter.com/JoeAbbey&quot;,
+      &quot;security_contact&quot;: &quot;&quot;,
+      &quot;details&quot;: &quot;just another dad in the cosmos&quot;
+    },
+    &quot;unbonding_height&quot;: &quot;0&quot;,
+    &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;commission&quot;: {
+      &quot;commission_rates&quot;: {
+        &quot;rate&quot;: &quot;0.100000000000000000&quot;,
+        &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+        &quot;max_change_rate&quot;: &quot;0.100000000000000000&quot;
+      },
+      &quot;update_time&quot;: &quot;2021-10-09T19:03:54.984821705Z&quot;
+    },
+    &quot;min_self_delegation&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="historicalinfo_2">HistoricalInfo</h3>
+<p><code>HistoricalInfo</code> REST 端點根據給定的高度查詢歷史信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/historical_info/{height}
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/historical_info/153332&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;hist&quot;: {
+    &quot;header&quot;: {
+      &quot;version&quot;: {
+        &quot;block&quot;: &quot;11&quot;,
+        &quot;app&quot;: &quot;0&quot;
+      },
+      &quot;chain_id&quot;: &quot;cosmos-1&quot;,
+      &quot;height&quot;: &quot;153332&quot;,
+      &quot;time&quot;: &quot;2021-10-12T09:05:35.062230221Z&quot;,
+      &quot;last_block_id&quot;: {
+        &quot;hash&quot;: &quot;NX8HevR5khb7H6NGKva+jVz7cyf0skF1CrcY9A0s+d8=&quot;,
+        &quot;part_set_header&quot;: {
+          &quot;total&quot;: 1,
+          &quot;hash&quot;: &quot;zLQ2FiKM5tooL3BInt+VVfgzjlBXfq0Hc8Iux/xrhdg=&quot;
+        }
+      },
+      &quot;last_commit_hash&quot;: &quot;P6IJrK8vSqU3dGEyRHnAFocoDGja0bn9euLuy09s350=&quot;,
+      &quot;data_hash&quot;: &quot;eUd+6acHWrNXYju8Js449RJ99lOYOs16KpqQl4SMrEM=&quot;,
+      &quot;validators_hash&quot;: &quot;mB4pravvMsJKgi+g8aYdSeNlt0kPjnRFyvtAQtaxcfw=&quot;,
+      &quot;next_validators_hash&quot;: &quot;mB4pravvMsJKgi+g8aYdSeNlt0kPjnRFyvtAQtaxcfw=&quot;,
+      &quot;consensus_hash&quot;: &quot;BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=&quot;,
+      &quot;app_hash&quot;: &quot;fuELArKRK+CptnZ8tu54h6xEleSWenHNmqC84W866fU=&quot;,
+      &quot;last_results_hash&quot;: &quot;p/BPexV4LxAzlVcPRvW+lomgXb6Yze8YLIQUo/4Kdgc=&quot;,
+      &quot;evidence_hash&quot;: &quot;47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=&quot;,
+      &quot;proposer_address&quot;: &quot;G0MeY8xQx7ooOsni8KE/3R/Ib3Q=&quot;
+    },
+    &quot;valset&quot;: [
+      {
+        &quot;operator_address&quot;: &quot;dstvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcqcnylw&quot;,
+        &quot;consensus_pubkey&quot;: {
+          &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+          &quot;key&quot;: &quot;/O7BtNW0pafwfvomgR4ZnfldwPXiFfJs9mHg3gwfv5Q=&quot;
+        },
+        &quot;jailed&quot;: false,
+        &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+        &quot;tokens&quot;: &quot;1416521659632&quot;,
+        &quot;delegator_shares&quot;: &quot;1416521659632.000000000000000000&quot;,
+        &quot;description&quot;: {
+          &quot;moniker&quot;: &quot;SG-1&quot;,
+          &quot;identity&quot;: &quot;48608633F99D1B60&quot;,
+          &quot;website&quot;: &quot;https://sg-1.online&quot;,
+          &quot;security_contact&quot;: &quot;&quot;,
+          &quot;details&quot;: &quot;SG-1 - your favorite validator on cosmos. We offer 100% Soft Slash protection.&quot;
+        },
+        &quot;unbonding_height&quot;: &quot;0&quot;,
+        &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+        &quot;commission&quot;: {
+          &quot;commission_rates&quot;: {
+            &quot;rate&quot;: &quot;0.037500000000000000&quot;,
+            &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+            &quot;max_change_rate&quot;: &quot;0.030000000000000000&quot;
+          },
+          &quot;update_time&quot;: &quot;2021-10-01T15:00:00Z&quot;
+        },
+        &quot;min_self_delegation&quot;: &quot;1&quot;
+      },
+      {
+        &quot;operator_address&quot;: &quot;dstvaloper1t8ehvswxjfn3ejzkjtntcyrqwvmvuknzmvtaaa&quot;,
+        &quot;consensus_pubkey&quot;: {
+          &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+          &quot;key&quot;: &quot;uExZyjNLtr2+FFIhNDAMcQ8+yTrqE7ygYTsI7khkA5Y=&quot;
+        },
+        &quot;jailed&quot;: false,
+        &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+        &quot;tokens&quot;: &quot;1348298958808&quot;,
+        &quot;delegator_shares&quot;: &quot;1348298958808.000000000000000000&quot;,
+        &quot;description&quot;: {
+          &quot;moniker&quot;: &quot;Cosmostation&quot;,
+          &quot;identity&quot;: &quot;AE4C403A6E7AA1AC&quot;,
+          &quot;website&quot;: &quot;https://www.cosmostation.io&quot;,
+          &quot;security_contact&quot;: &quot;admin@stamper.network&quot;,
+          &quot;details&quot;: &quot;Cosmostation validator node. Delegate your tokens and Start Earning Staking Rewards&quot;
+        },
+        &quot;unbonding_height&quot;: &quot;0&quot;,
+        &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+        &quot;commission&quot;: {
+          &quot;commission_rates&quot;: {
+            &quot;rate&quot;: &quot;0.050000000000000000&quot;,
+            &quot;max_rate&quot;: &quot;1.000000000000000000&quot;,
+            &quot;max_change_rate&quot;: &quot;0.200000000000000000&quot;
+          },
+          &quot;update_time&quot;: &quot;2021-10-01T15:06:38.821314287Z&quot;
+        },
+        &quot;min_self_delegation&quot;: &quot;1&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<p>Parameters REST 端點查詢抵押參數。</p>
+<p>model: gpt-3.5-turbo-16k-0613</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/params
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/params&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;unbonding_time&quot;: &quot;2419200s&quot;,
+    &quot;max_validators&quot;: 100,
+    &quot;max_entries&quot;: 7,
+    &quot;historical_entries&quot;: 10000,
+    &quot;bond_denom&quot;: &quot;dst&quot;
+  }
+}
+</code></pre>
+<h3 id="pool_2">Pool</h3>
+<p><code>Pool</code> REST 端點查詢池（Pool）信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/pool
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/pool&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;pool&quot;: {
+    &quot;not_bonded_tokens&quot;: &quot;432805737458&quot;,
+    &quot;bonded_tokens&quot;: &quot;15783637712645&quot;
+  }
+}
+</code></pre>
+<h3 id="validators_2">Validators</h3>
+<p><code>Validators</code> REST 端點根據給定的狀態查詢符合條件的所有驗證者。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/validators&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;validators&quot;: [
+    {
+      &quot;operator_address&quot;: &quot;dstvaloper1q3jsx9dpfhtyqqgetwpe5tmk8f0ms5qywje8tw&quot;,
+      &quot;consensus_pubkey&quot;: {
+        &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+        &quot;key&quot;: &quot;N7BPyek2aKuNZ0N/8YsrqSDhGZmgVaYUBuddY8pwKaE=&quot;
+      },
+      &quot;jailed&quot;: false,
+      &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+      &quot;tokens&quot;: &quot;383301887799&quot;,
+      &quot;delegator_shares&quot;: &quot;383301887799.000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;SmartNodes&quot;,
+        &quot;identity&quot;: &quot;D372724899D1EDC8&quot;,
+        &quot;website&quot;: &quot;https://smartnodes.co&quot;,
+        &quot;security_contact&quot;: &quot;&quot;,
+        &quot;details&quot;: &quot;Earn Rewards with Crypto Staking &amp; Node Deployment&quot;
+      },
+      &quot;unbonding_height&quot;: &quot;0&quot;,
+      &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commission_rates&quot;: {
+          &quot;rate&quot;: &quot;0.050000000000000000&quot;,
+          &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+          &quot;max_change_rate&quot;: &quot;0.100000000000000000&quot;
+        },
+        &quot;update_time&quot;: &quot;2021-10-01T15:51:31.596618510Z&quot;
+      },
+      &quot;min_self_delegation&quot;: &quot;1&quot;
+    },
+    {
+      &quot;operator_address&quot;: &quot;dstvaloper1q5ku90atkhktze83j9xjaks2p7uruag5zp6wt7&quot;,
+      &quot;consensus_pubkey&quot;: {
+        &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+        &quot;key&quot;: &quot;GDNpuKDmCg9GnhnsiU4fCWktuGUemjNfvpCZiqoRIYA=&quot;
+      },
+      &quot;jailed&quot;: false,
+      &quot;status&quot;: &quot;BOND_STATUS_UNBONDING&quot;,
+      &quot;tokens&quot;: &quot;1017819654&quot;,
+      &quot;delegator_shares&quot;: &quot;1017819654.000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;Noderunners&quot;,
+        &quot;identity&quot;: &quot;812E82D12FEA3493&quot;,
+        &quot;website&quot;: &quot;http://noderunners.biz&quot;,
+        &quot;security_contact&quot;: &quot;info@noderunners.biz&quot;,
+        &quot;details&quot;: &quot;Noderunners is a professional validator in POS networks. We have a huge node running experience, reliable soft and hardware. Our commissions are always low, our support to delegators is always full. Stake with us and start receiving your cosmos rewards now!&quot;
+      },
+      &quot;unbonding_height&quot;: &quot;147302&quot;,
+      &quot;unbonding_time&quot;: &quot;2021-11-08T22:58:53.718662452Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commission_rates&quot;: {
+          &quot;rate&quot;: &quot;0.050000000000000000&quot;,
+          &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+          &quot;max_change_rate&quot;: &quot;0.100000000000000000&quot;
+        },
+        &quot;update_time&quot;: &quot;2021-10-04T18:02:21.446645619Z&quot;
+      },
+      &quot;min_self_delegation&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: &quot;FONDBFkE4tEEf7yxWWKOD49jC2NK&quot;,
+    &quot;total&quot;: &quot;2&quot;
+  }
+}
+</code></pre>
+<h3 id="validator_2">Validator</h3>
+<p><code>Validator</code> REST 端點根據給定的驗證者地址查詢驗證者信息。`</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/validators/dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;validator&quot;: {
+    &quot;operator_address&quot;: &quot;dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+    &quot;consensus_pubkey&quot;: {
+      &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+      &quot;key&quot;: &quot;sIiexdJdYWn27+7iUHQJDnkp63gq/rzUq1Y+fxoGjXc=&quot;
+    },
+    &quot;jailed&quot;: false,
+    &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+    &quot;tokens&quot;: &quot;33027900000&quot;,
+    &quot;delegator_shares&quot;: &quot;33027900000.000000000000000000&quot;,
+    &quot;description&quot;: {
+      &quot;moniker&quot;: &quot;Witval&quot;,
+      &quot;identity&quot;: &quot;51468B615127273A&quot;,
+      &quot;website&quot;: &quot;&quot;,
+      &quot;security_contact&quot;: &quot;&quot;,
+      &quot;details&quot;: &quot;Witval is the validator arm from Vitwit. Vitwit is into software consulting and services business since 2015. We are working closely with Cosmos ecosystem since 2018. We are also building tools for the ecosystem, Aneka is our explorer for the cosmos ecosystem.&quot;
+    },
+    &quot;unbonding_height&quot;: &quot;0&quot;,
+    &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;commission&quot;: {
+      &quot;commission_rates&quot;: {
+        &quot;rate&quot;: &quot;0.050000000000000000&quot;,
+        &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+        &quot;max_change_rate&quot;: &quot;0.020000000000000000&quot;
+      },
+      &quot;update_time&quot;: &quot;2021-10-01T19:24:52.663191049Z&quot;
+    },
+    &quot;min_self_delegation&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="validatordelegations_1">ValidatorDelegations</h3>
+<p>The <code>ValidatorDelegations</code> REST endpoint queries delegate information for given validator.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}/delegations
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/validators/dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q/delegations&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_responses&quot;: [
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;dst190g5j8aszqhvtg7cprmev8xcxs6csra7xnk3n3&quot;,
+        &quot;validator_address&quot;: &quot;dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;31000000000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;dst&quot;,
+        &quot;amount&quot;: &quot;31000000000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;dst1ddle9tczl87gsvmeva3c48nenyng4n56qwq4ee&quot;,
+        &quot;validator_address&quot;: &quot;dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;628470000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;dst&quot;,
+        &quot;amount&quot;: &quot;628470000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;dst10fdvkczl76m040smd33lh9xn9j0cf26kk4s2nw&quot;,
+        &quot;validator_address&quot;: &quot;dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;838120000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;dst&quot;,
+        &quot;amount&quot;: &quot;838120000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;dst1n8f5fknsv2yt7a8u6nrx30zqy7lu9jfm0t5lq8&quot;,
+        &quot;validator_address&quot;: &quot;dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;500000000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;dst&quot;,
+        &quot;amount&quot;: &quot;500000000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;dst16msryt3fqlxtvsy8u5ay7wv2p8mglfg9hrek2e&quot;,
+        &quot;validator_address&quot;: &quot;dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;61310000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;dst&quot;,
+        &quot;amount&quot;: &quot;61310000&quot;
+      }
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;5&quot;
+  }
+}
+</code></pre>
+<h3 id="delegation_3">Delegation</h3>
+<p><code>Delegation</code> REST 端點根據給定的驗證者和委託人對查詢委託信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}/delegations/{delegatorAddr}
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/validators/dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q/delegations/dst1n8f5fknsv2yt7a8u6nrx30zqy7lu9jfm0t5lq8&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_response&quot;: {
+    &quot;delegation&quot;: {
+      &quot;delegator_address&quot;: &quot;dst1n8f5fknsv2yt7a8u6nrx30zqy7lu9jfm0t5lq8&quot;,
+      &quot;validator_address&quot;: &quot;dstvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+      &quot;shares&quot;: &quot;500000000.000000000000000000&quot;
+    },
+    &quot;balance&quot;: {
+      &quot;denom&quot;: &quot;dst&quot;,
+      &quot;amount&quot;: &quot;500000000&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="unbondingdelegation_1">UnbondingDelegation</h3>
+<p><code>UnbondingDelegation</code> REST 端點根據給定的驗證者和委託人對查詢解綁委託信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}/delegations/{delegatorAddr}/unbonding_delegation
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/validators/dstvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu/delegations/dst1ze2ye5u5k3qdlexvt2e0nn0508p04094ya0qpm/unbonding_delegation&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;unbond&quot;: {
+    &quot;delegator_address&quot;: &quot;dst1ze2ye5u5k3qdlexvt2e0nn0508p04094ya0qpm&quot;,
+    &quot;validator_address&quot;: &quot;dstvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu&quot;,
+    &quot;entries&quot;: [
+      {
+        &quot;creation_height&quot;: &quot;153687&quot;,
+        &quot;completion_time&quot;: &quot;2021-11-09T09:41:18.352401903Z&quot;,
+        &quot;initial_balance&quot;: &quot;525111&quot;,
+        &quot;balance&quot;: &quot;525111&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="validatorunbondingdelegations_1">ValidatorUnbondingDelegations</h3>
+<p><code>ValidatorUnbondingDelegations</code> REST 端點查詢驗證者的解綁委託信息。</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}/unbonding_delegations
+</code></pre>
+<p>範例:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/validators/dstvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu/unbonding_delegations&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>範例輸出:</p>
+<pre><code class="language-bash">{
+  &quot;unbonding_responses&quot;: [
+    {
+      &quot;delegator_address&quot;: &quot;dst1q9snn84jfrd9ge8t46kdcggpe58dua82vnj7uy&quot;,
+      &quot;validator_address&quot;: &quot;dstvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;90998&quot;,
+          &quot;completion_time&quot;: &quot;2021-11-05T00:14:37.005841058Z&quot;,
+          &quot;initial_balance&quot;: &quot;24000000&quot;,
+          &quot;balance&quot;: &quot;24000000&quot;
+        }
+      ]
+    },
+    {
+      &quot;delegator_address&quot;: &quot;dst1qf36e6wmq9h4twhdvs6pyq9qcaeu7ye0s3dqq2&quot;,
+      &quot;validator_address&quot;: &quot;dstvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;47478&quot;,
+          &quot;completion_time&quot;: &quot;2021-11-01T22:47:26.714116854Z&quot;,
+          &quot;initial_balance&quot;: &quot;8000000&quot;,
+          &quot;balance&quot;: &quot;8000000&quot;
+        }
+      ]
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;2&quot;
+  }
+}
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

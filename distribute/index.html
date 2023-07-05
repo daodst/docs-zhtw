@@ -1,0 +1,2525 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mint/">
+      
+      
+        <link rel="next" href="../slashing/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>分配 - DAODST文檔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST文檔" class="md-header__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST文檔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              分配
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/stcd/" class="md-tabs__link">
+        🔍協議
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱模塊
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈網關和驗證器
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞聊天
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋常見問題
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST文檔" class="md-nav__button md-logo" aria-label="DAODST文檔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST文檔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍協議
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍協議
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+          命令行界面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          命令行界面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        安裝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        單節點
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        帳號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        鏈ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        編碼
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas和手續費
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        密鑰環
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        密鑰管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        狀態導入導出
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        等待隊列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        多簽
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        代幣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        交易
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱模塊
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱模塊
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        模塊賬號
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        以太坊虛擬機
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        聊天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/" class="md-nav__link">
+        網關
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        合約
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        聊天質押
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth/" class="md-nav__link">
+        認證
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bank/" class="md-nav__link">
+        銀行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gov/" class="md-nav__link">
+        治理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mint/" class="md-nav__link">
+        鑄造
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          分配
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        分配
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概覽
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    缺點
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    對抵押的影響
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    內容
+  </a>
+  
+    <nav class="md-nav" aria-label="內容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f1" class="md-nav__link">
+    F1 手续费分配中的引用计数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    狀態
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    費用池
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    驗證人分配
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    委託分配
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    開始區塊
+  </a>
+  
+    <nav class="md-nav" aria-label="開始區塊">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    分配方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    社區儲備獎勵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    驗證人獎勵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    委託人的獎勵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    分配示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawdelegatorreward" class="md-nav__link">
+    MsgWithdrawDelegatorReward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withdrawvalidatorcommission" class="md-nav__link">
+    WithdrawValidatorCommission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fundcommunitypool" class="md-nav__link">
+    資助社區基金池（FundCommunityPool）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    常見的分配操作：
+  </a>
+  
+    <nav class="md-nav" aria-label="常見的分配操作：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    初始化委託。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    創建或修改委託分配。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    委託之前
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    委託之后
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    驗證者創建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    驗證者移除
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    驗證者被削減
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    事件
+  </a>
+  
+    <nav class="md-nav" aria-label="事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginblocker" class="md-nav__link">
+    BeginBlocker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    Handlers
+  </a>
+  
+    <nav class="md-nav" aria-label="Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgsetwithdrawaddress" class="md-nav__link">
+    MsgSetWithdrawAddress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawdelegatorreward_1" class="md-nav__link">
+    MsgWithdrawDelegatorReward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawvalidatorcommission" class="md-nav__link">
+    MsgWithdrawValidatorCommission
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slashing/" class="md-nav__link">
+        削減
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staking/" class="md-nav__link">
+        DPOS質押
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈網關和驗證器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈網關和驗證器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          設置和配寘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          設置和配寘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        運行驗證器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        配寘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        硬碟使用優化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        狀態同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        記憶體池
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          陞級
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          陞級
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        升級清單
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        硬分叉升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        自動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        手動升級
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        回滾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        提案模板
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        測試網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        主網
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          網關操作指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          網關操作指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        操作指南(linux)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        操作指南(win)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        金鑰備份和恢復
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞聊天
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞聊天
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        安裝啟動
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        文檔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/client_server/" class="md-nav__link">
+        客戶端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/server_server/" class="md-nav__link">
+        服務端-服務端API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        定制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        呼叫流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        可選配置*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        常見問題
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋常見問題
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概覽
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    缺點
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    對抵押的影響
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    內容
+  </a>
+  
+    <nav class="md-nav" aria-label="內容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f1" class="md-nav__link">
+    F1 手续费分配中的引用计数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    狀態
+  </a>
+  
+    <nav class="md-nav" aria-label="狀態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    費用池
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    驗證人分配
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    委託分配
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    開始區塊
+  </a>
+  
+    <nav class="md-nav" aria-label="開始區塊">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    分配方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    社區儲備獎勵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    驗證人獎勵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    委託人的獎勵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    分配示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawdelegatorreward" class="md-nav__link">
+    MsgWithdrawDelegatorReward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withdrawvalidatorcommission" class="md-nav__link">
+    WithdrawValidatorCommission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fundcommunitypool" class="md-nav__link">
+    資助社區基金池（FundCommunityPool）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    常見的分配操作：
+  </a>
+  
+    <nav class="md-nav" aria-label="常見的分配操作：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    初始化委託。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    創建或修改委託分配。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    委託之前
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    委託之后
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    驗證者創建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    驗證者移除
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    驗證者被削減
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    事件
+  </a>
+  
+    <nav class="md-nav" aria-label="事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginblocker" class="md-nav__link">
+    BeginBlocker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    Handlers
+  </a>
+  
+    <nav class="md-nav" aria-label="Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgsetwithdrawaddress" class="md-nav__link">
+    MsgSetWithdrawAddress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawdelegatorreward_1" class="md-nav__link">
+    MsgWithdrawDelegatorReward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawvalidatorcommission" class="md-nav__link">
+    MsgWithdrawValidatorCommission
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1"><code>分配</code></h1>
+<h2 id="_2">概覽</h2>
+<p>這個 <em>簡單</em> 的分配機制描述了一種被動地在驗證者和委託人之間分配獎勵的功能方法。請注意，這種機制在獎勵分配的精確性上不如主動獎勵分配機制，因此將來會進行升級。</p>
+<p>該機制的運作方式如下：收集到的獎勵在全局範圍內進行匯總，並被動地分配給驗證者和委託人。
+每個驗證者都有機會向委託人收取佣金，作為代表委託人收取獎勵的報酬。
+費用直接收入全局獎勵池和驗證者提案人獎勵池。
+由於被動記賬的特性，每當影響獎勵分配速率的參數發生變化時，也必須進行獎勵的提取。</p>
+<ul>
+<li>每當提款時，必須提取自己有權獲得的最大金額，不留任何餘額在池中。</li>
+<li>每當將代幣綁定、解綁或重新委託給現有賬戶時，必須完全提取獎勵（因為懶惰記賬的規則發生變化）。</li>
+<li>每當驗證者選擇更改獎勵佣金時，必須同時提取所有累積的佣金獎勵。</li>
+</ul>
+<p>本文所概述的分配機制用於在驗證者和相關委託人之間懶性地分配以下獎勵：</p>
+<ul>
+<li>多代幣手續費以社會化方式分配</li>
+<li>提案人獎勵池</li>
+<li>通脹的Dst供應</li>
+<li>驗證者從其委託人股份所獲得的所有獎勵中抽取佣金</li>
+</ul>
+<p>手續費會匯集到全局共享池以及特定於驗證者的提案人獎勵池中。使用的機制允許驗證者和委託人獨立且惰性地提取他們的獎勵。</p>
+<h2 id="_3">缺點</h2>
+<p>作為懶惰計算的一部分，每個委託人都持有一個特定於每個驗證者的累積條款，用於估計全局手續費池中持有的代幣中應支付給他們的大致公平份額。</p>
+<pre><code>entitlement = delegator-accumulation / all-delegators-accumulation
+</code></pre>
+<p>在每個區塊都有持續且相等的獎勵代幣流入的情況下，這種分配機制將等同於主動分配（每個區塊單獨分配給所有委託人）。
+然而，這是不切實際的，因此會根據獎勵代幣流入的波動以及其他委託人獎勵提取的時機，與主動分配產生偏差。</p>
+<p>如果您確實知道即將有大量獎勵流入，您將有動力等待這一事件之後再進行提取，這將增加您現有累積值 <em>accum</em> 的價值。欲了解更多詳情，請參閱 <a href="https://github.com/cosmos/cosmos-sdk/issues/2764">#2764</a>
+了解更多詳情。</p>
+<h2 id="_4">對抵押的影響</h2>
+<p>在BPoS（權益證明）中，對Dst供應收取佣金的同時，還允許自動綁定Dst供應（直接分配給綁定的驗證者），這在本質上是有問題的。
+這兩種機制在根本上是互斥的。如果佣金和自動綁定機制同時應用於抵押代幣，那麼任何驗證者與其委託人之間的抵押代幣分配將在每個區塊中發生變化。
+這就需要對每個委託記錄進行每個區塊的計算，這在計算上是相當昂貴的。</p>
+<p>總之，我們只能選擇在Dst佣金和未綁定的Dst供應之間，或者在無Dst佣金的綁定Dst供應之間進行選擇，我們選擇實施前者。
+希望重新綁定其供應的利益相關者可以選擇設置一個腳本，定期提取並重新綁定獎勵。</p>
+<h2 id="_5">內容</h2>
+<h3 id="_6">概念</h3>
+<p>在權益證明（PoS）區塊鏈中，從交易手續費中獲得的獎勵將支付給驗證者。手續費分配模塊將獎勵公平地分配給驗證者的相應委託人。</p>
+<p>獎勵是按周期計算的。每當驗證者的委託發生變化時，周期就會更新，例如，當驗證者收到新的委託時。然後，可以通過計算委託開始前的整個周期的總獎勵，再減去當前的總獎勵來計算單個驗證者的獎勵。</p>
+<p>當驗證者被移除或驗證者要求提款時，會支付佣金給驗證者。
+在每個 <code>BeginBlock</code> 操作中，都會計算並增加佣金，以更新累計的手續費金額。
+當委託發生變化或被移除，或者請求提款時，獎勵將分配給委託人。
+在分配獎勵之前，將應用在當前委託期間內對驗證者所做的所有懲罰。</p>
+<h2 id="f1">F1 手续费分配中的引用计数</h2>
+<p>在 F1 費用分配中，委託人收到的獎勵是在他們撤回委託時計算的。這個計算必須讀取獎勵總和除以他們在委託結束時的代幣份額所在時期，以及為撤回而創建的最後一個時期。</p>
+<p>此外，由於處罰會改變委託人所持有的代幣數量（但我們採用懶惰計算，只在委託人取消委託時計算），
+我們必須在委託人委託和撤回獎勵之間發生的任何處罰之前/之後的單獨時期內計算獎勵。
+因此，像委託一樣，處罰也引用了由處罰事件結束的時期。</p>
+<p>對於所有不再被任何委託或任何處罰引用的存儲歷史獎勵記錄，都可以安全地刪除，因為它們永遠不會被讀取（未來的委託和未來的處罰將始終引用未來的時期）。
+這是通過跟踪每個歷史獎勵存儲條目的 ReferenceCount 來實現的。每次創建一個可能需要引用歷史記錄的新對象（委託或處罰）時，引用計數就會增加。
+每次刪除一個以前需要引用歷史記錄的對象時，引用計數就會減少。
+如果引用計數降至零，則刪除歷史記錄。</p>
+<h2 id="_7">狀態</h2>
+<h3 id="_8">費用池</h3>
+<p>所有全球追踪的分配參數都存儲在 FeePool 中。獎勵從此處收集並添加到獎勵池，然後分配給驗證者/委託人。</p>
+<p>請注意，獎勵池持有十進制硬幣 <code>DecCoins</code>，以便從膨脹等操作中獲得硬幣的小數部分。當硬幣從池中分配時，它們將被截斷回非十進制的 <code>sdk.Coins</code>。</p>
+<ul>
+<li>FeePool: <code>0x00 -&gt; ProtocolBuffer(FeePool)</code></li>
+</ul>
+<pre><code class="language-go">// coins with decimal
+type DecCoins []DecCoin
+
+type DecCoin struct {
+    Amount sdk.Dec
+    Denom  string
+}
+</code></pre>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/distribution/v1beta1/distribution.proto#L94-L101</p>
+<h3 id="_9">驗證人分配</h3>
+<p>相關驗證人的驗證人分配信息每次都會更新：</p>
+<ol>
+<li>向驗證人的委託金額更新，</li>
+<li>驗證人成功提交區塊並獲得獎勵，</li>
+<li>任何委託人從驗證人中撤回委託</li>
+<li>
+<p>驗證人撤回其佣金。</p>
+</li>
+<li>
+<p>ValidatorDistInfo: <code>0x02 | ValOperatorAddrLen (1 byte) | ValOperatorAddr -&gt; ProtocolBuffer(validatorDistribution)</code></p>
+</li>
+</ol>
+<pre><code class="language-go">type ValidatorDistInfo struct {
+    OperatorAddress     sdk.AccAddress
+    SelfBondRewards     sdk.DecCoins
+    ValidatorCommission types.ValidatorAccumulatedCommission
+}
+</code></pre>
+<h3 id="_10">委託分配</h3>
+<p>每個委託分配只需要記錄它最後一次提取費用的高度。
+因為每次委託的屬性更改（如綁定代幣等）時都必須提取費用，
+所以它的屬性將保持不變，委託人的累積因子可以被被動地計算，只需知道最後一次提款的高度和當前的屬性。</p>
+<ul>
+<li>DelegationDistInfo: <code>0x02 | DelegatorAddrLen (1 byte) | DelegatorAddr | ValOperatorAddrLen (1 byte) | ValOperatorAddr -&gt; ProtocolBuffer(delegatorDist)</code></li>
+</ul>
+<pre><code class="language-go">type DelegationDistInfo struct {
+    WithdrawalHeight int64    // last time this delegation withdrew rewards
+}
+</code></pre>
+<h2 id="_11">開始區塊</h2>
+<p>在每個BeginBlock中，上一個區塊中收到的所有費用都轉移到分配的ModuleAccount帳戶。
+當委託人或驗證人撤回他們的獎勵時，它們會從ModuleAccount中扣除。
+在開始區塊期間，對收集的費用的不同索賠進行以下更新：</p>
+<ul>
+<li>上一個高度的區塊提議者及其委託人會收到1％至5％的費用獎勵。</li>
+<li>社區儲備稅會被收取。</li>
+<li>其餘部分按投票權比例分配給所有已抵押的驗證人。</li>
+</ul>
+<p>為了激勵驗證人等待並在區塊中包含額外的預提交信息，區塊提議人的獎勵是從Tendermint預提交信息中計算出來的。</p>
+<h3 id="_12">分配方案</h3>
+<p>假設 <code>fees</code> 是在上一個區塊中收集的總費用，包括用於抵押獎勵的通膨性獎勵。
+所有費用都在區塊期間收集到特定的模組帳戶中。在 <code>BeginBlock</code> 階段，它們將被發送到 <code>distribution</code> 中。
+不會發生其他代幣的發送。相反，每個帳戶有權獲得的獎勵將被存儲下來，並且可以通過 FundCommunityPool、WithdrawValidatorCommission 和 WithdrawDelegatorReward 消息觸發提款。</p>
+<h3 id="_13">社區儲備獎勵</h3>
+<p>社區儲備池將獲得 community_tax * fees，以及在驗證人獲得總獎勵後剩餘的零頭，這些零頭總是向下舍入到最接近的整數值。</p>
+<h3 id="_14">驗證人獎勵</h3>
+<p>提案人將獲得基礎獎勵 fees * baseproposerreward 和獎勵金 fees * bonusproposerreward * P，其中 P =（包括預提交的驗證人總權益 / 總驗證人權益）。
+提案人包含的預提交越多，P 就越大。
+P 永遠不會大於 1.00（因為只有綁定的驗證人才能提供有效的預提交），並且始終大於 2/3。</p>
+<p>剩餘的費用將按照驗證人的共識權重比例分配給所有綁定的驗證人，包括提案人。</p>
+<pre><code>powFrac = validator power / total bonded validator power
+proposerMul = baseproposerreward + bonusproposerreward * P
+voteMul = 1 - communitytax - proposerMul
+</code></pre>
+<p>總體而言，提案人將獲得 fees * (voteMul * powFrac + proposerMul) 的獎勵。
+所有其他驗證人將獲得 fees * voteMul * powFrac 的獎勵。</p>
+<h3 id="_15">委託人的獎勵</h3>
+<p>每個驗證人的獎勵將分配給其委託人。驗證人還有一個自我委託，其在分配計算中被視為常規委託。</p>
+<p>驗證人設置佣金率。佣金率是靈活的，但每個驗證人都設置了一個最高費率和最高每日增長率。這些最高值不能超過，以保護委託人免受驗證人佣金率的突然增加，以防止驗證人獲取所有獎勵。</p>
+<p>操作者有資格獲得的未結算獎勵存儲在<code>ValidatorAccumulatedCommission</code>中，委託人有資格獲得的獎勵存儲在<code>ValidatorCurrentRewards</code>中。
+F1費用分配方案用於計算每個委託人的獎勵，因為他們撤回或更新其委託，因此不在<code>BeginBlock</code>中處理。</p>
+<h3 id="_16">分配示例</h3>
+<p>對於這個示例分配，底層共識引擎根據參與抵押的總算力，按比例選擇區塊提議者。</p>
+<p>所有驗證人在包含預提交(pre-commit)到其建議的區塊方面表現相同。
+然後保持(包含預提交的數量) / (總抵押驗證人算力)的常數，以便驗證人的攤銷區塊獎勵為(驗證人算力 / 總抵押算力) * (1-社區稅率)的總獎勵。
+因此，單個委託人的獎勵為:</p>
+<pre><code>(delegator proportion of the validator power / validator power) * (validator power / total bonded power)
+  * (1 - community tax rate) * (1 - validator commision rate)
+= (delegator proportion of the validator power / total bonded power) * (1 -
+community tax rate) * (1 - validat
+
+
+# Messages
+
+## MsgSetWithdrawAddress
+
+By default, the withdraw address is the delegator address. To change its withdraw address, a delegator must send a `MsgSetWithdrawAddress` message.
+Changing the withdraw address is possible only if the parameter `WithdrawAddrEnabled` is set to `true`.
+
+The withdraw address cannot be any of the module accounts. These accounts are blocked from being withdraw addresses by being added to the distribution keeper's `blockedAddrs` array at initialization.
+
+Response:
+
++++ https://github.com/cosmos/cosmos-sdk/blob/v0.42.4/proto/cosmos/distribution/v1beta1/tx.proto#L29-L37
+
+```go
+func (k Keeper) SetWithdrawAddr(ctx sdk.Context, delegatorAddr sdk.AccAddress, withdrawAddr sdk.AccAddress) error
+    if k.blockedAddrs[withdrawAddr.String()] {
+        fail with &quot;`{withdrawAddr}` is not allowed to receive external funds&quot;
+    }
+
+    if !k.GetWithdrawAddrEnabled(ctx) {
+        fail with `ErrSetWithdrawAddrDisabled`
+    }
+
+    k.SetDelegatorWithdrawAddr(ctx, delegatorAddr, withdrawAddr)
+</code></pre>
+<h3 id="msgwithdrawdelegatorreward">MsgWithdrawDelegatorReward</h3>
+<p>委託人可以提取其獎勵。
+在分配模組內部，此交易同時刪除了先前的委託及其相關獎勵，就好像委託人只是開始了相同價值的新委託一樣。
+獎勵立即從分配「ModuleAccount」發送到提取地址。
+任何剩餘的部分（截斷小數）都會發送到社區池。
+委託開始的高度設置為當前的驗證人週期，並將上一個週期的引用計數減少。
+提取的金額從驗證人的「ValidatorOutstandingRewards」變量中扣除。</p>
+<p>In the F1 distribution, the total rewards are calculated per validator period, and a delegator receives a piece of those rewards in proportion to their stake in the validator.
+In basic F1, the total rewards that all the delegators are entitled to between to periods is calculated the following way.
+Let <code>R(X)</code> be the total accumulated rewards up to period <code>X</code> divided by the tokens staked at that time. The delegator allocation is <code>R(X) * delegator_stake</code>.
+Then the rewards for all the delegators for staking between periods <code>A</code> and <code>B</code> are <code>(R(B) - R(A)) * total stake</code>.
+However, these calculated rewards don't account for slashing.</p>
+<p>在F1分配中，總獎勵是根據驗證人週期進行計算，委託人按其在驗證人中的持股比例獲得其中一部分獎勵。
+在基本的F1分配中，所有委託人在兩個週期之間有權獲得的總獎勵計算如下:
+讓<code>R(X)</code>表示到期間X為止累積的總獎勵，並除以當時抵押的代幣數量。委託人的分配為<code>R(X) * 委託人抵押量</code>。
+然後，在期間A和B之間抵押的所有委託人的獎勵為<code>(R(B) - R(A)) * 總抵押數量</code>。
+但是，這些計算出來的獎勵並未考慮減產。</p>
+<p>考慮到減產需要迭代計算。
+讓 <code>F(X)</code> 表示在期間 <code>X</code> 發生的懲罰事件中要減少的驗證人的比例。
+如果驗證人在期間 <code>P1, ..., PN</code> 被削減，其中 <code>A &lt; P1</code>，<code>PN &lt; B</code>，則分配模塊將按以下方式計算每個委託人的獎勵 <code>T(A, B)</code>：·</p>
+<pre><code>stake := initial stake
+rewards := 0
+previous := A
+for P in P1, ..., PN`:
+    rewards = (R(P) - previous) * stake
+    stake = stake * F(P)
+    previous = P
+rewards = rewards + (R(B) - R(PN)) * stake
+</code></pre>
+<p>歷史獎勵是通過回放所有的削減事件，並在每個步驟中減少委託人的持股量來進行追溯計算的。
+最終計算出的抵押量與實際委託中抵押的代幣相當，但由於捨入誤差可能存在一定的誤差。</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.42.4/proto/cosmos/distribution/v1beta1/tx.proto#L42-L50</p>
+<h3 id="withdrawvalidatorcommission">WithdrawValidatorCommission</h3>
+<p>驗證人可以發送「WithdrawValidatorCommission」訊息來提取其累積佣金。
+佣金在每個區塊的「BeginBlock」期間計算，因此無需迭代即可提取。
+提取的金額從驗證人的「ValidatorOutstandingRewards」變數中扣除。
+只能發送整數金額。如果累積獎勵有小數，則在發送提款之前將其截斷，剩餘部分留待以後提取。</p>
+<h3 id="fundcommunitypool">資助社區基金池（FundCommunityPool）</h3>
+<p>這個消息直接將代幣從發送者發送到社區池。</p>
+<p>如果無法將金額從發送者轉移到分配模塊帳戶，則交易將失敗。</p>
+<pre><code class="language-go">func (k Keeper) FundCommunityPool(ctx sdk.Context, amount sdk.Coins, sender sdk.AccAddress) error {
+    if err := k.bankKeeper.SendCoinsFromAccountToModule(ctx, sender, types.ModuleName, amount); err != nil {
+        return err
+    }
+
+    feePool := k.GetFeePool(ctx)
+    feePool.CommunityPool = feePool.CommunityPool.Add(sdk.NewDecCoinsFromCoins(amount...)...)
+    k.SetFeePool(ctx, feePool)
+
+    return nil
+}
+</code></pre>
+<h2 id="_17">常見的分配操作：</h2>
+<p>這些操作在許多不同的訊息中進行。</p>
+<h3 id="_18">初始化委託。</h3>
+<p>每次更改委託時，都會提取獎勵並重新初始化委託。
+初始化委託會增加驗證人的週期，並跟踪委託的起始週期。</p>
+<pre><code class="language-go">// initialize starting info for a new delegation
+func (k Keeper) initializeDelegation(ctx sdk.Context, val sdk.ValAddress, del sdk.AccAddress) {
+    // period has already been incremented - we want to store the period ended by this delegation action
+    previousPeriod := k.GetValidatorCurrentRewards(ctx, val).Period - 1
+
+    // increment reference count for the period we're going to track
+    k.incrementReferenceCount(ctx, val, previousPeriod)
+
+    validator := k.stakingKeeper.Validator(ctx, val)
+    delegation := k.stakingKeeper.Delegation(ctx, del, val)
+
+    // calculate delegation stake in tokens
+    // we don't store directly, so multiply delegation shares * (tokens per share)
+    // note: necessary to truncate so we don't allow withdrawing more rewards than owed
+    stake := validator.TokensFromSharesTruncated(delegation.GetShares())
+    k.SetDelegatorStartingInfo(ctx, val, del, types.NewDelegatorStartingInfo(previousPeriod, stake, uint64(ctx.BlockHeight())))
+}
+</code></pre>
+<h2 id="hooks">Hooks</h2>
+<p>本模塊可以調用和調用可用的鉤子。</p>
+<h3 id="_19">創建或修改委託分配。</h3>
+<ul>
+<li>triggered-by: <code>staking.MsgDelegate</code>, <code>staking.MsgBeginRedelegate</code>, <code>staking.MsgUndelegate</code></li>
+</ul>
+<h3 id="_20">委託之前</h3>
+<ul>
+<li>委託獎勵會提取到委託人的提取地址。
+  獎勵包括當前週期，但不包括開始的週期。</li>
+<li>驗證者週期會增加。
+  驗證者週期會增加，因為驗證者的權力和份額分配可能已經發生變化。</li>
+<li>委託人開始週期的參考計數會減少。</li>
+</ul>
+<h3 id="_21">委託之后</h3>
+<p>委派的起始高度設定為上一時段。 由於前鉤，這段時間是委託人獲得獎勵的最後一段時間。</p>
+<h3 id="_22">驗證者創建</h3>
+<ul>
+<li>triggered-by: <code>staking.MsgCreateValidator</code></li>
+</ul>
+<p>當創建驗證者時，以下驗證者變量會被初始化：</p>
+<ul>
+<li>歷史獎勵</li>
+<li>當前累積獎勵</li>
+<li>累積佣金</li>
+<li>總未結算獎勵</li>
+<li>週期</li>
+</ul>
+<p>默認情況下，所有值都設置為<code>0</code>，除了週期，它被設置為<code>1</code>。</p>
+<h3 id="_23">驗證者移除</h3>
+<ul>
+<li>triggered-by: <code>staking.RemoveValidator</code></li>
+</ul>
+<p>未結算的佣金被發送到驗證者的自我委託提款地址。
+剩餘的委託人獎勵被發送到社區費用池。</p>
+<p>注意：只有當驗證者沒有剩餘的委託時，才會將其刪除。
+此時，所有未結算的委託人獎勵都已被提取。
+任何剩餘的獎勵都是微不足道的金額。</p>
+<h3 id="_24">驗證者被削減</h3>
+<ul>
+<li>
+<p>triggered-by: <code>staking.Slash</code></p>
+</li>
+<li>
+<p>當前驗證器週期參考計數增加。
+  參考計數增加是因為削減事件創建了對它的引用。</p>
+</li>
+<li>驗證器週期增加。</li>
+<li>削減事件被存儲以供以後使用。
+  當計算委託人獎勵時，削減事件將被引用。</li>
+</ul>
+<h2 id="_25">事件</h2>
+<p>分發模塊發出以下事件：</p>
+<h3 id="beginblocker">BeginBlocker</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>proposer_reward</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>proposer_reward</td>
+<td>reward</td>
+<td>{proposerReward}</td>
+</tr>
+<tr>
+<td>commission</td>
+<td>amount</td>
+<td>{commissionAmount}</td>
+</tr>
+<tr>
+<td>commission</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>rewards</td>
+<td>amount</td>
+<td>{rewardAmount}</td>
+</tr>
+<tr>
+<td>rewards</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="handlers">Handlers</h2>
+<h3 id="msgsetwithdrawaddress">MsgSetWithdrawAddress</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set_withdraw_address</td>
+<td>withdraw_address</td>
+<td>{withdrawAddress}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>distribution</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>set_withdraw_address</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="msgwithdrawdelegatorreward_1">MsgWithdrawDelegatorReward</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>withdraw_rewards</td>
+<td>amount</td>
+<td>{rewardAmount}</td>
+</tr>
+<tr>
+<td>withdraw_rewards</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>distribution</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>withdraw_delegator_reward</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="msgwithdrawvalidatorcommission">MsgWithdrawValidatorCommission</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>withdraw_commission</td>
+<td>amount</td>
+<td>{commissionAmount}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>distribution</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>withdraw_validator_commission</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h1 id="_26">參數</h1>
+<p>分發模塊包含以下參數：</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>communitytax</td>
+<td>string (dec)</td>
+<td>"0.020000000000000000" [0]</td>
+</tr>
+<tr>
+<td>baseproposerreward</td>
+<td>string (dec)</td>
+<td>"0.010000000000000000" [0]</td>
+</tr>
+<tr>
+<td>bonusproposerreward</td>
+<td>string (dec)</td>
+<td>"0.040000000000000000" [0]</td>
+</tr>
+<tr>
+<td>withdrawaddrenabled</td>
+<td>bool</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>[0] <code>communitytax</code>, <code>baseproposerreward</code> and <code>bonusproposerreward</code> 這些參數必須是正數，它們的總和不能超過1.00。</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
