@@ -238,7 +238,7 @@
         <a href="../../gateway/run/" class="md-tabs__link">
           
   
-  ✈網關和驗證器
+  🏰網關和驗證器
 
         </a>
       </li>
@@ -287,7 +287,7 @@
         <a href="./" class="md-tabs__link">
           
   
-  跨鏈
+  ✈️跨鏈
 
         </a>
       </li>
@@ -1089,7 +1089,7 @@
             
   
   <span class="md-ellipsis">
-    ✈網關和驗證器
+    🏰網關和驗證器
   </span>
   
 
@@ -1099,7 +1099,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            ✈網關和驗證器
+            🏰網關和驗證器
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1149,7 +1149,27 @@
         
   
   <span class="md-ellipsis">
-    運行驗證器
+    運行驗證節點
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gateway/validator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    管理驗證器
   </span>
   
 
@@ -1939,7 +1959,7 @@
             
   
   <span class="md-ellipsis">
-    跨鏈
+    ✈️跨鏈
   </span>
   
 
@@ -1949,7 +1969,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            跨鏈
+            ✈️跨鏈
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2172,23 +2192,25 @@
 
 <h2 id="_1">功能说明</h2>
 <p>賣家透過此程式實現了建立掛單任務，自動根據掛單任務進行掛單，自動提款，自動取消掛單等功能，跨鍊是透過HASH鎖定合約實現了完全去中心化的點對點的跨鏈。</p>
+<p>對於DST鏈，如果本地沒有啟動全節點，會默認啟動全節點，提供交易所用的RPC，鏈接為http://127.0.0.1:8545
+，你也可以配置你自己的RPC鏈接</p>
 <h2 id="hash">HASH鎖定合約流程介紹</h2>
-<p>假設有A、B兩個鏈 張三作為賣家擁有A鏈的USDT資產想要兌換成B鏈的USDT資產，李四作為買家有B鏈的USDT資產想要兌換成A鏈的USDT</p>
+<p>假設有A、B兩個鏈 Tom作為賣家擁有A鏈的USDT資產想要兌換成B鏈的USDT資產，Alice作為買家有B鏈的USDT資產想要兌換成A鏈的USDT</p>
 <ol>
 <li>
-<p>張三需要調用A鏈的HASH鎖定的跨鏈合約的創建賣單方法，傳入B鏈的鏈ID、賣出數量、鎖定時間、和鏈下生成的signature（賣家根據A鏈的鏈ID， B鏈的鏈ID， 賣家自訂的密碼，數量簽章所得）產生訂單，訂單有唯一的Key(sha256(signature)所得)，並把對應數量的USDT資產轉入到合約</p>
+<p>Tom需要調用A鏈的HASH鎖定的跨鏈合約的創建賣單方法，傳入B鏈的鏈ID、賣出數量、鎖定時間、和鏈下生成的signature（賣家根據A鏈的鏈ID， B鏈的鏈ID， 賣家自訂的密碼，數量簽章所得）產生訂單，訂單有唯一的Key(sha256(signature)所得)，並把對應數量的USDT資產轉入到合約</p>
 </li>
 <li>
-<p>李四想要購買首先調用A鏈HASH鎖定的跨鏈合約的購買訂單的合約方法，確定要買張三的訂單， 此時訂單處於鎖定狀態，</p>
+<p>Alice想要購買首先調用A鏈HASH鎖定的跨鏈合約的購買訂單的合約方法，確定要買Tom的訂單， 此時訂單處於鎖定狀態，</p>
 </li>
 <li>
-<p>其次李四需攜帶訂單的Key、A鏈的鏈ID， 賣出數量、訂單結束時間、signature、買家定義的提款鎖定時間（訂單結束時間&gt;=提款鎖定時間+當前時間）調用B鏈 HASH鎖定的跨鏈合約的創建賣單方法並把B鏈的USDT資產轉入合約</p>
+<p>其次Alice需攜帶訂單的Key、A鏈的鏈ID， 賣出數量、訂單結束時間、signature、買家定義的提款鎖定時間（訂單結束時間&gt;=提款鎖定時間+當前時間）調用B鏈 HASH鎖定的跨鏈合約的創建賣單方法並把B鏈的USDT資產轉入合約</p>
 </li>
 <li>
-<p>張三看到李四已經在B鏈付款成功後，調用B鏈的提取訂單資產方法，傳入創建訂單時賣家自定義的密碼，交易成功後密碼將公開給李四</p>
+<p>Tom看到Alice已經在B鏈付款成功後，調用B鏈的提取訂單資產方法，傳入創建訂單時賣家自定義的密碼，交易成功後密碼將公開給Alice</p>
 </li>
 <li>
-<p>李四得到密碼後需要調用A鏈的提取訂單資產的方法傳入密碼， 獲得A鏈的USDT的資產</p>
+<p>Alice得到密碼後需要調用A鏈的提取訂單資產的方法傳入密碼， 獲得A鏈的USDT的資產</p>
 </li>
 </ol>
 

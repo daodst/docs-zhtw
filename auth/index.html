@@ -240,7 +240,7 @@
         <a href="../gateway/run/" class="md-tabs__link">
           
   
-  ✈網關和驗證器
+  🏰網關和驗證器
 
         </a>
       </li>
@@ -285,7 +285,7 @@
         <a href="../window/introduce/" class="md-tabs__link">
           
   
-  跨鏈
+  ✈️跨鏈
 
         </a>
       </li>
@@ -1384,7 +1384,7 @@
             
   
   <span class="md-ellipsis">
-    ✈網關和驗證器
+    🏰網關和驗證器
   </span>
   
 
@@ -1394,7 +1394,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            ✈網關和驗證器
+            🏰網關和驗證器
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1444,7 +1444,27 @@
         
   
   <span class="md-ellipsis">
-    運行驗證器
+    運行驗證節點
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/validator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    管理驗證器
   </span>
   
 
@@ -2232,7 +2252,7 @@
             
   
   <span class="md-ellipsis">
-    跨鏈
+    ✈️跨鏈
   </span>
   
 
@@ -2242,7 +2262,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            跨鏈
+            ✈️跨鏈
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2669,7 +2689,7 @@
 <p>Txs 會為所有狀態讀/寫、簽名驗證以及與 tx 大小成比例的成本產生 gas 成本。
 運營商應在啟動節點時設置最低 gas 價格。
 他們必須在他們希望支持的每個代幣面額中設置 gas 的單位成本：</p>
-<pre><code>`stcd start ... --minimum-gas-prices=0.00001stake;0.05photinos`
+<pre><code>`stcd start ... --minimum-gas-prices=5000000000dst`
 </code></pre>
 <p>在將交易添加到mempool或gossipping交易時，驗證器會檢查交易的gas價格（由提供的手续费確定）是否滿足驗證器的最低gas價格。
 換句話說，交易必須提供至少一種與驗證器的最低gas價格相匹配的幣種的費用。</p>
