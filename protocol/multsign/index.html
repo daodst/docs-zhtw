@@ -974,6 +974,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../dao.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    去中心化组织
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../contract/" class="md-nav__link">
         
   
@@ -2287,18 +2307,32 @@
 <pre><code class="language-bash">stcd keys add --multisig=p1,p2,p3 --multisig-threshold=2 multisig_address
 stcd keys add --multisig=p2,p3,p1 --multisig-threshold=2 multisig_address
 </code></pre>
-<p>多重簽名地址也可以即時生成並通過 which 命令打印：</p>
+<p>多重簽名地址也可以即時生成並通過命令打印：</p>
 <pre><code class="language-bash">stcd keys show --multisig-threshold=K name1 name2 name3 [...]
 </code></pre>
 <h2 id="_2">簽名交易</h2>
 <h3 id="step-1">Step 1: 創建多簽密鑰</h3>
 <p>假設您有 <code>test1</code> 和 <code>test2</code> 想要使用 <code>test3</code> 創建一個多重簽名帳戶。</p>
-<p>首先將 <code>test3</code> 的公鑰導入您的密鑰環。</p>
+<p>首先查看 <code>test3</code> 的公鑰。</p>
+<pre><code class="language-sh">stcd.exe keys show test3 --output json
+</code></pre>
+<p>以下为<code>test3</code>的账户信息</p>
+<pre><code>{
+&quot;name&quot;:&quot;test3&quot;,
+&quot;type&quot;:&quot;local&quot;,
+&quot;address&quot;:&quot;dst1xe6xf2t9krt0694alapp9w095g5elyqj6tchpv&quot;,
+&quot;pubkey&quot;:&quot;{\&quot;@type\&quot;:\&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey\&quot;,\&quot;key\&quot;:\&quot;A+WM1PhFFV6XSI4xEdb6/l19TjUoGp4DW7m8VJk5hxbV\&quot;}&quot;
+}
+</code></pre>
+<p>注意,公钥的内容位于<strong>pubkey</strong>属性值内,例如:</p>
+<pre><code>&quot;{\&quot;@type\&quot;:\&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey\&quot;,\&quot;key\&quot;:\&quot;A+WM1PhFFV6XSI4xEdb6/l19TjUoGp4DW7m8VJk5hxbV\&quot;}&quot;
+</code></pre>
+<p>將 <code>test3</code> 的公鑰复制下来,然后導入到密鑰環。</p>
 <pre><code class="language-sh">stcd keys add \
     test3 \
-    --pubkey=dstpub1addwnpepqgcxazmq6wgt2j4rdfumsfwla0zfk8e5sws3p3zg5dkm9007hmfysxas0u2
+    --pubkey &quot;{\&quot;@type\&quot;:\&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey\&quot;,\&quot;key\&quot;:\&quot;A+WM1PhFFV6XSI4xEdb6/l19TjUoGp4DW7m8VJk5hxbV\&quot;}&quot;
 </code></pre>
-<p>生成具有 2/3 閾值的多重簽名密鑰。</p>
+<p>生成具有 2/3 閾值的多重簽名密鑰 multi。</p>
 <pre><code class="language-sh">stcd keys add \
     multi \
     --multisig=test1,test2,test3 \
@@ -2307,88 +2341,92 @@ stcd keys add --multisig=p2,p3,p1 --multisig-threshold=2 multisig_address
 <p>你可以看到它的地址和詳細信息：</p>
 <pre><code class="language-sh">stcd keys show multi
 
-- name: multi
+- address: dst18289xqh4ej6p7sucd6car6tch87h9vket6myxu
+  name: multi
+  pubkey: '{&quot;@type&quot;:&quot;/cosmos.crypto.multisig.LegacyAminoPubKey&quot;,&quot;threshold&quot;:2,&quot;public_keys&quot;:[{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;A+WM1PhFFV6XSI4xEdb6/l19TjUoGp4DW7m8VJk5hxbV&quot;},{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;A3uJG64OFWiIlhjBQqIGxa/pioP10jX0gmU3Cfoet+OT&quot;},{&quot;@type&quot;:&quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,&quot;key&quot;:&quot;A/wAMQvrs34IaRK6wSuRdBPJ9Ju99Csys5P3vjDGqx7b&quot;}]}'
   type: multi
-  address: dst1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m
-  pubkey: dstpub1ytql0csgqgfzd666axrjzq3mxw59ys6yqcd3ydjvhgs0uzs6kdk5fp4t73gmkl8t6y02yfq7tvfzd666axrjzq3sd69kp5usk492x6nehqjal67ynv0nfqapzrzy3gmdk27la0kjfqfzd666axrjzq6utqt639ka2j3xkncgk65dup06t297ccljmxhvhu3rmk92u3afjuyz9dg9
-  mnemonic: &quot;&quot;
-  threshold: 0
-  pubkeys: []
 </code></pre>
-<p>讓我們向多重簽名錢包添加 10 個 DST：</p>
+<p>讓我們向多重簽名錢包转移 10 個 DST：</p>
 <pre><code class="language-bash">stcd tx bank send \
     test1 \
-    dst1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
+    dst18289xqh4ej6p7sucd6car6tch87h9vket6myxu \
     10000000000000000000dst \
-    --chain-id=daodst_7000-1 \
+    --chain-id=daodst_7777-1 \
     --gas=auto \
-    --fees=1000000dst \
     --broadcast-mode=block
 </code></pre>
 <h3 id="step-2">Step 2: 創建多簽交易</h3>
-<p>我們想從我們的多重簽名賬戶發送 5 個 DST 到 <code>dst1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft</code>。</p>
+<p>我們想從我們的多重簽名賬戶發送 5 個 DST 到 <code>dst1xe6xf2t9krt0694alapp9w095g5elyqj6tchpv</code>。</p>
 <pre><code class="language-bash">stcd tx bank send \
-    dst1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft \
-    dst157g6rn6t6k5rl0dl57zha2wx72t633axqyvvwq \
+    multi \
+    dst1xe6xf2t9krt0694alapp9w095g5elyqj6tchpv \
     5000000000000000000dst \
-    --gas=200000 \
-    --fees=1000000dst \
-    --chain-id=daodst_7000-1 \
+    --gas=&quot;&quot; \
+    --chain-id=daodst_7777-1 \
     --generate-only &gt; unsignedTx.json
 </code></pre>
 <p>文件 <code>unsignedTx.json</code> 包含以 JSON 編碼的未簽名交易。</p>
 <pre><code class="language-json">{
-  &quot;body&quot;: {
-    &quot;messages&quot;: [
-      {
-        &quot;@type&quot;: &quot;/cosmos.bank.v1beta1.MsgSend&quot;,
-        &quot;from_address&quot;: &quot;dst1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft&quot;,
-        &quot;to_address&quot;: &quot;dst157g6rn6t6k5rl0dl57zha2wx72t633axqyvvwq&quot;,
-        &quot;amount&quot;: [
-          {
-            &quot;denom&quot;: &quot;dst&quot;,
-            &quot;amount&quot;: &quot;5000000000000000000&quot;
-          }
+    &quot;body&quot;: {
+        &quot;messages&quot;: [
+            {
+                &quot;@type&quot;: &quot;/cosmos.bank.v1beta1.MsgSend&quot;,
+                &quot;from_address&quot;: &quot;dst18289xqh4ej6p7sucd6car6tch87h9vket6myxu&quot;,
+                &quot;to_address&quot;: &quot;dst1xe6xf2t9krt0694alapp9w095g5elyqj6tchpv&quot;,
+                &quot;amount&quot;: [
+                    {
+                        &quot;denom&quot;: &quot;dst&quot;,
+                        &quot;amount&quot;: &quot;5000000000000000000&quot;
+                    }
+                ]
+            }
+        ],
+        &quot;memo&quot;: &quot;&quot;,
+        &quot;timeout_height&quot;: &quot;0&quot;,
+        &quot;extension_options&quot;: [
+
+        ],
+        &quot;non_critical_extension_options&quot;: [
+
         ]
-      }
-    ],
-    &quot;memo&quot;: &quot;&quot;,
-    &quot;timeout_height&quot;: &quot;0&quot;,
-    &quot;extension_options&quot;: [],
-    &quot;non_critical_extension_options&quot;: []
-  },
-  &quot;auth_info&quot;: {
-    &quot;signer_infos&quot;: [],
-    &quot;fee&quot;: {
-      &quot;amount&quot;: [
-        {
-          &quot;denom&quot;: &quot;dst&quot;,
-          &quot;amount&quot;: &quot;1000000&quot;
-        }
-      ],
-      &quot;gas_limit&quot;: &quot;200000&quot;,
-      &quot;payer&quot;: &quot;&quot;,
-      &quot;granter&quot;: &quot;&quot;
-    }
-  },
-  &quot;signatures&quot;: []
+    },
+    &quot;auth_info&quot;: {
+        &quot;signer_infos&quot;: [
+
+        ],
+        &quot;fee&quot;: {
+            &quot;amount&quot;: [
+                {
+                    &quot;denom&quot;: &quot;dst&quot;,
+                    &quot;amount&quot;: &quot;1000000000000000&quot;
+                }
+            ],
+            &quot;gas_limit&quot;: &quot;200000&quot;,
+            &quot;payer&quot;: &quot;&quot;,
+            &quot;granter&quot;: &quot;&quot;
+        },
+        &quot;tip&quot;: null
+    },
+    &quot;signatures&quot;: [
+
+    ]
 }
 </code></pre>
 <h3 id="step-3">Step 3: 單獨簽名</h3>
 <p>使用 <code>test1</code> 和 <code>test2</code> 簽名並創建個人簽名。</p>
 <pre><code class="language-sh">stcd tx sign \
     unsignedTx.json \
-    --multisig=dst1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
+    --multisig=dst18289xqh4ej6p7sucd6car6tch87h9vket6myxu \
     --from=test1 \
     --output-document=test1sig.json \
-    --chain-id=daodst_7000-1
+    --chain-id=daodst_7777-1
 </code></pre>
 <pre><code class="language-sh">stcd tx sign \
     unsignedTx.json \
-    --multisig=dst1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
+    --multisig=dst18289xqh4ej6p7sucd6car6tch87h9vket6myxu \
     --from=test2 \
     --output-document=test2sig.json \
-    --chain-id=daodst_7000-1
+    --chain-id=daodst_7777-1
 </code></pre>
 <h3 id="step-4">Step 4: 創建多重簽名</h3>
 <p>結合簽名來簽署交易。</p>
@@ -2397,93 +2435,98 @@ stcd keys add --multisig=p2,p3,p1 --multisig-threshold=2 multisig_address
     multi \
     test1sig.json test2sig.json \
     --output-document=signedTx.json \
-    --chain-id=daodst_7000-1
+    --chain-id=daodst_7777-1
 </code></pre>
 <p>TX 現已簽署：</p>
 <pre><code class="language-json">{
-  &quot;body&quot;: {
-    &quot;messages&quot;: [
-      {
-        &quot;@type&quot;: &quot;/cosmos.bank.v1beta1.MsgSend&quot;,
-        &quot;from_address&quot;: &quot;dst1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft&quot;,
-        &quot;to_address&quot;: &quot;dst157g6rn6t6k5rl0dl57zha2wx72t633axqyvvwq&quot;,
-        &quot;amount&quot;: [
-          {
-            &quot;denom&quot;: &quot;dst&quot;,
-            &quot;amount&quot;: &quot;5000000000000000000&quot;
-          }
-        ]
-      }
-    ],
-    &quot;memo&quot;: &quot;&quot;,
-    &quot;timeout_height&quot;: &quot;0&quot;,
-    &quot;extension_options&quot;: [],
-    &quot;non_critical_extension_options&quot;: []
-  },
-  &quot;auth_info&quot;: {
-    &quot;signer_infos&quot;: [
-      {
-        &quot;public_key&quot;: {
-          &quot;@type&quot;: &quot;/cosmos.crypto.multisig.LegacyAminoPubKey&quot;,
-          &quot;threshold&quot;: 2,
-          &quot;public_keys&quot;: [
+    &quot;body&quot;: {
+        &quot;messages&quot;: [
             {
-              &quot;@type&quot;: &quot;/cosmos.crypto.secp256k1.PubKey&quot;,
-              &quot;key&quot;: &quot;ApCzSG8k7Tr4aM6e4OJRExN7cNtvH21L9azbh+uRrvt4&quot;
-            },
-            {
-              &quot;@type&quot;: &quot;/cosmos.crypto.secp256k1.PubKey&quot;,
-              &quot;key&quot;: &quot;Ah91erz8ChNanqLe9ea948rvAiXMCRlR5Ka7EE/c0xUK&quot;
-            },
-            {
-              &quot;@type&quot;: &quot;/cosmos.crypto.secp256k1.PubKey&quot;,
-              &quot;key&quot;: &quot;A0OjtIUCFJM3AobJ9HJTWKP9RZV2+WPcwVjLgsAidrZ/&quot;
+                &quot;@type&quot;: &quot;/cosmos.bank.v1beta1.MsgSend&quot;,
+                &quot;from_address&quot;: &quot;dst18289xqh4ej6p7sucd6car6tch87h9vket6myxu&quot;,
+                &quot;to_address&quot;: &quot;dst1xe6xf2t9krt0694alapp9w095g5elyqj6tchpv&quot;,
+                &quot;amount&quot;: [
+                    {
+                        &quot;denom&quot;: &quot;dst&quot;,
+                        &quot;amount&quot;: &quot;5000000000000000000&quot;
+                    }
+                ]
             }
-          ]
-        },
-        &quot;mode_info&quot;: {
-          &quot;multi&quot;: {
-            &quot;bitarray&quot;: {
-              &quot;extra_bits_stored&quot;: 3,
-              &quot;elems&quot;: &quot;wA==&quot;
-            },
-            &quot;mode_infos&quot;: [
-              {
-                &quot;single&quot;: {
-                  &quot;mode&quot;: &quot;SIGN_MODE_LEGACY_AMINO_JSON&quot;
+        ],
+        &quot;memo&quot;: &quot;&quot;,
+        &quot;timeout_height&quot;: &quot;0&quot;,
+        &quot;extension_options&quot;: [
+
+        ],
+        &quot;non_critical_extension_options&quot;: [
+
+        ]
+    },
+    &quot;auth_info&quot;: {
+        &quot;signer_infos&quot;: [
+            {
+                &quot;public_key&quot;: {
+                    &quot;@type&quot;: &quot;/cosmos.crypto.multisig.LegacyAminoPubKey&quot;,
+                    &quot;threshold&quot;: 2,
+                    &quot;public_keys&quot;: [
+                        {
+                            &quot;@type&quot;: &quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,
+                            &quot;key&quot;: &quot;A+WM1PhFFV6XSI4xEdb6/l19TjUoGp4DW7m8VJk5hxbV&quot;
+                        },
+                        {
+                            &quot;@type&quot;: &quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,
+                            &quot;key&quot;: &quot;A3uJG64OFWiIlhjBQqIGxa/pioP10jX0gmU3Cfoet+OT&quot;
+                        },
+                        {
+                            &quot;@type&quot;: &quot;/ethermint.crypto.v1.ethsecp256k1.PubKey&quot;,
+                            &quot;key&quot;: &quot;A/wAMQvrs34IaRK6wSuRdBPJ9Ju99Csys5P3vjDGqx7b&quot;
+                        }
+                    ]
+                },
+                &quot;mode_info&quot;: {
+                    &quot;multi&quot;: {
+                        &quot;bitarray&quot;: {
+                            &quot;extra_bits_stored&quot;: 3,
+                            &quot;elems&quot;: &quot;YA==&quot;
+                        },
+                        &quot;mode_infos&quot;: [
+                            {
+                                &quot;single&quot;: {
+                                    &quot;mode&quot;: &quot;SIGN_MODE_LEGACY_AMINO_JSON&quot;
+                                }
+                            },
+                            {
+                                &quot;single&quot;: {
+                                    &quot;mode&quot;: &quot;SIGN_MODE_LEGACY_AMINO_JSON&quot;
+                                }
+                            }
+                        ]
+                    }
+                },
+                &quot;sequence&quot;: &quot;1&quot;
+            }
+        ],
+        &quot;fee&quot;: {
+            &quot;amount&quot;: [
+                {
+                    &quot;denom&quot;: &quot;dst&quot;,
+                    &quot;amount&quot;: &quot;1000000000000000&quot;
                 }
-              },
-              {
-                &quot;single&quot;: {
-                  &quot;mode&quot;: &quot;SIGN_MODE_LEGACY_AMINO_JSON&quot;
-                }
-              }
-            ]
-          }
+            ],
+            &quot;gas_limit&quot;: &quot;200000&quot;,
+            &quot;payer&quot;: &quot;&quot;,
+            &quot;granter&quot;: &quot;&quot;
         },
-        &quot;sequence&quot;: &quot;1&quot;
-      }
-    ],
-    &quot;fee&quot;: {
-      &quot;amount&quot;: [
-        {
-          &quot;denom&quot;: &quot;dst&quot;,
-          &quot;amount&quot;: &quot;1000000&quot;
-        }
-      ],
-      &quot;gas_limit&quot;: &quot;200000&quot;,
-      &quot;payer&quot;: &quot;&quot;,
-      &quot;granter&quot;: &quot;&quot;
-    }
-  },
-  &quot;signatures&quot;: [
-    &quot;CkCEeIbeGc+I1ipZuhp/0KhVNnWAv2tTlvgo5x61lzk1KHmLPV38m/YFurrFt5cm5+fqIXrn+FlOjrJuzBhw8ogYCkCawm9mpXsBHk0CFsE5618fVnvScEkfrzW0c2jCcjqV8EPuj3ut74UWzZyQkwtJGxUWtro9EgnGsB7Di1Gzizst&quot;
-  ]
+        &quot;tip&quot;: null
+    },
+    &quot;signatures&quot;: [
+        &quot;CkFYWWA1mhNbp68GellgJZYMFzQTYi/BkuK3ccinQlDj8xF/rkl3HjqmKQ4D36XCSCFg3tPBsoBMxtLPfzyNeJADAApBcbAT7BsSYLZUh5502sun5FHPvQ/aMf5ziWUp2KoZnOZIhNbtgfL4IREoZv2PrGhy9RaIAOXBeSQPeHr6ANUKGgA=&quot;
+    ]
 }
 </code></pre>
 <h3 id="step-5">Step 5: 廣播交易</h3>
 <pre><code class="language-sh">stcd tx broadcast signedTx.json \
-    --chain-id=daodst_7000-1 \
+    --chain-id=daodst_7777-1 \
     --broadcast-mode=block
 </code></pre>
 
