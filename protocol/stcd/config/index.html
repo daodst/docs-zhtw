@@ -1010,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dao.md" class="md-nav__link">
+      <a href="../../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1838,26 +1838,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2362,7 +2342,7 @@
 <p>以下頁面將指導您完成節點和客戶端的配置。
 該節點用於運行區塊鍊網絡、生產區塊和驗證交易。
 客戶端用作網關，通過發送交易和查詢狀態與區塊鍊網絡進行交互。
-此外，我們還介紹了 <a href="#running-the-json-rpc-server">運行 JSON-RPC 服務器</a>。</p>
+此外，我們還介紹了 <a href="#json-rpc">運行 JSON-RPC 服務器</a>。</p>
 <p>這些配置會影響節點的性能、安全性和功能。
 因此，了解並正確配置您的節點和客戶端至關重要。</p>
 <h2 id="_1">配置和數據目錄</h2>
@@ -2472,7 +2452,7 @@ broadcast-mode = &quot;sync&quot;
 JSON-RPC 在多種傳輸上提供。 Daodst 支持基於 HTTP 和 WebSocket 的 JSON-RPC。
 就要求而言，我們建議使用至少 8 核 CPU 和 64GB RAM 的服務器。
 您必須在防火牆上打開端口 8545 和 8546。</p>
-<p>📣 提示：除非您的節點在本地存儲區塊鏈的整個副本，否則您不能使用所有 JSON RPC 方法。您需要我們網絡的檔案/快照嗎？轉到<a href="./../../develop/api/snapshots-archives">本節</a>。</p>
+<p>📣 提示：除非您的節點在本地存儲區塊鏈的整個副本，否則您不能使用所有 JSON RPC 方法。您需要我們網絡的檔案/快照嗎？轉到<a href="../../../gateway/state-sync/#tendermint">本節</a>。</p>
 <h3 id="_5">啟用服務器</h3>
 <p>要啟用 RPC 服務器，請使用以下標誌（默認設置為 true）。</p>
 <pre><code class="language-bash">stcd start --json-rpc.enable

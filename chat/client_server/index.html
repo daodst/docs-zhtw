@@ -881,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dao.md" class="md-nav__link">
+      <a href="../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1700,26 +1700,6 @@
   
   <span class="md-ellipsis">
     金鑰備份和恢復
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
   </span>
   
 
@@ -7311,8 +7291,6 @@ example.comroom_id</p>
 <p>[v1.3 中新增]</p>
 <p>knock_restricted這個房間可以像以前一樣連接。如果你 使用敲門與房間交互,規則生效,而 嘗試在沒有邀請的情況下加入聊天室將應用加入規則。
 請注意,此規則僅適用於支援它的房間版本。restrictedknockknockrestricted</p>
-<p>成員資格允許的狀態轉換為:
-<a href="/img/membership.png"><img alt="membership.png" src="/img/membership.png" title="membership.png" /></a></p>
 <h4 id="get-_matrixclientv3joined_rooms">GET /_matrix/client/v3/joined_rooms</h4>
 <p>此 API 傳回使用者目前聊天室的清單。</p>
 <pre><code class="language-json">{
@@ -8202,10 +8180,8 @@ older acknowledgement for $ccc:example.com as it is unthreaded.
 "主時間線",或ID為"main"的特殊線程。</p>
 <p>下面是一個聊天室的示例 DAG,虛線表示事件
 關係和顯示拓撲排序的實線。</p>
-<p><a href="/img/threaded-dag.png"><img alt="threaded-dag.png" src="/img/threaded-dag.png" title="threaded-dag.png" /></a></p>
 <p>此 DAG 可以表示為 3 個線程時間線,其中"A"和"B"是線程
 根:</p>
-<p><a href="/img/threaded-dag-threads.png"><img alt="threaded-dag-threads.png" src="/img/threaded-dag-threads.png" title="threaded-dag-threads.png" /></a></p>
 <p>有了這個,我們可以證明:
 <em>"I"上的線程已讀回執會將"A"、"B"和"I"標記為已讀。
 </em>"E"上的線程已讀回執會將"C"和"E"標記為已讀。

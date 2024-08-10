@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dao.md" class="md-nav__link">
+      <a href="../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1838,26 +1838,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2357,14 +2337,14 @@
 <h2 id="_2">先決條件</h2>
 <ul>
 <li>等待本地節點區塊同步完成</li>
-<li><a href="/gateway/security">驗證器安全</a></li>
-<li><a href="/protocol/account/">建立帳號</a></li>
+<li><a href="../security/">驗證器安全</a></li>
+<li><a href="../../protocol/keyring/#_1">建立帳號</a></li>
 </ul>
 <h2 id="_3">創建你的驗證器</h2>
 <p>您的節點共識公鑰 (<code>dstvalconspub...</code>) 可用於通過抵押 NXN 代幣來創建新的驗證器。您可以通過運行以下命令找到您的驗證器公鑰：</p>
 <pre><code class="language-bash">stcd tendermint show-validator
 </code></pre>
-<p>🚨 <strong>危險</strong>：<u>切勿</u>使用 <a href="/protocol/keyring#testing"><code>test</code></a> 鍵控後端創建您的主網驗證器密鑰。這樣做可能會導致您的資金通過<code>eth_sendTransaction</code>JSON-RPC 端點遠程訪問，從而導致資金損失。</p>
+<p>🚨 <strong>危險</strong>：<u>切勿</u>使用 <a href="../../protocol/keyring/#testing"><code>test</code></a> 鍵控後端創建您的主網驗證器密鑰。這樣做可能會導致您的資金通過<code>eth_sendTransaction</code>JSON-RPC 端點遠程訪問，從而導致資金損失。</p>
 <p>Ref: <a href="https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds-remotely-accessible/">安全建議：不安全配置的 geth 可以遠程訪問資金</a></p>
 <p>要在測試網上創建驗證器，只需使用以下命令：</p>
 <pre><code class="language-bash">stcd tx staking create-validator \

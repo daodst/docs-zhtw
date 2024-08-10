@@ -1463,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dao.md" class="md-nav__link">
+      <a href="../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2282,26 +2282,6 @@
   
   <span class="md-ellipsis">
     金鑰備份和恢復
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
   </span>
   
 
@@ -4110,7 +4090,7 @@ func (msg *MsgEthereumTx) Sign(ethSigner ethtypes.Signer, keyringSigner keyring.
 <p>鉤子返回的錯誤被轉換為 VM 錯誤<code>無法處理本機日誌</code>，詳細的錯誤消息存儲在返回值中。
 消息異步發送到本機模塊，調用者無法捕獲和恢復錯誤。</p>
 <p>** 用例：在 Daodst 上調用原生 ERC20 模塊 **</p>
-<p>以下是取自 Daodst <a href="erc20.md">erc20 模塊</a> 的示例，展示了<code>EVMHooks</code>如何支持調用原生模塊以將 ERC-20 代幣轉換為 Cosmos 原生代幣的合約。
+<p>以下是取自 Daodst erc20 模塊 的示例，展示了<code>EVMHooks</code>如何支持調用原生模塊以將 ERC-20 代幣轉換為 Cosmos 原生代幣的合約。
 按照上面的步驟。</p>
 <p>您可以像這樣在智能合約中定義並發出一個“Transfer”日誌簽名：</p>
 <pre><code class="language-solidity">event Transfer(address indexed from, address indexed to, uint256 value);

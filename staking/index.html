@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dao.md" class="md-nav__link">
+      <a href="../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2525,26 +2525,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -3786,7 +3766,7 @@ parent:
 <p><code>ValidatorsByPower</code> 是一個額外的索引，提供了一個排序後的潛在驗證者列表，以快速確定當前的活躍集合。
 在此，默認情況下，ConsensusPower 等於 validator.Tokens/10^6。
 請注意，所有 Jailed 為 true 的驗證者都不會存儲在此索引中。</p>
-<p><code>LastValidatorsPower</code> 是一個特殊的索引，提供了上一個區塊的綁定驗證者的歷史列表。這個索引在一個區塊中保持不變，但在驗證者集合更新過程中會更新，該過程發生在  <a href="./05_end_block.md"><code>EndBlock</code></a>.</p>
+<p><code>LastValidatorsPower</code> 是一個特殊的索引，提供了上一個區塊的綁定驗證者的歷史列表。這個索引在一個區塊中保持不變，但在驗證者集合更新過程中會更新，該過程發生在  [<code>EndBlock</code>].</p>
 <p>每個驗證者的狀態都存儲在一個 Validator 結構中：</p>
 <p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L65-L99</p>
 <p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L24-L63</p>

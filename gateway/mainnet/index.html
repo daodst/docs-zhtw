@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dao.md" class="md-nav__link">
+      <a href="../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1856,26 +1856,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2394,7 +2374,7 @@
 <p>本文檔概述了加入現有主網的步驟。</p>
 <h2 id="_2">先决条件阅读</h2>
 <ul>
-<li><a href="/gateway/security">驗證器安全</a></li>
+<li><a href="../security/">驗證器安全</a></li>
 </ul>
 <h2 id="_3">主網</h2>
 <p>您需要設置 <strong>创世文件</strong> 和 <strong>种子节点</strong>。
@@ -2421,15 +2401,15 @@
 </tr>
 </tbody>
 </table>
-<p>⚠️<strong>重要的:</strong> 如果您作為驗證者加入主網，請確保您遵循所有 <a href="/gateway/security">security</a> 建議！</p>
+<p>⚠️<strong>重要的:</strong> 如果您作為驗證者加入主網，請確保您遵循所有 <a href="../security/">security</a> 建議！</p>
 <h2 id="daodst">安装 <code>daodst</code></h2>
-<p>按照 <a href="/gateway/run">安装</a> 文檔安裝 <strong>程序</strong></p>
+<p>按照 <a href="../run/">安装</a> 文檔安裝 <strong>程序</strong></p>
 <p>⚠️<strong>注意</strong> : 
 確保安裝了正確版本的<strong>程序</strong>。</p>
 <h3 id="chain-id">保存 Chain ID</h3>
 <p>我們建議將主網 <code>chain-id</code> 保存到您的<strong>程序</strong>的 <code>client.toml</code> 中。
 這將使您不必為每個 CLI 命令手動傳遞 <code>chain-id</code> 標誌。</p>
-<p>📣 提示 :  請參閱官方 <a href="/protocol/chainid">鏈 ID</a> 以供參考。</p>
+<p>📣 提示 :  請參閱官方 <a href="../../protocol/chainid/">鏈 ID</a> 以供參考。</p>
 <pre><code class="language-bash">stcd config chain-id daodst_7777-1
 </code></pre>
 <h2 id="_4">初始化節點</h2>
@@ -2483,7 +2463,7 @@ sed -i.bak -e &quot;s/^seeds =.*/seeds = \&quot;$SEEDS\&quot;/&quot; $install_pa
 </code></pre>
 <h2 id="_9">運行主網驗證器</h2>
 <p>📣 提示 : 
-有關如何運行驗證器的更多詳細信息，請遵循驗證器 <a href="/gateway/run">這些</a>
+有關如何運行驗證器的更多詳細信息，請遵循驗證器 <a href="../run/">這些</a>
 指示。</p>
 <pre><code class="language-bash">stcd tx staking create-validator \
 --amount=1000000000000dst \
@@ -2498,11 +2478,11 @@ sed -i.bak -e &quot;s/^seeds =.*/seeds = \&quot;$SEEDS\&quot;/&quot; $install_pa
 --gas-prices=&quot;5000000000dst&quot; \
 --from=&lt;key_name&gt;
 </code></pre>
-<p>🚨 <strong>危險</strong>: <u>永遠不要</u>使用 <a href="/protocol/keyring#testing"><code>test</code></a> 作为密钥环後端創建驗證器密鑰。
+<p>🚨 <strong>危險</strong>: <u>永遠不要</u>使用 <a href="../../protocol/keyring/#testing"><code>test</code></a> 作为密钥环後端創建驗證器密鑰。
 這樣做可能會導致您的資金通過<code>eth_sendTransaction</code> JSON-RPC 端點遠程訪問，從而導致資金損失。</p>
 <p>參考：<a href="https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds-remotely-accessible/">安全諮詢：不安全配置的 geth 可以使資金遠程訪問</a></p>
 <h2 id="_10">啟動主網</h2>
-<p>最後一步是<a href="/protocol/stcd/single-node#daemon">啟動節點</a>。一旦足夠的投票權（+2/3）
+<p>最後一步是<a href="../../protocol/stcd/single-node/#daemon">啟動節點</a>。一旦足夠的投票權（+2/3）
 從創世驗證器開始運行，節點將開始生產塊。</p>
 <pre><code class="language-bash">stcd daemon
 </code></pre>
@@ -2512,7 +2492,7 @@ sed -i.bak -e &quot;s/^seeds =.*/seeds = \&quot;$SEEDS\&quot;/&quot; $install_pa
 <pre><code class="language-bash">stcd tendermint show-node-id
 </code></pre>
 <h2 id="_12">狀態同步節點</h2>
-<p>如果您想使用狀態同步加入網絡（快速，但不適用於存檔節點），請查看我們的<a href="/gateway/state-sync/">狀態同步</a> 頁面。</p>
+<p>如果您想使用狀態同步加入網絡（快速，但不適用於存檔節點），請查看我們的<a href="../state-sync/">狀態同步</a> 頁面。</p>
 
 
 

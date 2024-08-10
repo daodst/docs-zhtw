@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dao.md" class="md-nav__link">
+      <a href="../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1725,26 +1725,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2150,27 +2130,95 @@
 
 <h1 id="_1">升級提案內容模板</h1>
 <p>升級包括三部分內容，網關客戶端升級、主鏈節點升級、APP升級。網關和主鏈分為linux和windows兩個版本，只支持64位系統。
-升級文件包需要進行sha256編碼，然後按照給定的格式拼接到下載鏈接上，用於文件的有效性校驗。
+升級文件包需要進行sha512編碼，然後按照給定的格式拼接到下載鏈接上，用於文件的有效性校驗。
 upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據或程序。</p>
-<p>執行sha256命令:</p>
-<pre><code class="language-bash">sha256sum file
+<p>執行sha512命令:</p>
+<pre><code class="language-bash">sha512sum file
 #output:    
 27a1ed5d502d4148f837f2a74c6d87b574ce52391fda253618e60486e0304c5b  file
 </code></pre>
 <ul>
 <li>網關客戶端升級提案內容:</li>
 </ul>
-<p>⚠️<strong>注意</strong> :網關客戶端升級需要按照固定格式進行打包，如: resources/gateway/gateway</p>
+<p>⚠️<strong>注意</strong> :如果需要陞級閘道後端，則壓縮包內可存放以下表格內的檔案</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">作業系統平臺</th>
+<th style="text-align: left;">路徑</th>
+<th style="text-align: left;">可選/必選</th>
+<th style="text-align: left;">說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">linux/windows</td>
+<td style="text-align: left;">resources/app.asar</td>
+<td style="text-align: left;">必選</td>
+<td style="text-align: left;">關聯版本</td>
+</tr>
+<tr>
+<td style="text-align: left;">linux</td>
+<td style="text-align: left;">resources/gateway/gateway</td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">閘道後端</td>
+</tr>
+<tr>
+<td style="text-align: left;">linux</td>
+<td style="text-align: left;">resources/gateway/cosmovisor</td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">鏈管理器</td>
+</tr>
+<tr>
+<td style="text-align: left;">linux</td>
+<td style="text-align: left;">resources/gateway/chat/chat</td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">通訊後端</td>
+</tr>
+<tr>
+<td style="text-align: left;">linux</td>
+<td style="text-align: left;">resources/gateway/servm/servm</td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">服務管理器</td>
+</tr>
+<tr>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;">resources/gateway/gateway.exe</td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">閘道後端</td>
+</tr>
+<tr>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;">resources/gateway/cosmovisor.exe</td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">鏈管理器</td>
+</tr>
+<tr>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;">resources/gateway/chat/chat.exe</td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">通訊後端</td>
+</tr>
+<tr>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;">resources/gateway/servm/servm.exe</td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">服務管理器</td>
+</tr>
+</tbody>
+</table>
 <pre><code class="language-bash">{
   &quot;gateway&quot;: {
         &quot;version&quot;: &quot;22.09.07&quot;,
         &quot;binaries&quot;: {
             &quot;linux/amd64&quot;: {
-                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;:&quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             },
             &quot;windows/amd64&quot;: {
-                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;:&quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             }
         }
@@ -2186,11 +2234,13 @@ upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據�
         &quot;version&quot;: &quot;22.10.08&quot;,
         &quot;binaries&quot;: {
             &quot;linux/amd64&quot;: {
-                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;:&quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             },
             &quot;windows/amd64&quot;: {
-                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;:&quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             }
         }
@@ -2205,7 +2255,8 @@ upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據�
         &quot;version&quot;: &quot;22.09.07&quot;,
         &quot;binaries&quot;: {
             &quot;android&quot;: {
-                &quot;url&quot;: &quot;https://example.com/gaia.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.apk?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;:&quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             }
         }
@@ -2214,28 +2265,32 @@ upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據�
 </code></pre>
 <p>支持一次提案升級多個程序:</p>
 <pre><code class="language-bash">{
-  &quot;gateway&quot;: {
+    &quot;gateway&quot;: {
         &quot;version&quot;: &quot;22.09.07&quot;,
         &quot;binaries&quot;: {
             &quot;linux/amd64&quot;: {
-                &quot;url&quot;: &quot;https://example.com/gaia.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;: &quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             },
             &quot;windows/amd64&quot;: {
-                &quot;url&quot;: &quot;https://example.com/gaia.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;: &quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             }
         }
     },
-  &quot;blockchain&quot;: {
+    &quot;blockchain&quot;: {
         &quot;version&quot;: &quot;22.10.08&quot;,
         &quot;binaries&quot;: {
             &quot;linux/amd64&quot;: {
-                &quot;url&quot;: &quot;https://example.com/gaia.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;: &quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             },
             &quot;windows/amd64&quot;: {
-                &quot;url&quot;: &quot;https://example.com/gaia.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;url&quot;: &quot;https://example.com/daodst.zip?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;: &quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
                 &quot;size&quot;: 123877163
             }
         }
@@ -2244,9 +2299,9 @@ upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據�
         &quot;version&quot;: &quot;22.09.07&quot;,
         &quot;binaries&quot;: {
             &quot;android&quot;: {
-                &quot;url&quot;: &quot;https://example.com/gaia.zip?checksum=sha256:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
-                &quot;size&quot;: 123877163,
-                &quot;sha512&quot;:&quot;&quot;
+                &quot;url&quot;: &quot;https://example.com/daodst.apk?checksum=sha512:aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;hash&quot;: &quot;aec070645fe53ee3b3763059376134f058cc337247c978add178b6ccdfb0019f&quot;,
+                &quot;size&quot;: 123877163
             }
         }
     }

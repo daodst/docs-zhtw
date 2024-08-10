@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dao.md" class="md-nav__link">
+      <a href="../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1940,15 +1940,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    ubuntu系統
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_21" class="md-nav__link">
-    手工升级
+    手動升級
   </a>
   
 </li>
@@ -1998,26 +1991,6 @@
   
   <span class="md-ellipsis">
     金鑰備份和恢復
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
   </span>
   
 
@@ -2657,15 +2630,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    ubuntu系統
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_21" class="md-nav__link">
-    手工升级
+    手動升級
   </a>
   
 </li>
@@ -2693,42 +2659,46 @@
 <h1 id="linux">linux網關操作指南</h1>
 <h2 id="gui">GUI安装</h2>
 <h3 id="centos7">centos7系統</h3>
-<p><strong>1.從官網（ https://www.daodst.com/ ）下載程式壓縮包</strong></p>
-<p><img alt="/img/linux/centos/img_10.png" src="/img/linux/centos/img_10.png" /></p>
-<p><strong>2.使用滑鼠右鍵點擊DST.zip，在彈出菜單中選擇“用歸檔管理器打開”</strong>
-<img alt="/img/linux/centos/img_11.png" src="/img/linux/centos/img_11.png" /></p>
-<p><strong>3.在弹出的窗口中點擊左上角“提取”</strong><br />
-<img alt="/img/linux/centos/zip1.jpg" src="/img/linux/centos/zip1.jpg" /></p>
-<p><strong>4.選擇一個安裝目錄,建议放到/data下面,且/data为独立硬盘</strong></p>
-<p><strong>点击右侧 提取按钮后 程式會自動複製到該目錄下(左侧红框标记为选中的安装位置)</strong></p>
-<p>📣 <strong><em>注意1: 一定要選擇磁片可用空間較大的位置</em></strong></p>
-<p>📣 <strong><em>注意2: 不要将安装目录选择在用户家目录下</em></strong></p>
-<p><img alt="/img/linux/centos/zip2.jpg" src="/img/linux/centos/zip2.jpg" /></p>
-<p><strong>5.進入安裝目錄</strong></p>
-<p><strong>6.在窗口空白处右鍵點擊鼠标，在弹出的窗口中点击"在終端機開啟",打開命令行界面</strong>
-<img alt="/img/linux/centos/ssh.jpg" src="/img/linux/centos/ssh.jpg" /></p>
-<p><strong>7.给初始化脚本增加执行权限</strong></p>
-<p><code>chmod u+x daodst/init.sh</code></p>
-<p><img alt="/img/linux/centos/chmod.jpg" src="/img/linux/centos/chmod.jpg" /></p>
-<p><strong>8.在命令行界面中执行初始化命令</strong></p>
-<p><code>pkexec $(pwd)/daodst/init.sh $USER</code></p>
+<p><strong>1.使用普通用戶登錄centos7系統,然后從官網（ https://www.daodst.com/ ）下載程式壓縮包</strong></p>
+<p><img alt="../img/linux/centos/img_10.png" src="../../img/linux/centos/img_10.png" /></p>
+<p><strong>2.輸入使用者密碼,建立/data目錄（用於存放dst程式）（注意：/data應該為讀寫速率良好的獨立硬碟，且可用空間應在1000G以上</strong></p>
+<p><code>pkexec mkdir -p /data</code></p>
+<p><strong>輸入使用者密碼,授予權限</strong></p>
+<p><code>pkexec chown $USER:$USER /data</code></p>
+<p><strong>3.使用滑鼠右鍵點擊DST.zip，在彈出菜單中選擇“用歸檔管理器打開”</strong>
+<img alt="../img/linux/centos/img_11.png" src="../../img/linux/centos/img_11.png" /></p>
+<p><strong>4.在弹出的窗口中點擊左上角“提取”</strong><br />
+<img alt="../img/linux/centos/zip1.jpg" src="../../img/linux/centos/zip1.jpg" /></p>
+<p><strong>5.選擇/data,注意不要選錯</strong></p>
+<p><strong>點擊右側選取按鈕後程式會自動複製到該目錄下（左側紅框標記為選中的安裝位置）</strong></p>
+<p>📣 <strong><em>注意1: 選擇的解压路径为/data,不要選錯位置</em></strong></p>
+<p>📣 <strong><em>注意2: 不要將安裝目錄選擇在用戶家目錄下</em></strong></p>
+<p><img alt="../img/linux/centos/zip2.jpg" src="../../img/linux/centos/zip2.jpg" /></p>
+<p><strong>6.進入安裝目錄</strong></p>
+<p><code>cd /data/daodst</code></p>
+<p><strong>7.在窗口空白处右鍵點擊鼠标，在弹出的窗口中点击"在終端機開啟",打開命令行界面</strong>
+<img alt="../img/linux/centos/ssh.jpg" src="../../img/linux/centos/ssh.jpg" /></p>
+<p><strong>8.在命令列介面中授權和執行初始化命令</strong></p>
+<p><code>pkexec chmod u+x /data/daodst/init.sh</code></p>
+<p><code>pkexec /data/daodst/init.sh $USER</code></p>
 <p><strong>9.初始化過程中需要輸入一次root用戶的密碼進行授權操作</strong>
-<img alt="/img/linux/centos/auth.jpg" src="/img/linux/centos/auth.jpg" /></p>
-<p><strong>10.初始化脚本执行后</strong>
-<img alt="/img/linux/centos/pkexec_output.jpg" src="/img/linux/centos/pkexec_output.jpg" /></p>
-<p><strong>11.重启操作系统</strong></p>
-<p><strong>12.打开终端，切换到root用户(在su命令后输入root的密码),切换成功后会显示root用户</strong>
-<img alt="/img/linux/centos/su.jpg" src="/img/linux/centos/su.jpg" /></p>
-<p><strong>13.进入网关后端目录</strong></p>
+<img alt="../img/linux/centos/auth.jpg" src="../../img/linux/centos/auth.jpg" /></p>
+<p><strong>10.初始化腳本執行後</strong>
+<img alt="../img/linux/centos/pkexec_output.jpg" src="../../img/linux/centos/pkexec_output.jpg" /></p>
+<p><strong>11.重啓作業系統,然后选择前面的普通用户再次登录系统</strong></p>
+<p><code>reboot</code></p>
+<p><strong>12.打開終端，切換到root用戶（在su命令後輸入root的密碼），切換成功後會顯示root用戶</strong>
+<img alt="../img/linux/centos/su.jpg" src="../../img/linux/centos/su.jpg" /></p>
+<p><strong>13.進入閘道後端目錄</strong></p>
 <p><code>cd /data/daodst/resources/gateway</code>
-<img alt="/img/linux/centos/gateway_backgd.jpg" src="/img/linux/centos/gateway_backgd.jpg" /></p>
-<p><strong>14.启动网关后端程序()</strong></p>
+<img alt="../img/linux/centos/gateway_backgd.jpg" src="../../img/linux/centos/gateway_backgd.jpg" /></p>
+<p><strong>14.啟動閘道後端程式</strong></p>
 <p><code>./op.sh start</code></p>
-<p><img alt="/img/linux/centos/gateway_backgd2.jpg" src="/img/linux/centos/gateway_backgd2.jpg" /></p>
+<p><img alt="../img/linux/centos/gateway_backgd2.jpg" src="../../img/linux/centos/gateway_backgd2.jpg" /></p>
 <p><strong>15.進入安裝根目錄或者系统桌面，雙擊圖標 "DstGatewayGUI.desktop" 启动网关前端</strong>
-<img alt="/img/linux/centos/desktop_icon.jpg" src="/img/linux/centos/desktop_icon.jpg" /></p>
+<img alt="../img/linux/centos/desktop_icon.jpg" src="../../img/linux/centos/desktop_icon.jpg" /></p>
 <p><strong>16.點擊 "trust and Launch" 進行啟動(该提示只会显示一次)</strong>
-<img alt="/img/linux/centos/desktop_trust.jpg" src="/img/linux/centos/desktop_trust.jpg" /></p>
+<img alt="../img/linux/centos/desktop_trust.jpg" src="../../img/linux/centos/desktop_trust.jpg" /></p>
 <p><strong>17.注意事项</strong></p>
 <p><strong>要先以root用户启动好网关后端,然后才能启动网关前端</strong></p>
 <h2 id="_1">後端管理</h2>
@@ -2784,38 +2754,38 @@ cd 安装目录/resource/gateway
 <pre><code>新建或導入錢包地址--&gt;創建dpos --&gt;創建閘道--&gt;質押FM --&gt;領取獎勵
 </code></pre>
 <h3 id="_8">新建錢包</h3>
-<p><img alt="img/pc/img_20.png" src="/img/pc/img_20.png" /></p>
+<p><img alt="../img/pc/img_20.png" src="../../img/pc/img_20.png" /></p>
 <h3 id="_9">導入錢包</h3>
-<p><img alt="img/pc/img_21.png" src="/img/pc/img_21.png" /></p>
+<p><img alt="../img/pc/img_21.png" src="../../img/pc/img_21.png" /></p>
 <h3 id="dpos">創建dpos</h3>
-<p><img alt="img/pc/img_22.png" src="/img/pc/img_22.png" /></p>
+<p><img alt="../img/pc/img_22.png" src="../../img/pc/img_22.png" /></p>
 <h3 id="_10">申请网关</h3>
-<p><img alt="img/pc/img_26.png" src="/img/pc/img_26.jpg" /></p>
+<p><img alt="../img/pc/img_26.png" src="../../img/pc/img_26.jpg" /></p>
 <h3 id="fm">質押FM</h3>
-<p><img alt="img/pc/img_11.png" src="/img/pc/img_11.png" /></p>
+<p><img alt="../img/pc/img_11.png" src="../../img/pc/img_11.png" /></p>
 <h3 id="_11">領取獎勵</h3>
-<p><img alt="img/pc/img_13.png" src="/img/pc/img_13.png" /></p>
+<p><img alt="../img/pc/img_13.png" src="../../img/pc/img_13.png" /></p>
 <h2 id="_12">首頁</h2>
 <pre><code>首頁包含了一些全局性的查看與功能
 其中包括：
 
 查看區塊同步情況 （介面右上方）
 </code></pre>
-<p><img alt="img/pc/img_4.png" src="/img/pc/img_4.png" /></p>
+<p><img alt="../img/pc/img_4.png" src="../../img/pc/img_4.png" /></p>
 <pre><code>查看任務狀態（介面右上方）
 </code></pre>
-<p><img alt="img/pc/img_5.png" src="/img/pc/img_5.png" /></p>
+<p><img alt="../img/pc/img_5.png" src="../../img/pc/img_5.png" /></p>
 <pre><code>管理軟件設置 （介面左下角）
 </code></pre>
-<p><img alt="img/pc/img_6.png" src="/img/pc/img_6.png" /></p>
+<p><img alt="../img/pc/img_6.png" src="../../img/pc/img_6.png" /></p>
 <h2 id="_13">操作</h2>
 <pre><code>右上角的操作可以管理DID和修改網關信息
 </code></pre>
-<p><img alt="img/pc/img_17.png" src="/img/pc/img_17.png" /></p>
+<p><img alt="../img/pc/img_17.png" src="../../img/pc/img_17.png" /></p>
 <h3 id="did">DID段管理</h3>
 <pre><code>可以通過質押FM的方式獲取更多的DID號段
 </code></pre>
-<p><img alt="img/pc/img_18.png" src="/img/pc/img_18.png" /></p>
+<p><img alt="../img/pc/img_18.png" src="../../img/pc/img_18.png" /></p>
 <pre><code>首頁左側選線條，包括資產和網關兩個選項卡
 </code></pre>
 <h2 id="_14">資產</h2>
@@ -2823,102 +2793,82 @@ cd 安装目录/resource/gateway
 
 左側三個按鈕，分別對應 DST,FM，HASH三個主幣
 </code></pre>
-<p><img alt="img/pc/img_7.png" src="/img/pc/img_7.png" /></p>
+<p><img alt="../img/pc/img_7.png" src="../../img/pc/img_7.png" /></p>
 <pre><code>右側可以查看餘額數量 交易記錄，以及進行主幣的發送和接收
 </code></pre>
-<p><img alt="img/pc/img_8.png" src="/img/pc/img_8.png" /></p>
+<p><img alt="../img/pc/img_8.png" src="../../img/pc/img_8.png" /></p>
 <pre><code>這裡導出助記詞，以及修改密碼
 </code></pre>
-<p><img alt="img/pc/img_9.png" src="/img/pc/img_9.png" /></p>
+<p><img alt="../img/pc/img_9.png" src="../../img/pc/img_9.png" /></p>
 <h2 id="_15">網關</h2>
 <pre><code>網關功能管理dpos質押，網關服務器，網關app，網關密鑰等
 </code></pre>
-<p><img alt="img/pc/img_10.png" src="/img/pc/img_10.png" /></p>
+<p><img alt="../img/pc/img_10.png" src="../../img/pc/img_10.png" /></p>
 <h3 id="dpos_1">DPOS質押管理</h3>
 <pre><code>成為驗證器後，可以在 _DPOS質押管理_ 頁面查看本節點的DPOS狀態
 
 可以進行質押與贖回
 </code></pre>
-<p><img alt="img/pc/img_11.png" src="/img/pc/img_11.png" /></p>
+<p><img alt="../img/pc/img_11.png" src="../../img/pc/img_11.png" /></p>
 <pre><code>DPOS的贖回不是立即到賬的，在此查看贖回狀態
 </code></pre>
-<p><img alt="img/pc/img_12.png" src="/img/pc/img_12.png" /></p>
+<p><img alt="../img/pc/img_12.png" src="../../img/pc/img_12.png" /></p>
 <pre><code>可以查看和領取質押獎勵以及佣金
 </code></pre>
-<p><img alt="img/pc/img_13.png" src="/img/pc/img_13.png" /></p>
+<p><img alt="../img/pc/img_13.png" src="../../img/pc/img_13.png" /></p>
 <pre><code>在此修改網關的設置
 </code></pre>
-<p><img alt="img/pc/img_14.png" src="/img/pc/img_14.png" /></p>
+<p><img alt="../img/pc/img_14.png" src="../../img/pc/img_14.png" /></p>
 <h3 id="_16">網關服務器資源</h3>
-<p><img alt="img/pc/img_15.png" src="/img/pc/img_15.jpg" /></p>
+<p><img alt="../img/pc/img_15.png" src="../../img/pc/img_15.jpg" /></p>
 <h3 id="app">網關app</h3>
-<p><img alt="img/pc/img_16.png" src="/img/pc/img_16.png" /></p>
+<p><img alt="../img/pc/img_16.png" src="../../img/pc/img_16.png" /></p>
 <h3 id="_17">網關密鑰</h3>
 <pre><code>網關密鑰的使用方法詳見
 </code></pre>
-<h4 id="_18"><a href="/gateway/key-backup.md">網關密鑰使用方法</a></h4>
+<h4 id="_18"><a href="../key-backup/">網關密鑰使用方法</a></h4>
 <h2 id="_19">設置</h2>
 <pre><code>設置包括：版本檢測、語言檢測、歷史清除設置、節點設置、數據目錄設置、路由層數檢測
 </code></pre>
-<p><img alt="img/pc/img_19.png" src="/img/pc/img_19.png" /></p>
+<p><img alt="../img/pc/img_19.png" src="../../img/pc/img_19.png" /></p>
 <h2 id="_20">升級</h2>
 <h3 id="centos">centos系統</h3>
-<pre><code>如果系統有升級任務，界面會自動彈出升級窗口
+<p>如果系統有升級任務，界面會自動彈出升級窗口
+<img alt="../img/linux/centos/img_5.png" src="../../img/linux/centos/img_5.png" /></p>
+<p>點擊升級，會自動下載最新的應用程序
+<img alt="../img/linux/centos/img_6.png" src="../../img/linux/centos/img_6.png" /></p>
+<p>升級過程中需要輸入一次當前登錄用戶的密碼進行授權操作
+<img alt="../img/linux/centos/upgrade.jpg" src="../../img/linux/centos/upgrade.jpg" /></p>
+<p>升級完成後介面會自動退出,這時候在桌面dst網關圖示並雙擊啟動
+<img alt="../img/linux/centos/desktop_icon.jpg" src="../../img/linux/centos/desktop_icon.jpg" /></p>
+<p>開啟程式後,如果顯示出「等待GateWay程式啟動...」等字樣,則說明需要<a href="#_2">手工啟動後端程序</a>
+<img alt="../img/linux/centos/starting.jpg" src="../../img/linux/centos/starting.jpg" /></p>
+<h3 id="_21">手動升級</h3>
+<pre><code>手動升級需要在命令視窗以管理員身份執行命令
 </code></pre>
-<p><img alt="/img/linux/centos/img_5.png" src="/img/linux/centos/img_5.png" /></p>
-<pre><code>點擊升級，會自動下載最新的應用程序
+<p><code>./gateway upgrade</code></p>
+<pre><code>進行手動升級,如果網關程式正在運行,則會提示關閉網關,並給出退出網關的命令:
 </code></pre>
-<p><img alt="/img/linux/centos/img_6.png" src="/img/linux/centos/img_6.png" /></p>
-<pre><code>新的應用程序下載完成後，會提示升級步驟，然後點擊退出
+<p><code>curl http://127.0.0.1:50321/soft/exit</code></p>
+<p><img alt="../img/linux/ubuntu/img_12.png" src="../../img/linux/ubuntu/img_12.png" /></p>
+<pre><code>執行退出指令後網關會自動退出
 </code></pre>
-<p><img alt="/img/linux/centos/img_7.png" src="/img/linux/centos/img_7.png" /></p>
-<pre><code>雙擊新生成的圖標upgrade.desktop,點擊trust and Launch 啟動升級。
+<p><img alt="../img/linux/ubuntu/img_13.png" src="../../img/linux/ubuntu/img_13.png" /></p>
+<pre><code>重新執行升級指令
 </code></pre>
-<p><img alt="/img/linux/centos/img_8.png" src="/img/linux/centos/img_8.png" /></p>
-<pre><code>升級過程中需要輸入一次當前登錄用戶的密碼進行授權操作
+<p><code>./gateway upgrade</code></p>
+<pre><code>程式會提示目前版本號及升級版本號,核對無誤後輸入y執行升級操作
 </code></pre>
-<p><img alt="/img/linux/ubuntu/img_9.png" src="/img/linux/centos/img_9.png" /></p>
-<h3 id="ubuntu">ubuntu系統</h3>
-<pre><code>如果系統有升級任務，界面會自動彈出升級窗口
+<p><img alt="../img/linux/ubuntu/img_14.png" src="../../img/linux/ubuntu/img_14.png" /></p>
+<pre><code>升級過程中會提示下載目錄及下載的url位址
 </code></pre>
-<p><img alt="/img/linux/ubuntu/img_5.png" src="/img/linux/ubuntu/img_5.png" /></p>
-<pre><code>點擊升級，會自動下載最新的應用程序
+<p><img alt="../img/linux/ubuntu/img_15.png" src="../../img/linux/ubuntu/img_15.png" /></p>
+<pre><code>如果升級遇到權限錯誤,請以管理員模式重新執行升級指令
 </code></pre>
-<p><img alt="/img/linux/ubuntu/img_6.png" src="/img/linux/ubuntu/img_6.png" /></p>
-<pre><code>新的應用程序下載完成後，會提示升級步驟，然後點擊退出
+<p><img alt="../img/linux/ubuntu/img_16.png" src="../../img/linux/ubuntu/img_16.png" /></p>
+<pre><code>升級結束後會提示進入指定目錄,以管理員身份重新執行初始化操作,執行完成後可正常啟動程序
 </code></pre>
-<p><img alt="/img/linux/ubuntu/img_7.png" src="/img/linux/ubuntu/img_7.png" /></p>
-<pre><code>右鍵電擊圖標upgrade.desktop,點擊屬性
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_8.png" src="/img/linux/ubuntu/img_8.png" /></p>
-<pre><code>點擊權限標籤，勾選允許檔案作為程式執行
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_9.png" src="/img/linux/ubuntu/img_9.png" /></p>
-<pre><code>右鍵點擊圖標upgrade.desktop,選擇作為程序運行來進行升級。
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_9.png" src="/img/linux/ubuntu/img_10.png" /></p>
-<pre><code>執行過程中會提示輸入當前用戶密碼進行授權操作
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_9.png" src="/img/linux/ubuntu/img_11.png" /></p>
-<h3 id="_21">手工升级</h3>
-<pre><code>手动升级需要在命令窗口以管理员身份运行命令./gateway upgrade进行手动升级,如果网关程序正在运行中,则会提示关闭网关,并给出退出网关的命令: curl http://127.0.0.1:50321/soft/exit
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_12.png" src="/img/linux/ubuntu/img_12.png" /></p>
-<pre><code>执行退出命令后网关会自动退出
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_13.png" src="/img/linux/ubuntu/img_13.png" /></p>
-<pre><code>重新执行升级命令 ./gateway upgrade  程序会提示当前版本号和升级版本号,核对无误后输入y执行升级操作
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_14.png" src="/img/linux/ubuntu/img_14.png" /></p>
-<pre><code>升级过程中会提示下载目录及下载的url地址
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_15.png" src="/img/linux/ubuntu/img_15.png" /></p>
-<pre><code>如果升级遇到权限错误,请以管理员模式重新运行升级命令
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_16.png" src="/img/linux/ubuntu/img_16.png" /></p>
-<pre><code>升级结束后会提示进入到指定目录,以管理员身份重新执行初始化操作,执行完成后可正常启动程序
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_17.png" src="/img/linux/ubuntu/img_17.png" /></p>
+<p><img alt="../img/linux/ubuntu/img_17.png" src="../../img/linux/ubuntu/img_17.png" /></p>
 
 
 

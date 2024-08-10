@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dao.md" class="md-nav__link">
+      <a href="../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1876,26 +1876,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2455,14 +2435,14 @@
 </tbody>
 </table>
 <h2 id="stcd">安装 <code>stcd</code></h2>
-<p>按照 <a href="/protocol/stcd/single-node">安装</a> 文檔安裝 ** 程序 **。</p>
+<p>按照 <a href="../../protocol/stcd/single-node/">安装</a> 文檔安裝 ** 程序 **。</p>
 <p>⚠️<strong>注意</strong> : 
 確保安裝了正確版本的 <strong>程序</strong>。</p>
 <h3 id="chain-id">保存 Chain ID</h3>
 <p>我們建議將測試網 <code>chain-id</code> 保存到您的 <code>client.toml</code> 中。
 這將使您不必為每個 CLI 命令手動傳遞 <code>chain-id</code> 標誌。</p>
 <p>📣 提示 :<br />
-請參閱官方 <a href="/protocol/chainid#official-chain-ids">鏈 ID</a> 以供參考。</p>
+請參閱官方 <a href="../../protocol/chainid/#official-chain-ids">鏈 ID</a> 以供參考。</p>
 <pre><code class="language-bash">stcd config chain-id daodst_7000-1
 </code></pre>
 <h2 id="_3">初始化节点</h2>
@@ -2516,9 +2496,9 @@ sed -i.bak -e &quot;s/^seeds =.*/seeds = \&quot;$SEEDS\&quot;/&quot; ~/.stcd/con
 <pre><code class="language-bash">sed -i.bak -e &quot;s/^persistent_peers *=.*/persistent_peers = \&quot;$PEERS\&quot;/&quot; $install_path/.stcd/config/config.toml
 </code></pre>
 <h2 id="_5">運行測試網驗證器</h2>
-<p>在 <a href="/gateway/testnet">水龍頭</a> 上聲明您的測試網使用你的驗證者賬戶地址並提交你的驗證者賬戶地址：</p>
+<p>在 <a href="./">水龍頭</a> 上聲明您的測試網使用你的驗證者賬戶地址並提交你的驗證者賬戶地址：</p>
 <p>📣 提示 :<br />
-有關如何運行驗證器的更多詳細信息，請遵循 <a href="/gateway/run">這些</a> 說明。</p>
+有關如何運行驗證器的更多詳細信息，請遵循 <a href="../run/">這些</a> 說明。</p>
 <pre><code class="language-bash">stcd tx staking create-validator \
   --amount=1000000000000dst \
   --pubkey=$(stcd tendermint show-validator) \
@@ -2533,7 +2513,7 @@ sed -i.bak -e &quot;s/^seeds =.*/seeds = \&quot;$SEEDS\&quot;/&quot; ~/.stcd/con
   --from=&lt;key_name&gt;
 </code></pre>
 <h2 id="_6">啟動測試網</h2>
-<p>最後一步是<a href="/protocol/stcd/single-node#start-node">啟動節點</a>。
+<p>最後一步是<a href="../../protocol/stcd/single-node/#start-node">啟動節點</a>。
 一旦來自創世驗證者的足夠投票權（+2/3）啟動並運行，測試網將開始生產區塊。</p>
 <pre><code class="language-bash">stcd daemon
 </code></pre>
@@ -2564,7 +2544,7 @@ stcd tendermint unsafe-reset-all --home $install_path/.stcd
 <pre><code class="language-bash">stcd tendermint show-node-id
 </code></pre>
 <h2 id="_11">狀態同步節點</h2>
-<p>如果您想使用狀態同步加入網絡（快速，但不適用於存檔節點），請查看我們的 <a href="/gateway/state-sync">狀態同步</a> 頁面</p>
+<p>如果您想使用狀態同步加入網絡（快速，但不適用於存檔節點），請查看我們的 <a href="../state-sync/">狀態同步</a> 頁面</p>
 
 
 

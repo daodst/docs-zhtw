@@ -1055,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dao.md" class="md-nav__link">
+      <a href="../../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1883,26 +1883,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2445,10 +2425,10 @@
 
 
 <h1 id="_1">單節點</h1>
-<p>在此頁面之後，您可以手動或使用已經準備好的自動化腳本運行單節點本地網絡。運行單節點設置對於想要測試其應用程序和協議功能的開發人員非常有用，因為它的簡單性和速度。對於更複雜的設置，請參考<a href="./multi-nodes">多節點設置</a>頁面。</p>
+<p>在此頁面之後，您可以手動或使用已經準備好的自動化腳本運行單節點本地網絡。運行單節點設置對於想要測試其應用程序和協議功能的開發人員非常有用，因為它的簡單性和速度。</p>
 <h2 id="_2">先決條件</h2>
 <ul>
-<li><a href="/protocol/stcd/">安裝</a></li>
+<li><a href="../">安裝</a></li>
 </ul>
 <h2 id="_3">自動化腳本</h2>
 <p>啟動本地 Daodst 節點的最簡單方法是使用提供的幫助腳本，它將為測試目的創建一個合理的默認配置：</p>
@@ -2509,11 +2489,11 @@ $CHAINID=&quot;daodst_7000-1&quot;
 stcd init $MONIKER --chain-id=$CHAINID
 </code></pre>
 <p>📣 提示：
-您可以稍後通過更新 <code>config.toml</code> 文件來 <a href="/protocol/stcd/config#client-configuration">修改</a> 這個 moniker 。</p>
-<p>上面的命令創建了您的節點和驗證器運行所需的所有配置文件，以及一個默認的創世文件，它定義了網絡的初始狀態。默認情況下，所有這些<a href="/protocol/stcd/config">配置文件</a> 都在<code>~/.stcd</code> 中，但您可以通過傳遞<code>--home</code> 標誌來覆蓋此文件夾的位置。</p>
+您可以稍後通過更新 <code>config.toml</code> 文件來 <a href="../config/#client-configuration">修改</a> 這個 moniker 。</p>
+<p>上面的命令創建了您的節點和驗證器運行所需的所有配置文件，以及一個默認的創世文件，它定義了網絡的初始狀態。默認情況下，所有這些<a href="../config/">配置文件</a> 都在<code>~/.stcd</code> 中，但您可以通過傳遞<code>--home</code> 標誌來覆蓋此文件夾的位置。</p>
 <h3 id="_6">創世程序</h3>
 <h3 id="_7">添加創世賬戶</h3>
-<p>在啟動鏈之前，您需要使用 <a href="/protocol/keyring#add-keys">keyring</a> 用至少一個帳戶填充狀態：</p>
+<p>在啟動鏈之前，您需要使用 <a href="../../keyring/#add-keys">keyring</a> 用至少一個帳戶填充狀態：</p>
 <pre><code class="language-bash">stcd keys add my_validator
 </code></pre>
 <p>創建本地帳戶後，繼續在鏈的創世文件中為其授予一些<code>dst</code>令牌。這樣做還將確保您的鏈知道此帳戶的存在：</p>
@@ -2583,7 +2563,7 @@ Daodst 目前支持12個單詞的助記詞。
 <pre><code class="language-bash">stcd config keyring-backend file
 </code></pre>
 <p>📣 提示：
-有關 Keyring 及其後端選項的更多信息，請單擊 <a href="/protocol/keyring/">此處</a>。</p>
+有關 Keyring 及其後端選項的更多信息，請單擊 <a href="../../keyring/">此處</a>。</p>
 <h3 id="_10">啟用跟踪</h3>
 <p>要在運行節點時啟用跟踪，請將 <code>local_node.sh</code> 腳本的最後一行修改為以下命令，
 在哪裡：</p>

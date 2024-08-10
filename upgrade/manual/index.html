@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dao.md" class="md-nav__link">
+      <a href="../../dao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1790,26 +1790,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ttts/ttts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    翻译和文本转语音服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2260,7 +2240,7 @@
 <p>了解如何手動升級您的節點。</p>
 <h2 id="_2">先決條件</h2>
 <ul>
-<li><a href="/protocol/stcd/">安装 stcd</a></li>
+<li><a href="../../protocol/stcd/">安装 stcd</a></li>
 </ul>
 <h2 id="1-daodst">1. 升級 Daodst 版本</h2>
 <p>在升級 Daodst 版本之前。使用 <code>Ctrl/Cmd+C</code> 停止您的 daodst 實例。</p>
@@ -2303,7 +2283,7 @@ echo &quot;&lt;expected_hash&gt;  genesis.json&quot; | sha256sum -c
 <p>:::</p>
 <h2 id="3">3. 數據重置</h2>
 <p>⚠️<strong>注意</strong> : 
-如果您要升級的版本需要數據重置（硬分叉），請檢查 <a href="./list-of-upgrades">此處</a>。如果不是這種情況，您可以跳到<a href="https://docs.cosmos.network/main/modules/upgrade">重新啟動</a>。</p>
+如果您要升級的版本需要數據重置（硬分叉），請檢查 <a href="../list/">此處</a>。如果不是這種情況，您可以跳到<a href="https://docs.cosmos.network/main/modules/upgrade">重新啟動</a>。</p>
 <p>刪除過時的文件並重置數據：</p>
 <pre><code class="language-bash">rm $install_path/.stcd/config/addrbook.json
 stcd tendermint unsafe-reset-all --home $install_path/.stcd
