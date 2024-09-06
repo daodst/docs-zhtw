@@ -1566,6 +1566,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    提案模板
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1575,6 +1586,66 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sha512" class="md-nav__link">
+    執行sha512命令:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    網關升級提案內容:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    主鏈節點升級提案內容:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    APP升級提案內容:
+  </a>
+  
+    <nav class="md-nav" aria-label="APP升級提案內容:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    支持一次提案升級多個程序:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2115,6 +2186,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sha512" class="md-nav__link">
+    執行sha512命令:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    網關升級提案內容:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    主鏈節點升級提案內容:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    APP升級提案內容:
+  </a>
+  
+    <nav class="md-nav" aria-label="APP升級提案內容:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    支持一次提案升級多個程序:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2132,15 +2252,16 @@
 <p>升級包括三部分內容，網關客戶端升級、主鏈節點升級、APP升級。網關和主鏈分為linux和windows兩個版本，只支持64位系統。
 升級文件包需要進行sha512編碼，然後按照給定的格式拼接到下載鏈接上，用於文件的有效性校驗。
 upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據或程序。</p>
-<p>執行sha512命令:</p>
+<h3 id="sha512">執行sha512命令:</h3>
 <pre><code class="language-bash">sha512sum file
 #output:    
 27a1ed5d502d4148f837f2a74c6d87b574ce52391fda253618e60486e0304c5b  file
 </code></pre>
-<ul>
-<li>網關客戶端升級提案內容:</li>
-</ul>
-<p>⚠️<strong>注意</strong> :如果需要陞級閘道後端，則壓縮包內可存放以下表格內的檔案</p>
+<h2 id="_2">網關升級提案內容:</h2>
+<p>⚠️<strong>注意</strong> : </p>
+<pre><code>網關升級提案的版本号需要和 `gateway` 、以及 `app.asar` 保持一致(日期多0不影响比较)
+</code></pre>
+<p>壓縮包內可存放以下檔案(windows)</p>
 <table>
 <thead>
 <tr>
@@ -2152,56 +2273,75 @@ upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據�
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">linux/windows</td>
-<td style="text-align: left;">resources/app.asar</td>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;"><code>resources/app.asar</code></td>
+<td style="text-align: left;">必選</td>
+<td style="text-align: left;">關聯版本</td>
+</tr>
+<tr>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;"><code>resources/gateway/gateway.exe</code></td>
+<td style="text-align: left;">必選</td>
+<td style="text-align: left;">閘道後端</td>
+</tr>
+<tr>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;"><code>resources/gateway/cosmovisor.exe</code></td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">鏈管理器</td>
+</tr>
+<tr>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;"><code>resources/gateway/chat/chat.exe</code></td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">通訊後端</td>
+</tr>
+<tr>
+<td style="text-align: left;">windows</td>
+<td style="text-align: left;"><code>resources/gateway/servm/servm.exe</code></td>
+<td style="text-align: left;">可選</td>
+<td style="text-align: left;">服務管理器</td>
+</tr>
+</tbody>
+</table>
+<p>壓縮包內可存放以下檔案(linux)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">作業系統平臺</th>
+<th style="text-align: left;">路徑</th>
+<th style="text-align: left;">可選/必選</th>
+<th style="text-align: left;">說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">linux</td>
+<td style="text-align: left;"><code>resources/app.asar</code></td>
 <td style="text-align: left;">必選</td>
 <td style="text-align: left;">關聯版本</td>
 </tr>
 <tr>
 <td style="text-align: left;">linux</td>
-<td style="text-align: left;">resources/gateway/gateway</td>
-<td style="text-align: left;">可選</td>
+<td style="text-align: left;"><code>resources/gateway/gateway</code></td>
+<td style="text-align: left;">必選</td>
 <td style="text-align: left;">閘道後端</td>
 </tr>
 <tr>
 <td style="text-align: left;">linux</td>
-<td style="text-align: left;">resources/gateway/cosmovisor</td>
+<td style="text-align: left;"><code>resources/gateway/cosmovisor</code></td>
 <td style="text-align: left;">可選</td>
 <td style="text-align: left;">鏈管理器</td>
 </tr>
 <tr>
 <td style="text-align: left;">linux</td>
-<td style="text-align: left;">resources/gateway/chat/chat</td>
+<td style="text-align: left;"><code>resources/gateway/chat/chat</code></td>
 <td style="text-align: left;">可選</td>
 <td style="text-align: left;">通訊後端</td>
 </tr>
 <tr>
 <td style="text-align: left;">linux</td>
-<td style="text-align: left;">resources/gateway/servm/servm</td>
-<td style="text-align: left;">可選</td>
-<td style="text-align: left;">服務管理器</td>
-</tr>
-<tr>
-<td style="text-align: left;">windows</td>
-<td style="text-align: left;">resources/gateway/gateway.exe</td>
-<td style="text-align: left;">可選</td>
-<td style="text-align: left;">閘道後端</td>
-</tr>
-<tr>
-<td style="text-align: left;">windows</td>
-<td style="text-align: left;">resources/gateway/cosmovisor.exe</td>
-<td style="text-align: left;">可選</td>
-<td style="text-align: left;">鏈管理器</td>
-</tr>
-<tr>
-<td style="text-align: left;">windows</td>
-<td style="text-align: left;">resources/gateway/chat/chat.exe</td>
-<td style="text-align: left;">可選</td>
-<td style="text-align: left;">通訊後端</td>
-</tr>
-<tr>
-<td style="text-align: left;">windows</td>
-<td style="text-align: left;">resources/gateway/servm/servm.exe</td>
+<td style="text-align: left;"><code>resources/gateway/servm/servm</code></td>
 <td style="text-align: left;">可選</td>
 <td style="text-align: left;">服務管理器</td>
 </tr>
@@ -2226,9 +2366,7 @@ upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據�
 
 }
 </code></pre>
-<ul>
-<li>主鏈節點升級提案內容:</li>
-</ul>
+<h2 id="_3">主鏈節點升級提案內容:</h2>
 <pre><code class="language-bash">{
   &quot;blockchain&quot;: {
         &quot;version&quot;: &quot;22.10.08&quot;,
@@ -2247,9 +2385,7 @@ upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據�
     }
 }
 </code></pre>
-<ul>
-<li>APP升級提案內容:</li>
-</ul>
+<h2 id="app">APP升級提案內容:</h2>
 <pre><code class="language-bash">{
     &quot;app&quot;: {
         &quot;version&quot;: &quot;22.09.07&quot;,
@@ -2263,7 +2399,7 @@ upgrade_script 腳本適用於升級除客戶端外需要額外處理的數據�
     }
 }
 </code></pre>
-<p>支持一次提案升級多個程序:</p>
+<h3 id="_4">支持一次提案升級多個程序:</h3>
 <pre><code class="language-bash">{
     &quot;gateway&quot;: {
         &quot;version&quot;: &quot;22.09.07&quot;,
